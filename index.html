@@ -721,7 +721,7 @@
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
           <button id="btnLearnGateSignIn" type="button" class="px-5 py-2.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-xs sm:text-sm shadow-lg transition">
-            ☁️ Sign In / Create Account
+            ☁️ Sign In with Google or Email
           </button>
           <button id="btnLearnGateToSongs" type="button" class="px-4 py-2.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-qtext font-bold text-xs sm:text-sm transition">
             🎵 Browse Free Songbook
@@ -1095,55 +1095,40 @@
     </div>
 
     <div id="cloudAuthModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border border-indigo-500/40">
-        <div class="flex items-center justify-between">
+      <div class="q-card rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl border border-indigo-500/40">
+        <div class="flex items-start justify-between gap-2">
           <div>
-            <h3 class="text-base font-black text-qtext">☁️ QCoach Cloud Sync (Supabase)</h3>
-            <p class="text-xs text-qmuted">Sync your daily streak, skill level, and 1–3 star song scores across devices.</p>
+            <h3 class="text-base font-black text-qtext">☁️ Sign In to QCoach Studio</h3>
+            <p class="text-xs text-qmuted mt-0.5">Save your streak, stars, and learning progress across devices.</p>
           </div>
-          <button id="btnCloseCloudAuth" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+          <button id="btnCloseCloudAuth" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold shrink-0">✕</button>
         </div>
 
-        <div id="cloudAuthStatusBox" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs font-mono text-qmuted">
-          Status: <strong class="text-amber-400">Guest Mode (Saved Locally)</strong>
-        </div>
-        <div class="flex items-center justify-between gap-2 rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2">
-          <span class="text-[11px] font-mono text-qmuted">First time setting up Supabase?</span>
-          <button id="btnCopySupabaseSchema" type="button" class="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/35 border border-indigo-400/50 text-indigo-300 font-bold text-[11px] transition">📋 Copy schema.sql</button>
-        </div>
+        <div id="cloudAuthStatusBox" class="hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs font-mono text-qmuted"></div>
 
-        <div id="cloudAuthSignedOutControls" class="space-y-2.5">
-          <div class="space-y-1">
-            <label class="text-[11px] font-mono text-qmuted">Email (Magic Link Sign-In)</label>
-            <div class="flex gap-2">
-              <input id="inputCloudEmail" type="email" placeholder="you@example.com" class="flex-1 bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-indigo-400">
-              <button id="btnCloudMagicLink" type="button" class="px-3 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xs transition">Send Link</button>
-            </div>
-          </div>
-          <button id="btnCloudGoogleSignIn" type="button" class="w-full py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">
+        <div id="cloudAuthSignedOutControls" class="space-y-3">
+          <button id="btnCloudGoogleSignIn" type="button" class="w-full py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs sm:text-sm shadow transition">
             Continue with Google
           </button>
+          <div class="flex items-center gap-2 text-[11px] font-mono text-qmuted">
+            <span class="flex-1 h-px bg-[#2C2C2E]"></span>
+            <span>or sign in with email</span>
+            <span class="flex-1 h-px bg-[#2C2C2E]"></span>
+          </div>
+          <div class="flex gap-2">
+            <input id="inputCloudEmail" type="email" placeholder="you@example.com" class="flex-1 bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-indigo-400">
+            <button id="btnCloudMagicLink" type="button" class="px-3.5 py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xs transition shrink-0">Email Link</button>
+          </div>
         </div>
 
         <div id="cloudAuthSignedInControls" class="hidden flex items-center gap-2">
-          <button id="btnCloudSyncNow" type="button" class="flex-1 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">
-            🔄 Sync Progress Now
+          <button id="btnCloudSyncNow" type="button" class="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">
+            🔄 Sync Now
           </button>
-          <button id="btnCloudSignOut" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qmuted font-bold text-xs transition">
+          <button id="btnCloudSignOut" type="button" class="px-3.5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qmuted font-bold text-xs transition">
             Sign Out
           </button>
         </div>
-
-        <details class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2.5 text-xs">
-          <summary class="cursor-pointer font-mono font-bold text-qmuted">⚙️ Supabase Project Keys (One-Time Setup)</summary>
-          <div class="mt-2 space-y-2">
-            <input id="inputSupabaseUrl" type="url" placeholder="https://your-project.supabase.co" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-xs text-qtext font-mono">
-            <input id="inputSupabaseAnon" type="text" placeholder="Supabase Anon Public Key" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-2.5 py-1.5 text-xs text-qtext font-mono">
-            <button id="btnSaveSupabaseKeys" type="button" class="w-full py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs transition">
-              Save Project Keys
-            </button>
-          </div>
-        </details>
       </div>
     </div>
 
@@ -10788,17 +10773,15 @@
       if (activeUser) {
         const name = activeUser.email ? activeUser.email.split('@')[0] : 'Synced';
         if (lbl) lbl.textContent = name;
-        if (box) box.innerHTML = `Status: <strong class="text-emerald-400">Signed in as ${activeUser.email || 'Member'}</strong>${!navigator.onLine ? ' <span class="text-amber-400">(Offline Mode)</span>' : ''}`;
+        if (box) {
+          box.classList.remove('hidden');
+          box.innerHTML = `Signed in as <strong class="text-emerald-400">${activeUser.email || 'Member'}</strong>${!navigator.onLine ? ' <span class="text-amber-400">(Offline Mode)</span>' : ''}`;
+        }
         if (outC) outC.classList.add('hidden');
         if (inC) inC.classList.remove('hidden');
       } else {
-        const cfg = getSavedSupabaseConfig();
-        if (lbl) lbl.textContent = 'Sign In / Sync';
-        if (box) {
-          box.innerHTML = cfg.url
-            ? 'Status: <strong class="text-amber-400">Guest Mode (Sign in to unlock Learn)</strong>'
-            : 'Status: <strong class="text-amber-400">Guest Mode (Saved Locally)</strong><div class="mt-1 text-[11px] opacity-80">Add your Supabase Project Keys below to enable sign-in &amp; cross-device sync.</div>';
-        }
+        if (lbl) lbl.textContent = 'Sign In';
+        if (box) box.classList.add('hidden');
         if (outC) outC.classList.remove('hidden');
         if (inC) inC.classList.add('hidden');
       }
