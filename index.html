@@ -355,9 +355,7 @@
           </button>
         </nav>
 
-        <button id="btnQuickAddSong" type="button" class="px-2 py-1 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/40 text-[11px] font-bold transition" title="Add MP3/WMA/MP4 or Search Online">
-          ➕<span class="hidden sm:inline ml-1">Add</span>
-        </button>
+
 
         <button id="btnQuickThemeCycle" type="button" class="px-1.5 py-1 rounded-lg bg-[#121212] hover:bg-zinc-800 text-qtext border border-[#2C2C2E] hover:border-amber-500/60 text-[11px] font-bold transition flex items-center gap-1" title="Display Theme: Bright — Click to cycle Bright / Gray / Dark / Auto" aria-label="Switch Display Theme">
           <span id="quickThemeIcon">☀️</span>
@@ -615,10 +613,7 @@
             <span>🎼</span>
             <span id="stageTabHighwayLabel">TAB: Auto</span>
           </button>
-          <button id="btnOpenMicCalib" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-emerald-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="5-Second Mic &amp; Speaker Echo Calibration">
-            <span>🎚️</span>
-            <span>Calib</span>
-          </button>
+
         </div>
 
         <div class="flex items-center gap-2">
@@ -678,24 +673,26 @@
     <!-- TAB VIEW 2: MY SONGBOOK (IndexedDB Local Library + Preloaded Songs) -->
     <div id="viewSongbook" class="hidden space-y-4">
       <div class="q-card rounded-2xl p-5 space-y-4">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#2C2C2E] pb-3">
-          <div>
-            <h2 class="text-lg font-extrabold text-qtext">My Offline Songbook (<span id="songbookCountBadge">175</span> Unique Songs)</h2>
-            <p class="text-xs text-qmuted">220+ unique non-duplicated songs with full Verse 1 / Chorus / Verse 2 / Bridge charts, verified strumming &amp; fingerpicking patterns, harmonic GCEA tabs, and on-demand LRCLIB + Google Drive sync.</p>
-            <div class="mt-2 flex flex-wrap items-center gap-2">
-              <input id="songbookFilterInput" type="text" placeholder="Filter 220+ unique songs by title, artist, strum, or meter..." class="w-full sm:w-72 bg-zinc-900 border border-zinc-700 rounded-xl px-3 py-1.5 text-xs text-qtext placeholder-qmuted focus:outline-none focus:border-amber-500">
-              <div class="flex flex-wrap items-center gap-1">
-                <button type="button" data-sb-cat="all" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500 text-black">All</button>
-                <button type="button" data-sb-cat="sots" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Sword of the Spirit</button>
-                <button type="button" data-sb-cat="catholic" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Catholic &amp; Hymns</button>
-                <button type="button" data-sb-cat="hindi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Hindi Gospel</button>
-                <button type="button" data-sb-cat="marathi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Marathi Gospel</button>
-                <button type="button" data-sb-cat="3/4" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">3/4 Waltz</button>
-                <button type="button" data-sb-cat="6/8" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">6/8 Rolling</button>
-                <button type="button" data-sb-cat="christmas" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">🎄 Christmas</button>
-                <button type="button" data-sb-cat="fingerpick" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">🤌 Fingerpick</button>
-                <button type="button" data-sb-cat="hydrated" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">✨ Full Lyrics</button>
-              </div>
+        <div class="flex flex-col gap-3 border-b border-[#2C2C2E] pb-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h2 class="text-lg font-extrabold text-qtext">Songbook (<span id="songbookCountBadge">221</span> Songs)</h2>
+            <div class="flex items-center gap-2">
+              <button id="btnOpenRequestSong" type="button" class="px-3 py-1.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-xs font-mono font-bold text-amber-300 transition">
+                🎵 Request a Song
+              </button>
+              <button id="btnOpenSetlistHub" type="button" class="px-3 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-xs font-mono font-bold text-emerald-300 transition">
+                🤝 Setlists
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <input id="songbookFilterInput" type="text" placeholder="Search title, artist, fingerpicking, 3-chord, 3/4, Christmas..." class="w-full sm:w-80 bg-zinc-900 border border-zinc-700 rounded-xl px-3 py-1.5 text-xs text-qtext placeholder-qmuted focus:outline-none focus:border-amber-500">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <button type="button" data-sb-cat="all" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500 text-black">All</button>
+              <button type="button" data-sb-cat="english" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">English</button>
+              <button type="button" data-sb-cat="catholic" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Catholic &amp; Hymns</button>
+              <button type="button" data-sb-cat="hindi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Hindi Gospel</button>
+              <button type="button" data-sb-cat="marathi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Marathi Gospel</button>
             </div>
           </div>
         </div>
@@ -730,52 +727,33 @@
       </div>
 
       <div id="learnUnlockedContent" class="space-y-4">
-      <!-- Top Header: Rank Progress, Streak, Stars, Hosted Packs & Cloud Sync -->
+      <!-- Top Header: Coach Level, Stars, Streak & Account -->
       <div class="q-card rounded-2xl p-4 sm:p-5 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <div class="flex items-center gap-2">
-              <h2 class="text-lg sm:text-xl font-black text-qtext tracking-tight">🎓 Ukulele Coach &amp; Training Gym</h2>
-              <span id="learnRankBadge" class="px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-[11px] font-mono font-bold text-emerald-400">🌱 Beginner</span>
-            </div>
-            <p class="text-xs text-qmuted mt-0.5">Structured drills with 🎙️ automatic microphone listening and live Coach feedback on chords &amp; rhythm.</p>
+          <div class="flex items-center gap-2.5">
+            <span class="text-xs font-mono uppercase tracking-wider text-qmuted font-bold">Your Level</span>
+            <span id="learnRankBadge" class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-xs sm:text-sm font-black text-emerald-400">Beginner</span>
           </div>
           <div class="flex flex-wrap items-center gap-2">
-            <div class="px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-mono font-bold text-amber-400">
-              🔥 Streak: <span id="learnStreakCount">0</span>d
-            </div>
-            <div id="learnTodayGoalPill" class="px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-300" title="Daily minimum goal is 1 lesson — keep going for unlimited lessons per day!">
-              ✅ Today: <span id="learnTodayCount">0</span>/1
-            </div>
             <div class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-mono font-bold text-emerald-400">
-              ⭐ Stars: <span id="learnStarsCount">0</span>
+              ⭐ <span id="learnStarsCount">0</span>
             </div>
-            <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-xs font-mono font-bold text-amber-300 transition" title="2-Minute Skill Placement Check — jump straight to your true Unit">
+            <div class="px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-mono font-bold text-amber-400">
+              🔥 <span id="learnStreakCount">0</span>d
+            </div>
+            <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-xs font-mono font-bold text-qtext transition" title="Quickly skip to your current level">
               🧭 Placement
             </button>
-            <button id="btnOpenCreatorStudio" type="button" class="px-3 py-1.5 rounded-xl bg-fuchsia-500/15 hover:bg-fuchsia-500/25 border border-fuchsia-400/50 text-xs font-mono font-bold text-fuchsia-300 transition" title="Visual Tap-to-Sync Song &amp; Pack Creator Studio">
-              🛠️ Studio
-            </button>
-            <button id="btnOpenSetlistHub" type="button" class="px-3 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-xs font-mono font-bold text-emerald-300 transition" title="Worship-Group / Choir Setlist Builder &amp; Shareable Link">
-              🤝 Setlists
-            </button>
-            <button id="btnInstallPwaApp" type="button" class="hidden px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-mono font-black transition" title="Install QCoach Studio to your Home Screen">
-              📲 Install
-            </button>
-            <button id="btnLoadHostedPacks" type="button" class="px-3 py-1.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-300 transition" title="Sync additional Song Packs from hosted packs/manifest.json">
-              📦 Packs
-            </button>
-            <button id="btnOpenCloudAuth" type="button" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-xs font-mono font-bold text-indigo-300 transition" title="Sign in with Google or Email (Supabase) to sync your streak &amp; star ratings across devices">
-              ☁️ <span id="cloudAuthBtnLabel">Sign In / Sync</span>
+            <button id="btnOpenCloudAuth" type="button" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-xs font-mono font-bold text-indigo-300 transition">
+              ☁️ <span id="cloudAuthBtnLabel">Sign In</span>
             </button>
           </div>
         </div>
 
-        <!-- Rank Promotion Progress Bar -->
+        <!-- Coach Level Progress Bar -->
         <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2 space-y-1.5">
           <div class="flex items-center justify-between text-[11px] font-mono">
-            <span id="learnRankProgressLabel" class="text-qtext font-bold">Progress to 🎸 Intermediate: 0 / 12 Stars</span>
-            <span id="learnRankCriteriaHint" class="text-qmuted">Pass drills at ≥80% accuracy to promote</span>
+            <span id="learnRankProgressLabel" class="text-qtext font-bold">Intermediate: 0 / 30 ⭐</span>
           </div>
           <div class="w-full h-2 rounded-full bg-zinc-800 overflow-hidden">
             <div id="learnRankProgressBar" class="h-full bg-gradient-to-r from-emerald-500 to-amber-400 transition-all duration-300" style="width: 4%;"></div>
@@ -787,9 +765,8 @@
       <div class="flex flex-wrap items-center justify-between gap-2">
         <div class="inline-flex items-center gap-1 p-1 rounded-xl bg-[#121212] border border-[#2C2C2E]">
           <button id="btnLearnModePath" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-black bg-amber-500 text-black shadow transition">🗺️ Guided Path</button>
-          <button id="btnLearnModeGym" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-qmuted hover:text-qtext transition">🏋️ Skill Gym (7 Panes)</button>
+          <button id="btnLearnModeGym" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-qmuted hover:text-qtext transition">🏋️ Skill Gym</button>
         </div>
-        <span class="text-[11px] font-mono text-qmuted">Minimum 1 lesson/day · Unlimited pace anytime</span>
       </div>
 
       <!-- MODE A (DEFAULT): 🗺️ LINEAR GUIDED PATH -->
@@ -802,7 +779,7 @@
               <span id="nextLessonUnitBadge" class="text-[11px] font-mono text-amber-400 font-bold">Unit 1 · Lesson 1.1</span>
             </div>
             <h3 id="nextLessonTitle" class="text-base sm:text-lg font-black text-qtext">C Major Mastery</h3>
-            <p id="nextLessonDesc" class="text-xs text-qmuted">🎙️ Auto-Listen ON — pass at ≥75% to unlock the next lesson immediately.</p>
+            <p id="nextLessonDesc" class="text-xs text-qmuted">Play cleanly to unlock the next lesson.</p>
           </div>
           <div class="flex items-center gap-2 shrink-0">
             <button id="btnContinueNextLessonDrill" type="button" class="px-3 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition" title="Start at 75% tempo with Auto-Ramp">
@@ -1132,45 +1109,62 @@
       </div>
     </div>
 
-<div id="viewTuner" class="hidden space-y-4">
-      <div class="q-card rounded-2xl p-5 max-w-3xl mx-auto space-y-5">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#2C2C2E] pb-3">
+    <!-- 🎵 REQUEST A SONG MODAL (Saves to Supabase community_song_submissions) -->
+    <div id="requestSongModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="q-card rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl border border-amber-500/40">
+        <div class="flex items-start justify-between gap-2">
           <div>
-            <div class="flex flex-wrap items-center gap-2">
-              <span id="tunerModeBadge" class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold">
-                High G · Concert Re-Entrant
-              </span>
-              <div class="inline-flex items-center gap-0.5 bg-[#121212] p-0.5 rounded-lg border border-[#2C2C2E]">
-                <button type="button" data-g-mode="high" class="tuner-g-mode-btn px-2 py-0.5 rounded-md text-[11px] font-mono font-bold bg-amber-500 text-black transition">High G (G4)</button>
-                <button type="button" data-g-mode="low" class="tuner-g-mode-btn px-2 py-0.5 rounded-md text-[11px] font-mono font-semibold text-qmuted hover:text-qtext transition">Low G (G3)</button>
-              </div>
+            <h3 class="text-base font-black text-qtext">🎵 Request a Song</h3>
+            <p class="text-xs text-qmuted mt-0.5">Tell us what song you want added to the curated QCoach Songbook.</p>
+          </div>
+          <button id="btnCloseRequestSong" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold shrink-0">✕</button>
+        </div>
+        <div class="space-y-2.5">
+          <input id="reqSongTitle" type="text" placeholder="Song Title (required)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+          <input id="reqSongArtist" type="text" placeholder="Artist / Hymnbook (optional)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+          <select id="reqSongLang" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+            <option value="en">English / Worship / Hymn</option>
+            <option value="hi">Hindi Gospel</option>
+            <option value="mr">Marathi Gospel</option>
+          </select>
+          <input id="reqSongYoutube" type="url" placeholder="YouTube Link (optional)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+        </div>
+        <button id="btnSubmitRequestSong" type="button" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs sm:text-sm shadow transition">
+          Send Request
+        </button>
+      </div>
+    </div>
+
+<div id="viewTuner" class="hidden space-y-4">
+      <div class="q-card rounded-2xl p-5 max-w-2xl mx-auto space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#2C2C2E] pb-3">
+          <div class="flex flex-wrap items-center gap-3">
+            <h2 id="tunerMainHeading" class="text-xl font-black text-qtext font-mono tracking-tight">G4 · C4 · E4 · A4</h2>
+            <div class="inline-flex items-center gap-0.5 bg-[#121212] p-0.5 rounded-lg border border-[#2C2C2E]">
+              <button type="button" data-g-mode="high" class="tuner-g-mode-btn px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500 text-black transition">High G</button>
+              <button type="button" data-g-mode="low" class="tuner-g-mode-btn px-2.5 py-1 rounded-md text-xs font-mono font-semibold text-qmuted hover:text-qtext transition">Low G</button>
             </div>
-            <h2 id="tunerMainHeading" class="text-xl font-extrabold text-qtext mt-1">Ukulele Tuner · G4 · C4 · E4 · A4</h2>
-            <p class="text-xs text-qmuted">Pluck-Lock &amp; Decay-Free Hold · Skips initial pluck spike, captures true pitch &amp; freezes needle before string fade</p>
           </div>
           <button id="btnToggleMicTuner" type="button" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition shrink-0">
-            🎙️ Start Microphone Tuner
+            🎙️ Start Tuner
           </button>
         </div>
 
-        <!-- Analog Cents Needle Gauge & Live Frequency Readout -->
+        <!-- Clean Analog Needle Gauge & Detected Note -->
         <div class="rounded-2xl bg-[#121212] border border-[#2C2C2E] p-5 flex flex-col items-center space-y-4">
-          <div class="flex items-center gap-3">
-            <span id="tunerStatusPill" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-zinc-800 text-zinc-400 border border-zinc-700">
-              Mic Standby — Click Start or Pluck Reference Tone
-            </span>
-          </div>
+          <span id="tunerStatusPill" class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-zinc-800 text-zinc-400 border border-zinc-700">
+            Tap Start Tuner, then pluck a string
+          </span>
 
-          <!-- Analog Gauge SVG (-50 to +50 cents) -->
           <div class="w-full max-w-md">
             <svg id="tunerGaugeSvg" viewBox="0 0 320 170" class="w-full h-auto overflow-visible">
               <path d="M 30 145 A 130 130 0 0 1 290 145" fill="none" stroke="#2C2C2E" stroke-width="14" stroke-linecap="round"></path>
               <path d="M 148 15.5 A 130 130 0 0 1 172 15.5" fill="none" stroke="#10B981" stroke-width="16"></path>
-              <text x="22" y="164" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">-50c</text>
-              <text x="72" y="55" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">-25c</text>
-              <text x="148" y="10" fill="#10B981" font-size="11" font-weight="bold" font-family="JetBrains Mono">0c</text>
-              <text x="225" y="55" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">+25c</text>
-              <text x="275" y="164" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">+50c</text>
+              <text x="22" y="164" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">-50</text>
+              <text x="72" y="55" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">-25</text>
+              <text x="155" y="10" fill="#10B981" font-size="11" font-weight="bold" font-family="JetBrains Mono">0</text>
+              <text x="225" y="55" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">+25</text>
+              <text x="275" y="164" fill="#A1A1AA" font-size="10" font-family="JetBrains Mono">+50</text>
               <g id="tunerNeedleGroup" transform="rotate(0 160 145)">
                 <line x1="160" y1="145" x2="160" y2="26" stroke="#F59E0B" stroke-width="4" stroke-linecap="round" id="tunerNeedleLine"></line>
                 <circle cx="160" cy="145" r="9" fill="#F4F4F5"></circle>
@@ -1180,80 +1174,26 @@
 
           <div class="text-center space-y-1">
             <div class="flex items-baseline justify-center gap-3">
-              <span id="tunerDetectedString" class="text-5xl font-black text-amber-400 font-mono">A4</span>
-              <span id="tunerCentsReadout" class="text-xl font-mono font-bold text-emerald-400">0.0 cents</span>
+              <span id="tunerDetectedString" class="text-5xl font-black text-amber-400 font-mono">G4</span>
+              <span id="tunerCentsReadout" class="text-lg font-mono font-bold text-emerald-400">0.0</span>
             </div>
-            <div id="tunerHzReadout" class="text-sm font-mono text-qmuted">Target: 440.00 Hz · Live: 440.00 Hz</div>
+            <div id="tunerHzReadout" class="hidden"></div>
           </div>
         </div>
 
-        <!-- Collapsible Tuning Peg Simulator (Hidden by default so real ukulele players see a clean Tuner) -->
-        <div class="flex items-center justify-center">
-          <button id="btnToggleTunerTestBar" type="button" class="px-3 py-1.5 rounded-lg bg-[#121212] hover:bg-zinc-800 text-xs font-mono text-qmuted hover:text-qtext border border-[#2C2C2E] transition">
-            🎛️ Test Without Mic / Practice by Ear ▼
-          </button>
-        </div>
-        <div id="tunerLivePickupBar" class="hidden rounded-2xl bg-[#121212] border border-emerald-500/40 p-4 space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center gap-2">
-              <span id="tunerSourceModeDot" class="w-2.5 h-2.5 rounded-full bg-zinc-600"></span>
-              <span id="tunerSourceModeLabel" class="text-xs font-mono font-bold text-emerald-400">
-                Preview &amp; Hardware Mic Ready — Click "🎙️ Start Microphone Tuner" Above
-              </span>
-            </div>
-            <button id="btnAutoCenterPeg" type="button" class="px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold transition" title="Bring active string smoothly to 0.0 cents In-Tune">
-              🎯 Tune Peg to 0.0c (In-Tune)
-            </button>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
-            <div class="sm:col-span-5 flex items-center gap-1.5">
-              <span class="text-[11px] font-mono text-qmuted shrink-0">Pluck String:</span>
-              <button id="btnSimStringG" type="button" data-sim-string="G4" class="btn-sim-string px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono font-bold text-qtext border border-zinc-700">G4</button>
-              <button type="button" data-sim-string="C4" class="btn-sim-string px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono font-bold text-qtext border border-zinc-700">C4</button>
-              <button type="button" data-sim-string="E4" class="btn-sim-string px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono font-bold text-qtext border border-zinc-700">E4</button>
-              <button type="button" data-sim-string="A4" class="btn-sim-string px-2.5 py-1 rounded-lg bg-amber-500 text-black text-xs font-mono font-black border border-amber-300">A4</button>
-            </div>
-            <div class="sm:col-span-7 flex items-center gap-2">
-              <span class="text-xs font-mono text-red-400 shrink-0">-40c Flat</span>
-              <input id="sliderTunerPegCents" type="range" min="-40" max="40" step="0.5" value="0" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer" title="Adjust Tuning Peg (-40 cents Flat to +40 cents Sharp) to test live microphone pitch detection in preview">
-              <span class="text-xs font-mono text-red-400 shrink-0">+40c Sharp</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 Concert Ukulele String Cards -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div id="tunerCardG" data-string="G4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-center space-y-2">
-            <div id="tunerCardGSub" class="text-xs font-mono text-qmuted">String 4 (High G)</div>
+        <!-- 4 Clean Ukulele String Indicators -->
+        <div class="grid grid-cols-4 gap-2.5">
+          <div id="tunerCardG" data-string="G4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
             <div id="tunerCardGName" class="text-2xl font-black text-qtext font-mono">G4</div>
-            <div id="tunerCardGHz" class="text-xs font-mono text-amber-400">392.00 Hz</div>
-            <button id="tunerCardGBtn" type="button" data-ref-string="G4" class="btn-ref-tone w-full py-1.5 rounded-lg bg-zinc-800 hover:bg-amber-500 hover:text-black text-xs font-bold transition">
-              🔊 Play G4 Tone
-            </button>
           </div>
-          <div data-string="C4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-center space-y-2">
-            <div class="text-xs font-mono text-qmuted">String 3 (Lowest)</div>
+          <div data-string="C4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
             <div class="text-2xl font-black text-qtext font-mono">C4</div>
-            <div class="text-xs font-mono text-amber-400">261.63 Hz</div>
-            <button type="button" data-ref-string="C4" class="btn-ref-tone w-full py-1.5 rounded-lg bg-zinc-800 hover:bg-amber-500 hover:text-black text-xs font-bold transition">
-              🔊 Play C4 Tone
-            </button>
           </div>
-          <div data-string="E4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-center space-y-2">
-            <div class="text-xs font-mono text-qmuted">String 2</div>
+          <div data-string="E4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
             <div class="text-2xl font-black text-qtext font-mono">E4</div>
-            <div class="text-xs font-mono text-amber-400">329.63 Hz</div>
-            <button type="button" data-ref-string="E4" class="btn-ref-tone w-full py-1.5 rounded-lg bg-zinc-800 hover:bg-amber-500 hover:text-black text-xs font-bold transition">
-              🔊 Play E4 Tone
-            </button>
           </div>
-          <div data-string="A4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-center space-y-2">
-            <div class="text-xs font-mono text-qmuted">String 1 (Bottom)</div>
+          <div data-string="A4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
             <div class="text-2xl font-black text-qtext font-mono">A4</div>
-            <div class="text-xs font-mono text-amber-400">440.00 Hz</div>
-            <button type="button" data-ref-string="A4" class="btn-ref-tone w-full py-1.5 rounded-lg bg-zinc-800 hover:bg-amber-500 hover:text-black text-xs font-bold transition">
-              🔊 Play A4 Tone
-            </button>
           </div>
         </div>
       </div>
@@ -1482,6 +1422,17 @@
               Hidden (Badge Only)
             </button>
           </div>
+        </div>
+
+        <!-- Song Creator Studio (Advanced / Admin) -->
+        <div data-settings-panel="library" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-fuchsia-500/40 p-4 flex items-center justify-between gap-3">
+          <div>
+            <h3 class="text-xs font-mono uppercase tracking-wider text-fuchsia-400 font-bold">🛠️ Song &amp; Pack Creator Studio</h3>
+            <p class="text-xs text-qmuted mt-0.5">Tap-to-Sync lyrics and export verified song packs.</p>
+          </div>
+          <button id="btnOpenCreatorStudio" type="button" class="px-3 py-1.5 rounded-xl bg-fuchsia-500/20 hover:bg-fuchsia-500/35 border border-fuchsia-400/50 text-xs font-mono font-bold text-fuchsia-300 transition shrink-0">
+            Open Studio
+          </button>
         </div>
 
         <!-- SECTION 2: Unified Add Song Pipeline (Song Name / YouTube Link / MP3 Upload) -->
@@ -7236,19 +7187,38 @@
       const filterQ = filterEl ? filterEl.value.trim().toLowerCase() : '';
       const cat = state.songbookCategory || 'all';
       const visibleSongs = state.songs.filter(sg => {
+        const isHindi = (sg.mediaFormat || '').toLowerCase().includes('hindi') || (sg.artist || '').toLowerCase().includes('hindi');
+        const isMarathi = (sg.mediaFormat || '').toLowerCase().includes('marathi') || (sg.artist || '').toLowerCase().includes('marathi');
+        if (cat === 'english' && (isHindi || isMarathi)) return false;
+        if (cat === 'catholic' && !((sg.mediaFormat || '').toLowerCase().includes('catholic') || (sg.artist || '').toLowerCase().includes('hymn') || (sg.artist || '').toLowerCase().includes('catholic'))) return false;
+        if (cat === 'hindi' && !isHindi) return false;
+        if (cat === 'marathi' && !isMarathi) return false;
+        if (!filterQ) return true;
+
         const patText = getPatternLabelForSong(sg).toLowerCase();
-        const matchesText = !filterQ || (sg.title || '').toLowerCase().includes(filterQ) || (sg.artist || '').toLowerCase().includes(filterQ) || (sg.mediaFormat || '').toLowerCase().includes(filterQ) || patText.includes(filterQ);
-        if (!matchesText) return false;
-        if (cat === 'sots') return (sg.artist || '').toLowerCase().includes('sword of the spirit') || (sg.mediaFormat || '').toLowerCase().includes('sword of the spirit');
-        if (cat === 'catholic') return (sg.mediaFormat || '').toLowerCase().includes('catholic') || (sg.artist || '').toLowerCase().includes('hymn') || (sg.artist || '').toLowerCase().includes('catholic');
-        if (cat === '3/4') return sg.musicalMeta && sg.musicalMeta.timeSignature && sg.musicalMeta.timeSignature.beatsPerBar === 3;
-        if (cat === '6/8') return sg.musicalMeta && sg.musicalMeta.timeSignature && sg.musicalMeta.timeSignature.beatsPerBar === 6;
-        if (cat === 'hindi') return (sg.mediaFormat || '').toLowerCase().includes('hindi') || (sg.artist || '').toLowerCase().includes('hindi');
-        if (cat === 'marathi') return (sg.mediaFormat || '').toLowerCase().includes('marathi') || (sg.artist || '').toLowerCase().includes('marathi');
-        if (cat === 'christmas') return (sg.mediaFormat || '').toLowerCase().includes('christmas');
-        if (cat === 'fingerpick') return (sg.musicalMeta && sg.musicalMeta.strumPattern || []).some(x => ['G', 'C', 'E', 'A'].includes(x));
-        if (cat === 'hydrated') return !!sg.lyricsHydrated;
-        return true;
+        const ts = sg.musicalMeta && sg.musicalMeta.timeSignature;
+        const meterStr = ts ? `${ts.beatsPerBar}/${ts.beatUnit}` : '';
+        const isFp = (sg.musicalMeta && sg.musicalMeta.strumPattern || []).some(x => ['G', 'C', 'E', 'A'].includes(x)) || /pick|arp|travis/i.test(patText);
+        const chordSet = new Set();
+        (sg.sections || []).forEach(sec => (sec.bars || []).forEach(b => {
+          const c = b.chordBeginner || b.chordIntermediate || b.chordExpert;
+          if (c) chordSet.add(String(c).toLowerCase());
+        }));
+        const uniqueChordCount = chordSet.size;
+
+        if (/finger\s*pick|arpeggio|travis|picking/.test(filterQ)) return isFp;
+        if (/(3|three)[\s-]*(chord|finger)|easy\s*chord/.test(filterQ)) return uniqueChordCount > 0 && uniqueChordCount <= 3;
+        if (/(4|four)[\s-]*(chord|finger)/.test(filterQ)) return uniqueChordCount > 0 && uniqueChordCount <= 4;
+        if (/waltz|3\/4/.test(filterQ)) return meterStr === '3/4';
+        if (/6\/8|dadra|rolling/.test(filterQ)) return meterStr === '6/8';
+
+        return (sg.title || '').toLowerCase().includes(filterQ)
+          || (sg.artist || '').toLowerCase().includes(filterQ)
+          || (sg.mediaFormat || '').toLowerCase().includes(filterQ)
+          || (sg.category || '').toLowerCase().includes(filterQ)
+          || patText.includes(filterQ)
+          || meterStr.includes(filterQ)
+          || chordSet.has(filterQ);
       });
       visibleSongs.forEach((song) => {
         const isCurrent = song.id === state.currentSongId;
@@ -7631,6 +7601,9 @@
           const effectiveBpm = Math.round(song.musicalMeta.bpm * (song.autoSync.playbackRate || 1.0));
           if (effectiveBpm > song.masteryStats.maxCleanBpm) {
             song.masteryStats.maxCleanBpm = effectiveBpm;
+          }
+          if (typeof showListenPassSummaryIfReady === 'function') {
+            showListenPassSummaryIfReady();
           }
 
           if (state.loopEnabled) {
@@ -8345,9 +8318,19 @@
     }
 
     function showListenPassSummaryIfReady() {
-      if (!state.listenEnabled) return;
+      if (!state.listenEnabled) {
+        if (state.activeDrillMeta) {
+          showToast('✓ Practice pass finished! Turn on 🎙️ Listen to get graded & mark Passed.', 'info');
+        }
+        return;
+      }
       const vals = Object.values(state.listenBarResults);
-      if (vals.length < 3) return;
+      if (vals.length < 1) {
+        if (state.activeDrillMeta) {
+          showToast('🎙️ No strums detected — check your mic or Noise Filter and try again.', 'warn');
+        }
+        return;
+      }
       const hits = vals.filter(v => v === 'hit').length;
       const chordPct = Math.round((hits / vals.length) * 100);
       const rhythmPct = listenEngine.onsetCount > 0
@@ -8381,6 +8364,7 @@
         }
       }
       if (state.activeDrillMeta && state.activeDrillMeta.id) saveDrillScore(state.activeDrillMeta.id, finalPct);
+      if (typeof renderLearnPathView === 'function') renderLearnPathView();
       if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
       if (typeof openCoachDiagnosisCard === 'function') openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, state.activeDrillMeta);
       showToast(`${stars} ${finalPct}% Accuracy (${hits}/${vals.length} bars · ${rhythmPct}% On-Beat)${bestNote}`, finalPct >= 65 ? 'success' : 'info');
@@ -8406,8 +8390,7 @@
         lvlBar.style.width = pct + '%';
       }
 
-      const dynGate = Math.max(0.005, Number(localStorage.getItem('qcoach_mic_noise_gate') || 0.008));
-      if (typeof handleMicCalibrationSample === 'function') handleMicCalibrationSample(rms);
+      const dynGate = (typeof updateAdaptiveNoiseGate === 'function') ? updateAdaptiveNoiseGate(rms, nowMs) : 0.008;
       const isStrumOnset = rms > dynGate && rms > listenEngine.prevRms * 1.24 && (nowMs - listenEngine.lastOnsetMs) > 140;
       listenEngine.prevRms = rms * 0.65 + listenEngine.prevRms * 0.35;
 
@@ -8540,6 +8523,7 @@
     }
 
     async function startChordListener() {
+      state.globalMicWanted = true;
       if (state.listenEnabled && listenEngine.analyser) return;
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
         showToast('Microphone API unavailable here — open QCoach on your HTTPS GitHub Pages URL.', 'warn');
@@ -8547,7 +8531,7 @@
       }
       try {
         if (typeof stopTunerMicrophone === 'function') {
-          try { stopTunerMicrophone(); } catch (e) {}
+          try { stopTunerMicrophone(true); } catch (e) {}
         }
         const stream = await navigator.mediaDevices.getUserMedia({
           audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false }
@@ -8592,6 +8576,7 @@
     }
 
     function stopChordListener(silent = false) {
+      if (!silent) state.globalMicWanted = false;
       if (listenEngine.rafId) {
         cancelAnimationFrame(listenEngine.rafId);
         listenEngine.rafId = null;
@@ -8622,7 +8607,7 @@
       "id": "drill-ch-c",
       "title": "C Major Mastery",
       "tier": "beginner",
-      "badge": "🌱 Step 1",
+      "badge": "Step 1",
       "desc": "Ring finger on A-string Fret 3. Keep thumb centered behind the neck.",
       "chords": [
         "C",
@@ -8643,7 +8628,7 @@
       "id": "drill-ch-am",
       "title": "A Minor (Am) Mastery",
       "tier": "beginner",
-      "badge": "🌱 Step 2",
+      "badge": "Step 2",
       "desc": "Middle finger on G-string Fret 2. One-finger warm minor chord.",
       "chords": [
         "Am",
@@ -8664,7 +8649,7 @@
       "id": "drill-ch-f",
       "title": "F Major Mastery",
       "tier": "beginner",
-      "badge": "🌱 Step 3",
+      "badge": "Step 3",
       "desc": "Index on E-Fret 1, Middle on G-Fret 2. Essential worship chord.",
       "chords": [
         "F",
@@ -8685,7 +8670,7 @@
       "id": "drill-ch-g",
       "title": "G Major Triangle",
       "tier": "beginner",
-      "badge": "🌱 Step 4",
+      "badge": "Step 4",
       "desc": "3-finger triangle (0-2-3-2). Most important beginner milestone.",
       "chords": [
         "G",
@@ -8771,7 +8756,7 @@
       "id": "drill-tr-c-am",
       "title": "C ↔ Am Smooth Switch",
       "tier": "beginner",
-      "badge": "🌱 Easiest Switch",
+      "badge": "Easiest Switch",
       "desc": "Alternate 1-finger C and Am every bar with zero pause between beats.",
       "chords": [
         "C",
@@ -8792,7 +8777,7 @@
       "id": "drill-tr-c-f",
       "title": "C ↔ F Worship Switch",
       "tier": "beginner",
-      "badge": "🌱 Core Switch",
+      "badge": "Core Switch",
       "desc": "The #1 chord change in hymns & gospel songs. Nail clean F landings.",
       "chords": [
         "C",
@@ -8813,7 +8798,7 @@
       "id": "drill-tr-c-g",
       "title": "C ↔ G Anchor Switch",
       "tier": "beginner",
-      "badge": "🌱 Core Switch",
+      "badge": "Core Switch",
       "desc": "Use your ring finger on Fret 3 as a pivot from A-string to E-string.",
       "chords": [
         "C",
@@ -8963,7 +8948,7 @@
       "id": "drill-st-down",
       "title": "All-Down Metronome Lock",
       "tier": "beginner",
-      "badge": "🌱 Rhythm 1",
+      "badge": "Rhythm 1",
       "desc": "Hold C Major and lock every down-strum squarely on Beats 1–2–3–4.",
       "chords": [
         "C",
@@ -8984,7 +8969,7 @@
       "id": "drill-st-waltz",
       "title": "3/4 Worship Waltz",
       "tier": "beginner",
-      "badge": "🌱 3/4 Meter",
+      "badge": "3/4 Meter",
       "desc": "D - D U D U (1 - 2 & 3 &) for Amazing Grace & traditional Catholic hymns.",
       "chords": [
         "C",
@@ -9005,7 +8990,7 @@
       "id": "drill-st-island",
       "title": "Island / Calypso Groove",
       "tier": "beginner",
-      "badge": "🌱 Rhythm 2",
+      "badge": "Rhythm 2",
       "desc": "D - D U - U D U on C–G–Am–F. Keep your right hand swinging steadily.",
       "chords": [
         "C",
@@ -9379,7 +9364,7 @@
       "songKey": "this little light of mine",
       "title": "Milestone 1: This Little Light of Mine",
       "tier": "beginner",
-      "badge": "🌱 Unit 1 Exam",
+      "badge": "Unit 1 Exam",
       "desc": "Score ≥75% with steady 4/4 strumming and clean beginner chord switches.",
       "bpm": 76,
       "tip": "Keep your right hand steady on every beat—focus on crisp C and F landings."
@@ -9453,7 +9438,7 @@
     let QCOACH_GUIDED_UNITS = [
   {
     "unit": 1,
-    "badge": "🌱 Unit 1 · First Chords & Steady Pulse",
+    "badge": "Unit 1 · First Chords & Steady Pulse",
     "title": "C, Am, F & Steady Down-Strums (Beginner)",
     "goal": "Build clean fingertip posture, lock onto a steady 4/4 pulse, and finish your first 3-chord worship song.",
     "lessonIds": [
@@ -9843,8 +9828,8 @@
       const modal = document.getElementById('coachDiagnosisModal');
       if (!modal) return;
       document.getElementById('coachDiagTitle').textContent = finalPct >= 85
-        ? 'Outstanding Control!'
-        : (finalPct >= 65 ? 'Solid Progress — Almost Mastered!' : 'Good Warm-Up — Let’s Tighten It Up');
+        ? '🎉 Lesson Passed — Outstanding!'
+        : (finalPct >= 75 ? '✅ Lesson Passed!' : 'Keep Practicing (Need 75% to Pass)');
       document.getElementById('coachDiagStars').textContent = stars;
       document.getElementById('coachDiagOverall').textContent = finalPct + '%';
       document.getElementById('coachDiagChords').textContent = chordPct + '%';
@@ -10153,17 +10138,18 @@
       }).join('');
     }
 
-    // Autocorrelation Single-Note Pitch Detector (220 Hz - 950 Hz ukulele melody range)
+    // Fast Autocorrelation Single-Note Pitch Detector (210 Hz - 950 Hz ukulele melody range)
     function detectSingleNoteHz(buf, sampleRate) {
-      const size = buf.length;
+      const winSize = Math.min(buf.length, 2048);
+      const offset = buf.length - winSize;
       const minLag = Math.floor(sampleRate / 950);
-      const maxLag = Math.min(Math.floor(size / 2), Math.ceil(sampleRate / 210));
+      const maxLag = Math.min(Math.floor(winSize / 2), Math.ceil(sampleRate / 210));
       let bestLag = -1;
       let bestCorr = 0;
       for (let lag = minLag; lag <= maxLag; lag++) {
         let sum = 0, normA = 0, normB = 0;
-        for (let i = 0; i < size - lag; i += 2) {
-          const a = buf[i], b = buf[i + lag];
+        for (let i = 0; i < winSize - lag; i += 2) {
+          const a = buf[offset + i], b = buf[offset + i + lag];
           sum += a * b;
           normA += a * a;
           normB += b * b;
@@ -10172,53 +10158,70 @@
         const corr = sum / denom;
         if (corr > bestCorr) { bestCorr = corr; bestLag = lag; }
       }
-      return (bestCorr >= 0.72 && bestLag > 0) ? (sampleRate / bestLag) : 0;
+      return (bestCorr >= 0.64 && bestLag > 0) ? (sampleRate / bestLag) : 0;
     }
 
     function evaluateSingleNoteTabPitch(timeData, sampleRate, rms) {
       if (!isTabHighwayActive()) return;
       const now = performance.now();
-      if (now - tabHighwayState.lastPitchEvalMs < 95) return;
+      if (now - tabHighwayState.lastPitchEvalMs < 30) return;
       tabHighwayState.lastPitchEvalMs = now;
 
       const hz = detectSingleNoteHz(timeData, sampleRate);
       if (!hz) return;
       const seq = getActiveTabSequence();
       const curSlot = (state.currentSubdivisionIndex || 0) % seq.notes.length;
-      const target = seq.notes[curSlot];
-      if (!target) return;
-      const cents = Math.abs(1200 * Math.log2(hz / target.hz));
+      const candidates = [curSlot];
+      if (curSlot > 0 && !tabHighwayState.hitSlots[`${state.currentBarIndex}-${curSlot - 1}`]) {
+        candidates.push(curSlot - 1);
+      }
       const readout = document.getElementById('tabLivePitchReadout');
-      if (cents <= 45) {
-        tabHighwayState.hitSlots[`${state.currentBarIndex}-${curSlot}`] = true;
-        if (readout) readout.textContent = `✅ Clean ${target.note} (${Math.round(hz)} Hz)`;
-        renderMelodyTabHighway();
-      } else {
-        if (readout) readout.textContent = `♪ Heard ${Math.round(hz)} Hz → Target ${target.note} (${Math.round(target.hz)} Hz)`;
+      for (const slotIdx of candidates) {
+        const target = seq.notes[slotIdx];
+        if (!target) continue;
+        const cents = Math.abs(1200 * Math.log2(hz / target.hz));
+        if (cents <= 55) {
+          const key = `${state.currentBarIndex}-${slotIdx}`;
+          if (!tabHighwayState.hitSlots[key]) {
+            tabHighwayState.hitSlots[key] = true;
+            renderMelodyTabHighway();
+          }
+          if (readout) {
+            readout.className = 'text-xs font-mono font-black text-emerald-400';
+            readout.textContent = '✅ Clean!';
+          }
+          return;
+        }
+      }
+      if (readout) {
+        readout.className = 'text-xs font-mono font-bold text-amber-300';
+        readout.textContent = '🎯 Try highlighted fret';
       }
     }
 
-    // 🎚️ 5-SECOND MIC & SPEAKER ECHO CALIBRATION
-    const micCalibState = { running: false, samples: [], startMs: 0 };
-    function handleMicCalibrationSample(rms) {
-      if (!micCalibState.running) return;
-      micCalibState.samples.push(rms);
-      const elapsed = performance.now() - micCalibState.startMs;
-      const pct = Math.min(100, Math.round((elapsed / 3000) * 100));
-      const bar = document.getElementById('micCalibProgressBar');
-      if (bar) bar.style.width = pct + '%';
-      if (elapsed >= 3000) {
-        micCalibState.running = false;
-        const sorted = micCalibState.samples.slice().sort((a, b) => a - b);
-        const p90 = sorted[Math.floor(sorted.length * 0.9)] || 0.005;
-        const gate = Math.min(0.045, Math.max(0.006, Number((p90 * 1.45 + 0.003).toFixed(4))));
-        try { localStorage.setItem('qcoach_mic_noise_gate', String(gate)); } catch (e) {}
-        const stEl = document.getElementById('micCalibStatusText');
-        const gEl = document.getElementById('micCalibGateValue');
-        if (stEl) stEl.textContent = '✅ Calibrated! Background room noise filtered out.';
-        if (gEl) gEl.textContent = `Gate: ${gate}`;
-        showToast(`🎚️ Mic calibrated (Noise Gate: ${gate})`, 'success');
+    // 🎚️ AUTOMATIC BACKGROUND NOISE CANCELLATION (Always ON, adapts every 2.5 min)
+    const autoNoiseState = { gate: 0.008, samples: [], lastRecalibMs: 0, initialized: false };
+    function updateAdaptiveNoiseGate(rms, nowMs) {
+      // Collect quiet/ambient samples in a rolling window
+      if (autoNoiseState.samples.length < 180) {
+        autoNoiseState.samples.push(rms);
+      } else if (nowMs - autoNoiseState.lastRecalibMs >= 150000) {
+        autoNoiseState.samples = [rms];
+        autoNoiseState.lastRecalibMs = nowMs;
       }
+      if (!autoNoiseState.initialized && autoNoiseState.samples.length >= 45) {
+        const sorted = autoNoiseState.samples.slice().sort((a, b) => a - b);
+        const floor = sorted[Math.floor(sorted.length * 0.35)] || 0.005;
+        autoNoiseState.gate = Math.min(0.038, Math.max(0.006, Number((floor * 1.65 + 0.003).toFixed(4))));
+        autoNoiseState.initialized = true;
+        autoNoiseState.lastRecalibMs = nowMs;
+      } else if (autoNoiseState.initialized && autoNoiseState.samples.length === 180 && (nowMs - autoNoiseState.lastRecalibMs >= 150000)) {
+        const sorted = autoNoiseState.samples.slice().sort((a, b) => a - b);
+        const floor = sorted[Math.floor(sorted.length * 0.35)] || 0.005;
+        autoNoiseState.gate = Math.min(0.038, Math.max(0.006, Number((floor * 1.65 + 0.003).toFixed(4))));
+        autoNoiseState.lastRecalibMs = nowMs;
+      }
+      return autoNoiseState.gate;
     }
 
     // 🛠️ VISUAL TAP-TO-SYNC SONG & PACK CREATOR STUDIO
@@ -10475,18 +10478,18 @@
         const intReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.intermediateStars) || 30;
         const expReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.expertStars) || 70;
         if (stats.rank === 'expert') {
-          rankBadge.textContent = '🔥 Advanced / Master';
+          rankBadge.textContent = '🔥 Advanced';
           if (rankLbl) rankLbl.textContent = `Mastery Unlocked · ${stats.totalStars} Stars Earned`;
           if (rankBar) rankBar.style.width = '100%';
         } else if (stats.rank === 'intermediate') {
           rankBadge.textContent = '🎸 Intermediate';
           const pct = Math.min(100, Math.round(((stats.totalStars - intReq) / Math.max(1, expReq - intReq)) * 100));
-          if (rankLbl) rankLbl.textContent = `Progress to 🔥 Advanced: ${stats.totalStars} / ${expReq} Stars`;
+          if (rankLbl) rankLbl.textContent = `Next Level: Advanced · ${stats.totalStars} / ${expReq} ⭐`;
           if (rankBar) rankBar.style.width = `${Math.max(8, pct)}%`;
         } else {
-          rankBadge.textContent = '🌱 Beginner';
+          rankBadge.textContent = 'Beginner';
           const pct = Math.min(100, Math.round((stats.totalStars / Math.max(1, intReq)) * 100));
-          if (rankLbl) rankLbl.textContent = `Progress to 🎸 Intermediate: ${stats.totalStars} / ${intReq} Stars`;
+          if (rankLbl) rankLbl.textContent = `Next Level: Intermediate · ${stats.totalStars} / ${intReq} ⭐`;
           if (rankBar) rankBar.style.width = `${Math.max(5, pct)}%`;
         }
       }
@@ -10527,64 +10530,102 @@
         const ud = document.getElementById('nextLessonDesc');
         if (ub) ub.textContent = nextStep.stepLabel;
         if (ut) ut.textContent = `${nextStep.item.title} (${nextStep.item.bpm} BPM)`;
-        if (ud) ud.textContent = `${nextStep.item.desc} 🎙️ Auto-Listen ON — pass at ≥75% or keep chaining unlimited lessons.`;
+        if (ud) ud.textContent = nextStep.item.desc;
       }
 
       const unitsWrap = document.getElementById('guidedUnitsList');
       if (unitsWrap) {
         unitsWrap.innerHTML = '';
-        QCOACH_GUIDED_UNITS.forEach(u => {
-          const passedCount = u.lessonIds.filter(id => getBestScoreForItem(findDrillById(id)) >= 75).length;
-          const unitCard = document.createElement('div');
-          unitCard.className = 'q-card rounded-2xl p-4 space-y-3';
-          const nodesHtml = u.lessonIds.map((lid, idx) => {
+        const flatSeq = getFlatGuidedSequence();
+        const masteredItems = flatSeq.filter(s => getBestScoreForItem(s.item) >= 75);
+        const activeUnitNum = nextStep ? nextStep.unit : 1;
+        const activeUnit = QCOACH_GUIDED_UNITS.find(u => u.unit === activeUnitNum) || QCOACH_GUIDED_UNITS[0];
+
+        // 1. Current Unit Stepper (Focused 6-step milestone track — no wall of 36 cards!)
+        if (activeUnit) {
+          const passedInUnit = activeUnit.lessonIds.filter(id => getBestScoreForItem(findDrillById(id)) >= 75).length;
+          const unitTrack = document.createElement('div');
+          unitTrack.className = 'q-card rounded-2xl p-4 space-y-3';
+          const stepsHtml = activeUnit.lessonIds.map((lid, idx) => {
             const item = findDrillById(lid);
             if (!item) return '';
             const best = getBestScoreForItem(item);
             const passed = best >= 75;
             const isNext = nextStep && nextStep.item.id === item.id;
-            const stars = best >= 85 ? '⭐⭐⭐' : (best >= 65 ? '⭐⭐' : (best > 0 ? '⭐' : '☆☆☆'));
-            const borderCls = isNext
-              ? 'border-2 border-emerald-400 bg-emerald-500/10'
-              : (passed ? 'border border-emerald-500/40 bg-[#121212]' : 'border border-[#2C2C2E] bg-[#121212]');
+            const pillCls = passed
+              ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-300'
+              : (isNext
+                ? 'border-2 border-amber-400 bg-amber-500/15 text-qtext shadow'
+                : 'border-[#2C2C2E] bg-[#121212] text-qmuted opacity-70');
             return `
-              <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl ${borderCls}">
-                <div class="flex items-center gap-2.5 min-w-0">
-                  <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-mono font-black shrink-0 ${passed ? 'bg-emerald-500 text-black' : (isNext ? 'bg-amber-500 text-black' : 'bg-zinc-800 text-qmuted')}">
-                    ${passed ? '✓' : (u.unit + '.' + (idx + 1))}
-                  </div>
-                  <div class="min-w-0">
-                    <div class="text-sm font-bold text-qtext truncate">${item.title}</div>
-                    <div class="text-[11px] text-qmuted truncate">${item.badge} · ${item.meter || '4/4'} · ${item.bpm} BPM</div>
-                  </div>
+              <button type="button" data-guided-id="${item.id}" class="guided-node-btn text-left p-2.5 rounded-xl border ${pillCls} flex items-center gap-2.5 hover:opacity-100 transition">
+                <span class="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-mono font-black shrink-0 ${passed ? 'bg-emerald-500 text-black' : (isNext ? 'bg-amber-500 text-black' : 'bg-zinc-800 text-qmuted')}">
+                  ${passed ? '✓' : (idx + 1)}
+                </span>
+                <div class="min-w-0 flex-1">
+                  <div class="text-xs font-bold truncate">${item.title}</div>
+                  <div class="text-[10px] font-mono opacity-80">${passed ? `Mastered · ${best}%` : (isNext ? '▶ Up Next' : 'Upcoming')}</div>
                 </div>
-                <div class="flex items-center gap-2 shrink-0">
-                  <span class="text-xs font-mono text-amber-400">${stars}</span>
-                  <button type="button" data-guided-id="${item.id}" class="guided-node-btn px-3 py-1 rounded-lg ${isNext ? 'bg-emerald-500 hover:bg-emerald-400 text-black font-black' : 'bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold'} text-xs transition">
-                    ${passed ? 'Replay' : '▶ Play'}
-                  </button>
-                </div>
-              </div>
-            `;
+              </button>`;
           }).join('');
 
-          unitCard.innerHTML = `
-            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#2C2C2E] pb-2.5">
+          unitTrack.innerHTML = `
+            <div class="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <div class="flex items-center gap-2">
-                  <span class="px-2 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/40 text-[11px] font-mono font-bold text-amber-400">${u.badge}</span>
-                  <span class="text-xs font-mono text-emerald-400 font-bold">${passedCount}/${u.lessonIds.length} Passed</span>
-                </div>
-                <h3 class="text-base font-black text-qtext mt-1">${u.title}</h3>
+                <div class="text-[11px] font-mono font-bold text-amber-400 uppercase">${activeUnit.badge} · ${passedInUnit}/${activeUnit.lessonIds.length} Done</div>
+                <h3 class="text-sm sm:text-base font-black text-qtext">${activeUnit.title}</h3>
               </div>
-              <button type="button" data-testout-id="${u.testOutId}" class="unit-testout-btn px-2.5 py-1 rounded-lg bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-indigo-300 text-[11px] font-mono font-bold transition" title="Already know this unit? Take the Unit Milestone Exam directly">
-                ⚡ Skip / Test Out
+              <button type="button" data-testout-id="${activeUnit.testOutId}" class="unit-testout-btn px-2.5 py-1 rounded-lg bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-indigo-300 text-[11px] font-mono font-bold transition">
+                ⚡ Skip Unit
               </button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-2">${nodesHtml}</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">${stepsHtml}</div>
           `;
-          unitsWrap.appendChild(unitCard);
-        });
+          unitsWrap.appendChild(unitTrack);
+        }
+
+        // 2. Mastered So Far Trophy Strip (Clean, rewarding pills of completed skills)
+        if (masteredItems.length > 0) {
+          const masteredCard = document.createElement('div');
+          masteredCard.className = 'q-card rounded-2xl p-4 space-y-2.5';
+          const chipsHtml = masteredItems.map(s => `
+            <button type="button" data-guided-id="${s.item.id}" class="guided-node-btn inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-xs font-bold text-emerald-300 transition" title="Tap to replay">
+              <span>✓</span>
+              <span>${s.item.title}</span>
+            </button>`).join('');
+          masteredCard.innerHTML = `
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-black text-emerald-400 uppercase">🏆 Mastered So Far (${masteredItems.length} / ${flatSeq.length})</span>
+              <span class="text-[11px] text-qmuted">Tap any skill to replay</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">${chipsHtml}</div>
+          `;
+          unitsWrap.appendChild(masteredCard);
+        }
+
+        // 3. Collapsed Full 6-Unit Roadmap (Peek ahead without cluttering the screen)
+        const roadmapDetails = document.createElement('details');
+        roadmapDetails.className = 'q-card rounded-2xl p-3.5 text-xs';
+        const summaryRows = QCOACH_GUIDED_UNITS.map(u => {
+          const pCnt = u.lessonIds.filter(id => getBestScoreForItem(findDrillById(id)) >= 75).length;
+          const allDone = pCnt >= u.lessonIds.length;
+          return `
+            <div class="flex items-center justify-between gap-2 py-2 border-b border-[#2C2C2E] last:border-b-0">
+              <div class="min-w-0">
+                <div class="font-bold text-qtext truncate">${allDone ? '✅ ' : (u.unit === activeUnitNum ? '▶ ' : '○ ')}${u.badge}</div>
+                <div class="text-[11px] text-qmuted truncate">${u.title}</div>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <span class="font-mono text-[11px] ${allDone ? 'text-emerald-400 font-bold' : 'text-qmuted'}">${pCnt}/${u.lessonIds.length}</span>
+                ${!allDone ? `<button type="button" data-testout-id="${u.testOutId}" class="unit-testout-btn px-2 py-0.5 rounded bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/40 text-indigo-300 text-[10px] font-mono font-bold">Skip</button>` : ''}
+              </div>
+            </div>`;
+        }).join('');
+        roadmapDetails.innerHTML = `
+          <summary class="cursor-pointer font-mono font-bold text-qmuted hover:text-qtext select-none">🗺️ View Full 6-Unit Journey (${masteredItems.length}/${flatSeq.length} Mastered)</summary>
+          <div class="mt-2 pt-1">${summaryRows}</div>
+        `;
+        unitsWrap.appendChild(roadmapDetails);
 
         unitsWrap.querySelectorAll('.guided-node-btn').forEach(btn => {
           btn.addEventListener('click', () => {
@@ -10637,7 +10678,7 @@
             </div>
             <h3 class="text-base font-black text-qtext">${item.title}</h3>
             <p class="text-xs text-qmuted leading-relaxed">${item.desc}</p>
-            <div class="text-[11px] font-mono text-cyan-400 font-semibold">${item.meter || '4/4'} · ${item.bpm} BPM · 🎙️ Auto-Listen</div>
+            <div class="text-[11px] font-mono text-cyan-400 font-semibold">${item.meter || '4/4'} · ${item.bpm} BPM</div>
           </div>
           <div class="flex items-center gap-2 pt-1">
             <button type="button" data-drill-id="${item.id}" data-ramp="true" class="learn-launch-btn flex-1 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition" title="Starts at 75% tempo and auto-ramps +5% BPM on each clean pass">
@@ -10991,7 +11032,7 @@
       const simG = document.getElementById('btnSimStringG');
 
       if (badge) badge.textContent = isLow ? 'Low G · Linear Tuning' : 'High G · Concert Re-Entrant';
-      if (heading) heading.textContent = `Ukulele Tuner · ${gName} · C4 · E4 · A4`;
+      if (heading) heading.textContent = `${gName} · C4 · E4 · A4`;
       if (cardG) cardG.setAttribute('data-string', gName);
       if (cardGSub) cardGSub.textContent = isLow ? 'String 4 (Low G)' : 'String 4 (High G)';
       if (cardGName) cardGName.textContent = gName;
@@ -11187,6 +11228,26 @@
       state.tunerSimOsc.frequency.setValueAtTime(liveHz, state.audioCtx.currentTime);
     }
 
+    function stopTunerMicrophone(silent = false) {
+      if (!silent) state.globalMicWanted = false;
+      state.tunerActive = false;
+      if (state.tunerRafId) cancelAnimationFrame(state.tunerRafId);
+      if (state.tunerStream) {
+        state.tunerStream.getTracks().forEach(t => t.stop());
+        state.tunerStream = null;
+      }
+      const btn = document.getElementById('btnToggleMicTuner');
+      if (btn) {
+        btn.textContent = '🎙️ Start Tuner';
+        btn.className = 'px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition shrink-0';
+      }
+      const statusPill = document.getElementById('tunerStatusPill');
+      if (statusPill) {
+        statusPill.textContent = 'Tap Start Tuner, then pluck a string';
+        statusPill.className = 'px-3 py-1 rounded-full text-xs font-mono font-bold bg-zinc-800 text-zinc-400 border border-zinc-700';
+      }
+    }
+
     async function toggleMicrophoneTuner() {
       const btn = document.getElementById('btnToggleMicTuner');
       const modeDot = document.getElementById('tunerSourceModeDot');
@@ -11194,6 +11255,7 @@
       const statusPill = document.getElementById('tunerStatusPill');
 
       if (state.tunerActive) {
+        state.globalMicWanted = false;
         state.tunerActive = false;
         if (state.tunerRafId) cancelAnimationFrame(state.tunerRafId);
         if (state.tunerStream) {
@@ -11204,7 +11266,8 @@
           try { state.tunerSimOsc.stop(); state.tunerSimOsc.disconnect(); } catch (e) {}
           state.tunerSimOsc = null;
         }
-        btn.textContent = '🎙️ Start Microphone Tuner';
+        if (state.listenEnabled) stopChordListener(true);
+        btn.textContent = '🎙️ Start Tuner';
         btn.className = 'px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition shrink-0';
         if (modeDot) modeDot.className = 'w-2.5 h-2.5 rounded-full bg-zinc-600';
         if (modeLbl) modeLbl.textContent = 'Microphone Tuner Stopped — Click "🎙️ Start Microphone Tuner" to Resume';
@@ -11234,6 +11297,7 @@
           const src = ctx.createMediaStreamSource(stream);
           src.connect(inputBus);
           state.tunerStream = stream;
+          state.globalMicWanted = true;
           gotHardwareMic = true;
         } catch (err1) {
           try {
@@ -12623,6 +12687,17 @@
           ? 'nav-tab-btn px-2 py-1 rounded-md text-[11px] font-bold bg-amber-500 text-black transition'
           : 'nav-tab-btn px-2 py-1 rounded-md text-[11px] font-semibold text-qmuted hover:text-qtext transition';
       });
+
+      // Unified Mic Handoff between Tuner & Stage
+      if (state.globalMicWanted) {
+        if (tabName === 'tuner' && !state.tunerActive) {
+          if (state.listenEnabled) stopChordListener(true);
+          toggleMicrophoneTuner();
+        } else if (tabName === 'stage' && !state.listenEnabled) {
+          if (state.tunerActive) stopTunerMicrophone(true);
+          startChordListener();
+        }
+      }
     }
 
     function initPwaManifestAndServiceWorker() {
@@ -12715,38 +12790,50 @@
         renderMelodyTabHighway();
       });
 
-      const btnOpenCal = document.getElementById('btnOpenMicCalib');
-      if (btnOpenCal) btnOpenCal.addEventListener('click', () => {
-        const gEl = document.getElementById('micCalibGateValue');
-        if (gEl) gEl.textContent = 'Gate: ' + (localStorage.getItem('qcoach_mic_noise_gate') || '0.008');
-        document.getElementById('micCalibModalBackdrop')?.classList.remove('hidden');
+
+
+      // 🎵 Request a Song Modal (Curated Songbook Submissions)
+      document.getElementById('btnOpenRequestSong')?.addEventListener('click', () => {
+        document.getElementById('requestSongModalBackdrop')?.classList.remove('hidden');
       });
-      document.getElementById('btnCloseMicCalib')?.addEventListener('click', () => {
-        micCalibState.running = false;
-        document.getElementById('micCalibModalBackdrop')?.classList.add('hidden');
+      document.getElementById('btnCloseRequestSong')?.addEventListener('click', () => {
+        document.getElementById('requestSongModalBackdrop')?.classList.add('hidden');
       });
-      document.getElementById('btnResetMicCalib')?.addEventListener('click', () => {
-        localStorage.removeItem('qcoach_mic_noise_gate');
-        const gEl = document.getElementById('micCalibGateValue');
-        if (gEl) gEl.textContent = 'Gate: 0.008';
-        showToast('Mic noise gate reset to default (0.008).', 'info');
-      });
-      document.getElementById('btnRunMicCalib')?.addEventListener('click', async () => {
-        if (!state.listenEnabled) await startChordListener();
-        if (!state.listenEnabled || !listenEngine.analyser) {
-          const stEl = document.getElementById('micCalibStatusText');
-          if (stEl) stEl.textContent = '⚠️ Microphone access is required to calibrate.';
-          return;
+      document.getElementById('btnSubmitRequestSong')?.addEventListener('click', async () => {
+        const title = (document.getElementById('reqSongTitle')?.value || '').trim();
+        const artist = (document.getElementById('reqSongArtist')?.value || '').trim();
+        const language = document.getElementById('reqSongLang')?.value || 'en';
+        const youtube_url = (document.getElementById('reqSongYoutube')?.value || '').trim();
+        if (!title) { showToast('Please enter the song title.', 'warn'); return; }
+        let savedCloud = false;
+        try {
+          const sb = await ensureSupabaseClient();
+          if (sb && qcoachCloudUser && navigator.onLine) {
+            const { error } = await sb.from('community_song_submissions').insert({
+              submitted_by: qcoachCloudUser.id,
+              title, artist, language, youtube_url,
+              payload: { requestedVia: 'songbook_modal' }
+            });
+            if (!error) savedCloud = true;
+          }
+        } catch (e) {}
+        if (!savedCloud) {
+          try {
+            const prev = JSON.parse(localStorage.getItem('qcoach_song_requests_v1') || '[]');
+            prev.push({ title, artist, language, youtube_url, at: new Date().toISOString() });
+            localStorage.setItem('qcoach_song_requests_v1', JSON.stringify(prev));
+          } catch (e) {}
         }
-        micCalibState.samples = [];
-        micCalibState.startMs = performance.now();
-        micCalibState.running = true;
-        const stEl = document.getElementById('micCalibStatusText');
-        if (stEl) stEl.textContent = '🤫 Listening to room noise (3 seconds)...';
+        document.getElementById('reqSongTitle').value = '';
+        document.getElementById('reqSongArtist').value = '';
+        document.getElementById('reqSongYoutube').value = '';
+        document.getElementById('requestSongModalBackdrop')?.classList.add('hidden');
+        showToast(savedCloud ? `🎵 Requested "${title}" — sent to QCoach team!` : `🎵 Saved request for "${title}"! Sign in to sync requests.`, 'success');
       });
 
-      // Song Creator Studio
+      // Song Creator Studio (in Settings → Library)
       document.getElementById('btnOpenCreatorStudio')?.addEventListener('click', () => {
+        document.getElementById('settingsModalBackdrop')?.classList.add('hidden');
         document.getElementById('creatorStudioModalBackdrop')?.classList.remove('hidden');
       });
       document.getElementById('btnCloseCreatorStudio')?.addEventListener('click', () => {
@@ -13159,7 +13246,7 @@
         renderFretboardStage();
       });
 
-      document.getElementById('btnQuickAddSong').addEventListener('click', () => {
+      document.getElementById('btnQuickAddSong')?.addEventListener('click', () => {
         switchSettingsTab('library');
         document.getElementById('settingsModalBackdrop').classList.remove('hidden');
         const el = document.getElementById('settingsSectionAddSong');
