@@ -710,6 +710,26 @@
 
     <!-- VIEW 3: GUIDED LEARNING PATH & INTERACTIVE TRAINING GYM (v3.0) -->
     <div id="viewLearnPath" class="hidden space-y-4">
+      <!-- 🔐 Sign-In Gate for Personalized Learning (Songs & Stage remain 100% free) -->
+      <div id="learnAuthGate" class="hidden q-card rounded-2xl p-6 sm:p-8 border-2 border-indigo-500/50 bg-gradient-to-br from-indigo-500/10 via-transparent to-amber-500/10 text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/50 text-xs font-mono font-bold text-indigo-300">
+          ☁️ Personalized Coaching · Cloud + Offline Sync
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black text-qtext tracking-tight">Sign In to Unlock Your Personal Ukulele Coach</h2>
+        <p class="text-xs sm:text-sm text-qmuted max-w-xl mx-auto leading-relaxed">
+          Your <strong>Songbook, Stage, YouTube Sync &amp; Tuner</strong> are always free without signing in. Sign in with Google or Email to unlock the <strong>6-Unit Guided Path, Skill Gym, Placement Check &amp; Adaptive Weak-Spot Coach</strong>—and keep your stars, streaks, and progress synced across all your devices (even offline!).
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
+          <button id="btnLearnGateSignIn" type="button" class="px-5 py-2.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-xs sm:text-sm shadow-lg transition">
+            ☁️ Sign In / Create Account
+          </button>
+          <button id="btnLearnGateToSongs" type="button" class="px-4 py-2.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-qtext font-bold text-xs sm:text-sm transition">
+            🎵 Browse Free Songbook
+          </button>
+        </div>
+      </div>
+
+      <div id="learnUnlockedContent" class="space-y-4">
       <!-- Top Header: Rank Progress, Streak, Stars, Hosted Packs & Cloud Sync -->
       <div class="q-card rounded-2xl p-4 sm:p-5 space-y-3">
         <div class="flex flex-wrap items-center justify-between gap-3">
@@ -921,6 +941,8 @@
         </div>
       </div>
     </div>
+
+      </div>
 
     <!-- CLOUD ACCOUNT & SUPABASE SYNC MODAL (Guest-First, Optional Sign-In) -->
     <!-- 🎚️ 5-SECOND MIC & SPEAKER ECHO CALIBRATION MODAL -->
@@ -9693,6 +9715,7 @@
         if (pct > (Number(m[drillId]) || 0)) {
           m[drillId] = pct;
           localStorage.setItem('qcoach_drill_scores_v3', JSON.stringify(m));
+          if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
         }
       } catch (e) {}
     }
@@ -9874,7 +9897,7 @@
 
     
     // === PHASE 2 & 3 ENGINE: WAIT MODE, PLACEMENT CHECK & ADAPTIVE WEAK-SPOT COACH ===
-    const QCOACH_SUPABASE_SCHEMA_SQL = "-- QCoach v3.0 Phase 1 MVP Schema (Supabase / PostgreSQL)\n-- Run this in Supabase SQL Editor when ready to enable user accounts, streaks & cloud song packs.\n\ncreate table if not exists public.profiles (\n  id uuid primary key references auth.users(id) on delete cascade,\n  display_name text,\n  skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),\n  daily_streak int default 0,\n  last_practice_date date,\n  created_at timestamptz default now()\n);\n\ncreate table if not exists public.song_progress (\n  id uuid primary key default gen_random_uuid(),\n  user_id uuid references public.profiles(id) on delete cascade,\n  song_norm_key text not null,\n  best_listen_score int default 0,\n  stars int default 0 check (stars between 0 and 3),\n  loops_completed int default 0,\n  max_clean_bpm int default 72,\n  updated_at timestamptz default now(),\n  unique (user_id, song_norm_key)\n);\n\ncreate table if not exists public.community_song_submissions (\n  id uuid primary key default gen_random_uuid(),\n  submitted_by uuid references public.profiles(id) on delete set null,\n  title text not null,\n  artist text,\n  language text default 'en',\n  youtube_url text,\n  payload jsonb not null,\n  status text default 'pending' check (status in ('pending','verified','rejected')),\n  created_at timestamptz default now()\n);\n\nalter table public.profiles enable row level security;\nalter table public.song_progress enable row level security;\nalter table public.community_song_submissions enable row level security;\n\ncreate policy \"Users manage own profile\" on public.profiles\n  for all using (auth.uid() = id) with check (auth.uid() = id);\n\ncreate policy \"Users manage own progress\" on public.song_progress\n  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);\n\ncreate policy \"Users submit and read own submissions\" on public.community_song_submissions\n  for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);\n";
+    const QCOACH_SUPABASE_SCHEMA_SQL = "-- QCoach Studio v4.2 Cloud Sync Schema (Supabase / PostgreSQL)\n-- Run this in Supabase SQL Editor to enable user accounts, cross-device journey sync & future paid tiers.\n\ncreate table if not exists public.profiles (\n  id uuid primary key references auth.users(id) on delete cascade,\n  display_name text,\n  skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),\n  subscription_tier text default 'free' check (subscription_tier in ('free','pro')),\n  daily_streak int default 0,\n  last_practice_date date,\n  learning_state jsonb default '{}'::jsonb,\n  created_at timestamptz default now()\n);\n\nalter table public.profiles add column if not exists subscription_tier text default 'free';\nalter table public.profiles add column if not exists learning_state jsonb default '{}'::jsonb;\n\ncreate table if not exists public.song_progress (\n  id uuid primary key default gen_random_uuid(),\n  user_id uuid references public.profiles(id) on delete cascade,\n  song_norm_key text not null,\n  best_listen_score int default 0,\n  stars int default 0 check (stars between 0 and 3),\n  loops_completed int default 0,\n  max_clean_bpm int default 72,\n  updated_at timestamptz default now(),\n  unique (user_id, song_norm_key)\n);\n\ncreate table if not exists public.community_song_submissions (\n  id uuid primary key default gen_random_uuid(),\n  submitted_by uuid references public.profiles(id) on delete set null,\n  title text not null,\n  artist text,\n  language text default 'en',\n  youtube_url text,\n  payload jsonb not null,\n  status text default 'pending' check (status in ('pending','verified','rejected')),\n  created_at timestamptz default now()\n);\n\nalter table public.profiles enable row level security;\nalter table public.song_progress enable row level security;\nalter table public.community_song_submissions enable row level security;\n\ndrop policy if exists \"Users manage own profile\" on public.profiles;\ncreate policy \"Users manage own profile\" on public.profiles\n  for all using (auth.uid() = id) with check (auth.uid() = id);\n\ndrop policy if exists \"Users manage own progress\" on public.song_progress;\ncreate policy \"Users manage own progress\" on public.song_progress\n  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);\n\ndrop policy if exists \"Users submit and read own submissions\" on public.community_song_submissions;\ncreate policy \"Users submit and read own submissions\" on public.community_song_submissions\n  for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);\n";
     const CHORD_HISTORY_KEY = 'qcoach_chord_history_v1';
 
     function updateWaitModeButtonUi() {
@@ -10443,6 +10466,14 @@
     }
 
     function renderLearnPathView() {
+      const gateEl = document.getElementById('learnAuthGate');
+      const unlockedEl = document.getElementById('learnUnlockedContent');
+      const signedIn = (typeof isCloudUserSignedIn === 'function') ? isCloudUserSignedIn() : true;
+      if (gateEl && unlockedEl) {
+        gateEl.classList.toggle('hidden', signedIn);
+        unlockedEl.classList.toggle('hidden', !signedIn);
+        if (!signedIn) return;
+      }
       const grid = document.getElementById('learnCurriculumGrid');
       if (!grid) return;
       const stats = getLearnStats();
@@ -10684,11 +10715,28 @@
     }
 
     // =========================================================================
-    // QCOACH STUDIO v3.0 — SUPABASE CLOUD AUTH & PROGRESS SYNC (OPTIONAL)
+    // QCOACH STUDIO v4.2 — SUPABASE TWO-WAY CLOUD AUTH, OFFLINE CACHE & SYNC
     // =========================================================================
-    const QCOACH_SUPABASE_DEFAULT = { url: '', anonKey: '' };
+    const QCOACH_SUPABASE_DEFAULT = { url: 'https://ismsbmehuzzgypdovawu.supabase.co', anonKey: 'sb_publishable_CWhJ53WEYYBF090QgZkXgw_qun67IqC' };
+    const QCOACH_CACHED_USER_KEY = 'qcoach_cached_cloud_user_v1';
     let qcoachSupabaseClient = null;
     let qcoachCloudUser = null;
+
+    function getCachedCloudUser() {
+      try {
+        const raw = localStorage.getItem(QCOACH_CACHED_USER_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) { return null; }
+    }
+    function setCachedCloudUser(u) {
+      try {
+        if (u && u.id) localStorage.setItem(QCOACH_CACHED_USER_KEY, JSON.stringify({ id: u.id, email: u.email || 'Member' }));
+        else localStorage.removeItem(QCOACH_CACHED_USER_KEY);
+      } catch (e) {}
+    }
+    function isCloudUserSignedIn() {
+      return !!(qcoachCloudUser || getCachedCloudUser());
+    }
 
     function getSavedSupabaseConfig() {
       try {
@@ -10712,17 +10760,35 @@
         });
       }
       qcoachSupabaseClient = window.supabase.createClient(cfg.url, cfg.anonKey);
+      qcoachSupabaseClient.auth.onAuthStateChange(async (event, session) => {
+        const u = (session && session.user) || null;
+        if (u && (!qcoachCloudUser || qcoachCloudUser.id !== u.id)) {
+          qcoachCloudUser = u;
+          setCachedCloudUser(u);
+          await pullAndMergeCloudProgress();
+          await syncCloudProgressQuietly();
+          updateCloudAuthUi();
+          if (typeof renderLearnPathView === 'function') renderLearnPathView();
+        } else if (event === 'SIGNED_OUT') {
+          qcoachCloudUser = null;
+          setCachedCloudUser(null);
+          updateCloudAuthUi();
+          if (typeof renderLearnPathView === 'function') renderLearnPathView();
+        }
+      });
       return qcoachSupabaseClient;
     }
 
     function updateCloudAuthUi() {
+      const activeUser = qcoachCloudUser || getCachedCloudUser();
       const lbl = document.getElementById('cloudAuthBtnLabel');
       const box = document.getElementById('cloudAuthStatusBox');
       const outC = document.getElementById('cloudAuthSignedOutControls');
       const inC = document.getElementById('cloudAuthSignedInControls');
-      if (qcoachCloudUser) {
-        if (lbl) lbl.textContent = qcoachCloudUser.email ? qcoachCloudUser.email.split('@')[0] : 'Synced';
-        if (box) box.innerHTML = `Status: <strong class="text-emerald-400">Signed in as ${qcoachCloudUser.email || 'Member'}</strong>`;
+      if (activeUser) {
+        const name = activeUser.email ? activeUser.email.split('@')[0] : 'Synced';
+        if (lbl) lbl.textContent = name;
+        if (box) box.innerHTML = `Status: <strong class="text-emerald-400">Signed in as ${activeUser.email || 'Member'}</strong>${!navigator.onLine ? ' <span class="text-amber-400">(Offline Mode)</span>' : ''}`;
         if (outC) outC.classList.add('hidden');
         if (inC) inC.classList.remove('hidden');
       } else {
@@ -10730,25 +10796,106 @@
         if (lbl) lbl.textContent = 'Sign In / Sync';
         if (box) {
           box.innerHTML = cfg.url
-            ? 'Status: <strong class="text-amber-400">Guest Mode (Supabase Connected)</strong>'
-            : 'Status: <strong class="text-amber-400">Guest Mode (Saved Locally)</strong><div class="mt-1 text-[11px] opacity-80">Add your free Supabase Project Keys below to enable cross-device sync.</div>';
+            ? 'Status: <strong class="text-amber-400">Guest Mode (Sign in to unlock Learn)</strong>'
+            : 'Status: <strong class="text-amber-400">Guest Mode (Saved Locally)</strong><div class="mt-1 text-[11px] opacity-80">Add your Supabase Project Keys below to enable sign-in &amp; cross-device sync.</div>';
         }
         if (outC) outC.classList.remove('hidden');
         if (inC) inC.classList.add('hidden');
       }
     }
 
+    async function pullAndMergeCloudProgress() {
+      try {
+        const sb = await ensureSupabaseClient();
+        if (!sb || !qcoachCloudUser || !navigator.onLine) return;
+        const { data: prof } = await sb.from('profiles').select('*').eq('id', qcoachCloudUser.id).maybeSingle();
+        if (prof) {
+          const localStreak = Number(localStorage.getItem('qcoach_streak_count') || 0);
+          if ((prof.daily_streak || 0) > localStreak) {
+            localStorage.setItem('qcoach_streak_count', String(prof.daily_streak));
+          }
+          if (prof.last_practice_date && prof.last_practice_date > (localStorage.getItem('qcoach_streak_last_date') || '')) {
+            localStorage.setItem('qcoach_streak_last_date', prof.last_practice_date);
+          }
+          if (prof.skill_level && !localStorage.getItem('qcoach_skill_level')) {
+            localStorage.setItem('qcoach_skill_level', prof.skill_level);
+          }
+          const ls = prof.learning_state || {};
+          if (ls.drillScores && typeof ls.drillScores === 'object') {
+            const curD = getDrillScoresMap();
+            Object.entries(ls.drillScores).forEach(([k, v]) => {
+              if (Number(v) > (Number(curD[k]) || 0)) curD[k] = Number(v);
+            });
+            localStorage.setItem('qcoach_drill_scores_v3', JSON.stringify(curD));
+          }
+          if (ls.chordHistory && typeof ls.chordHistory === 'object') {
+            const curH = getPersistentChordHistory();
+            Object.entries(ls.chordHistory).forEach(([ch, st]) => {
+              if (!st) return;
+              if (!curH[ch] || (st.attempts || 0) > (curH[ch].attempts || 0)) {
+                curH[ch] = { hits: st.hits || 0, attempts: st.attempts || 0 };
+              }
+            });
+            localStorage.setItem(CHORD_HISTORY_KEY, JSON.stringify(curH));
+          }
+          const today = new Date().toISOString().slice(0, 10);
+          if (ls.todayDate === today && Number(ls.todayLessons || 0) > getTodayLessonsCompleted()) {
+            localStorage.setItem('qcoach_today_date', today);
+            localStorage.setItem('qcoach_today_lessons', String(ls.todayLessons));
+          }
+          if (ls.setlist && Array.isArray(ls.setlist.songKeys) && ls.setlist.songKeys.length) {
+            const curSl = getSavedSetlist();
+            if (!curSl.songKeys || !curSl.songKeys.length) saveGroupSetlist(ls.setlist);
+          }
+        }
+        const { data: songRows } = await sb.from('song_progress').select('*').eq('user_id', qcoachCloudUser.id);
+        if (Array.isArray(songRows) && songRows.length) {
+          const byKey = new Map();
+          (state.songs || []).forEach(sg => byKey.set(normalizeSongTitleKey(sg.title), sg));
+          let updatedSongs = false;
+          songRows.forEach(r => {
+            const sg = byKey.get(r.song_norm_key);
+            if (sg) {
+              sg.masteryStats = sg.masteryStats || { loopsCompleted: 0, maxCleanBpm: 72, bestListenScore: 0 };
+              if ((r.best_listen_score || 0) > (sg.masteryStats.bestListenScore || 0)) {
+                sg.masteryStats.bestListenScore = r.best_listen_score;
+                updatedSongs = true;
+              }
+              if ((r.loops_completed || 0) > (sg.masteryStats.loopsCompleted || 0)) {
+                sg.masteryStats.loopsCompleted = r.loops_completed;
+                updatedSongs = true;
+              }
+              if ((r.max_clean_bpm || 0) > (sg.masteryStats.maxCleanBpm || 0)) {
+                sg.masteryStats.maxCleanBpm = r.max_clean_bpm;
+                updatedSongs = true;
+              }
+            }
+          });
+          if (updatedSongs && typeof saveSongsToIndexedDB === 'function') saveSongsToIndexedDB();
+        }
+      } catch (e) {}
+    }
+
     async function syncCloudProgressQuietly() {
       try {
         const sb = await ensureSupabaseClient();
-        if (!sb || !qcoachCloudUser) return;
+        if (!sb || !qcoachCloudUser || !navigator.onLine) return;
         const stats = getLearnStats();
+        const today = new Date().toISOString().slice(0, 10);
+        const learningState = {
+          drillScores: getDrillScoresMap(),
+          chordHistory: getPersistentChordHistory(),
+          todayDate: today,
+          todayLessons: getTodayLessonsCompleted(),
+          setlist: getSavedSetlist()
+        };
         await sb.from('profiles').upsert({
           id: qcoachCloudUser.id,
           display_name: qcoachCloudUser.email || 'Ukulele Player',
           skill_level: getEffectiveDifficultyMode(),
           daily_streak: stats.streak,
-          last_practice_date: new Date().toISOString().slice(0, 10)
+          last_practice_date: localStorage.getItem('qcoach_streak_last_date') || today,
+          learning_state: learningState
         });
         const rows = [];
         (state.songs || []).forEach(sg => {
@@ -10776,14 +10923,21 @@
       const kIn = document.getElementById('inputSupabaseAnon');
       if (uIn) uIn.value = cfg.url;
       if (kIn) kIn.value = cfg.anonKey;
-      if (!cfg.url || !cfg.anonKey) { updateCloudAuthUi(); return; }
+      if (!cfg.url || !cfg.anonKey) { updateCloudAuthUi(); renderLearnPathView(); return; }
       try {
         const sb = await ensureSupabaseClient();
-        const { data } = await sb.auth.getUser();
-        qcoachCloudUser = (data && data.user) || null;
-        updateCloudAuthUi();
-        if (qcoachCloudUser) syncCloudProgressQuietly();
-      } catch (e) { updateCloudAuthUi(); }
+        if (navigator.onLine) {
+          const { data } = await sb.auth.getUser();
+          qcoachCloudUser = (data && data.user) || null;
+          if (qcoachCloudUser) {
+            setCachedCloudUser(qcoachCloudUser);
+            await pullAndMergeCloudProgress();
+            await syncCloudProgressQuietly();
+          }
+        }
+      } catch (e) {}
+      updateCloudAuthUi();
+      if (typeof renderLearnPathView === 'function') renderLearnPathView();
     }
 
     function stopPlayback() {
@@ -12721,6 +12875,7 @@
       });
 
       checkSharedSetlistFromUrl();
+      if (typeof initCloudAuthIfConfigured === 'function') initCloudAuthIfConfigured();
 
       const bModePath = document.getElementById('btnLearnModePath');
       const bModeGym = document.getElementById('btnLearnModeGym');
@@ -12815,13 +12970,22 @@
           showToast('☁️ Progress synced to Supabase!', 'success');
         });
       }
+      document.getElementById('btnLearnGateSignIn')?.addEventListener('click', () => {
+        initCloudAuthIfConfigured();
+        document.getElementById('cloudAuthModalBackdrop')?.classList.remove('hidden');
+      });
+      document.getElementById('btnLearnGateToSongs')?.addEventListener('click', () => {
+        setActiveView('songs');
+      });
       const btnSignOut = document.getElementById('btnCloudSignOut');
       if (btnSignOut) {
         btnSignOut.addEventListener('click', async () => {
           const sb = await ensureSupabaseClient();
           if (sb) await sb.auth.signOut();
           qcoachCloudUser = null;
+          setCachedCloudUser(null);
           updateCloudAuthUi();
+          renderLearnPathView();
           showToast('Signed out (Guest Mode active).', 'info');
         });
       }

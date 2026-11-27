@@ -18,7 +18,8 @@
         "drill-ch-f",
         "drill-tr-c-f",
         "mile-1"
-      ]
+      ],
+      "testOutId": "mile-1"
     },
     {
       "unit": 2,
@@ -32,7 +33,8 @@
         "drill-st-waltz",
         "drill-st-island",
         "mile-2"
-      ]
+      ],
+      "testOutId": "mile-2"
     },
     {
       "unit": 3,
@@ -46,7 +48,8 @@
         "drill-tr-key-g",
         "drill-tr-split-bar",
         "mile-3"
-      ]
+      ],
+      "testOutId": "mile-3"
     },
     {
       "unit": 4,
@@ -60,7 +63,8 @@
         "drill-st-dadra-chuck",
         "drill-tr-4chord",
         "mile-4"
-      ]
+      ],
+      "testOutId": "mile-4"
     },
     {
       "unit": 5,
@@ -74,7 +78,8 @@
         "drill-tr-key-d",
         "drill-st-chuck",
         "mile-5"
-      ]
+      ],
+      "testOutId": "mile-5"
     },
     {
       "unit": 6,
@@ -88,7 +93,8 @@
         "drill-sc-travis",
         "drill-ek-transpose",
         "mile-6"
-      ]
+      ],
+      "testOutId": "mile-6"
     }
   ],
   "drillLibrary": {

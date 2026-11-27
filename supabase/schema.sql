@@ -1,14 +1,19 @@
--- QCoach v3.0 Phase 1 MVP Schema (Supabase / PostgreSQL)
--- Run this in Supabase SQL Editor when ready to enable user accounts, streaks & cloud song packs.
+-- QCoach Studio v4.2 Cloud Sync Schema (Supabase / PostgreSQL)
+-- Run this in Supabase SQL Editor to enable user accounts, cross-device journey sync & future paid tiers.
 
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   display_name text,
   skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),
+  subscription_tier text default 'free' check (subscription_tier in ('free','pro')),
   daily_streak int default 0,
   last_practice_date date,
+  learning_state jsonb default '{}'::jsonb,
   created_at timestamptz default now()
 );
+
+alter table public.profiles add column if not exists subscription_tier text default 'free';
+alter table public.profiles add column if not exists learning_state jsonb default '{}'::jsonb;
 
 create table if not exists public.song_progress (
   id uuid primary key default gen_random_uuid(),
@@ -38,11 +43,14 @@ alter table public.profiles enable row level security;
 alter table public.song_progress enable row level security;
 alter table public.community_song_submissions enable row level security;
 
+drop policy if exists "Users manage own profile" on public.profiles;
 create policy "Users manage own profile" on public.profiles
   for all using (auth.uid() = id) with check (auth.uid() = id);
 
+drop policy if exists "Users manage own progress" on public.song_progress;
 create policy "Users manage own progress" on public.song_progress
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+drop policy if exists "Users submit and read own submissions" on public.community_song_submissions;
 create policy "Users submit and read own submissions" on public.community_song_submissions
   for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);
