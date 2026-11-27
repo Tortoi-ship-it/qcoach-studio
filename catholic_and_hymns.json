@@ -1,0 +1,7747 @@
+{
+  "schemaVersion": "3.0",
+  "packName": "Catholic & Classic Hymns",
+  "language": "en",
+  "songs": [
+    {
+      "id": "cath-kyrie-eleison",
+      "normKey": "kyrie eleison",
+      "title": "Kyrie Eleison (Lord Have Mercy)",
+      "artist": "Catholic Mass Setting",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 68,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ky-ri-e,",
+          "e-le-i-son"
+        ],
+        [
+          "Lord, have",
+          "mer-cy",
+          "on us"
+        ],
+        [
+          "Chri-ste,",
+          "e-le-i-son"
+        ],
+        [
+          "Christ, have",
+          "mer-cy",
+          "on us"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "0X5t1LTMdoo",
+        "youtubeUrl": "https://youtu.be/0X5t1LTMdoo",
+        "videoTitle": "Kyrie Eleison (Lord Have Mercy)",
+        "dur": 86,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            6,
+            "Kyrie Eleison"
+          ],
+          [
+            13,
+            "Lord Have Mercy"
+          ],
+          [
+            19,
+            "Kyrie Eleison"
+          ],
+          [
+            25,
+            "Lord Have Mercy"
+          ],
+          [
+            32,
+            "Christe Eleison"
+          ],
+          [
+            38,
+            "Christ Have Mercy"
+          ],
+          [
+            44,
+            "Christe Eleison"
+          ],
+          [
+            50,
+            "Christ Have Mercy"
+          ],
+          [
+            59,
+            "Kyrie Eleison"
+          ],
+          [
+            66,
+            "Lord Have Mercy"
+          ],
+          [
+            72,
+            "Kyrie Eleison"
+          ],
+          [
+            78,
+            "Lord Have Mercy"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-gloria-in-excelsis",
+      "normKey": "gloria in excelsis deo",
+      "title": "Gloria in Excelsis Deo (Angels)",
+      "artist": "Catholic Traditional",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Glo-ria",
+          "in ex-",
+          "cel-sis De-o"
+        ],
+        [
+          "Glo-ria",
+          "in ex-",
+          "cel-sis De-o"
+        ],
+        [
+          "An-gels we",
+          "have heard",
+          "on high"
+        ],
+        [
+          "sweet-ly sing-ing",
+          "o'er the",
+          "plains"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "2D0ncpEMcGM",
+        "youtubeUrl": "https://youtu.be/2D0ncpEMcGM",
+        "videoTitle": "Gloria in Excelsis Deo (Angels)",
+        "dur": 165,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            3,
+            "Gloria in excelsis Deo"
+          ],
+          [
+            9,
+            "Et in terra pax hominibus bonae voluntatis"
+          ],
+          [
+            17,
+            "Laudamus te, benedicimus te"
+          ],
+          [
+            25,
+            "Adoramus te, glorificamus te"
+          ],
+          [
+            33,
+            "Gratias agimus tibi propter magnam gloriam tuam"
+          ],
+          [
+            43,
+            "Domine Deus, Rex caelestis"
+          ],
+          [
+            49,
+            "Deus Pater omnipotens"
+          ],
+          [
+            55,
+            "Domine Fili unigenite"
+          ],
+          [
+            59,
+            "Jesu Christe"
+          ],
+          [
+            64,
+            "Domine Deus, Agnus Dei"
+          ],
+          [
+            69,
+            "Filius Patris"
+          ],
+          [
+            74,
+            "Qui tollis peccata mundi"
+          ],
+          [
+            80,
+            "Miserere nobis"
+          ],
+          [
+            86,
+            "Qui tollis peccata mundi"
+          ],
+          [
+            90,
+            "Suscipe deprecationem nostram"
+          ],
+          [
+            99,
+            "Qui sedes ad dexteram Patris"
+          ],
+          [
+            104,
+            "Miserere nobis"
+          ],
+          [
+            108,
+            "Quoniam tu solus Sanctus"
+          ],
+          [
+            112,
+            "Tu solus Dominus"
+          ],
+          [
+            117,
+            "Tu solus Altissimus"
+          ],
+          [
+            122,
+            "Jesu Christe"
+          ],
+          [
+            126,
+            "Cum Sancto Spiritu"
+          ],
+          [
+            131,
+            "In gloria Dei Patris"
+          ],
+          [
+            138,
+            "Amen"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-immaculate-mary",
+      "normKey": "immaculate mary",
+      "title": "Immaculate Mary (Ave Maria)",
+      "artist": "Catholic Marian Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "Am",
+          "G7",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Im-ma-cu-",
+          "late Ma-ry,",
+          "your prais-es"
+        ],
+        [
+          "we sing,",
+          "You reign",
+          "now in heav-en"
+        ],
+        [
+          "A-ve,",
+          "A-ve,",
+          "A-ve Ma-ri-a!"
+        ],
+        [
+          "A-ve,",
+          "A-ve,",
+          "Ma-ri-a!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "hXqTGl6mbYg",
+        "youtubeUrl": "https://youtu.be/hXqTGl6mbYg",
+        "videoTitle": "Immaculate Mary (Ave Maria)",
+        "dur": 212,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            12,
+            "Immaculate Mary, your praises we sing;"
+          ],
+          [
+            20,
+            "You reign now in heaven with Jesus our king."
+          ],
+          [
+            29,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            38,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            48,
+            "Most blessed of women, to whom was revealed,"
+          ],
+          [
+            56,
+            "The plan of salvation for ages concealed."
+          ],
+          [
+            65,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            73,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            83,
+            "O perfect disciple, you cherished God's word;"
+          ],
+          [
+            92,
+            "Proclaimed by your virtue, the good news you heard."
+          ],
+          [
+            101,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            109,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            119,
+            "O mother of mercy, the cross of your son."
+          ],
+          [
+            128,
+            "Has brought us to new life: in him we are one."
+          ],
+          [
+            136,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            145,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            155,
+            "So now with the saints and the angels above."
+          ],
+          [
+            164,
+            "We join you in praising our God who is love."
+          ],
+          [
+            173,
+            "Ave, ave, ave Maria."
+          ],
+          [
+            181,
+            "Ave, ave, ave Maria."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-abba-father",
+      "normKey": "abba father",
+      "title": "Abba, Father",
+      "artist": "Carey Landry · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "G7",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ab-ba,",
+          "Ab-ba",
+          "Fa-ther"
+        ],
+        [
+          "You are",
+          "the pot-ter,",
+          "we are clay"
+        ],
+        [
+          "Mold us",
+          "and fa-shion",
+          "us each day"
+        ],
+        [
+          "Ab-ba,",
+          "Ab-ba",
+          "Fa-ther"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "9mDhpQSzEfM",
+        "youtubeUrl": "https://youtu.be/9mDhpQSzEfM",
+        "videoTitle": "Abba, Father",
+        "dur": 264,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Abba"
+          ],
+          [
+            16,
+            "Abba Father"
+          ],
+          [
+            23,
+            "You are the potter"
+          ],
+          [
+            29,
+            "We are the clay"
+          ],
+          [
+            35,
+            "The work of your hands"
+          ],
+          [
+            44,
+            "Mold us"
+          ],
+          [
+            51,
+            "Mold us and fashion us"
+          ],
+          [
+            58,
+            "Into the image"
+          ],
+          [
+            64,
+            "Of Jesus, your Son"
+          ],
+          [
+            70,
+            "Of Jesus, your Son"
+          ],
+          [
+            79,
+            "Abba"
+          ],
+          [
+            86,
+            "Abba Father"
+          ],
+          [
+            93,
+            "You are the potter"
+          ],
+          [
+            99,
+            "We are the clay"
+          ],
+          [
+            105,
+            "The work of your hands"
+          ],
+          [
+            113,
+            "Father"
+          ],
+          [
+            121,
+            "May we be one in you"
+          ],
+          [
+            127,
+            "May we be one in you"
+          ],
+          [
+            133,
+            "As he is in you"
+          ],
+          [
+            140,
+            "And you are in him"
+          ],
+          [
+            148,
+            "Abba"
+          ],
+          [
+            155,
+            "Abba Father"
+          ],
+          [
+            162,
+            "You are the potter"
+          ],
+          [
+            168,
+            "We are the clay"
+          ],
+          [
+            174,
+            "The work of your hands"
+          ],
+          [
+            183,
+            "Glory"
+          ],
+          [
+            190,
+            "Glory and praise to you"
+          ],
+          [
+            196,
+            "Glory and praise to you"
+          ],
+          [
+            202,
+            "Forever, amen"
+          ],
+          [
+            209,
+            "Forever, amen"
+          ],
+          [
+            217,
+            "Abba"
+          ],
+          [
+            224,
+            "Abba Father"
+          ],
+          [
+            231,
+            "You are the potter"
+          ],
+          [
+            237,
+            "We are the clay"
+          ],
+          [
+            243,
+            "The work of your hands"
+          ],
+          [
+            251,
+            "Abba"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-lord-is-my-hope",
+      "normKey": "the lord is my hope",
+      "title": "The Lord Is My Hope",
+      "artist": "M.D. Ridge · Catholic Mass",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "The Lord",
+          "is my",
+          "hope and my"
+        ],
+        [
+          "ref-uge,",
+          "My strong-hold",
+          "in time"
+        ],
+        [
+          "of need,",
+          "My strength",
+          "and my song"
+        ],
+        [
+          "for-ev-er",
+          "will I",
+          "sing"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "hUcM4DtARpU",
+        "youtubeUrl": "https://youtu.be/hUcM4DtARpU",
+        "videoTitle": "The Lord Is My Hope",
+        "dur": 162,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            14,
+            "The Lord is my hope and my glory"
+          ],
+          [
+            21,
+            "The Lord is the song that I sing"
+          ],
+          [
+            27,
+            "So tender and loving, a shepherd"
+          ],
+          [
+            34,
+            "So rooted in justice, a king"
+          ],
+          [
+            40,
+            "When shadow confuses my vision"
+          ],
+          [
+            47,
+            "When sorrow lays claim to my heart"
+          ],
+          [
+            52,
+            "God is my refuge, my rock and my shield"
+          ],
+          [
+            59,
+            "I will rely on the Lord"
+          ],
+          [
+            65,
+            "I will rely on the Lord"
+          ],
+          [
+            72,
+            "Justice reigns, and the wicked are cast down"
+          ],
+          [
+            84,
+            "In your love is our safety and strength"
+          ],
+          [
+            96,
+            "The Lord is my hope and my glory"
+          ],
+          [
+            103,
+            "The Lord is the song that I sing"
+          ],
+          [
+            110,
+            "So tender and loving, a shepherd"
+          ],
+          [
+            116,
+            "So rooted in justice, a king"
+          ],
+          [
+            123,
+            "When shadow confuses my vision"
+          ],
+          [
+            129,
+            "When sorrow lays claim to my heart"
+          ],
+          [
+            135,
+            "God is my refuge, my rock and my shield"
+          ],
+          [
+            142,
+            "I will rely on the Lord"
+          ],
+          [
+            148,
+            "I will rely on the Lord"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-here-i-am-lord",
+      "normKey": "here i am lord",
+      "title": "Here I Am, Lord",
+      "artist": "Dan Schutte · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Here I",
+          "am, Lord,",
+          "Is it I,",
+          "Lord?"
+        ],
+        [
+          "I have",
+          "heard You",
+          "call-ing in",
+          "the night"
+        ],
+        [
+          "I will",
+          "go, Lord,",
+          "if You lead",
+          "me"
+        ],
+        [
+          "I will",
+          "hold Your",
+          "peo-ple in",
+          "my heart"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "cDdniihKBzI",
+        "youtubeUrl": "https://youtu.be/cDdniihKBzI",
+        "videoTitle": "Here I Am, Lord",
+        "dur": 227,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            14,
+            "I, the Lord of sea and sky,"
+          ],
+          [
+            19,
+            "I have heard my people cry,"
+          ],
+          [
+            25,
+            "All who dwell in dark and sin"
+          ],
+          [
+            31,
+            "my hand will save."
+          ],
+          [
+            39,
+            "I, who made the stars of night,"
+          ],
+          [
+            44,
+            "I will make their darkness bright."
+          ],
+          [
+            50,
+            "Who will bear my light to them?"
+          ],
+          [
+            55,
+            "Whom shall I send?"
+          ],
+          [
+            62,
+            "Here I am, Lord."
+          ],
+          [
+            68,
+            "Is it I, Lord?"
+          ],
+          [
+            74,
+            "I have heard you calling in the night."
+          ],
+          [
+            85,
+            "I will go, Lord,"
+          ],
+          [
+            90,
+            "if you lead me."
+          ],
+          [
+            96,
+            "I will hold your people in my heart."
+          ],
+          [
+            110,
+            "I, the Lord of snow and rain,"
+          ],
+          [
+            115,
+            "I have borne my people's pain."
+          ],
+          [
+            121,
+            "I have wept for love of them,"
+          ],
+          [
+            127,
+            "they turn away."
+          ],
+          [
+            135,
+            "I will break their hearts of stone,"
+          ],
+          [
+            140,
+            "give them hearts for love alone."
+          ],
+          [
+            146,
+            "I will speak my word to them."
+          ],
+          [
+            151,
+            "Whom shall I send?"
+          ],
+          [
+            158,
+            "Here I am, Lord."
+          ],
+          [
+            163,
+            "Is it I, Lord?"
+          ],
+          [
+            170,
+            "I have heard you calling in the night."
+          ],
+          [
+            181,
+            "I will go, Lord,"
+          ],
+          [
+            187,
+            "if you lead me."
+          ],
+          [
+            193,
+            "I will hold your people in my heart."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-be-not-afraid",
+      "normKey": "be not afraid",
+      "title": "Be Not Afraid",
+      "artist": "Bob Dufford · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Be not",
+          "a-fraid,",
+          "I go be-fore",
+          "you al-ways"
+        ],
+        [
+          "Come fol-low",
+          "me, and",
+          "I will give",
+          "you rest"
+        ],
+        [
+          "If you",
+          "pass through",
+          "rag-ing wa-ters"
+        ],
+        [
+          "you shall",
+          "not drown"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "IJ0jOjqISPU",
+        "youtubeUrl": "https://youtu.be/IJ0jOjqISPU",
+        "videoTitle": "Be Not Afraid",
+        "dur": 179,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            13,
+            "You shall cross the barren desert,"
+          ],
+          [
+            19,
+            "but you shall not die of thirst."
+          ],
+          [
+            25,
+            "You shall wander far in safety"
+          ],
+          [
+            30,
+            "though you do not know the way."
+          ],
+          [
+            36,
+            "You shall speak your words in foreign lands"
+          ],
+          [
+            42,
+            "and all will understand."
+          ],
+          [
+            48,
+            "You shall see the face of God and live."
+          ],
+          [
+            59,
+            "Be not afraid."
+          ],
+          [
+            65,
+            "I go before you always."
+          ],
+          [
+            71,
+            "Come follow me,"
+          ],
+          [
+            76,
+            "and I will give you rest."
+          ],
+          [
+            89,
+            "If you pass through raging waters in the sea,"
+          ],
+          [
+            96,
+            "you shall not drown."
+          ],
+          [
+            100,
+            "If you walk amid the burning flames,"
+          ],
+          [
+            106,
+            "you shall not be harmed."
+          ],
+          [
+            111,
+            "If you stand before the pow'r of hell"
+          ],
+          [
+            117,
+            "and death is at your side,"
+          ],
+          [
+            123,
+            "Know that I am with you through it all."
+          ],
+          [
+            134,
+            "Be not afraid."
+          ],
+          [
+            140,
+            "I go before you always."
+          ],
+          [
+            145,
+            "Come follow me,"
+          ],
+          [
+            150,
+            "and I will give you rest."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-on-eagles-wings",
+      "normKey": "on eagle s wings",
+      "title": "On Eagle's Wings",
+      "artist": "Michael Joncas · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "And He",
+          "will raise",
+          "you up on"
+        ],
+        [
+          "ea-gle's",
+          "wings, bear",
+          "you on the"
+        ],
+        [
+          "breath of",
+          "dawn, make",
+          "you to shine"
+        ],
+        [
+          "like the",
+          "sun, and",
+          "hold you in",
+          "His hand"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "nSjkJiuCaVI",
+        "youtubeUrl": "https://youtu.be/nSjkJiuCaVI",
+        "videoTitle": "On Eagle's Wings",
+        "dur": 265,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            13,
+            "You who dwell in the shelter of the Lord,"
+          ],
+          [
+            19,
+            "who abide in His shadow for life."
+          ],
+          [
+            25,
+            "Say to the Lord, \"My refuge,"
+          ],
+          [
+            30,
+            "my rock in whom I trust!\""
+          ],
+          [
+            36,
+            "And He will raise you up on eagle's wings,"
+          ],
+          [
+            43,
+            "bear you on the breath of dawn."
+          ],
+          [
+            49,
+            "Make you to shine like the sun"
+          ],
+          [
+            55,
+            "and hold you in the palm of His hand."
+          ],
+          [
+            66,
+            "The snare of the fowler will never capture you"
+          ],
+          [
+            72,
+            "and famine will bring you no fear."
+          ],
+          [
+            78,
+            "Under His wings your refuge,"
+          ],
+          [
+            83,
+            "His faithfulness your shield."
+          ],
+          [
+            89,
+            "And He will raise you up on eagle's wings,"
+          ],
+          [
+            97,
+            "bear you on the breath of dawn."
+          ],
+          [
+            102,
+            "Make you to shine like the sun"
+          ],
+          [
+            108,
+            "and hold you in the palm of His hand."
+          ],
+          [
+            120,
+            "You need not fear the terror of the night,"
+          ],
+          [
+            125,
+            "nor the arrow that flies by day."
+          ],
+          [
+            131,
+            "Though thousands fall about you,"
+          ],
+          [
+            137,
+            "near you it shall not come."
+          ],
+          [
+            142,
+            "And He will raise you up on eagle's wings,"
+          ],
+          [
+            150,
+            "bear you on the breath of dawn."
+          ],
+          [
+            156,
+            "Make you to shine like the sun"
+          ],
+          [
+            161,
+            "and hold you in the palm of His hand."
+          ],
+          [
+            173,
+            "For to His angels He's given a command,"
+          ],
+          [
+            179,
+            "to guard you in all of your ways."
+          ],
+          [
+            185,
+            "Upon their hands they will bear you up"
+          ],
+          [
+            191,
+            "lest you dash your foot against a stone."
+          ],
+          [
+            196,
+            "And He will raise you up on eagle's wings,"
+          ],
+          [
+            204,
+            "bear you on the breath of dawn."
+          ],
+          [
+            210,
+            "Make you to shine like the sun"
+          ],
+          [
+            216,
+            "and hold you in the palm of His hand."
+          ],
+          [
+            228,
+            "And hold you in the palm of His hand."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-take-and-receive",
+      "normKey": "take and receive",
+      "title": "Take and Receive (Suscipe)",
+      "artist": "St. Ignatius · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 68,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Take and",
+          "re-ceive,",
+          "O Lord, my"
+        ],
+        [
+          "lib-er-ty,",
+          "Take all",
+          "my will, my"
+        ],
+        [
+          "mind, my",
+          "mem-o-ry"
+        ],
+        [
+          "All things",
+          "I hold",
+          "are Yours"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "r51BUDdCN6I",
+        "youtubeUrl": "https://youtu.be/r51BUDdCN6I",
+        "videoTitle": "Take and Receive (Suscipe)",
+        "dur": 171,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            18,
+            "Take and receive, O Lord, my liberty"
+          ],
+          [
+            28,
+            "Take all my will, my mind, and memory"
+          ],
+          [
+            39,
+            "All things I hold and all I own are Thine"
+          ],
+          [
+            50,
+            "Thine was the gift, to Thee I all resign"
+          ],
+          [
+            59,
+            "Do Thou direct and govern all and sway"
+          ],
+          [
+            70,
+            "Do what Thou wilt, command, and I obey"
+          ],
+          [
+            80,
+            "Only Thy grace, Thy love on me bestow"
+          ],
+          [
+            90,
+            "These make me rich, all else will I forego"
+          ],
+          [
+            100,
+            "Do Thou direct and govern all and sway"
+          ],
+          [
+            110,
+            "Do what Thou wilt, command, and I obey"
+          ],
+          [
+            121,
+            "Only Thy grace, Thy love on me bestow"
+          ],
+          [
+            131,
+            "These make me rich, all else will I forego"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-pescador",
+      "normKey": "lord you have come to the lakeshore",
+      "title": "Lord, You Have Come to the Lakeshore",
+      "artist": "Cesáreo Gabaráin · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 64,
+        "chords": [
+          "C",
+          "G",
+          "C",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "rol6",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O Lord,",
+          "with Your eyes",
+          "set u-pon me"
+        ],
+        [
+          "gent-ly smil-ing,",
+          "You have spo-ken"
+        ],
+        [
+          "my name,",
+          "All I longed",
+          "for I have"
+        ],
+        [
+          "found by",
+          "the wa-ter"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "Ky94UuOlrnA",
+        "youtubeUrl": "https://youtu.be/Ky94UuOlrnA",
+        "videoTitle": "Lord, You Have Come to the Lakeshore",
+        "dur": 187,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            6,
+            "You have come down to the lakeshore"
+          ],
+          [
+            11,
+            "seeking neither the wise nor the wealthy,"
+          ],
+          [
+            17,
+            "but only asking for me to follow."
+          ],
+          [
+            24,
+            "Sweet Lord, you have looked into my eyes;"
+          ],
+          [
+            30,
+            "kindly smiling, you've called out my name..."
+          ],
+          [
+            36,
+            "On the sand I have abandoned my small boat;"
+          ],
+          [
+            42,
+            "now with you, I will seek other seas."
+          ],
+          [
+            50,
+            "You know full well what I have, Lord:"
+          ],
+          [
+            55,
+            "neither treasure nor weapons for conquest"
+          ],
+          [
+            61,
+            "just these my fish nets and will for working"
+          ],
+          [
+            68,
+            "Sweet Lord, you have looked into my eyes;"
+          ],
+          [
+            74,
+            "kindly smiling, you've called out my name..."
+          ],
+          [
+            80,
+            "On the sand I have abandoned my small boat;"
+          ],
+          [
+            86,
+            "now with you, I will seek other seas."
+          ],
+          [
+            93,
+            "You need my hands, my exhaustion,"
+          ],
+          [
+            99,
+            "working love for the rest of the weary"
+          ],
+          [
+            105,
+            "a love that's willing to go on loving."
+          ],
+          [
+            111,
+            "Sweet Lord, you have looked into my eyes;"
+          ],
+          [
+            117,
+            "kindly smiling, you've called out my name..."
+          ],
+          [
+            123,
+            "On the sand I have abandoned my small boat;"
+          ],
+          [
+            129,
+            "now with you, I will seek other seas."
+          ],
+          [
+            137,
+            "You who have fished other waters;"
+          ],
+          [
+            142,
+            "you, the longing of souls that are yearning:"
+          ],
+          [
+            148,
+            "O loving Friend, you have come to call me."
+          ],
+          [
+            155,
+            "Sweet Lord, you have looked into my eyes;"
+          ],
+          [
+            161,
+            "kindly smiling, you've called out my name..."
+          ],
+          [
+            167,
+            "On the sand I have abandoned my small boat;"
+          ],
+          [
+            173,
+            "now with you, I will seek other seas."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-holy-god-we-praise",
+      "normKey": "holy god we praise thy name",
+      "title": "Holy God, We Praise Thy Name",
+      "artist": "Catholic Traditional",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 78,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ho-ly",
+          "God, we",
+          "praise Thy name!"
+        ],
+        [
+          "Lord of",
+          "all, we",
+          "bow be-fore Thee"
+        ],
+        [
+          "All on",
+          "earth Thy",
+          "scep-ter claim"
+        ],
+        [
+          "In-fi-nite",
+          "Thy vast",
+          "do-main"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "SuUGPniE1D4",
+        "youtubeUrl": "https://youtu.be/SuUGPniE1D4",
+        "videoTitle": "Holy God, We Praise Thy Name",
+        "dur": 152,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            11,
+            "Holy God, we praise Thy name;"
+          ],
+          [
+            18,
+            "Lord of all, we bow before Thee!"
+          ],
+          [
+            25,
+            "All on earth Thy sceptre claim,"
+          ],
+          [
+            32,
+            "all in heav'n above adore Thee;"
+          ],
+          [
+            40,
+            "Infinite, Thy vast domain,"
+          ],
+          [
+            46,
+            "everlasting is Thy reign."
+          ],
+          [
+            54,
+            "Infinite, Thy vast domain,"
+          ],
+          [
+            61,
+            "everlasting is Thy reign."
+          ],
+          [
+            70,
+            "Hark! The loud celestial hymn,"
+          ],
+          [
+            78,
+            "angel choirs above are raising."
+          ],
+          [
+            85,
+            "Cherubim and Seraphim,"
+          ],
+          [
+            92,
+            "in unceasing chorus praising;"
+          ],
+          [
+            100,
+            "Fill the heav'ns with sweet accord:"
+          ],
+          [
+            107,
+            "\"Holy, holy, holy Lord!\""
+          ],
+          [
+            115,
+            "Fill the heav'ns with sweet accord:"
+          ],
+          [
+            122,
+            "\"Holy, holy, holy Lord!\""
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-panis-angelicus",
+      "normKey": "panis angelicus",
+      "title": "Panis Angelicus",
+      "artist": "César Franck · Catholic Sacred",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 62,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "trv4",
+        "e": [
+          "arp4",
+          "bal4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pa-nis",
+          "an-ge-li-cus",
+          "fit pa-nis"
+        ],
+        [
+          "ho-mi-num,",
+          "Dat pa-nis",
+          "coe-li-cus"
+        ],
+        [
+          "fi-gu-ris",
+          "ter-mi-num,",
+          "O res mi-"
+        ],
+        [
+          "ra-bi-lis,",
+          "man-du-cat",
+          "Do-mi-num"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "xXdDi5IfddM",
+        "youtubeUrl": "https://youtu.be/xXdDi5IfddM",
+        "videoTitle": "Panis Angelicus",
+        "dur": 233,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            45,
+            "Panis angelicus"
+          ],
+          [
+            53,
+            "Fit panis hominum;"
+          ],
+          [
+            61,
+            "Dat panis coelicus"
+          ],
+          [
+            67,
+            "Figuris terminum;"
+          ],
+          [
+            76,
+            "O res mirabilis!"
+          ],
+          [
+            84,
+            "Manducat dominum"
+          ],
+          [
+            90,
+            "Pauper, pauper,"
+          ],
+          [
+            97,
+            "Servus et humilis"
+          ],
+          [
+            105,
+            "Pauper, pauper,"
+          ],
+          [
+            113,
+            "Servus et humilis."
+          ],
+          [
+            136,
+            "Panis angelicus"
+          ],
+          [
+            143,
+            "Fit panis hominum;"
+          ],
+          [
+            151,
+            "Dat panis coelicus"
+          ],
+          [
+            157,
+            "Figuris terminum;"
+          ],
+          [
+            166,
+            "O res mirabilis!"
+          ],
+          [
+            173,
+            "Manducat dominum"
+          ],
+          [
+            180,
+            "Pauper, pauper,"
+          ],
+          [
+            187,
+            "Servus et humilis"
+          ],
+          [
+            195,
+            "Pauper, pauper,"
+          ],
+          [
+            202,
+            "Servus et humilis."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-salve-regina",
+      "normKey": "salve regina",
+      "title": "Salve Regina (Hail, Holy Queen)",
+      "artist": "Catholic Marian Chant",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 64,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Sal-ve,",
+          "Re-gi-na,",
+          "Ma-ter mi-"
+        ],
+        [
+          "se-ri-cor-di-ae,",
+          "Vi-ta, dul-"
+        ],
+        [
+          "ce-do,",
+          "et spes",
+          "nos-tra, sal-ve"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "MasTb1XlHDg",
+        "youtubeUrl": "https://youtu.be/MasTb1XlHDg",
+        "videoTitle": "Salve Regina (Hail, Holy Queen)",
+        "dur": 147,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            4,
+            "Salve Regina,"
+          ],
+          [
+            9,
+            "Mater misericordiae,"
+          ],
+          [
+            16,
+            "Vita, dulcedo,"
+          ],
+          [
+            21,
+            "et spes nostra, salve."
+          ],
+          [
+            27,
+            "Ad te clamamus,"
+          ],
+          [
+            32,
+            "exsules filii Hevae."
+          ],
+          [
+            39,
+            "Ad te suspiramus,"
+          ],
+          [
+            44,
+            "gementes et flentes"
+          ],
+          [
+            49,
+            "in hac lacrimarum valle."
+          ],
+          [
+            56,
+            "Eia ergo, advocata nostra,"
+          ],
+          [
+            65,
+            "illos tuos misericordes oculos"
+          ],
+          [
+            74,
+            "ad nos converte."
+          ],
+          [
+            81,
+            "Et Jesum,"
+          ],
+          [
+            84,
+            "benedictum fructum ventris tui,"
+          ],
+          [
+            91,
+            "nobis post hoc exsilium ostende."
+          ],
+          [
+            103,
+            "O clemens, O pia,"
+          ],
+          [
+            117,
+            "O dulcis"
+          ],
+          [
+            126,
+            "Virgo Maria."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-tantum-ergo",
+      "normKey": "tantum ergo sacramentum",
+      "title": "Tantum Ergo Sacramentum",
+      "artist": "St. Thomas Aquinas · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 66,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Tan-tum",
+          "er-go",
+          "Sa-cra-men-tum"
+        ],
+        [
+          "Ve-ne-re-mur",
+          "cer-nu-i,",
+          "Et an-ti-quum"
+        ],
+        [
+          "do-cu-men-tum",
+          "No-vo ce-dat"
+        ],
+        [
+          "ri-tu-i"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "YVavVTi5v0o",
+        "youtubeUrl": "https://youtu.be/YVavVTi5v0o",
+        "videoTitle": "Tantum Ergo Sacramentum",
+        "dur": 116,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            7,
+            "Tantum ergo Sacramentum"
+          ],
+          [
+            14,
+            "Veneremur cernui"
+          ],
+          [
+            22,
+            "Et antiquum documentum"
+          ],
+          [
+            30,
+            "Novo cedat ritui"
+          ],
+          [
+            37,
+            "Praestet fides supplementum"
+          ],
+          [
+            44,
+            "Sensuum defectui."
+          ],
+          [
+            52,
+            "Genitori, Genitoque"
+          ],
+          [
+            60,
+            "Laus et iubilatio"
+          ],
+          [
+            68,
+            "Salus, honor, virtus quoque"
+          ],
+          [
+            75,
+            "Sit et benedictio"
+          ],
+          [
+            82,
+            "Procedenti ab utroque"
+          ],
+          [
+            90,
+            "Compar sit laudatio."
+          ],
+          [
+            98,
+            "Amen."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-taste-and-see",
+      "normKey": "taste and see",
+      "title": "Taste and See",
+      "artist": "James Moore · Catholic Psalm 34",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 66,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Taste and",
+          "see, taste and",
+          "see the good-ness"
+        ],
+        [
+          "of the",
+          "Lord, O",
+          "taste and see"
+        ],
+        [
+          "the good-ness",
+          "of the Lord,",
+          "of the Lord"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "b4EsaIBMp9c",
+        "youtubeUrl": "https://youtu.be/b4EsaIBMp9c",
+        "videoTitle": "Taste and See",
+        "dur": 221,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            19,
+            "Taste and see. Taste and see the goodness of the Lord."
+          ],
+          [
+            35,
+            "O, taste and see. Taste and see the goodness of the Lord, of the Lord."
+          ],
+          [
+            57,
+            "I will bless the Lord at all times."
+          ],
+          [
+            65,
+            "God's praise shall always be on my lips;"
+          ],
+          [
+            74,
+            "My soul shall glory in the Lord;"
+          ],
+          [
+            82,
+            "For God has been so good to me."
+          ],
+          [
+            90,
+            "Taste and see. Taste and see the goodness of the Lord."
+          ],
+          [
+            106,
+            "O, taste and see. Taste and see the goodness of the Lord, of the Lord."
+          ],
+          [
+            129,
+            "Glorify the Lord with me."
+          ],
+          [
+            137,
+            "Together let us all praise God's name."
+          ],
+          [
+            145,
+            "I called the Lord who answered me;"
+          ],
+          [
+            153,
+            "From all my troubles God set me free."
+          ],
+          [
+            162,
+            "Taste and see. Taste and see the goodness of the Lord."
+          ],
+          [
+            178,
+            "O, taste and see. Taste and see the goodness of the Lord, of the Lord."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-one-bread-one-body",
+      "normKey": "one bread one body",
+      "title": "One Bread, One Body",
+      "artist": "John Foley · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "One bread,",
+          "one bo-dy,",
+          "one Lord of",
+          "all"
+        ],
+        [
+          "One cup",
+          "of bles-sing",
+          "which we",
+          "bless"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "WHAu3fLF7NI",
+        "youtubeUrl": "https://youtu.be/WHAu3fLF7NI",
+        "videoTitle": "One Bread, One Body",
+        "dur": 297,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            14,
+            "One bread, one body, one Lord of all,"
+          ],
+          [
+            27,
+            "One cup of blessing which we bless."
+          ],
+          [
+            37,
+            "And we, though many, throughout the earth,"
+          ],
+          [
+            50,
+            "We are one body in this one Lord."
+          ],
+          [
+            64,
+            "Gentile or Jew, servant or free,"
+          ],
+          [
+            75,
+            "Woman or man, no more."
+          ],
+          [
+            87,
+            "One bread, one body, one Lord of all,"
+          ],
+          [
+            98,
+            "One cup of blessing which we bless."
+          ],
+          [
+            108,
+            "And we, though many, throughout the earth,"
+          ],
+          [
+            121,
+            "We are one body in this one Lord."
+          ],
+          [
+            134,
+            "Many the gifts, many the works,"
+          ],
+          [
+            145,
+            "One in the Lord of all."
+          ],
+          [
+            157,
+            "One bread, one body, one Lord of all,"
+          ],
+          [
+            168,
+            "One cup of blessing which we bless."
+          ],
+          [
+            178,
+            "And we, though many, throughout the earth,"
+          ],
+          [
+            190,
+            "We are one body in this one Lord."
+          ],
+          [
+            204,
+            "Grain for the fields, scattered and grown,"
+          ],
+          [
+            215,
+            "Gathered to one, for all."
+          ],
+          [
+            226,
+            "One bread, one body, one Lord of all,"
+          ],
+          [
+            238,
+            "One cup of blessing which we bless."
+          ],
+          [
+            248,
+            "And we, though many, throughout the earth."
+          ],
+          [
+            260,
+            "We are one body in this one Lord."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-table-of-plenty",
+      "normKey": "table of plenty",
+      "title": "Table of Plenty",
+      "artist": "Dan Schutte · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Come to",
+          "the feast of",
+          "heav-en and earth"
+        ],
+        [
+          "Come to",
+          "the ta-ble",
+          "of plen-ty"
+        ],
+        [
+          "God will",
+          "pro-vide for",
+          "all that we need"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "_t8O_PwPlKA",
+        "youtubeUrl": "https://youtu.be/_t8O_PwPlKA",
+        "videoTitle": "Table of Plenty",
+        "dur": 169,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Come to the feast of heaven and earth!"
+          ],
+          [
+            14,
+            "Come to the table of plenty!"
+          ],
+          [
+            18,
+            "God will provide for all that we need,"
+          ],
+          [
+            23,
+            "Here at the table of plenty."
+          ],
+          [
+            32,
+            "O come and sit at my table"
+          ],
+          [
+            36,
+            "Where saints and sinners are friends."
+          ],
+          [
+            41,
+            "I wait to welcome the lost and lonely"
+          ],
+          [
+            45,
+            "To share the cup of my love."
+          ],
+          [
+            53,
+            "Come to the feast of heaven and earth!"
+          ],
+          [
+            58,
+            "Come to the table of plenty!"
+          ],
+          [
+            62,
+            "God will provide for all that we need,"
+          ],
+          [
+            67,
+            "Here at the table of plenty."
+          ],
+          [
+            75,
+            "O come and eat without money;"
+          ],
+          [
+            80,
+            "Come to drink without price."
+          ],
+          [
+            85,
+            "My feast of gladness will feed your spirit"
+          ],
+          [
+            89,
+            "With faith and fullness of life."
+          ],
+          [
+            97,
+            "Come to the feast of heaven and earth!"
+          ],
+          [
+            102,
+            "Come to the table of plenty!"
+          ],
+          [
+            106,
+            "God will provide for all that we need,"
+          ],
+          [
+            111,
+            "Here at the table of plenty."
+          ],
+          [
+            119,
+            "My bread will ever sustain you"
+          ],
+          [
+            123,
+            "Through days of sorrow and woe."
+          ],
+          [
+            128,
+            "My wine will flow like a sea of gladness"
+          ],
+          [
+            133,
+            "To flood the depths of your soul."
+          ],
+          [
+            140,
+            "Come to the feast of heaven and earth!"
+          ],
+          [
+            145,
+            "Come to the table of plenty!"
+          ],
+          [
+            149,
+            "God will provide for all that we need,"
+          ],
+          [
+            154,
+            "Here at the table of plenty."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-city-of-god",
+      "normKey": "city of god",
+      "title": "City of God",
+      "artist": "Dan Schutte · Catholic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 96,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "A-wake",
+          "from your",
+          "slum-ber!",
+          "A-rise from"
+        ],
+        [
+          "your sleep!",
+          "A new day",
+          "is dawn-ing"
+        ],
+        [
+          "Let us",
+          "build the",
+          "ci-ty of",
+          "God!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "gzJv2oTIGfk",
+        "youtubeUrl": "https://youtu.be/gzJv2oTIGfk",
+        "videoTitle": "City of God",
+        "dur": 222,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            10,
+            "Awake from your slumber! Arise from your sleep!"
+          ],
+          [
+            18,
+            "A new day is dawning for all those who weep."
+          ],
+          [
+            28,
+            "The people in darkness have seen a great light."
+          ],
+          [
+            36,
+            "The Lord of our longing has conquered the night."
+          ],
+          [
+            44,
+            "Let us build the city of God. May our tears be turned into dancing!"
+          ],
+          [
+            52,
+            "For the Lord, our light and our love, has turned the night into day!"
+          ],
+          [
+            66,
+            "We are sons of the morning; we are daughters of day."
+          ],
+          [
+            74,
+            "The One who has loved us has brightened our way."
+          ],
+          [
+            83,
+            "The Lord of all kindness has called us to be,"
+          ],
+          [
+            91,
+            "A light for His people to set their hearts free."
+          ],
+          [
+            99,
+            "Let us build the city of God. May our tears be turned into dancing!"
+          ],
+          [
+            107,
+            "For the Lord, our light and our love, has turned the night into day!"
+          ],
+          [
+            121,
+            "God is light; in Him there is no darkness."
+          ],
+          [
+            129,
+            "Let us walk in His light, His children one and all."
+          ],
+          [
+            141,
+            "O comfort my people; make gentle your words."
+          ],
+          [
+            149,
+            "Proclaim to my city the day of her birth."
+          ],
+          [
+            157,
+            "O city of gladness, now lift up your voice!"
+          ],
+          [
+            165,
+            "Proclaim the good tidings that all may rejoice!"
+          ],
+          [
+            174,
+            "Let us build the city of God. May our tears be turned into dancing!"
+          ],
+          [
+            182,
+            "For the Lord, our light and our love, has turned the night into day!"
+          ],
+          [
+            192,
+            "Has turned our night into day!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-prayer-of-st-francis",
+      "normKey": "prayer of st francis",
+      "title": "Prayer of St. Francis (Make Me)",
+      "artist": "Sebastian Temple · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "G",
+          "Dm",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "trv4",
+        "e": [
+          "arp4",
+          "bal4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Make me",
+          "a chan-nel",
+          "of Your",
+          "peace"
+        ],
+        [
+          "Where there",
+          "is ha-tred,",
+          "let me bring",
+          "Your love"
+        ],
+        [
+          "Where there",
+          "is in-ju-ry,",
+          "Your par-don",
+          "Lord"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "ihhvm6eLWZI",
+        "youtubeUrl": "https://youtu.be/ihhvm6eLWZI",
+        "videoTitle": "Prayer of St. Francis (Make Me)",
+        "dur": 172,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            8,
+            "Make me a channel of your peace"
+          ],
+          [
+            14,
+            "Where there is hatred, let me bring your love"
+          ],
+          [
+            21,
+            "Where there is injury, your pardon, Lord"
+          ],
+          [
+            27,
+            "And where there's doubt, true faith in you"
+          ],
+          [
+            35,
+            "Make me a channel of your peace"
+          ],
+          [
+            41,
+            "Where there's despair in life, let me bring hope"
+          ],
+          [
+            48,
+            "Where there is darkness, only light"
+          ],
+          [
+            54,
+            "And where there's sadness, ever joy"
+          ],
+          [
+            61,
+            "Oh Master, grant that I may never seek"
+          ],
+          [
+            67,
+            "So much to be consoled as to console"
+          ],
+          [
+            73,
+            "To be understood as to understand"
+          ],
+          [
+            79,
+            "To be loved as to love with all my soul"
+          ],
+          [
+            88,
+            "Make me a channel of your peace"
+          ],
+          [
+            94,
+            "It is in pardoning that we are pardoned"
+          ],
+          [
+            100,
+            "In giving of ourselves that we receive"
+          ],
+          [
+            107,
+            "And in dying that we're born to eternal life"
+          ],
+          [
+            114,
+            "Oh Master, grant that I may never seek"
+          ],
+          [
+            120,
+            "So much to be consoled as to console"
+          ],
+          [
+            126,
+            "To be understood as to understand"
+          ],
+          [
+            132,
+            "To be loved as to love with all my soul"
+          ],
+          [
+            141,
+            "Make me a channel of your peace"
+          ],
+          [
+            147,
+            "Where there is hatred, let me bring your love"
+          ],
+          [
+            153,
+            "Where there is injury, your pardon, Lord"
+          ],
+          [
+            160,
+            "And where there's doubt, true faith in you"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cath-seek-ye-first",
+      "normKey": "seek ye first",
+      "title": "Seek Ye First",
+      "artist": "Karen Lafferty · Catholic/Worship",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "Em"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Seek ye",
+          "first the",
+          "king-dom of",
+          "God"
+        ],
+        [
+          "and His",
+          "righ-teous-",
+          "ness"
+        ],
+        [
+          "And all",
+          "these things",
+          "shall be ad-ded"
+        ],
+        [
+          "Al-le-lu,",
+          "Al-le-lu-",
+          "ia!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "EsBpM9IcBts",
+        "youtubeUrl": "https://youtu.be/EsBpM9IcBts",
+        "videoTitle": "Seek Ye First",
+        "dur": 185,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            31,
+            "Seek ye first the kingdom of God"
+          ],
+          [
+            39,
+            "And His righteousness"
+          ],
+          [
+            47,
+            "And all these things shall be added unto you"
+          ],
+          [
+            55,
+            "Hallelu, Hallelujah!"
+          ],
+          [
+            63,
+            "Man shall not live by bread alone"
+          ],
+          [
+            71,
+            "But by every word"
+          ],
+          [
+            79,
+            "That proceeds from the mouth of God"
+          ],
+          [
+            87,
+            "Hallelu, Hallelujah!"
+          ],
+          [
+            95,
+            "Ask, and it shall be given unto you"
+          ],
+          [
+            103,
+            "Seek, and ye shall find"
+          ],
+          [
+            111,
+            "Knock, and the door shall be opened unto you"
+          ],
+          [
+            118,
+            "Hallelu, Hallelujah!"
+          ],
+          [
+            126,
+            "Seek ye first the kingdom of God"
+          ],
+          [
+            134,
+            "And His righteousness"
+          ],
+          [
+            142,
+            "And all these things shall be added unto you"
+          ],
+          [
+            150,
+            "Hallelu, Hallelujah!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-0",
+      "normKey": "how great thou art",
+      "title": "How Great Thou Art",
+      "artist": "Traditional Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O Lord",
+          "my God,",
+          "when I in",
+          "awe-some won-der"
+        ],
+        [
+          "Con-si-der",
+          "all the",
+          "worlds Thy hands",
+          "have made"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "Cc0QVWzCv9k",
+        "youtubeUrl": "https://youtu.be/Cc0QVWzCv9k",
+        "videoTitle": "How Great Thou Art",
+        "dur": 295,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            15,
+            "O Lord my God, when I in awesome wonder,"
+          ],
+          [
+            22,
+            "Consider all the worlds Thy hands have made;"
+          ],
+          [
+            30,
+            "I see the stars, I hear the rolling thunder,"
+          ],
+          [
+            37,
+            "Thy power throughout the universe displayed."
+          ],
+          [
+            45,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            52,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            60,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            67,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            78,
+            "When through the woods, and forest glades I wander"
+          ],
+          [
+            86,
+            "And hear the birds sing sweetly in the trees."
+          ],
+          [
+            93,
+            "When I look down, from lofty mountain grandeur"
+          ],
+          [
+            100,
+            "And hear the brook, and feel the gentle breeze."
+          ],
+          [
+            107,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            115,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            122,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            130,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            141,
+            "And when I think, that God, His Son not sparing;"
+          ],
+          [
+            149,
+            "Sent Him to die, I scarce can take it in;"
+          ],
+          [
+            156,
+            "That on a cross, my burden gladly bearing,"
+          ],
+          [
+            164,
+            "He bled and died to take away my sin."
+          ],
+          [
+            171,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            179,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            186,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            194,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            205,
+            "When Christ shall come, with shout of acclamation,"
+          ],
+          [
+            212,
+            "And take me home, what joy shall fill my heart."
+          ],
+          [
+            219,
+            "Then I shall bow, in humble adoration,"
+          ],
+          [
+            227,
+            "And there proclaim: My God, how great Thou art!"
+          ],
+          [
+            234,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            242,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            249,
+            "Then sings my soul, my Saviour God, to Thee,"
+          ],
+          [
+            257,
+            "How great Thou art, how great Thou art."
+          ],
+          [
+            264,
+            "How great Thou art, how great Thou art."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-4",
+      "normKey": "silent night",
+      "title": "Silent Night",
+      "artist": "Franz Gruber · Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 60,
+        "chords": [
+          "C",
+          "G",
+          "C",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Si-lent",
+          "night, ho-ly",
+          "night, All is"
+        ],
+        [
+          "calm, all is",
+          "bright, Round yon",
+          "Vir-gin Mo-ther"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "z7jYvmY6Gfk",
+        "youtubeUrl": "https://youtu.be/z7jYvmY6Gfk",
+        "videoTitle": "Silent Night",
+        "dur": 228,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            24,
+            "Silent night, holy night"
+          ],
+          [
+            35,
+            "All is calm, all is bright"
+          ],
+          [
+            45,
+            "Round yon virgin mother and child"
+          ],
+          [
+            55,
+            "Holy infant so tender and mild"
+          ],
+          [
+            65,
+            "Sleep in heavenly peace"
+          ],
+          [
+            75,
+            "Sleep in heavenly peace"
+          ],
+          [
+            89,
+            "Silent night, holy night"
+          ],
+          [
+            100,
+            "Shepherds quake at the sight"
+          ],
+          [
+            110,
+            "Glories stream from heaven afar"
+          ],
+          [
+            120,
+            "Heavenly hosts sing Alleluia"
+          ],
+          [
+            130,
+            "Christ the Savior is born"
+          ],
+          [
+            140,
+            "Christ the Savior is born"
+          ],
+          [
+            155,
+            "Silent night, holy night"
+          ],
+          [
+            165,
+            "Son of God, love's pure light"
+          ],
+          [
+            175,
+            "Radiant beams from Thy holy face"
+          ],
+          [
+            185,
+            "With the dawn of redeeming grace"
+          ],
+          [
+            195,
+            "Jesus, Lord at Thy birth"
+          ],
+          [
+            205,
+            "Jesus, Lord at Thy birth"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-15",
+      "normKey": "he s got the whole world in his hands",
+      "title": "He's Got the Whole World in His Hands",
+      "artist": "Traditional Spiritual",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 96,
+        "chords": [
+          "C",
+          "G7",
+          "C",
+          "G7"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "chk4",
+        "e": [
+          "chk4",
+          "drv4",
+          "srf4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "He's got the",
+          "whole world",
+          "in His",
+          "hands"
+        ],
+        [
+          "He's got the",
+          "whole wide",
+          "world in His",
+          "hands"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "W_btuje-3xU",
+        "youtubeUrl": "https://youtu.be/W_btuje-3xU",
+        "videoTitle": "He's Got the Whole World in His Hands",
+        "dur": 212,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            25,
+            "He's got the whole world in His hands"
+          ],
+          [
+            30,
+            "He's got the whole wide world in His hands"
+          ],
+          [
+            34,
+            "He's got the whole world in His hands"
+          ],
+          [
+            38,
+            "He's got the whole world in His hands"
+          ],
+          [
+            42,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            46,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            50,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            54,
+            "He's got the whole world in His hands"
+          ],
+          [
+            65,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            69,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            73,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            77,
+            "He's got the whole world in His hands"
+          ],
+          [
+            82,
+            "He's got you and me, sister, in His hands"
+          ],
+          [
+            86,
+            "He's got you and me, brother, in His hands"
+          ],
+          [
+            91,
+            "He's got you and me, sister, in His hands"
+          ],
+          [
+            95,
+            "He's got the whole world in His hands"
+          ],
+          [
+            107,
+            "He's got the whole world in His hands"
+          ],
+          [
+            111,
+            "He's got the whole wide world in His hands"
+          ],
+          [
+            115,
+            "He's got the whole world in His hands"
+          ],
+          [
+            119,
+            "He's got the whole world in His hands"
+          ],
+          [
+            124,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            128,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            132,
+            "He's got the wind and the rain in His hands"
+          ],
+          [
+            136,
+            "He's got the whole world in His hands"
+          ],
+          [
+            141,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            145,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            149,
+            "He's got the little bitty baby in His hands"
+          ],
+          [
+            153,
+            "He's got the whole world in His hands"
+          ],
+          [
+            158,
+            "He's got you and me, sister, in His hands"
+          ],
+          [
+            162,
+            "He's got you and me, brother, in His hands"
+          ],
+          [
+            166,
+            "He's got you and me, sister, in His hands"
+          ],
+          [
+            170,
+            "He's got the whole world in His hands"
+          ],
+          [
+            174,
+            "He's got everybody in His hands"
+          ],
+          [
+            178,
+            "He's got everybody in His hands"
+          ],
+          [
+            181,
+            "He's got everybody in His hands"
+          ],
+          [
+            184,
+            "He's got the whole world in His hands"
+          ],
+          [
+            188,
+            "He's got the whole world in His hands"
+          ],
+          [
+            192,
+            "He's got the whole world in His hands"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-16",
+      "normKey": "when the saints go marching in",
+      "title": "When the Saints Go Marching In",
+      "artist": "Traditional Gospel",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 112,
+        "chords": [
+          "C",
+          "C",
+          "G7",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "chk4",
+        "e": [
+          "chk4",
+          "drv4",
+          "srf4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Oh, when",
+          "the saints",
+          "go march-ing",
+          "in"
+        ],
+        [
+          "Lord, how",
+          "I want to",
+          "be in that",
+          "num-ber"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "kG6ZVNzqQ8M",
+        "youtubeUrl": "https://youtu.be/kG6ZVNzqQ8M",
+        "videoTitle": "When the Saints Go Marching In",
+        "dur": 212,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            4,
+            "I am just a weary pilgrim"
+          ],
+          [
+            9,
+            "Plodding through this world of sin"
+          ],
+          [
+            13,
+            "Getting ready for that city"
+          ],
+          [
+            18,
+            "When the saints go marching in"
+          ],
+          [
+            22,
+            "Oh when the saints go marching in"
+          ],
+          [
+            27,
+            "Oh when the saints go marching in"
+          ],
+          [
+            31,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            36,
+            "When the saints go marching in"
+          ],
+          [
+            41,
+            "My father loved the Savior"
+          ],
+          [
+            45,
+            "What a soldier he had been"
+          ],
+          [
+            49,
+            "But his steps will be more steady"
+          ],
+          [
+            54,
+            "When the saints go marching in"
+          ],
+          [
+            58,
+            "Oh when the saints go marching in"
+          ],
+          [
+            63,
+            "Oh when the saints go marching in"
+          ],
+          [
+            67,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            72,
+            "When the saints go marching in"
+          ],
+          [
+            95,
+            "Up there we'll see the Savior"
+          ],
+          [
+            99,
+            "Who redeemed my soul from sin"
+          ],
+          [
+            104,
+            "With extended hands He'll greet me"
+          ],
+          [
+            108,
+            "When the saints go marching in"
+          ],
+          [
+            113,
+            "Oh when the saints go marching in"
+          ],
+          [
+            118,
+            "Oh when the saints go marching in"
+          ],
+          [
+            122,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            127,
+            "When the saints go marching in"
+          ],
+          [
+            131,
+            "Oh when the saints go marching in"
+          ],
+          [
+            136,
+            "Oh when the saints go marching in"
+          ],
+          [
+            140,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            145,
+            "When the saints go marching in"
+          ],
+          [
+            163,
+            "Oh when the saints go marching in"
+          ],
+          [
+            168,
+            "Oh when the saints go marching in"
+          ],
+          [
+            172,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            177,
+            "When the saints go marching in"
+          ],
+          [
+            181,
+            "Oh when the saints go marching in"
+          ],
+          [
+            186,
+            "Oh when the saints go marching in"
+          ],
+          [
+            190,
+            "Oh Lord I want to be in that number"
+          ],
+          [
+            195,
+            "When the saints go marching in"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-17",
+      "normKey": "swing low sweet chariot",
+      "title": "Swing Low, Sweet Chariot",
+      "artist": "Traditional Spiritual",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 80,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Swing low,",
+          "sweet cha-ri-",
+          "ot, Com-ing",
+          "for to car-ry"
+        ],
+        [
+          "me home,",
+          "Swing low,",
+          "sweet cha-ri-",
+          "ot"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "v8frEt6w4G8",
+        "youtubeUrl": "https://youtu.be/v8frEt6w4G8",
+        "videoTitle": "Swing Low, Sweet Chariot",
+        "dur": 130,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Swing low, sweet chariot"
+          ],
+          [
+            13,
+            "Comin' for to carry me home"
+          ],
+          [
+            17,
+            "Swing low, sweet chariot"
+          ],
+          [
+            22,
+            "Comin' for to carry me home"
+          ],
+          [
+            25,
+            "I looked over Jordan, and what did I see"
+          ],
+          [
+            30,
+            "Comin' for to carry me home"
+          ],
+          [
+            33,
+            "A band of angels comin' after me"
+          ],
+          [
+            38,
+            "Comin' for to carry me home"
+          ],
+          [
+            42,
+            "Swing low, sweet chariot"
+          ],
+          [
+            47,
+            "Comin' for to carry me home"
+          ],
+          [
+            50,
+            "Swing low, sweet chariot"
+          ],
+          [
+            55,
+            "Comin' for to carry me home"
+          ],
+          [
+            58,
+            "If you get there before I do"
+          ],
+          [
+            63,
+            "Comin' for to carry me home"
+          ],
+          [
+            66,
+            "Tell all my friends I'm comin' too"
+          ],
+          [
+            71,
+            "Comin' for to carry me home"
+          ],
+          [
+            75,
+            "Swing low, sweet chariot"
+          ],
+          [
+            79,
+            "Comin' for to carry me home"
+          ],
+          [
+            83,
+            "Swing low, sweet chariot"
+          ],
+          [
+            88,
+            "Comin' for to carry me home"
+          ],
+          [
+            91,
+            "Sometimes I'm up, sometimes I'm down"
+          ],
+          [
+            96,
+            "Comin' for to carry me home"
+          ],
+          [
+            99,
+            "But still my soul feels heavenly bound"
+          ],
+          [
+            104,
+            "Comin' for to carry me home"
+          ],
+          [
+            108,
+            "Swing low, sweet chariot"
+          ],
+          [
+            113,
+            "Comin' for to carry me home"
+          ],
+          [
+            116,
+            "Swing low, sweet chariot"
+          ],
+          [
+            121,
+            "Comin' for to carry me home"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-18",
+      "normKey": "kumbaya my lord",
+      "title": "Kumbaya, My Lord",
+      "artist": "Traditional Spiritual",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Kum-ba-",
+          "ya, my Lord,",
+          "kum-ba-",
+          "ya"
+        ],
+        [
+          "O Lord,",
+          "kum-ba-",
+          "ya"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "uv0sfA7zuS8",
+        "youtubeUrl": "https://youtu.be/uv0sfA7zuS8",
+        "videoTitle": "Kumbaya, My Lord",
+        "dur": 154,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            6,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            15,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            25,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            34,
+            "O Lord, kumbaya."
+          ],
+          [
+            41,
+            "Someone's crying, Lord, kumbaya."
+          ],
+          [
+            50,
+            "Someone's crying, Lord, kumbaya."
+          ],
+          [
+            59,
+            "Someone's crying, Lord, kumbaya."
+          ],
+          [
+            68,
+            "O Lord, kumbaya."
+          ],
+          [
+            75,
+            "Someone's singing, Lord, kumbaya."
+          ],
+          [
+            84,
+            "Someone's singing, Lord, kumbaya."
+          ],
+          [
+            93,
+            "Someone's singing, Lord, kumbaya."
+          ],
+          [
+            101,
+            "O Lord, kumbaya."
+          ],
+          [
+            108,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            117,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            126,
+            "Kumbaya, my Lord, kumbaya."
+          ],
+          [
+            135,
+            "O Lord, kumbaya."
+          ],
+          [
+            140,
+            "O Lord, kumbaya."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-20",
+      "normKey": "i have decided to follow jesus",
+      "title": "I Have Decided to Follow Jesus",
+      "artist": "Traditional Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "I have",
+          "de-ci-ded",
+          "to fol-low",
+          "Je-sus"
+        ],
+        [
+          "No turn-ing",
+          "back, no",
+          "turn-ing",
+          "back"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "L7XHeCZB5KU",
+        "youtubeUrl": "https://youtu.be/L7XHeCZB5KU",
+        "videoTitle": "I Have Decided to Follow Jesus",
+        "dur": 166,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            3,
+            "I have decided to follow Jesus"
+          ],
+          [
+            9,
+            "I have decided to follow Jesus"
+          ],
+          [
+            17,
+            "I have decided to follow Jesus"
+          ],
+          [
+            24,
+            "No turning back, no turning back"
+          ],
+          [
+            31,
+            "The world behind me, the cross before me"
+          ],
+          [
+            38,
+            "The world behind me, the cross before me"
+          ],
+          [
+            45,
+            "The world behind me, the cross before me"
+          ],
+          [
+            52,
+            "No turning back, no turning back"
+          ],
+          [
+            59,
+            "Though none go with me, still I will follow"
+          ],
+          [
+            66,
+            "Though none go with me, still I will follow"
+          ],
+          [
+            73,
+            "Though none go with me, still I will follow"
+          ],
+          [
+            80,
+            "No turning back, no turning back"
+          ],
+          [
+            87,
+            "Will you decide now to follow Jesus?"
+          ],
+          [
+            94,
+            "Will you decide now to follow Jesus?"
+          ],
+          [
+            101,
+            "Will you decide now to follow Jesus?"
+          ],
+          [
+            108,
+            "No turning back, no turning back"
+          ],
+          [
+            116,
+            "I have decided to follow Jesus"
+          ],
+          [
+            123,
+            "I have decided to follow Jesus"
+          ],
+          [
+            130,
+            "I have decided to follow Jesus"
+          ],
+          [
+            137,
+            "No turning back, no turning back"
+          ],
+          [
+            143,
+            "No turning back, no turning back"
+          ],
+          [
+            151,
+            "There's no turning back, no turning back"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-24",
+      "normKey": "o come o come emmanuel",
+      "title": "O Come, O Come, Emmanuel",
+      "artist": "Traditional Advent",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "Am"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O come,",
+          "O come,",
+          "Em-man-u-",
+          "el"
+        ],
+        [
+          "and ran-som",
+          "cap-tive",
+          "Is-ra-el"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "7xtpJ4Q_Q-4",
+        "youtubeUrl": "https://youtu.be/7xtpJ4Q_Q-4",
+        "videoTitle": "O Come, O Come, Emmanuel",
+        "dur": 226,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            11,
+            "O come, O come, Emmanuel,"
+          ],
+          [
+            17,
+            "And ransom captive Israel,"
+          ],
+          [
+            23,
+            "That mourns in lonely exile here"
+          ],
+          [
+            30,
+            "Until the Son of God appear."
+          ],
+          [
+            36,
+            "Rejoice! Rejoice! Emmanuel"
+          ],
+          [
+            44,
+            "Shall come to you, O Israel!"
+          ],
+          [
+            53,
+            "O come, our Wisdom from on high,"
+          ],
+          [
+            59,
+            "Who ordered all things mightily;"
+          ],
+          [
+            65,
+            "To us the path of knowledge show,"
+          ],
+          [
+            71,
+            "And teach us in her ways to go."
+          ],
+          [
+            78,
+            "Rejoice! Rejoice! Emmanuel"
+          ],
+          [
+            86,
+            "Shall come to you, O Israel!"
+          ],
+          [
+            95,
+            "O come, the branch of Jesse's tree;"
+          ],
+          [
+            101,
+            "Free them from Satan's tyranny"
+          ],
+          [
+            107,
+            "That trust Your mighty pow'r to save"
+          ],
+          [
+            113,
+            "And give them vict'ry o'er the grave."
+          ],
+          [
+            120,
+            "Rejoice! Rejoice! Emmanuel"
+          ],
+          [
+            128,
+            "Shall come to you, O Israel!"
+          ],
+          [
+            136,
+            "O come, O Key of David, come,"
+          ],
+          [
+            143,
+            "And open wide our heav'nly home."
+          ],
+          [
+            149,
+            "Make safe the way that leads on high,"
+          ],
+          [
+            155,
+            "And close the path to misery."
+          ],
+          [
+            161,
+            "Rejoice! Rejoice! Emmanuel"
+          ],
+          [
+            169,
+            "Shall come to you, O Israel!"
+          ],
+          [
+            178,
+            "O come, desire of nations, bind"
+          ],
+          [
+            185,
+            "In one the hearts of all mankind;"
+          ],
+          [
+            191,
+            "O bid our sad divisions cease,"
+          ],
+          [
+            198,
+            "And be Yourself our King of Peace."
+          ],
+          [
+            204,
+            "Rejoice! Rejoice! Emmanuel"
+          ],
+          [
+            212,
+            "Shall come to you, O Israel!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-27",
+      "normKey": "hark the herald angels sing",
+      "title": "Hark! The Herald Angels Sing",
+      "artist": "Charles Wesley",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Hark! the",
+          "he-rald",
+          "an-gels sing,",
+          "Glo-ry to the"
+        ],
+        [
+          "new-born King,",
+          "Peace on earth",
+          "and mer-cy",
+          "mild"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "3P97yj-f4sc",
+        "youtubeUrl": "https://youtu.be/3P97yj-f4sc",
+        "videoTitle": "Hark! The Herald Angels Sing",
+        "dur": 176,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            15,
+            "Hark the herald angels sing"
+          ],
+          [
+            20,
+            "Glory to the newborn King"
+          ],
+          [
+            24,
+            "Peace on earth and mercy mild"
+          ],
+          [
+            29,
+            "God and sinners reconciled"
+          ],
+          [
+            33,
+            "Joyful all ye nations rise"
+          ],
+          [
+            38,
+            "Join the triumphs of the skies"
+          ],
+          [
+            43,
+            "Nature rise and worship Him"
+          ],
+          [
+            47,
+            "Who is born at Bethlehem"
+          ],
+          [
+            52,
+            "Hark the herald angels sing"
+          ],
+          [
+            56,
+            "Glory to the newborn King"
+          ],
+          [
+            64,
+            "Christ by highest heaven adored"
+          ],
+          [
+            69,
+            "Christ the everlasting Lord"
+          ],
+          [
+            74,
+            "Late in time behold Him come"
+          ],
+          [
+            78,
+            "Offspring of a virgin's womb"
+          ],
+          [
+            83,
+            "Veiled in flesh the Godhead see"
+          ],
+          [
+            88,
+            "Hail the incarnate Deity"
+          ],
+          [
+            92,
+            "Pleased as man with men to appear"
+          ],
+          [
+            97,
+            "Jesus our Emmanuel here"
+          ],
+          [
+            101,
+            "Hark the herald angels sing"
+          ],
+          [
+            106,
+            "Glory to the newborn King"
+          ],
+          [
+            119,
+            "Hail the heav'n born Prince of Peace"
+          ],
+          [
+            123,
+            "Hail the Son of Righteousness"
+          ],
+          [
+            128,
+            "Light and life around He brings"
+          ],
+          [
+            133,
+            "Risen with healing in His wings"
+          ],
+          [
+            137,
+            "Mild He lays His glory by"
+          ],
+          [
+            142,
+            "Born that men no more may die"
+          ],
+          [
+            146,
+            "Born to raise the sons of earth"
+          ],
+          [
+            151,
+            "Born to give them second birth"
+          ],
+          [
+            156,
+            "Hark the herald angels sing"
+          ],
+          [
+            160,
+            "Glory to the newborn King"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-28",
+      "normKey": "away in a manger",
+      "title": "Away in a Manger",
+      "artist": "Traditional Carol",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "A-way in",
+          "a man-ger,",
+          "no crib for"
+        ],
+        [
+          "a bed, The",
+          "lit-tle Lord",
+          "Je-sus laid",
+          "down His sweet head"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "AnwO_0DrpCk",
+        "youtubeUrl": "https://youtu.be/AnwO_0DrpCk",
+        "videoTitle": "Away in a Manger",
+        "dur": 120,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            8,
+            "Away in a manger, no crib for a bed,"
+          ],
+          [
+            16,
+            "The little Lord Jesus laid down His sweet head."
+          ],
+          [
+            24,
+            "The stars in the bright sky looked down where He lay,"
+          ],
+          [
+            32,
+            "The little Lord Jesus asleep on the hay."
+          ],
+          [
+            42,
+            "The cattle are lowing, the baby awakes,"
+          ],
+          [
+            50,
+            "But little Lord Jesus, no crying He makes."
+          ],
+          [
+            58,
+            "I love Thee, Lord Jesus, look down from the sky,"
+          ],
+          [
+            66,
+            "And stay by my cradle till morning is nigh."
+          ],
+          [
+            76,
+            "Be near me, Lord Jesus, I ask Thee to stay"
+          ],
+          [
+            85,
+            "Close by me forever, and love me, I pray."
+          ],
+          [
+            92,
+            "Bless all the dear children in Thy tender care,"
+          ],
+          [
+            100,
+            "And take us to heaven to live with Thee there."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-30",
+      "normKey": "christ the lord is risen today",
+      "title": "Christ the Lord Is Risen Today",
+      "artist": "Charles Wesley",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Christ the",
+          "Lord is",
+          "ris-en to-",
+          "day, Al-le-lu-ia!"
+        ],
+        [
+          "Sons of",
+          "men and",
+          "an-gels say,",
+          "Al-le-lu-ia!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "nzy7jFNUc3w",
+        "youtubeUrl": "https://youtu.be/nzy7jFNUc3w",
+        "videoTitle": "Christ the Lord Is Risen Today",
+        "dur": 172,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Christ the Lord is risen today, Alleluia!"
+          ],
+          [
+            18,
+            "Sons of men and angels say, Alleluia!"
+          ],
+          [
+            28,
+            "Raise your joys and triumphs high, Alleluia!"
+          ],
+          [
+            37,
+            "Sing, ye heavens, and earth reply, Alleluia!"
+          ],
+          [
+            46,
+            "Lives again our glorious King, Alleluia!"
+          ],
+          [
+            55,
+            "Where, O death, is now thy sting? Alleluia!"
+          ],
+          [
+            64,
+            "Dying once, our souls to save, Alleluia!"
+          ],
+          [
+            73,
+            "Where thy victory, O grave? Alleluia!"
+          ],
+          [
+            83,
+            "Love's redeeming work is done, Alleluia!"
+          ],
+          [
+            92,
+            "Fought the fight, the battle won, Alleluia!"
+          ],
+          [
+            101,
+            "Death in vain forbids him rise, Alleluia!"
+          ],
+          [
+            110,
+            "Christ has opened Paradise, Alleluia!"
+          ],
+          [
+            120,
+            "Soar we now where Christ has led, Alleluia!"
+          ],
+          [
+            130,
+            "Following our exalted Head, Alleluia!"
+          ],
+          [
+            140,
+            "Made like him, like him we rise, Alleluia!"
+          ],
+          [
+            151,
+            "Ours the cross, the grave, the skies, Alleluia!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-61",
+      "normKey": "all creatures of our god and king",
+      "title": "All Creatures of Our God and King",
+      "artist": "St. Francis of Assisi",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "All crea-tures",
+          "of our God",
+          "and King, Lift"
+        ],
+        [
+          "up your voice",
+          "and with us",
+          "sing Al-le-lu-ia!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "hhycL4h64_s",
+        "youtubeUrl": "https://youtu.be/hhycL4h64_s",
+        "videoTitle": "All Creatures of Our God and King",
+        "dur": 290,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            24,
+            "All creatures of our God and King"
+          ],
+          [
+            30,
+            "Lift up your voice and with us sing"
+          ],
+          [
+            36,
+            "O praise Him, Alleluia"
+          ],
+          [
+            43,
+            "Thou, burning sun with golden beam"
+          ],
+          [
+            49,
+            "Thou, silver moon with softer gleam"
+          ],
+          [
+            55,
+            "O praise Him, O praise Him"
+          ],
+          [
+            62,
+            "Alleluia, Alleluia, Alleluia"
+          ],
+          [
+            83,
+            "Let all things their Creator bless"
+          ],
+          [
+            89,
+            "And worship Him in humbleness"
+          ],
+          [
+            95,
+            "O praise Him, Alleluia"
+          ],
+          [
+            102,
+            "Praise, praise the Father, praise the Son"
+          ],
+          [
+            108,
+            "And praise the Spirit, Three-in-One"
+          ],
+          [
+            114,
+            "O praise Him, O praise Him"
+          ],
+          [
+            121,
+            "Alleluia, Alleluia, Alleluia"
+          ],
+          [
+            135,
+            "All the redeemed washed by His blood"
+          ],
+          [
+            141,
+            "Come and rejoice in His great love"
+          ],
+          [
+            147,
+            "O praise Him, Alleluia"
+          ],
+          [
+            154,
+            "Christ has defeated every sin"
+          ],
+          [
+            160,
+            "Cast all your burdens now on Him"
+          ],
+          [
+            166,
+            "O praise Him, O praise Him"
+          ],
+          [
+            173,
+            "Alleluia, Alleluia, Alleluia"
+          ],
+          [
+            187,
+            "He shall return in pow'r to reign"
+          ],
+          [
+            193,
+            "Heaven and earth will join to say"
+          ],
+          [
+            199,
+            "O praise Him, Alleluia"
+          ],
+          [
+            206,
+            "Then who shall fall on bended knee?"
+          ],
+          [
+            212,
+            "All creatures of our God and King"
+          ],
+          [
+            218,
+            "O praise Him, O praise Him"
+          ],
+          [
+            224,
+            "Alleluia, Alleluia"
+          ],
+          [
+            231,
+            "O praise Him, O praise Him"
+          ],
+          [
+            237,
+            "Alleluia, Alleluia, Alleluia"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "classic-62",
+      "normKey": "be thou my vision",
+      "title": "Be Thou My Vision",
+      "artist": "Traditional Irish Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Be Thou",
+          "my Vi-sion,",
+          "O Lord of"
+        ],
+        [
+          "my heart,",
+          "Naught be all",
+          "else to me"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "Optrm7lF16s",
+        "youtubeUrl": "https://youtu.be/Optrm7lF16s",
+        "videoTitle": "Be Thou My Vision",
+        "dur": 215,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            30,
+            "Be Thou my Vision, O Lord of my heart"
+          ],
+          [
+            38,
+            "Naught be all else to me, save that Thou art"
+          ],
+          [
+            47,
+            "Thou my best thought, by day or by night"
+          ],
+          [
+            55,
+            "Waking or sleeping, Thy presence my light"
+          ],
+          [
+            70,
+            "Be Thou my Wisdom, and Thou my true Word"
+          ],
+          [
+            78,
+            "I ever with Thee and Thou with me, Lord"
+          ],
+          [
+            87,
+            "Thou my great Father, I Thy true son"
+          ],
+          [
+            95,
+            "Thou in me dwelling, and I with Thee one"
+          ],
+          [
+            106,
+            "Riches I heed not, nor man's empty praise"
+          ],
+          [
+            114,
+            "Thou mine inheritance, now and always"
+          ],
+          [
+            123,
+            "Thou and Thou only, first in my heart"
+          ],
+          [
+            131,
+            "High King of Heaven, my treasure Thou art"
+          ],
+          [
+            142,
+            "High King of Heaven, my victory won"
+          ],
+          [
+            151,
+            "May I reach Heaven's joys, O bright Heaven's Sun"
+          ],
+          [
+            159,
+            "Heart of my own heart, whatever befall"
+          ],
+          [
+            167,
+            "Still be my Vision, O Ruler of all"
+          ],
+          [
+            176,
+            "Heart of my own heart, whatever befall"
+          ],
+          [
+            184,
+            "Still be my Vision, O Ruler of all"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-23",
+      "normKey": "christ be beside me",
+      "title": "Christ Be Beside Me (St. Patrick)",
+      "artist": "Catholic Traditional Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Christ be",
+          "be-side me,",
+          "Christ be be-fore",
+          "me"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "pv3Rb0Dz93U",
+        "youtubeUrl": "https://youtu.be/pv3Rb0Dz93U",
+        "videoTitle": "Christ be beside me Christ be before me",
+        "dur": 160,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            15,
+            "Christ be beside me, Christ be before me, Christ be behind me, King of my heart; Christ be within me,"
+          ],
+          [
+            35,
+            "Christ be below me, Christ be above me, never to part."
+          ],
+          [
+            63,
+            "Christ on my right hand, Christ on my left hand, Christ all around me, shield in my strife; Christ in"
+          ],
+          [
+            80,
+            "my sleeping, Christ in my sitting, Christ in my rising, light of my life."
+          ],
+          [
+            111,
+            "Christ be in all hearts thinking about me, Christ be on all tongues telling of me; Christ be the vision"
+          ],
+          [
+            130,
+            "in eyes that see me, in ears that hear me, Christ ever be."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-24",
+      "normKey": "lead me guide me",
+      "title": "Lead Me, Guide Me",
+      "artist": "Doris Akers · Catholic/Gospel",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Lead me,",
+          "guide me, a-",
+          "long the way"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "PLpB-dE2DHM",
+        "youtubeUrl": "https://youtu.be/PLpB-dE2DHM",
+        "videoTitle": "Gaither, Velma Willis - Lead Me, Guide Me (Live)",
+        "dur": 197,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            0,
+            "Lead me, guide me, along the way."
+          ],
+          [
+            12,
+            "For if You lead me,"
+          ],
+          [
+            21,
+            "I cannot stray."
+          ],
+          [
+            26,
+            "Lord, let me walk"
+          ],
+          [
+            32,
+            "Each day with Thee."
+          ],
+          [
+            39,
+            "Keep me, oh, Lord."
+          ],
+          [
+            47,
+            "Lead me."
+          ],
+          [
+            55,
+            "I am weak, and I need"
+          ],
+          [
+            62,
+            "Thy strength and power, to help"
+          ],
+          [
+            72,
+            "me o'er"
+          ],
+          [
+            76,
+            "my weakest hour."
+          ],
+          [
+            82,
+            "Help me through"
+          ],
+          [
+            86,
+            "the darkness"
+          ],
+          [
+            90,
+            "for Thy face"
+          ],
+          [
+            93,
+            "to see. Oh, lead me."
+          ],
+          [
+            100,
+            "Oh, Lord, lead me."
+          ],
+          [
+            111,
+            "Lead me"
+          ],
+          [
+            114,
+            "Guide me along the way."
+          ],
+          [
+            122,
+            "For if You lead me,"
+          ],
+          [
+            131,
+            "I cannot stray. Lord, let me walk"
+          ],
+          [
+            142,
+            "Each day with Thee."
+          ],
+          [
+            149,
+            "Oh, Lord, lead me."
+          ],
+          [
+            153,
+            "Lead me, oh, Lord."
+          ],
+          [
+            157,
+            "Lead me."
+          ],
+          [
+            165,
+            "Lead me, oh, Lord."
+          ],
+          [
+            169,
+            "Oh, Lord, lead me."
+          ],
+          [
+            179,
+            "Lead me, oh, Lord."
+          ],
+          [
+            182,
+            "Oh, Lord, lead me."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-25",
+      "normKey": "immaculate conception",
+      "title": "Immaculate Conception (O Sanctissima)",
+      "artist": "Catholic Marian Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "G",
+          "C",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O sanc-tis-",
+          "si-ma, O pi-",
+          "is-si-ma, dul-cis",
+          "Vir-go Ma-ri-a"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "7GcTkmEoluI",
+        "youtubeUrl": "https://youtu.be/7GcTkmEoluI",
+        "videoTitle": "O Sanctissima | Mary Song | Catholic Hymn | Choir with Lyrics | Latin & English | Sunday 7pm Choir",
+        "dur": 247,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            14,
+            "O sanctissima, o piisima,"
+          ],
+          [
+            26,
+            "Dulcis Virgo Maria!"
+          ],
+          [
+            38,
+            "Mater amata, intemerata,"
+          ],
+          [
+            51,
+            "Ora, ora pro nobis."
+          ],
+          [
+            65,
+            "Tu solatium et refugium,"
+          ],
+          [
+            78,
+            "Virgo Mater Maria."
+          ],
+          [
+            91,
+            "Quidquid optamus, per te speramus;"
+          ],
+          [
+            104,
+            "Ora, ora pro nobis."
+          ],
+          [
+            119,
+            "Ecce debiles, perquam flebiles;"
+          ],
+          [
+            132,
+            "Salva nos, Maria!"
+          ],
+          [
+            145,
+            "Tolle languores, sana dolores;"
+          ],
+          [
+            158,
+            "Ora, ora pro nobis."
+          ],
+          [
+            174,
+            "Virgo, respice, Mater, aspice;"
+          ],
+          [
+            187,
+            "Audi nos, Maria!"
+          ],
+          [
+            199,
+            "Tu medicinam, portas divinam;"
+          ],
+          [
+            212,
+            "Ora, ora pro nobis."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-26",
+      "normKey": "soul of my savior",
+      "title": "Soul of My Savior (Anima Christi)",
+      "artist": "Catholic Eucharistic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 68,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Soul of my",
+          "Sa-vior, sanc-ti-",
+          "fy my breast"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "tkFvz0Ch7vI",
+        "youtubeUrl": "https://youtu.be/tkFvz0Ch7vI",
+        "videoTitle": "Soul of My Saviour (Tune: Anima Christi - 3vv) [with lyrics for congregations]",
+        "dur": 173,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            1,
+            "Soul of my Saviour, Sanctify my breast, Body of Christ, Be thou my saving guest,"
+          ],
+          [
+            26,
+            "Blood of my Saviour, Bathe me in thy tide, Wash me with water Flowing from thy side."
+          ],
+          [
+            55,
+            "Strength and protection May thy passion be, O blessèd Jesu, Hear and answer me;"
+          ],
+          [
+            80,
+            "Deep in thy wounds, Lord, hide and shelter me, So shall I never, Never part from thee."
+          ],
+          [
+            110,
+            "Guard and defend me From the foe malign, In death's dread moments Make me only thine;"
+          ],
+          [
+            137,
+            "Call me and bid me Come to thee on high Where I may praise thee With thy saints for ay."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-27",
+      "normKey": "o sacrament most holy",
+      "title": "O Sacrament Most Holy",
+      "artist": "Catholic Eucharistic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O Sa-cra-ment",
+          "most ho-ly, O",
+          "Sa-cra-ment di-",
+          "vine!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "v3mCMwO6RVY",
+        "youtubeUrl": "https://youtu.be/v3mCMwO6RVY",
+        "videoTitle": "O Sacrament Most Holy (FULDA)",
+        "dur": 152,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            12,
+            "O Jesus, we adore you, who in your love divine, conceal your mighty Godhead in forms of bread and wine. O Sacrament"
+          ],
+          [
+            35,
+            "most holy, O Sacrament divine, all praise and all"
+          ],
+          [
+            51,
+            "thanksgiving be every moment thine! O Jesus, we adore you, our victim and our priest, whose precious blood and body become our sacred feast. O Sacrament"
+          ],
+          [
+            78,
+            "most holy, O Sacrament divine, all praise and all thanksgiving be every moment thine! O Jesus, we adore you, our Savior"
+          ],
+          [
+            104,
+            "and our King, and with the saints and angels our humble homage bring. O Sacrament most holy, O Sacrament"
+          ],
+          [
+            126,
+            "divine, all praise and all thanksgiving be every"
+          ],
+          [
+            140,
+            "moment thine!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-28",
+      "normKey": "sing of mary pure and lowly",
+      "title": "Sing of Mary, Pure and Lowly",
+      "artist": "Catholic Marian Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Sing of",
+          "Ma-ry, pure and",
+          "low-ly, Vir-gin",
+          "Mo-ther un-de-filed"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "vEk6XBKey0A",
+        "youtubeUrl": "https://youtu.be/vEk6XBKey0A",
+        "videoTitle": "Sing of Mary (Lyric Video) - Catholic Music Initiative - Dave Moore, Lauren Moore",
+        "dur": 188,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            11,
+            "Sing of Mary, pure and lowly, Virgin Mother undefiled."
+          ],
+          [
+            24,
+            "Sing of God's own Son most holy, Who became her little child."
+          ],
+          [
+            36,
+            "Fairest child of fairest mother, God the Lord who came to earth,"
+          ],
+          [
+            47,
+            "Word made flesh, our very brother, takes our nature by his birth."
+          ],
+          [
+            63,
+            "Sing of Jesus, son of Mary, in the home at Nazareth."
+          ],
+          [
+            75,
+            "Toil and labor cannot weary Love enduring unto death."
+          ],
+          [
+            87,
+            "Constant was the love he gave her, though he went forth from her side,"
+          ],
+          [
+            99,
+            "Forth to preach and heal and suffer, till on Calvary he died."
+          ],
+          [
+            120,
+            "Glory be to God the Father; Glory be to God the Son;"
+          ],
+          [
+            133,
+            "Glory be to God the Spirit; Glory to the Three in One."
+          ],
+          [
+            145,
+            "From the heart of blessed Mary, from all saints the song ascends,"
+          ],
+          [
+            157,
+            "And the Church the strain re-echoes unto earth's remotest ends."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-29",
+      "normKey": "hail mary gentle woman",
+      "title": "Hail Mary: Gentle Woman",
+      "artist": "Carey Landry · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Hail Ma-ry,",
+          "full of grace,",
+          "the Lord is",
+          "with you"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "OUey6ytEXqY",
+        "youtubeUrl": "https://youtu.be/OUey6ytEXqY",
+        "videoTitle": "Hail Mary, Gentle Woman | Carey Landry | Catholic Hymn | Choir (SATB) with Lyrics | Sunday 7pm Choir",
+        "dur": 256,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            6,
+            "Hail Mary, full of grace,"
+          ],
+          [
+            14,
+            "the Lord is with you."
+          ],
+          [
+            21,
+            "Blessed are you among women,"
+          ],
+          [
+            26,
+            "and blest is the fruit of your womb, Jesus."
+          ],
+          [
+            38,
+            "Holy Mary, Mother of God,"
+          ],
+          [
+            46,
+            "Pray for us sinners now,"
+          ],
+          [
+            51,
+            "and at the hour of death. Amen."
+          ],
+          [
+            63,
+            "Gentle woman, quiet light,"
+          ],
+          [
+            71,
+            "Morning star, so strong and bright,"
+          ],
+          [
+            79,
+            "Gentle Mother, peaceful dove,"
+          ],
+          [
+            87,
+            "Teach us wisdom, teach us love."
+          ],
+          [
+            95,
+            "You were chosen by the Father,"
+          ],
+          [
+            103,
+            "You were chosen for the Son."
+          ],
+          [
+            111,
+            "You were chosen from all women,"
+          ],
+          [
+            119,
+            "And for woman, shining one."
+          ],
+          [
+            129,
+            "Gentle woman, quiet light,"
+          ],
+          [
+            138,
+            "Morning star, so strong and bright,"
+          ],
+          [
+            146,
+            "Gentle Mother, peaceful dove,"
+          ],
+          [
+            154,
+            "Teach us wisdom, teach us love."
+          ],
+          [
+            162,
+            "Blessed are you among women,"
+          ],
+          [
+            171,
+            "Blest in turn all women, too."
+          ],
+          [
+            179,
+            "Blessed they with peaceful spirits."
+          ],
+          [
+            187,
+            "Blessed they with gentle hearts."
+          ],
+          [
+            197,
+            "Gentle woman, quiet light,"
+          ],
+          [
+            205,
+            "Morning star, so strong and bright,"
+          ],
+          [
+            213,
+            "Gentle Mother, peaceful dove,"
+          ],
+          [
+            221,
+            "Teach us wisdom, teach us love."
+          ],
+          [
+            230,
+            "Teach us wisdom, teach us love."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-30",
+      "normKey": "ave maria",
+      "title": "Ave Maria (Schubert)",
+      "artist": "Franz Schubert · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 60,
+        "chords": [
+          "C",
+          "Am",
+          "Dm",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "rol6",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "A-ve Ma-",
+          "ri-a, Gra-ti-",
+          "a ple-na"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "sWe95K5BEoM",
+        "youtubeUrl": "https://youtu.be/sWe95K5BEoM",
+        "videoTitle": "Ave Maria | Schubert | Solo & Choir with Lyrics (Latin & English) | Hail Mary | Sunday 7pm Choir",
+        "dur": 259,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            18,
+            "Ave Maria"
+          ],
+          [
+            31,
+            "Gratia plena"
+          ],
+          [
+            39,
+            "Maria, gratia plena"
+          ],
+          [
+            48,
+            "Maria, gratia plena"
+          ],
+          [
+            56,
+            "Ave, Ave Dominus"
+          ],
+          [
+            64,
+            "Dominus tecum"
+          ],
+          [
+            69,
+            "Benedicta tu in mulieribus"
+          ],
+          [
+            78,
+            "Et benedictus"
+          ],
+          [
+            86,
+            "Et benedictus fructus ventris"
+          ],
+          [
+            94,
+            "Ventris tui, Jesus"
+          ],
+          [
+            104,
+            "Ave Maria"
+          ],
+          [
+            128,
+            "Sancta Maria"
+          ],
+          [
+            140,
+            "Mater Dei"
+          ],
+          [
+            149,
+            "Ora pro nobis peccatoribus"
+          ],
+          [
+            158,
+            "Ora, ora pro nobis"
+          ],
+          [
+            166,
+            "Ora pro nobis peccatoribus"
+          ],
+          [
+            179,
+            "Nunc et in hora mortis"
+          ],
+          [
+            188,
+            "In hora mortis nostrae"
+          ],
+          [
+            196,
+            "In hora mortis, mortis nostrae"
+          ],
+          [
+            205,
+            "In hora mortis nostrae"
+          ],
+          [
+            214,
+            "Ave Maria"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-31",
+      "normKey": "christ be our light",
+      "title": "Christ Be Our Light",
+      "artist": "Bernadette Farrell · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "E7"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "syn4",
+        "e": [
+          "arp4",
+          "ich4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Christ, be our",
+          "light! Shine in our",
+          "hearts, shine through the",
+          "dark-ness"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "qibAAo0JiEQ",
+        "youtubeUrl": "https://youtu.be/qibAAo0JiEQ",
+        "videoTitle": "Christ, Be Our Light – Bernadette Farrell [Official Lyric Video]",
+        "dur": 254,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Longing for light, we wait in darkness"
+          ],
+          [
+            15,
+            "Longing for truth, we turn to you"
+          ],
+          [
+            20,
+            "Make us your own, your holy people,"
+          ],
+          [
+            26,
+            "light for the world to see"
+          ],
+          [
+            31,
+            "Christ, be our light! Shine in our hearts"
+          ],
+          [
+            38,
+            "Shine through the darkness"
+          ],
+          [
+            43,
+            "Christ, be our light! Shine in your church gathered today"
+          ],
+          [
+            55,
+            "Longing for peace, our world is troubled"
+          ],
+          [
+            61,
+            "Longing for hope, many despair"
+          ],
+          [
+            66,
+            "Your word alone has pow'r to save us"
+          ],
+          [
+            72,
+            "Make us your living voice"
+          ],
+          [
+            77,
+            "Christ, be our light! Shine in our hearts"
+          ],
+          [
+            84,
+            "Shine through the darkness"
+          ],
+          [
+            89,
+            "Christ, be our light! Shine in your church gathered today"
+          ],
+          [
+            101,
+            "Longing for food, many are hungry"
+          ],
+          [
+            107,
+            "Longing for water, many still thirst"
+          ],
+          [
+            112,
+            "Make us your bread, broken for others,"
+          ],
+          [
+            118,
+            "shared until all are fed"
+          ],
+          [
+            124,
+            "Christ, be our light! Shine in our hearts"
+          ],
+          [
+            131,
+            "Shine through the darkness"
+          ],
+          [
+            135,
+            "Christ, be our light! Shine in your church gathered today"
+          ],
+          [
+            148,
+            "Longing for shelter, many are homeless"
+          ],
+          [
+            154,
+            "Longing for warmth, many are cold"
+          ],
+          [
+            159,
+            "Make us your building, sheltering others,"
+          ],
+          [
+            165,
+            "walls made of living stone"
+          ],
+          [
+            170,
+            "Christ, be our light! Shine in our hearts"
+          ],
+          [
+            177,
+            "Shine through the darkness"
+          ],
+          [
+            182,
+            "Christ, be our light! Shine in your church gathered today"
+          ],
+          [
+            194,
+            "Many the gifts, many the people,"
+          ],
+          [
+            200,
+            "many the hearts that yearn to belong"
+          ],
+          [
+            206,
+            "Let us be servants to one another,"
+          ],
+          [
+            212,
+            "making your kingdom come"
+          ],
+          [
+            217,
+            "Christ, be our light! Shine in our hearts"
+          ],
+          [
+            224,
+            "Shine through the darkness"
+          ],
+          [
+            229,
+            "Christ, be our light! Shine in your church gathered today"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-32",
+      "normKey": "gather us in",
+      "title": "Gather Us In",
+      "artist": "Marty Haugen · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Here in this",
+          "place new light is",
+          "stream-ing"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "ar0BXa82F9M",
+        "youtubeUrl": "https://youtu.be/ar0BXa82F9M",
+        "videoTitle": "Gather Us In By Marty Haugen",
+        "dur": 204,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            23,
+            "Here in this place new light is streaming, now is the darkness vanished away"
+          ],
+          [
+            31,
+            "See in this space our fears and our dreamings, brought here to you in the light of this day"
+          ],
+          [
+            41,
+            "Gather us in, the lost and forsaken, gather us in, the blind and the lame"
+          ],
+          [
+            49,
+            "Call to us now, and we shall awaken, we shall arise at the sound of our name"
+          ],
+          [
+            64,
+            "We are the young, our lives are a mystery, we are the old who yearn for your face"
+          ],
+          [
+            72,
+            "We have been sung throughout all of history, called to be light to the whole human race"
+          ],
+          [
+            82,
+            "Gather us in, the rich and the haughty, gather us in, the proud and the strong"
+          ],
+          [
+            90,
+            "Give us a heart so meek and so lowly, give us the courage to enter the song"
+          ],
+          [
+            104,
+            "Here we will take the wine and the water, here we will take the bread of new birth"
+          ],
+          [
+            112,
+            "Here you shall call your sons and your daughters, call us anew to be salt for the earth"
+          ],
+          [
+            123,
+            "Give us to drink the wine of compassion, give us to eat the bread that is you"
+          ],
+          [
+            131,
+            "Nourish us well, and teach us to fashion lives that are holy and hearts that are true"
+          ],
+          [
+            156,
+            "Not in the dark of buildings confining, not in some heaven, light years away"
+          ],
+          [
+            164,
+            "But here in this place the new light is shining, now is the kingdom, now is the day"
+          ],
+          [
+            174,
+            "Gather us in and hold us forever, gather us in and make us your own"
+          ],
+          [
+            183,
+            "Gather us in, all peoples together, fire of love in our flesh and our bone"
+          ],
+          [
+            191,
+            "Fire of love in our flesh and our bone"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-33",
+      "normKey": "all are welcome",
+      "title": "All Are Welcome (Let Us Build)",
+      "artist": "Marty Haugen · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Let us build",
+          "a house where",
+          "love can dwell"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "N9bOiAxwi4U",
+        "youtubeUrl": "https://youtu.be/N9bOiAxwi4U",
+        "videoTitle": "Let Us Build a House (All Are Welcome - 5vv) [with lyrics for congregations]",
+        "dur": 272,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            1,
+            "Let us build a house where love can dwell and all can safely live,"
+          ],
+          [
+            10,
+            "a place where saints and children tell how hearts learn to forgive."
+          ],
+          [
+            18,
+            "Built of hopes and dreams and visions, rock of faith and vault of grace;"
+          ],
+          [
+            27,
+            "here the love of Christ shall end divisions."
+          ],
+          [
+            33,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ],
+          [
+            50,
+            "Let us build a house where prophets speak, and words are strong and true,"
+          ],
+          [
+            59,
+            "where all God's children dare to seek to dream God's reign anew."
+          ],
+          [
+            68,
+            "Here the cross shall stand as witness and as symbol of God's grace;"
+          ],
+          [
+            77,
+            "here as one we claim the faith of Jesus."
+          ],
+          [
+            82,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ],
+          [
+            99,
+            "Let us build a house where love is found in water, wine and wheat:"
+          ],
+          [
+            108,
+            "a banquet hall on holy ground where peace and justice meet."
+          ],
+          [
+            116,
+            "Here the love of God, through Jesus, is revealed in time and space;"
+          ],
+          [
+            125,
+            "as we share in Christ the feast that frees us."
+          ],
+          [
+            130,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ],
+          [
+            147,
+            "Let us build a house where hands will reach beyond the wood and stone"
+          ],
+          [
+            156,
+            "to heal and strengthen, serve and teach, and live the Word they've known."
+          ],
+          [
+            165,
+            "Here the outcast and the stranger bears the image of God's face;"
+          ],
+          [
+            174,
+            "let us bring an end to fear and danger."
+          ],
+          [
+            179,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ],
+          [
+            201,
+            "Let us build a house where all are named, their songs and visions heard"
+          ],
+          [
+            210,
+            "and loved and treasured, taught and claimed as words within the Word."
+          ],
+          [
+            220,
+            "Built of tears and cries and laughter, prayers of faith and songs of grace,"
+          ],
+          [
+            229,
+            "let this house proclaim from floor to rafter."
+          ],
+          [
+            234,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ],
+          [
+            246,
+            "All are welcome, all are welcome, all are welcome in this place."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-34",
+      "normKey": "blest are they",
+      "title": "Blest Are They",
+      "artist": "David Haas · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Blest are they,",
+          "the poor in",
+          "spi-rit"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "BzCG6xTG8qg",
+        "youtubeUrl": "https://youtu.be/BzCG6xTG8qg",
+        "videoTitle": "Blest Are They by David Haas",
+        "dur": 161,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            7,
+            "Blest are they, the poor in spirit, theirs is the kingdom of God."
+          ],
+          [
+            19,
+            "Blest are they, full of sorrow, they shall be consoled."
+          ],
+          [
+            30,
+            "Rejoice and be glad! Blessed are you, holy are you."
+          ],
+          [
+            42,
+            "Rejoice and be glad! Yours is the kingdom of God."
+          ],
+          [
+            57,
+            "Blest are they, the lowly ones, they shall inherit the earth."
+          ],
+          [
+            69,
+            "Blest are they who hunger and thirst, they shall have their fill."
+          ],
+          [
+            80,
+            "Rejoice and be glad! Blessed are you, holy are you."
+          ],
+          [
+            92,
+            "Rejoice and be glad! Yours is the kingdom of God."
+          ],
+          [
+            106,
+            "Blest are they who show mercy, mercy shall be theirs."
+          ],
+          [
+            118,
+            "Blest are they, the pure of heart, they shall see God."
+          ],
+          [
+            129,
+            "Rejoice and be glad! Blessed are you, holy are you."
+          ],
+          [
+            141,
+            "Rejoice and be glad! Yours is the kingdom of God."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-35",
+      "normKey": "you are near",
+      "title": "You Are Near (Psalm 139)",
+      "artist": "Dan Schutte · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Yah-weh, I",
+          "know You are",
+          "near, Stand-ing",
+          "al-ways at my side"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "WQX8ic2hsfs",
+        "youtubeUrl": "https://youtu.be/WQX8ic2hsfs",
+        "videoTitle": "You Are Near – Dan Schutte [Official Lyric Video]",
+        "dur": 191,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            11,
+            "O Lord, I know you are near"
+          ],
+          [
+            22,
+            "Standing always at my side"
+          ],
+          [
+            32,
+            "You guard me from the foe"
+          ],
+          [
+            38,
+            "And you lead me in ways everlasting"
+          ],
+          [
+            50,
+            "Lord, you have searched my heart"
+          ],
+          [
+            55,
+            "And you know when I sit and when I stand"
+          ],
+          [
+            60,
+            "Your hand is upon me, protecting me from death"
+          ],
+          [
+            67,
+            "Keeping me from harm"
+          ],
+          [
+            75,
+            "O Lord, I know you are near"
+          ],
+          [
+            86,
+            "Standing always at my side"
+          ],
+          [
+            96,
+            "You guard me from the foe"
+          ],
+          [
+            102,
+            "And you lead me in ways everlasting"
+          ],
+          [
+            114,
+            "Where can I run from your love?"
+          ],
+          [
+            118,
+            "If I climb to the heavens you are there"
+          ],
+          [
+            124,
+            "If I fly to the sunrise or sail beyond the sea"
+          ],
+          [
+            131,
+            "Still I'd find you there"
+          ],
+          [
+            139,
+            "O Lord, I know you are near"
+          ],
+          [
+            149,
+            "Standing always at my side"
+          ],
+          [
+            160,
+            "You guard me from the foe"
+          ],
+          [
+            166,
+            "And you lead me in ways everlasting"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-36",
+      "normKey": "shepherd of souls",
+      "title": "Shepherd of Souls",
+      "artist": "Catholic Eucharistic Hymn",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Shep-herd of",
+          "souls, re-fresh and",
+          "bless Thy cho-sen",
+          "pil-grim flock"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "aNwpwHF8azo",
+        "youtubeUrl": "https://youtu.be/aNwpwHF8azo",
+        "videoTitle": "Shepherd of Souls - James Montgomery",
+        "dur": 136,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            17,
+            "Shepherd of souls, refresh and bless"
+          ],
+          [
+            24,
+            "Your chosen pilgrim flock."
+          ],
+          [
+            31,
+            "With manna in the wilderness,"
+          ],
+          [
+            38,
+            "With water from the rock."
+          ],
+          [
+            45,
+            "We would not live by bread alone,"
+          ],
+          [
+            52,
+            "But by your word of grace,"
+          ],
+          [
+            58,
+            "In strength of which we travel on,"
+          ],
+          [
+            65,
+            "To our abiding place."
+          ],
+          [
+            72,
+            "Be known to us in breaking bread,"
+          ],
+          [
+            80,
+            "But do not then depart,"
+          ],
+          [
+            86,
+            "Savior, abide with us, and spread,"
+          ],
+          [
+            94,
+            "Your table in our heart."
+          ],
+          [
+            100,
+            "Shepherd of souls, refresh and bless"
+          ],
+          [
+            107,
+            "Your chosen pilgrim flock."
+          ],
+          [
+            113,
+            "With manna in the wilderness,"
+          ],
+          [
+            120,
+            "With water from the rock."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-37",
+      "normKey": "gift of finest wheat",
+      "title": "Gift of Finest Wheat",
+      "artist": "Robert Kreutz · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "You sat-is-",
+          "fy the hun-gry",
+          "heart with gift of",
+          "fi-nest wheat"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "kw3XTnDjCg0",
+        "youtubeUrl": "https://youtu.be/kw3XTnDjCg0",
+        "videoTitle": "Gift of Finest Wheat (You Satisfy The Hungry Heart) | Parable of the Sower Song | Choir with Lyrics",
+        "dur": 262,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            24,
+            "You satisfy the hungry heart"
+          ],
+          [
+            30,
+            "With gift of finest wheat;"
+          ],
+          [
+            36,
+            "Come give to us, O Saving Lord,"
+          ],
+          [
+            41,
+            "The Bread of Life to eat."
+          ],
+          [
+            49,
+            "As when the shepherd calls his sheep"
+          ],
+          [
+            54,
+            "They know and heed his voice;"
+          ],
+          [
+            60,
+            "So when you call your family Lord"
+          ],
+          [
+            65,
+            "We follow and rejoice."
+          ],
+          [
+            72,
+            "You satisfy the hungry heart"
+          ],
+          [
+            77,
+            "With gift of finest wheat;"
+          ],
+          [
+            83,
+            "Come give to us, O Saving Lord,"
+          ],
+          [
+            88,
+            "The Bread of Life to eat."
+          ],
+          [
+            96,
+            "With joyful lips, we sing to you"
+          ],
+          [
+            102,
+            "Our praise and gratitude,"
+          ],
+          [
+            107,
+            "That you should count us worthy, Lord"
+          ],
+          [
+            113,
+            "To share this Heavenly food."
+          ],
+          [
+            120,
+            "You satisfy the hungry heart"
+          ],
+          [
+            125,
+            "With gift of finest wheat;"
+          ],
+          [
+            131,
+            "Come give to us, O Saving Lord,"
+          ],
+          [
+            137,
+            "The Bread of Life to eat."
+          ],
+          [
+            145,
+            "Is not the cup we bless and share"
+          ],
+          [
+            151,
+            "The Blood of Christ outpoured?"
+          ],
+          [
+            156,
+            "Do not one cup, one loaf declare"
+          ],
+          [
+            162,
+            "Our oneness in the Lord?"
+          ],
+          [
+            169,
+            "You satisfy the hungry heart"
+          ],
+          [
+            175,
+            "With gift of finest wheat;"
+          ],
+          [
+            181,
+            "Come give to us, O Saving Lord,"
+          ],
+          [
+            186,
+            "The Bread of Life to eat."
+          ],
+          [
+            193,
+            "The mystery of your presence, Lord"
+          ],
+          [
+            199,
+            "No mortal tongue can tell"
+          ],
+          [
+            205,
+            "Whom all the world cannot contain"
+          ],
+          [
+            211,
+            "Comes in our hearts to dwell."
+          ],
+          [
+            218,
+            "You satisfy the hungry heart"
+          ],
+          [
+            223,
+            "With gift of finest wheat;"
+          ],
+          [
+            229,
+            "Come give to us, O Saving Lord,"
+          ],
+          [
+            236,
+            "The Bread of Life to eat."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-38",
+      "normKey": "ubi caritas",
+      "title": "Ubi Caritas (Where Charity and Love)",
+      "artist": "Bob Hurd · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 68,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "arp3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "U-bi ca-ri-",
+          "tas et a-mor,",
+          "De-us i-bi",
+          "est"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "7FA7vW5yo0M",
+        "youtubeUrl": "https://youtu.be/7FA7vW5yo0M",
+        "videoTitle": "Ubi Caritas (Est Vera, Deus Ibi Est) | Bob Hurd | Catholic Choir with Lyrics | Sunday 7pm Choir",
+        "dur": 263,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            19,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ],
+          [
+            38,
+            "The love of Christ joins us together. Let us rejoice in him,"
+          ],
+          [
+            48,
+            "And in our love and care for all now love God in return."
+          ],
+          [
+            60,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ],
+          [
+            78,
+            "In true communion let us gather, may all divisions cease,"
+          ],
+          [
+            88,
+            "And in their place be Christ the Lord, our risen Prince of Peace."
+          ],
+          [
+            100,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ],
+          [
+            118,
+            "May we who gather at this table to share the bread of life,"
+          ],
+          [
+            128,
+            "Become a sacrament of love, your healing touch, O Christ."
+          ],
+          [
+            141,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ],
+          [
+            160,
+            "For those in need make us your mercy,"
+          ],
+          [
+            166,
+            "For those oppressed your might."
+          ],
+          [
+            170,
+            "Make us your Church, a holy sign"
+          ],
+          [
+            176,
+            "Of justice and new life."
+          ],
+          [
+            183,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ],
+          [
+            202,
+            "May we one day behold your glory and see you face to face,"
+          ],
+          [
+            212,
+            "Rejoicing with the saints of God to sing eternal praise."
+          ],
+          [
+            224,
+            "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-39",
+      "normKey": "i am the bread of life",
+      "title": "I Am the Bread of Life",
+      "artist": "Suzanne Toolan · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "I am the",
+          "bread of life,",
+          "You who come to",
+          "Me shall not hun-ger"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "IvD0XJzOWQ4",
+        "youtubeUrl": "https://youtu.be/IvD0XJzOWQ4",
+        "videoTitle": "I Am The Bread of Life | Suzanne Toolan with Lyrics | Catholic Hymn Song | Sunday 7pm Choir",
+        "dur": 219,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            31,
+            "I am the Bread of life."
+          ],
+          [
+            35,
+            "You who come to me shall not hunger;"
+          ],
+          [
+            41,
+            "and who believe in me shall not thirst."
+          ],
+          [
+            47,
+            "No one can come to me"
+          ],
+          [
+            52,
+            "unless the Father beckons."
+          ],
+          [
+            58,
+            "And I will raise you up, and I will raise you up"
+          ],
+          [
+            68,
+            "and I will raise you up on the last day."
+          ],
+          [
+            83,
+            "The bread that I will give"
+          ],
+          [
+            88,
+            "is my flesh for the life of the world,"
+          ],
+          [
+            93,
+            "and if you eat of this bread,"
+          ],
+          [
+            99,
+            "you shall live forever, you shall live forever."
+          ],
+          [
+            110,
+            "And I will raise you up, and I will raise you up"
+          ],
+          [
+            120,
+            "and I will raise you up on the last day."
+          ],
+          [
+            135,
+            "Unless you eat of the flesh of the Son of Man"
+          ],
+          [
+            146,
+            "and drink of his blood, and drink of his blood"
+          ],
+          [
+            156,
+            "you shall not have life within you."
+          ],
+          [
+            162,
+            "And I will raise you up, and I will raise you up"
+          ],
+          [
+            172,
+            "and I will raise you up on the last day."
+          ],
+          [
+            184,
+            "And I will raise you up, and I will raise you up"
+          ],
+          [
+            194,
+            "and I will raise you up on the last day."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-40",
+      "normKey": "lord of all hopefulness",
+      "title": "Lord of All Hopefulness",
+      "artist": "Jan Struther · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Lord of all",
+          "hope-ful-ness,",
+          "Lord of all",
+          "joy"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "PNlLEl8rkSA",
+        "youtubeUrl": "https://youtu.be/PNlLEl8rkSA",
+        "videoTitle": "Lord of all hopefulness Hymn (+lyrics) - Westminster Abbey",
+        "dur": 164,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            10,
+            "Lord of all hopefulness, Lord of all joy,"
+          ],
+          [
+            18,
+            "Whose trust, ever child-like, no cares could destroy,"
+          ],
+          [
+            26,
+            "Be there at our waking, and give us, we pray,"
+          ],
+          [
+            35,
+            "Your bliss in our hearts, Lord, at the break of the day."
+          ],
+          [
+            46,
+            "Lord of all eagerness, Lord of all faith,"
+          ],
+          [
+            53,
+            "Whose strong hands were skilled at the plane and the lathe,"
+          ],
+          [
+            62,
+            "Be there at our labours, and give us, we pray,"
+          ],
+          [
+            71,
+            "Your strength in our hearts, Lord, at the noon of the day."
+          ],
+          [
+            82,
+            "Lord of all kindliness, Lord of all grace,"
+          ],
+          [
+            89,
+            "Your hands swift to welcome, your arms to embrace,"
+          ],
+          [
+            98,
+            "Be there at our homing, and give us, we pray,"
+          ],
+          [
+            106,
+            "Your love in our hearts, Lord, at the eve of the day."
+          ],
+          [
+            118,
+            "Lord of all gentleness, Lord of all calm,"
+          ],
+          [
+            125,
+            "Whose voice is contentment, whose presence is balm,"
+          ],
+          [
+            134,
+            "Be there at our sleeping, and give us, we pray,"
+          ],
+          [
+            142,
+            "Your peace in our hearts, Lord, at the end of the day."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-41",
+      "normKey": "come holy ghost",
+      "title": "Come, Holy Ghost (Veni Creator)",
+      "artist": "Rabanus Maurus · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Come, Ho-ly",
+          "Ghost, Cre-a-tor",
+          "blest, and in our",
+          "hearts take up Thy rest"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "WjKcc8IcxIo",
+        "youtubeUrl": "https://youtu.be/WjKcc8IcxIo",
+        "videoTitle": "Come Holy Ghost Our Souls Inspire (Tune: Veni, Creator Spiritus-4vv) [with lyrics for congregations]",
+        "dur": 156,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            2,
+            "Come, Holy Ghost, our souls inspire"
+          ],
+          [
+            9,
+            "And lighten with celestial fire;"
+          ],
+          [
+            16,
+            "Thou the anointing Spirit art,"
+          ],
+          [
+            24,
+            "Who dost thy sevenfold gifts impart."
+          ],
+          [
+            33,
+            "Thy blessed unction from above"
+          ],
+          [
+            40,
+            "Is comfort, life, and fire of love;"
+          ],
+          [
+            47,
+            "Enable with perpetual light"
+          ],
+          [
+            55,
+            "The dullness of our blinded sight."
+          ],
+          [
+            63,
+            "Anoint and cheer our soiled face"
+          ],
+          [
+            71,
+            "With the abundance of thy grace:"
+          ],
+          [
+            78,
+            "Keep far our foes, give peace at home;"
+          ],
+          [
+            85,
+            "Where thou art guide no ill can come."
+          ],
+          [
+            94,
+            "Teach us to know the Father, Son,"
+          ],
+          [
+            101,
+            "And thee, of both, to be but one;"
+          ],
+          [
+            109,
+            "That through the ages all along"
+          ],
+          [
+            116,
+            "This may be our endless song:"
+          ],
+          [
+            125,
+            "Praise to thine eternal merit,"
+          ],
+          [
+            134,
+            "Father, Son and Holy Spirit."
+          ],
+          [
+            143,
+            "Amen."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-42",
+      "normKey": "o sacred head surrounded",
+      "title": "O Sacred Head, Surrounded",
+      "artist": "St. Bernard · Catholic Lent",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "4/4",
+        "bpm": 66,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "arp4",
+          "isl4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "O sa-cred",
+          "Head, sur-roun-ded",
+          "by crown of",
+          "pier-cing thorn"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "iATSwph9wFQ",
+        "youtubeUrl": "https://youtu.be/iATSwph9wFQ",
+        "videoTitle": "O Sacred Head, Surrounded | Passion Chorale | Lenten Hymn | Good Friday | Choir | Sunday 7pm Choir",
+        "dur": 207,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            59,
+            "O Sacred Head, surrounded"
+          ],
+          [
+            67,
+            "by crown of piercing thorn!"
+          ],
+          [
+            74,
+            "O bleeding Head, so wounded,"
+          ],
+          [
+            82,
+            "reviled and put to scorn!"
+          ],
+          [
+            89,
+            "The pow'r of death comes o'er you,"
+          ],
+          [
+            97,
+            "the glow of life decays,"
+          ],
+          [
+            105,
+            "Yet angel hosts adore you,"
+          ],
+          [
+            113,
+            "and tremble as they gaze."
+          ],
+          [
+            122,
+            "In this, your bitter passion,"
+          ],
+          [
+            130,
+            "Good Shepherd, think of me."
+          ],
+          [
+            138,
+            "With your most kind compassion,"
+          ],
+          [
+            146,
+            "unworthy though I be;"
+          ],
+          [
+            154,
+            "Beneath your cross abiding,"
+          ],
+          [
+            161,
+            "forever would I rest,"
+          ],
+          [
+            169,
+            "In your dear love confiding,"
+          ],
+          [
+            177,
+            "and with your presence blest."
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-43",
+      "normKey": "were you there",
+      "title": "Were You There?",
+      "artist": "Traditional Spiritual · Lent",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 64,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "trv4",
+        "e": [
+          "arp4",
+          "bal4",
+          "rif4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Were you there",
+          "when they cru-ci-",
+          "fied my Lord?"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "WrsrUQAMu0g",
+        "youtubeUrl": "https://youtu.be/WrsrUQAMu0g",
+        "videoTitle": "Were You There (When They Crucified My Lord) | Traditional Lenten Spiritual Hymn | Choir w/ Lyrics",
+        "dur": 395,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            0,
+            "Were you there when they crucified my Lord?"
+          ],
+          [
+            16,
+            "Were you there when they crucified my Lord?"
+          ],
+          [
+            27,
+            "Oh"
+          ],
+          [
+            33,
+            "Sometimes it causes me to tremble, tremble, tremble"
+          ],
+          [
+            49,
+            "Were you there when they crucified my Lord?"
+          ],
+          [
+            62,
+            "Were you there when they nailed him to the tree?"
+          ],
+          [
+            74,
+            "Were you there when they nailed him to the tree?"
+          ],
+          [
+            86,
+            "Oh"
+          ],
+          [
+            92,
+            "Sometimes it causes me to tremble"
+          ],
+          [
+            101,
+            "Tremble, tremble"
+          ],
+          [
+            108,
+            "Were you there when they nailed him to the tree?"
+          ],
+          [
+            121,
+            "Were you there when they pierced him in the side?"
+          ],
+          [
+            134,
+            "Were you there when they pierced him in the side?"
+          ],
+          [
+            145,
+            "Oh"
+          ],
+          [
+            151,
+            "Sometimes it causes me to tremble"
+          ],
+          [
+            160,
+            "Tremble"
+          ],
+          [
+            163,
+            "Tremble"
+          ],
+          [
+            168,
+            "Were you there when they pierced him in the side?"
+          ],
+          [
+            182,
+            "Were you there when the sun refused to shine?"
+          ],
+          [
+            194,
+            "Were you there when the sun refused to shine?"
+          ],
+          [
+            206,
+            "Oh"
+          ],
+          [
+            213,
+            "Sometimes it causes me to tremble"
+          ],
+          [
+            222,
+            "Tremble"
+          ],
+          [
+            226,
+            "Tremble"
+          ],
+          [
+            231,
+            "Were you there when the sun refused to shine?"
+          ],
+          [
+            245,
+            "Were you there when they laid him in the tomb?"
+          ],
+          [
+            258,
+            "Were you there when they laid him in the tomb?"
+          ],
+          [
+            271,
+            "Oh"
+          ],
+          [
+            278,
+            "Sometimes it causes me to tremble"
+          ],
+          [
+            287,
+            "Tremble"
+          ],
+          [
+            291,
+            "Tremble"
+          ],
+          [
+            296,
+            "Were you there when they laid him in the tomb?"
+          ],
+          [
+            310,
+            "Were you there when he rose up from the grave?"
+          ],
+          [
+            322,
+            "Were you there when he rose up from the grave?"
+          ],
+          [
+            334,
+            "Oh"
+          ],
+          [
+            341,
+            "Sometimes it causes me to tremble"
+          ],
+          [
+            351,
+            "Tremble"
+          ],
+          [
+            355,
+            "Tremble"
+          ],
+          [
+            360,
+            "Were you there when he rose up from the grave?"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-44",
+      "normKey": "jesus christ is risen today",
+      "title": "Jesus Christ Is Risen Today",
+      "artist": "Easter Hymn · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 92,
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "chk4",
+        "e": [
+          "chk4",
+          "drv4",
+          "srf4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Je-sus Christ",
+          "is ri-sen to-",
+          "day, Al-le-lu-",
+          "ia!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "PcTP3Pj6Smo",
+        "youtubeUrl": "https://youtu.be/PcTP3Pj6Smo",
+        "videoTitle": "Jesus Christ is Risen Today (Hymn with lyrics)",
+        "dur": 144,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            11,
+            "Jesus Christ is risen today, Alleluia!"
+          ],
+          [
+            21,
+            "our triumphant holy day, Alleluia!"
+          ],
+          [
+            31,
+            "who did once upon the cross, Alleluia!"
+          ],
+          [
+            41,
+            "suffer to redeem our loss. Alleluia!"
+          ],
+          [
+            52,
+            "Hymns of praise then let us sing, Alleluia!"
+          ],
+          [
+            62,
+            "unto Christ our heavenly King, Alleluia!"
+          ],
+          [
+            72,
+            "who endured the cross and grave, Alleluia!"
+          ],
+          [
+            82,
+            "sinners to redeem and save. Alleluia!"
+          ],
+          [
+            94,
+            "But the pains that he endured, Alleluia!"
+          ],
+          [
+            104,
+            "our salvation have procured; Alleluia!"
+          ],
+          [
+            115,
+            "now above the sky he's King, Alleluia!"
+          ],
+          [
+            126,
+            "where the angels ever sing. Alleluia!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bonus-45",
+      "normKey": "alleluia sing to jesus",
+      "title": "Alleluia! Sing to Jesus",
+      "artist": "William C. Dix · Catholic",
+      "category": "Catholic & Hymns",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 80,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Al-le-lu-ia!",
+          "Sing to Je-sus!",
+          "His the scep-ter,",
+          "His the throne"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "UJDWFYIkBns",
+        "youtubeUrl": "https://youtu.be/UJDWFYIkBns",
+        "videoTitle": "Alleluia, Sing to Jesus (Tune: Hyfrydol - 4vv) [with lyrics for congregations]",
+        "dur": 257,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            1,
+            "Alleluia! Sing to Jesus;"
+          ],
+          [
+            8,
+            "His the sceptre, His the throne."
+          ],
+          [
+            15,
+            "Alleluia! His the triumph,"
+          ],
+          [
+            22,
+            "His the victory alone."
+          ],
+          [
+            29,
+            "Hark! The songs of peaceful Zion"
+          ],
+          [
+            37,
+            "Thunder like a mighty flood:"
+          ],
+          [
+            44,
+            "\"Jesus out of ev'ry nation"
+          ],
+          [
+            52,
+            "Has redeemed us by His blood.\""
+          ],
+          [
+            62,
+            "Alleluia! Not as orphans"
+          ],
+          [
+            69,
+            "Are we left in sorrow now."
+          ],
+          [
+            76,
+            "Alleluia! He is near us;"
+          ],
+          [
+            84,
+            "Faith believes, nor questions how."
+          ],
+          [
+            91,
+            "Though the cloud from sight received Him"
+          ],
+          [
+            99,
+            "When the forty days were o'er,"
+          ],
+          [
+            106,
+            "Shall our hearts forget His promise,"
+          ],
+          [
+            114,
+            "\"I am with you evermore\"?"
+          ],
+          [
+            124,
+            "Alleluia! Bread of angels,"
+          ],
+          [
+            131,
+            "Thou on earth our food, our stay."
+          ],
+          [
+            139,
+            "Alleluia! Here the sinful"
+          ],
+          [
+            146,
+            "Flee to Thee from day to day."
+          ],
+          [
+            154,
+            "Intercessor, Friend of sinners,"
+          ],
+          [
+            162,
+            "Earth's Redeemer, plead for me"
+          ],
+          [
+            170,
+            "Where the songs of all the sinless"
+          ],
+          [
+            177,
+            "Sweep across the crystal sea."
+          ],
+          [
+            187,
+            "Alleluia, King eternal,"
+          ],
+          [
+            195,
+            "Thee the Lord of lords we own;"
+          ],
+          [
+            202,
+            "Alleluia, born of Mary,"
+          ],
+          [
+            210,
+            "Earth thy footstool, heaven thy throne:"
+          ],
+          [
+            217,
+            "Thou within the veil hast entered,"
+          ],
+          [
+            225,
+            "Robed in flesh, our great High Priest;"
+          ],
+          [
+            233,
+            "Thou on earth both Priest and Victim"
+          ],
+          [
+            241,
+            "In the Eucharistic feast."
+          ]
+        ]
+      }
+    }
+  ]
+}

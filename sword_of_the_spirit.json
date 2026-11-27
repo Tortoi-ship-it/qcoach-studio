@@ -1,0 +1,3021 @@
+{
+  "schemaVersion": "3.0",
+  "packName": "Sword of the Spirit Worship",
+  "language": "en",
+  "songs": [
+    {
+      "id": "sots-amen-our-hearts-cry",
+      "normKey": "amen our hearts cry",
+      "title": "Amen, Our Hearts Cry",
+      "artist": "John C. Blattner · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "A-men,",
+          "A-men,",
+          "our hearts",
+          "cry"
+        ],
+        [
+          "His",
+          "Word",
+          "is",
+          "true"
+        ],
+        [
+          "All that",
+          "the Lord",
+          "has",
+          "said"
+        ],
+        [
+          "We",
+          "will",
+          "do",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "4rXZuFVS35w",
+        "youtubeUrl": "https://youtu.be/4rXZuFVS35w",
+        "videoTitle": "Amen Our Hearts Cry (John C. Blattner - Katie Riley)",
+        "dur": 295,
+        "source": "video_audio_verified",
+        "verified": true,
+        "lines": [
+          [
+            26,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            33,
+            "His Word is true"
+          ],
+          [
+            39,
+            "All that the Lord has said"
+          ],
+          [
+            45,
+            "We will do"
+          ],
+          [
+            53,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            59,
+            "His Word is true"
+          ],
+          [
+            65,
+            "All that the Lord has said"
+          ],
+          [
+            71,
+            "We will do"
+          ],
+          [
+            80,
+            "You have borne us on eagles' wings"
+          ],
+          [
+            86,
+            "We have witnessed Your power"
+          ],
+          [
+            92,
+            "Yahweh, You will be our Lord"
+          ],
+          [
+            97,
+            "Your Word will be our law"
+          ],
+          [
+            106,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            112,
+            "His Word is true"
+          ],
+          [
+            118,
+            "All that the Lord has said"
+          ],
+          [
+            125,
+            "We will do"
+          ],
+          [
+            133,
+            "The One who called forth creation"
+          ],
+          [
+            139,
+            "Who raised up mankind from dust"
+          ],
+          [
+            145,
+            "The One who set the stars in their place"
+          ],
+          [
+            150,
+            "Has revealed His mind to us"
+          ],
+          [
+            160,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            166,
+            "His Word is true"
+          ],
+          [
+            172,
+            "All that the Lord has said"
+          ],
+          [
+            178,
+            "We will do"
+          ],
+          [
+            186,
+            "He has not spoken in secret"
+          ],
+          [
+            192,
+            "Or in some darkened land"
+          ],
+          [
+            198,
+            "The Word of God shines forth like the sun"
+          ],
+          [
+            204,
+            "His truth is close at hand"
+          ],
+          [
+            213,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            219,
+            "His Word is true"
+          ],
+          [
+            225,
+            "All that the Lord has said"
+          ],
+          [
+            232,
+            "We will do"
+          ],
+          [
+            240,
+            "See the first things have come to pass"
+          ],
+          [
+            246,
+            "All that I spoke has come true"
+          ],
+          [
+            252,
+            "Before a new thing breaks from the bud"
+          ],
+          [
+            258,
+            "I declare it all to you"
+          ],
+          [
+            267,
+            "Amen, Amen, our hearts cry"
+          ],
+          [
+            274,
+            "His Word is true"
+          ],
+          [
+            280,
+            "All that the Lord has said"
+          ],
+          [
+            286,
+            "We will do"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-god-alone",
+      "normKey": "god alone",
+      "title": "God Alone",
+      "artist": "John Keating · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "God",
+          "a-lone,",
+          "God a-lone"
+        ],
+        [
+          "In Your",
+          "courts, O",
+          "my Lord"
+        ],
+        [
+          "is my",
+          "home, You",
+          "are my"
+        ],
+        [
+          "trea-sure,",
+          "my por-tion"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "FCA1LvPRyCQ",
+        "youtubeUrl": "https://youtu.be/FCA1LvPRyCQ",
+        "videoTitle": "God Alone",
+        "dur": 181,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            3,
+            "O the depth of the riches and the wisdom and the knowledge of God"
+          ],
+          [
+            16,
+            "How unsearchable are His judgments, how inscrutable His ways."
+          ],
+          [
+            35,
+            "God alone! God alone!"
+          ],
+          [
+            46,
+            "In Your courts, O my Lord, is my home."
+          ],
+          [
+            56,
+            "You are my treasure, my portion, delight of my soul;"
+          ],
+          [
+            67,
+            "My life, my salvation, my fortress, my God and my all!"
+          ],
+          [
+            78,
+            "O my soul, claim nothing as your own"
+          ],
+          [
+            87,
+            "For you, there is God, and God alone"
+          ],
+          [
+            98,
+            "God alone! God alone!"
+          ],
+          [
+            109,
+            "In Your courts, O my Lord, is my home."
+          ],
+          [
+            120,
+            "You are my treasure, my portion, delight of my soul;"
+          ],
+          [
+            130,
+            "My life, my salvation, my fortress, my God and my all!"
+          ],
+          [
+            142,
+            "O my soul, claim nothing as your own"
+          ],
+          [
+            150,
+            "For you, there is God, and God alone"
+          ],
+          [
+            161,
+            "For you, there is God, and God alone"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-your-glorious-grace",
+      "normKey": "your glorious grace",
+      "title": "Your Glorious Grace",
+      "artist": "Joseph Mathias · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "We kneel",
+          "be-fore",
+          "You, Fa-ther"
+        ],
+        [
+          "From whom",
+          "Your sons",
+          "have name"
+        ],
+        [
+          "Then Fa-ther",
+          "make us",
+          "one"
+        ],
+        [
+          "to praise",
+          "Your glo-rious",
+          "grace"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-living-sacrifice",
+      "normKey": "living sacrifice",
+      "title": "Living Sacrifice",
+      "artist": "Joseph Mathias · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 64,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "rol6",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Lord to",
+          "wor-ship in",
+          "Your pre-sence"
+        ],
+        [
+          "This a-lone",
+          "is my",
+          "de-sire"
+        ],
+        [
+          "Bind me",
+          "clo-ser to",
+          "Your al-tar"
+        ],
+        [
+          "Touch my",
+          "lips with",
+          "ho-ly fire"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-we-come-to-you",
+      "normKey": "we come to you",
+      "title": "We Come to You",
+      "artist": "John Hughes · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 78,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "We come",
+          "to You,",
+          "to the",
+          "liv-ing God"
+        ],
+        [
+          "You who",
+          "bought us",
+          "at a",
+          "price"
+        ],
+        [
+          "Un-to",
+          "Je-sus",
+          "Christ our",
+          "Lord"
+        ],
+        [
+          "O Son",
+          "of God",
+          "we come"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "WBZy_ifabTI",
+        "youtubeUrl": "https://youtu.be/WBZy_ifabTI",
+        "videoTitle": "We Come to You",
+        "dur": 324,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            34,
+            "We have come to Mount Zion"
+          ],
+          [
+            40,
+            "The heavenly Jerusalem, the city of our God"
+          ],
+          [
+            49,
+            "Thousands upon thousands of angels gathered round"
+          ],
+          [
+            57,
+            "We come to praise the Lord of Hosts"
+          ],
+          [
+            63,
+            "We come to You, to the Living God"
+          ],
+          [
+            70,
+            "You who bought us at a price"
+          ],
+          [
+            74,
+            "We come freely unto Jesus Christ our Lord"
+          ],
+          [
+            80,
+            "Once rejected, now become our Cornerstone"
+          ],
+          [
+            87,
+            "O Son of God, we come to You"
+          ],
+          [
+            106,
+            "We have come to Your temple courts"
+          ],
+          [
+            112,
+            "The true and better dwelling place not made with human hands"
+          ],
+          [
+            120,
+            "Our High Priest has entered once for all"
+          ],
+          [
+            127,
+            "His life, His perfect, holy blood"
+          ],
+          [
+            135,
+            "We come to You, to the Living God"
+          ],
+          [
+            142,
+            "You who bought us at a price"
+          ],
+          [
+            146,
+            "We come freely unto Jesus Christ our Lord"
+          ],
+          [
+            152,
+            "Once rejected, now become our Cornerstone"
+          ],
+          [
+            160,
+            "O Son of God, we come to You"
+          ],
+          [
+            178,
+            "We have come with nothing in our hands"
+          ],
+          [
+            185,
+            "A living sacrifice, we're offering our lives"
+          ],
+          [
+            193,
+            "From every tribe and nation of the earth"
+          ],
+          [
+            201,
+            "We come to serve the Lord of Hosts"
+          ],
+          [
+            209,
+            "We come to You, to the Living God"
+          ],
+          [
+            216,
+            "You who bought us at a price"
+          ],
+          [
+            221,
+            "We come freely unto Jesus Christ our Lord"
+          ],
+          [
+            227,
+            "Once rejected, now become our Cornerstone"
+          ],
+          [
+            234,
+            "O Son of God, we come to You"
+          ],
+          [
+            240,
+            "To the Living God, You who bought us at a price"
+          ],
+          [
+            247,
+            "We come freely unto Jesus Christ our Lord"
+          ],
+          [
+            254,
+            "Once rejected, now become our Cornerstone"
+          ],
+          [
+            261,
+            "O Son of God, we come to You"
+          ],
+          [
+            268,
+            "O Son of God, we come to You"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-more-of-you",
+      "normKey": "more of you",
+      "title": "More of You",
+      "artist": "John Hughes · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "More of",
+          "You,",
+          "O",
+          "God"
+        ],
+        [
+          "More of",
+          "You,",
+          "Christ",
+          "Je-sus"
+        ],
+        [
+          "More of",
+          "You,",
+          "O",
+          "Spi-rit"
+        ],
+        [
+          "We want",
+          "more of",
+          "who You",
+          "are"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "CqYOfAlHHjU",
+        "youtubeUrl": "https://youtu.be/CqYOfAlHHjU",
+        "videoTitle": "More of You",
+        "dur": 277,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            16,
+            "More of You, O God"
+          ],
+          [
+            22,
+            "More of You, Christ Jesus"
+          ],
+          [
+            28,
+            "More of You, O Spirit"
+          ],
+          [
+            34,
+            "We want more of who You are"
+          ],
+          [
+            45,
+            "More abundant life"
+          ],
+          [
+            51,
+            "More indwelling presence"
+          ],
+          [
+            57,
+            "More transforming power"
+          ],
+          [
+            63,
+            "We want more, we yearn for You"
+          ],
+          [
+            71,
+            "We welcome You"
+          ],
+          [
+            77,
+            "Come be enthroned on our praise"
+          ],
+          [
+            84,
+            "We have made room, all else is loss"
+          ],
+          [
+            90,
+            "We wait for You"
+          ],
+          [
+            96,
+            "We will not rest"
+          ],
+          [
+            103,
+            "Until You make Your home with us"
+          ],
+          [
+            110,
+            "Until You come and satisfy us"
+          ],
+          [
+            116,
+            "We want more"
+          ],
+          [
+            128,
+            "More of You, O God"
+          ],
+          [
+            134,
+            "More of You, Christ Jesus"
+          ],
+          [
+            140,
+            "More of You, O Spirit"
+          ],
+          [
+            146,
+            "We want more of who You are"
+          ],
+          [
+            154,
+            "We welcome You"
+          ],
+          [
+            160,
+            "Come be enthroned on our praise"
+          ],
+          [
+            167,
+            "We have made room, all else is loss"
+          ],
+          [
+            173,
+            "We wait for You"
+          ],
+          [
+            180,
+            "We will not rest"
+          ],
+          [
+            186,
+            "Until You make Your home with us"
+          ],
+          [
+            193,
+            "Until You come and satisfy us"
+          ],
+          [
+            200,
+            "We want more"
+          ],
+          [
+            205,
+            "We welcome You"
+          ],
+          [
+            212,
+            "Come be enthroned on our praise"
+          ],
+          [
+            218,
+            "We have made room, all else is loss"
+          ],
+          [
+            225,
+            "We wait for You"
+          ],
+          [
+            231,
+            "We will not rest"
+          ],
+          [
+            238,
+            "Until You make Your home with us"
+          ],
+          [
+            245,
+            "Until You come and satisfy us"
+          ],
+          [
+            251,
+            "We want more"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-there-is-power",
+      "normKey": "there is power",
+      "title": "There Is Power",
+      "artist": "Joseph Mathias · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "There is",
+          "pow-er",
+          "in the",
+          "name"
+        ],
+        [
+          "of the",
+          "ris-en",
+          "Lord Je-sus"
+        ],
+        [
+          "Ev-ery",
+          "chain is",
+          "bro-ken",
+          "now"
+        ],
+        [
+          "by His",
+          "migh-ty",
+          "grace"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "lTBPYPouPnQ",
+        "youtubeUrl": "https://youtu.be/lTBPYPouPnQ",
+        "videoTitle": "There Is Power",
+        "dur": 290,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            14,
+            "There is power in the Name"
+          ],
+          [
+            19,
+            "In the name above all names"
+          ],
+          [
+            25,
+            "In the Son of God who came"
+          ],
+          [
+            31,
+            "Jesus Christ, the Name that saves"
+          ],
+          [
+            42,
+            "There is power in the Word"
+          ],
+          [
+            48,
+            "Piercing hearts with news unheard"
+          ],
+          [
+            54,
+            "Turning sinners from dead works"
+          ],
+          [
+            59,
+            "Raising dead men from the earth"
+          ],
+          [
+            65,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            71,
+            "In the Name, in the blood"
+          ],
+          [
+            77,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            83,
+            "To proclaim, to heal, to conquer, and to live"
+          ],
+          [
+            99,
+            "There is power in the Cross"
+          ],
+          [
+            105,
+            "In the blood He shed for us"
+          ],
+          [
+            111,
+            "To redeem our every loss"
+          ],
+          [
+            117,
+            "To present us pure and just"
+          ],
+          [
+            122,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            128,
+            "In the Name, in the blood"
+          ],
+          [
+            134,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            140,
+            "To proclaim, to heal, to conquer, and to live"
+          ],
+          [
+            168,
+            "And we shall be filled with power"
+          ],
+          [
+            174,
+            "When the Spirit comes on us"
+          ],
+          [
+            180,
+            "And we will lift Jesus higher"
+          ],
+          [
+            185,
+            "When the Spirit comes on us"
+          ],
+          [
+            191,
+            "And we shall be filled with power"
+          ],
+          [
+            197,
+            "When the Spirit comes on us"
+          ],
+          [
+            202,
+            "And we will lift Jesus higher"
+          ],
+          [
+            208,
+            "When the Spirit comes on us"
+          ],
+          [
+            214,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            220,
+            "In the Name, in the blood"
+          ],
+          [
+            225,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            232,
+            "To proclaim, to heal, to conquer, and to live"
+          ],
+          [
+            238,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            243,
+            "In the Name, in the blood"
+          ],
+          [
+            249,
+            "There is power in the Spirit of our God"
+          ],
+          [
+            255,
+            "To proclaim, to heal, to conquer, and to live"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-a-new-spirit",
+      "normKey": "a new spirit",
+      "title": "A New Spirit",
+      "artist": "Joseph Mathias · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Put a",
+          "new spi-rit",
+          "with-in"
+        ],
+        [
+          "Cre-ate",
+          "in me a",
+          "clean heart"
+        ],
+        [
+          "Re-new",
+          "a right",
+          "spi-rit"
+        ],
+        [
+          "O Lord",
+          "my strength",
+          "and shield"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "K4UNXHYaSck",
+        "youtubeUrl": "https://youtu.be/K4UNXHYaSck",
+        "videoTitle": "A New Spirit",
+        "dur": 376,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            24,
+            "Lord, I want to serve before You"
+          ],
+          [
+            33,
+            "With tongues of fire and a heart set free"
+          ],
+          [
+            43,
+            "Come, rebuild this fallen temple"
+          ],
+          [
+            53,
+            "I am Yours, I surrender and I yield"
+          ],
+          [
+            83,
+            "Lord, I want to sing Your praises"
+          ],
+          [
+            92,
+            "With tongues of fire and a heart set free"
+          ],
+          [
+            100,
+            "Come and fill this broken vessel"
+          ],
+          [
+            108,
+            "I am Yours, I surrender and I yield"
+          ],
+          [
+            124,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            132,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            140,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            148,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            165,
+            "Lord, I'll be sin's slave no longer"
+          ],
+          [
+            171,
+            "The blood of Christ has set me free"
+          ],
+          [
+            178,
+            "Take my heart, my mind, my voice, Lord"
+          ],
+          [
+            188,
+            "I am Yours, I surrender and I yield"
+          ],
+          [
+            199,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            207,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            215,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            223,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            238,
+            "Renew, revive, restore us, O Lord"
+          ],
+          [
+            254,
+            "Renew, revive, restore us, O Lord"
+          ],
+          [
+            267,
+            "Renew, revive, restore us, O Lord"
+          ],
+          [
+            283,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            291,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            298,
+            "A new heart I will give you, says the Lord"
+          ],
+          [
+            308,
+            "And a new Spirit I will put within you"
+          ],
+          [
+            322,
+            "Lord, we want to see Your kingdom"
+          ],
+          [
+            328,
+            "A church renewed and a world redeemed"
+          ],
+          [
+            338,
+            "Cleanse our lips to speak Your gospel"
+          ],
+          [
+            346,
+            "We are Yours, we surrender and we yield"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-all-blessing-all-glory",
+      "normKey": "all blessing all glory",
+      "title": "All Blessing, All Glory",
+      "artist": "Paul Beckman · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 78,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "We have",
+          "heard, we",
+          "have seen"
+        ],
+        [
+          "Won-ders",
+          "great, migh-ty",
+          "deeds"
+        ],
+        [
+          "All bles-sing,",
+          "all glo-ry,",
+          "hon-or"
+        ],
+        [
+          "For You",
+          "are ho-ly,",
+          "Lord"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "f40Mp96mKYY",
+        "youtubeUrl": "https://youtu.be/f40Mp96mKYY",
+        "videoTitle": "All Blessing, All Glory",
+        "dur": 210,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            15,
+            "We have heard, we have seen"
+          ],
+          [
+            18,
+            "Wonders great, mighty deeds"
+          ],
+          [
+            22,
+            "From your hand we receive"
+          ],
+          [
+            25,
+            "Goodness and mercy"
+          ],
+          [
+            28,
+            "Age to age you command"
+          ],
+          [
+            32,
+            "What you speak ever stands"
+          ],
+          [
+            35,
+            "By your word and your pow'r"
+          ],
+          [
+            38,
+            "We find hope, rest secure"
+          ],
+          [
+            41,
+            "So by faith we will rise and declare:"
+          ],
+          [
+            48,
+            "You are holy!"
+          ],
+          [
+            54,
+            "You are holy!"
+          ],
+          [
+            61,
+            "You are holy!"
+          ],
+          [
+            69,
+            "Nations rise, kingdoms fail"
+          ],
+          [
+            72,
+            "You remain, you prevail"
+          ],
+          [
+            75,
+            "Robed in strength, crowned with grace"
+          ],
+          [
+            78,
+            "Justice and mercy"
+          ],
+          [
+            82,
+            "To your throne we draw near"
+          ],
+          [
+            85,
+            "Brought by love, without fear"
+          ],
+          [
+            88,
+            "Lifted hands, hearts redeemed"
+          ],
+          [
+            91,
+            "Freed from death, unashamed"
+          ],
+          [
+            95,
+            "So by faith we will rise and declare:"
+          ],
+          [
+            101,
+            "You are holy!"
+          ],
+          [
+            108,
+            "You are holy!"
+          ],
+          [
+            114,
+            "You are holy!"
+          ],
+          [
+            121,
+            "All blessing, all glory, all honor and praise"
+          ],
+          [
+            128,
+            "Our God everlasting, the Ancient of Days"
+          ],
+          [
+            134,
+            "In sov'reignty reigning, in wisdom and truth"
+          ],
+          [
+            141,
+            "Your servants, your people, your children"
+          ],
+          [
+            145,
+            "Bring worship only to you"
+          ],
+          [
+            152,
+            "Worship only to you"
+          ],
+          [
+            159,
+            "For you are holy"
+          ],
+          [
+            166,
+            "You are holy"
+          ],
+          [
+            172,
+            "You are holy"
+          ],
+          [
+            179,
+            "For you are holy"
+          ],
+          [
+            186,
+            "You are holy"
+          ],
+          [
+            192,
+            "You are holy"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-the-lord-is-my-rock",
+      "normKey": "the lord is my rock",
+      "title": "The Lord Is My Rock",
+      "artist": "Joseph Mathias · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 92,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "The Lord",
+          "is my",
+          "rock and",
+          "for-tress"
+        ],
+        [
+          "and my",
+          "de-li-",
+          "ve-rer"
+        ],
+        [
+          "My shield",
+          "and my",
+          "sal-va-tion"
+        ],
+        [
+          "Blest be",
+          "my rock!"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-fill-me",
+      "normKey": "fill me",
+      "title": "Fill Me",
+      "artist": "Charles Wesley Jr · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 62,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "rol6",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Fill me",
+          "with Your",
+          "liv-ing pre-sence"
+        ],
+        [
+          "Draw me",
+          "clo-ser",
+          "to Your-self"
+        ],
+        [
+          "For Lord",
+          "I am",
+          "Your ser-vant"
+        ],
+        [
+          "Take my",
+          "life, a",
+          "sac-ri-fice"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-holy-holy-holy-lord",
+      "normKey": "holy holy holy lord",
+      "title": "Holy, Holy, Holy Lord (All Hail)",
+      "artist": "Paul M. Graham · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 80,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "All hail",
+          "the vic-tory",
+          "of the Lamb"
+        ],
+        [
+          "Cre-a-tion's",
+          "King who",
+          "saved us"
+        ],
+        [
+          "Raised up",
+          "to sit at",
+          "God's right hand"
+        ],
+        [
+          "Ho-ly,",
+          "ho-ly, ho-ly",
+          "Lord!"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "VR-c7MSsbqs",
+        "youtubeUrl": "https://youtu.be/VR-c7MSsbqs",
+        "videoTitle": "Holy, Holy, Holy Lord (All Hail)",
+        "dur": 210,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            13,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            18,
+            "Lord God Almighty!"
+          ],
+          [
+            24,
+            "Early in the morning our song shall rise to Thee"
+          ],
+          [
+            34,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            39,
+            "Merciful and mighty!"
+          ],
+          [
+            45,
+            "God in three Persons, blessed Trinity"
+          ],
+          [
+            58,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            63,
+            "All the saints adore Thee"
+          ],
+          [
+            68,
+            "Casting down their golden crowns around the glassy sea"
+          ],
+          [
+            79,
+            "Cherubim and Seraphim"
+          ],
+          [
+            84,
+            "Falling down before Thee"
+          ],
+          [
+            89,
+            "Which wert and art, and evermore shalt be"
+          ],
+          [
+            102,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            107,
+            "Though the darkness hide Thee"
+          ],
+          [
+            112,
+            "Though the eye made blind by sin Thy glory may not see"
+          ],
+          [
+            122,
+            "Only Thou art Holy"
+          ],
+          [
+            127,
+            "There is none beside Thee"
+          ],
+          [
+            133,
+            "Perfect in power, in love, and purity"
+          ],
+          [
+            146,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            151,
+            "Lord God Almighty!"
+          ],
+          [
+            157,
+            "All Thy works shall praise Thy name, in earth, and sky, and sea"
+          ],
+          [
+            167,
+            "Holy, Holy, Holy!"
+          ],
+          [
+            172,
+            "Merciful and mighty!"
+          ],
+          [
+            178,
+            "God in three Persons, blessed Trinity"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-seated-on-the-throne",
+      "normKey": "seated on the throne",
+      "title": "Seated on the Throne",
+      "artist": "Brendan Murray · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 82,
+        "chords": [
+          "F",
+          "C",
+          "G",
+          "Am"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ho-ly,",
+          "migh-ty,",
+          "wor-thy is"
+        ],
+        [
+          "the Lord",
+          "God Al-",
+          "migh-ty!"
+        ],
+        [
+          "To Him",
+          "who sits",
+          "en-throned"
+        ],
+        [
+          "be all",
+          "the glo-ry!"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-hail-the-conqueror",
+      "normKey": "hail the conqueror",
+      "title": "Hail the Conqueror",
+      "artist": "John Hughes · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 94,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "The robe,",
+          "the crown,",
+          "the prize!"
+        ],
+        [
+          "You are",
+          "lif-ted",
+          "high!"
+        ],
+        [
+          "Hail the",
+          "con-quer-or",
+          "Jesus"
+        ],
+        [
+          "Our fi-nal",
+          "en-e-my",
+          "is cast out"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-i-saw-the-king",
+      "normKey": "i saw the king",
+      "title": "I Saw the King",
+      "artist": "Daniel Mayoros · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "I saw",
+          "the King",
+          "high and"
+        ],
+        [
+          "lif-ted",
+          "up on",
+          "His throne"
+        ],
+        [
+          "And the",
+          "train of",
+          "His robe"
+        ],
+        [
+          "filled the",
+          "tem-ple",
+          "with praise"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "KXOzeSiOn4E",
+        "youtubeUrl": "https://youtu.be/KXOzeSiOn4E",
+        "videoTitle": "I Saw the King",
+        "dur": 287,
+        "source": "verified",
+        "verified": true,
+        "lines": [
+          [
+            10,
+            "I saw the armies of angels arising"
+          ],
+          [
+            18,
+            "The banners of heaven appear on the clouds"
+          ],
+          [
+            26,
+            "I saw the King in His glory arriving"
+          ],
+          [
+            34,
+            "The cry goes up, our salvation is near"
+          ],
+          [
+            43,
+            "I heard the tongues of the holy ones singing"
+          ],
+          [
+            51,
+            "Anthems of cherubim thundering on high"
+          ],
+          [
+            59,
+            "Voices on voices in harmony ringing"
+          ],
+          [
+            67,
+            "All God's redeemed join the heavenly choir"
+          ],
+          [
+            75,
+            "See the King upon His throne"
+          ],
+          [
+            84,
+            "See the victory He has won"
+          ],
+          [
+            92,
+            "See His love and mercy saving"
+          ],
+          [
+            99,
+            "Jesus reigns forevermore"
+          ],
+          [
+            108,
+            "Under His feet every mountain shall crumble"
+          ],
+          [
+            116,
+            "Valleys arise to prepare Him a way"
+          ],
+          [
+            124,
+            "So shall the proud fall before Him, be humbled"
+          ],
+          [
+            132,
+            "And the afflicted be raised to His side"
+          ],
+          [
+            141,
+            "See the King upon His throne"
+          ],
+          [
+            149,
+            "See the victory He has won"
+          ],
+          [
+            156,
+            "See His love and mercy saving"
+          ],
+          [
+            164,
+            "Jesus reigns forevermore"
+          ],
+          [
+            173,
+            "Look to His coming, you sleepers, awaken"
+          ],
+          [
+            181,
+            "Where He approaches the shadows depart"
+          ],
+          [
+            189,
+            "Feel from your arms Satan's fetters are breaking"
+          ],
+          [
+            197,
+            "Lift up your head and rejoice in the light"
+          ],
+          [
+            206,
+            "See the King upon His throne"
+          ],
+          [
+            214,
+            "See the victory He has won"
+          ],
+          [
+            222,
+            "See His love and mercy saving"
+          ],
+          [
+            229,
+            "Jesus reigns forevermore"
+          ],
+          [
+            237,
+            "See the King upon His throne"
+          ],
+          [
+            245,
+            "See the victory He has won"
+          ],
+          [
+            253,
+            "See His love and mercy saving"
+          ],
+          [
+            260,
+            "Jesus reigns forevermore"
+          ],
+          [
+            268,
+            "Jesus reigns forevermore"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-strong-the-chains",
+      "normKey": "strong the chains",
+      "title": "Strong the Chains",
+      "artist": "Paul Beckman · Sword of the Spirit",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 78,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Strong the",
+          "chains that",
+          "held me"
+        ],
+        [
+          "Strong-er",
+          "still Your",
+          "love"
+        ],
+        [
+          "You broke",
+          "the dark-ness",
+          "open"
+        ],
+        [
+          "and raised",
+          "me up",
+          "a-bove"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-glorious-and-mighty",
+      "normKey": "glorious and mighty",
+      "title": "Glorious and Mighty",
+      "artist": "Sword of the Spirit Worship",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "ich4",
+        "e": [
+          "trv4",
+          "ich4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Glo-rious",
+          "and migh-ty",
+          "is our God"
+        ],
+        [
+          "Rul-ing",
+          "o-ver all",
+          "the earth"
+        ],
+        [
+          "We lift",
+          "our voi-ces",
+          "to proclaim"
+        ],
+        [
+          "Your maj-es-ty",
+          "and worth"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "sots-all-that-is-good",
+      "normKey": "all that is good",
+      "title": "All That Is Good",
+      "artist": "Sword of the Spirit Worship",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "ich4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "All that",
+          "is",
+          "good,",
+          "all that is love"
+        ],
+        [
+          "What-ev-er",
+          "is ho-ly,",
+          "what-ev-er",
+          "is true"
+        ],
+        [
+          "You are",
+          "their source,",
+          "You are",
+          "their fount"
+        ],
+        [
+          "You, Lord,",
+          "and You",
+          "a-lone",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "4FT--XQapd0",
+        "youtubeUrl": "https://youtu.be/4FT--XQapd0",
+        "videoTitle": "All That is Good (with lyrics) - Verses and Rhymes",
+        "dur": 177,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            10,
+            "All that is good"
+          ],
+          [
+            14,
+            "All that is love"
+          ],
+          [
+            18,
+            "Whatever is holy"
+          ],
+          [
+            23,
+            "Whatever is true"
+          ],
+          [
+            28,
+            "You are their source"
+          ],
+          [
+            33,
+            "You are their fount"
+          ],
+          [
+            37,
+            "You, Lord, and You alone"
+          ],
+          [
+            47,
+            "Holy, Holy"
+          ],
+          [
+            55,
+            "Holy, O Lord Most High"
+          ],
+          [
+            65,
+            "Holy, Holy"
+          ],
+          [
+            74,
+            "Holy, O Lord Most High"
+          ],
+          [
+            88,
+            "All that is good"
+          ],
+          [
+            93,
+            "All that is love"
+          ],
+          [
+            97,
+            "Whatever is holy"
+          ],
+          [
+            101,
+            "Whatever is true"
+          ],
+          [
+            107,
+            "You are their source"
+          ],
+          [
+            111,
+            "You are their fount"
+          ],
+          [
+            116,
+            "You, Lord, and You alone"
+          ],
+          [
+            125,
+            "Worthy, Worthy"
+          ],
+          [
+            134,
+            "Worthy, O Lord Most High"
+          ],
+          [
+            144,
+            "Worthy, Worthy"
+          ],
+          [
+            153,
+            "Worthy, O Lord"
+          ],
+          [
+            157,
+            "You are worthy, O Lord"
+          ],
+          [
+            161,
+            "You are worthy, O Lord Most High"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-song-of-patrick",
+      "normKey": "song of patrick",
+      "title": "Song of Patrick",
+      "artist": "Sword of the Spirit Worship",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 96,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "chk4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "This day",
+          "God gives me",
+          "strength of",
+          "high hea-ven"
+        ],
+        [
+          "Sun and",
+          "moon shi-ning,",
+          "flame in",
+          "my heart"
+        ],
+        [
+          "Ri-sing",
+          "I thank You,",
+          "Migh-ty and",
+          "Strong One"
+        ],
+        [
+          "King of",
+          "cre-a-tion,",
+          "Gi-ver",
+          "of rest"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "falLFSfKoyc",
+        "youtubeUrl": "https://youtu.be/falLFSfKoyc",
+        "videoTitle": "Song of Patrick - Worship song fullversion",
+        "dur": 186,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            10,
+            "This day God gives me, strength of high heaven"
+          ],
+          [
+            16,
+            "Sun and moon shining, flame in my heart"
+          ],
+          [
+            22,
+            "Flashing of lightning, wind in its swiftness"
+          ],
+          [
+            27,
+            "Deeps of the ocean, firmness of earth"
+          ],
+          [
+            33,
+            "Rising I thank you, Mighty and strong One"
+          ],
+          [
+            39,
+            "King of creation, Giver of rest"
+          ],
+          [
+            45,
+            "Light of the morning, dispersing the darkness"
+          ],
+          [
+            50,
+            "Your love awaking the dawn!"
+          ],
+          [
+            58,
+            "This day God sends me, strength as my steersman"
+          ],
+          [
+            64,
+            "Might to uphold me, wisdom as guide"
+          ],
+          [
+            69,
+            "Your eyes are watchful, your ears are listening"
+          ],
+          [
+            75,
+            "Your lips are speaking, strength at my side"
+          ],
+          [
+            81,
+            "Rising I thank you, Mighty and strong One"
+          ],
+          [
+            87,
+            "King of creation, Giver of rest"
+          ],
+          [
+            92,
+            "Light of the morning, dispersing the darkness"
+          ],
+          [
+            98,
+            "Your love awaking the dawn!"
+          ],
+          [
+            105,
+            "God's way is my way, God's shield is round me"
+          ],
+          [
+            111,
+            "God's host defends me, saving from ill"
+          ],
+          [
+            117,
+            "Angels of heaven, drive from me always"
+          ],
+          [
+            123,
+            "All that would harm me, stand by me still"
+          ],
+          [
+            129,
+            "Rising I thank you, Mighty and strong One"
+          ],
+          [
+            135,
+            "King of creation, Giver of rest"
+          ],
+          [
+            140,
+            "Light of the morning, dispersing the darkness"
+          ],
+          [
+            146,
+            "Your love awaking the dawn!"
+          ],
+          [
+            152,
+            "Rising I thank you, mighty and strong one"
+          ],
+          [
+            158,
+            "King of creation, Giver of rest"
+          ],
+          [
+            163,
+            "Firmly confessing, oneness of Godhead"
+          ],
+          [
+            169,
+            "Threeness of Persons, Trinity blest!"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-arise-o-lord",
+      "normKey": "arise o lord",
+      "title": "Arise, O Lord",
+      "artist": "Sword of the Spirit Worship",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 94,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "chk4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "A-rise,",
+          "O Lord,",
+          "and come to Your",
+          "res-ting place"
+        ],
+        [
+          "Let Your",
+          "glo-ry fill",
+          "this tem-ple",
+          ""
+        ],
+        [
+          "A-rise,",
+          "O Lord,",
+          "may Your peo-ple",
+          "re-joice"
+        ],
+        [
+          "Re-mem-ber",
+          "Your pro-mise",
+          "and a-rise",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "OuMzfVxMdaA",
+        "youtubeUrl": "https://youtu.be/OuMzfVxMdaA",
+        "videoTitle": "Arise O Lord - worship songs fullversion",
+        "dur": 176,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            5,
+            "The Lord our God is faithful in all his words and deeds"
+          ],
+          [
+            14,
+            "His steadfast love is for all who call upon his name"
+          ],
+          [
+            22,
+            "And he has given us his word that he will send his Spirit"
+          ],
+          [
+            30,
+            "And make his dwelling in our midst"
+          ],
+          [
+            38,
+            "Arise, O Lord, and come to your resting place"
+          ],
+          [
+            46,
+            "Let your glory fill this temple, and salvation clothe your saints"
+          ],
+          [
+            55,
+            "Arise, O Lord, and may your people rejoice in your goodness"
+          ],
+          [
+            63,
+            "Remember your promise to us, and arise"
+          ],
+          [
+            72,
+            "The highest heavens cannot contain the Lord our God"
+          ],
+          [
+            81,
+            "Nor any temple that man has built upon the earth"
+          ],
+          [
+            89,
+            "And who are we that God should come and make his home within us?"
+          ],
+          [
+            98,
+            "Yet by your word let it be done"
+          ],
+          [
+            105,
+            "Arise, O Lord, and come to your resting place"
+          ],
+          [
+            113,
+            "Let your glory fill this temple, and salvation clothe your saints"
+          ],
+          [
+            122,
+            "Arise, O Lord, and may your people rejoice in your goodness"
+          ],
+          [
+            130,
+            "Remember your promise to us, and arise"
+          ],
+          [
+            139,
+            "Arise, O Lord, and come to your resting place"
+          ],
+          [
+            147,
+            "Let your glory fill this temple, and salvation clothe your saints"
+          ],
+          [
+            156,
+            "Arise, O Lord, and may your people rejoice in your goodness"
+          ],
+          [
+            164,
+            "Remember your promise to us, and arise"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-create-in-me-psalm51",
+      "normKey": "create in me",
+      "title": "Create in Me (Psalm 51)",
+      "artist": "Sword of the Spirit Worship",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "trv4",
+          "bal4",
+          "wlk4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Cre-ate",
+          "in me",
+          "a clean",
+          "heart"
+        ],
+        [
+          "Put a new",
+          "and right spi-rit",
+          "with-in",
+          "me"
+        ],
+        [
+          "Cast me not",
+          "a-way from",
+          "Your pre-sence",
+          ""
+        ],
+        [
+          "Take not Your",
+          "Ho-ly Spi-rit",
+          "from me",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "lKjkZyD1Pjg",
+        "youtubeUrl": "https://youtu.be/lKjkZyD1Pjg",
+        "videoTitle": "CREATE IN ME (Psalm 51) - Chips Tenoso",
+        "dur": 238,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            13,
+            "Create in me a clean heart"
+          ],
+          [
+            20,
+            "Put a new and right spirit within me"
+          ],
+          [
+            27,
+            "Cast me not away from Your presence"
+          ],
+          [
+            34,
+            "And take not Your Holy Spirit from me"
+          ],
+          [
+            47,
+            "Have mercy on me, O God, in Your goodness"
+          ],
+          [
+            54,
+            "In Your compassion, blot out all my sin"
+          ],
+          [
+            61,
+            "Thoroughly cleanse me from all of my guilt"
+          ],
+          [
+            67,
+            "Wash me till I'm whiter than snow"
+          ],
+          [
+            74,
+            "Create in me a clean heart"
+          ],
+          [
+            80,
+            "Put a new and right spirit within me"
+          ],
+          [
+            87,
+            "Cast me not away from Your presence"
+          ],
+          [
+            94,
+            "And take not Your Holy Spirit from me"
+          ],
+          [
+            107,
+            "Restore to me the joy of Your salvation"
+          ],
+          [
+            114,
+            "Uphold me with a willing spirit"
+          ],
+          [
+            121,
+            "So I will teach transgressors Your ways"
+          ],
+          [
+            127,
+            "And sinners will return to You"
+          ],
+          [
+            134,
+            "Create in me a clean heart"
+          ],
+          [
+            140,
+            "Put a new and right spirit within me"
+          ],
+          [
+            147,
+            "Cast me not away from Your presence"
+          ],
+          [
+            154,
+            "And take not Your Holy Spirit from me"
+          ],
+          [
+            168,
+            "You are pleased with sincerity of heart"
+          ],
+          [
+            174,
+            "Not with sacrifices nor with holocausts"
+          ],
+          [
+            181,
+            "My sacrifice is a broken spirit"
+          ],
+          [
+            187,
+            "For You will not refuse a humble heart"
+          ],
+          [
+            194,
+            "Create in me a clean heart"
+          ],
+          [
+            200,
+            "Put a new and right spirit within me"
+          ],
+          [
+            207,
+            "Cast me not away from Your presence"
+          ],
+          [
+            214,
+            "And take not Your Holy Spirit from me"
+          ],
+          [
+            226,
+            "Create in me a clean heart"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-i-delight-in-your-will",
+      "normKey": "i delight in your will",
+      "title": "I Delight in Your Will",
+      "artist": "Joseph Mathias · Servants of the Word",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 78,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "isl4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pa-tient-ly",
+          "I sought",
+          "the",
+          "Lord"
+        ],
+        [
+          "He has",
+          "heard my",
+          "cry",
+          ""
+        ],
+        [
+          "I de-light",
+          "in Your will,",
+          "O my",
+          "God"
+        ],
+        [
+          "Your law is",
+          "with-in my",
+          "heart",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "r93KFvvHO0k",
+        "youtubeUrl": "https://youtu.be/r93KFvvHO0k",
+        "videoTitle": "I Delight in Your Will - The Servants of the Word",
+        "dur": 265,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            9,
+            "Patiently I sought the Lord, He has heard my cry"
+          ],
+          [
+            16,
+            "And He has drawn me up and made my steps secure"
+          ],
+          [
+            28,
+            "Patiently I sought the Lord, He has heard my cry"
+          ],
+          [
+            35,
+            "And He has drawn me up and made my steps secure"
+          ],
+          [
+            43,
+            "And I said, Behold I come, in the steps of my Savior before me"
+          ],
+          [
+            54,
+            "Behold I come to You"
+          ],
+          [
+            62,
+            "I delight in Your will, O my God"
+          ],
+          [
+            68,
+            "And Your law is within my heart"
+          ],
+          [
+            72,
+            "Yes, I come to serve Your will"
+          ],
+          [
+            78,
+            "And I will speak of Your steadfast love"
+          ],
+          [
+            85,
+            "And I'll tell of Your favor, yes I come to do Your will"
+          ],
+          [
+            93,
+            "For You have set me free"
+          ],
+          [
+            104,
+            "Sacrifice and offering You do not desire"
+          ],
+          [
+            112,
+            "But You have given me an open ear"
+          ],
+          [
+            122,
+            "Sacrifice and offering You do not desire"
+          ],
+          [
+            130,
+            "But You have given me an open ear"
+          ],
+          [
+            136,
+            "And I said, Behold I come, in the steps of my Savior before me"
+          ],
+          [
+            154,
+            "I delight in Your will, O my God"
+          ],
+          [
+            160,
+            "Your law is within my heart, yes I come to serve Your will"
+          ],
+          [
+            171,
+            "I will speak of Your steadfast love"
+          ],
+          [
+            176,
+            "And tell of Your favor, so I come to do Your will"
+          ],
+          [
+            184,
+            "For You have set me free"
+          ],
+          [
+            242,
+            "I delight in Your will, O my God"
+          ],
+          [
+            249,
+            "Yes, I come to do Your will"
+          ],
+          [
+            255,
+            "For You have set me free"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sots-my-glorious-victor",
+      "normKey": "my glorious victor",
+      "title": "My Glorious Victor",
+      "artist": "Joseph Mathias · Servants of the Word",
+      "category": "Sword of the Spirit Worship",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "I am",
+          "Your ser-vant",
+          "for-e-ver"
+        ],
+        [
+          "Free-ly",
+          "I come and",
+          "free-ly stay"
+        ],
+        [
+          "Your bonds",
+          "are free-dom,",
+          "let me stay"
+        ],
+        [
+          "with You,",
+          "my Glo-rious",
+          "Vic-tor"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "j2z4BcbUlc8",
+        "youtubeUrl": "https://youtu.be/j2z4BcbUlc8",
+        "videoTitle": "My Glorious Victor - The Servants of the Word",
+        "dur": 598,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            7,
+            "My Glorious Victor, my Lord and my King"
+          ],
+          [
+            28,
+            "I kneel before You, glad vassal of Your throne"
+          ],
+          [
+            42,
+            "Your bonds are freedom, pierce my open ear"
+          ],
+          [
+            55,
+            "Let me stay with You forever"
+          ],
+          [
+            71,
+            "I am Your servant forever"
+          ],
+          [
+            83,
+            "I am Your servant forever, freely I come and freely stay"
+          ],
+          [
+            331,
+            "Your bonds are freedom, let me stay with You"
+          ],
+          [
+            358,
+            "Pierce my ear to follow, Your love holds me near"
+          ],
+          [
+            389,
+            "I am Your servant forever"
+          ],
+          [
+            405,
+            "Freely I come and freely stay"
+          ]
+        ]
+      }
+    }
+  ]
+}

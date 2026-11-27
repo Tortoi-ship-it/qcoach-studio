@@ -296,6 +296,10 @@
       background: #CBD5E1;
     }
   </style>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="theme-color" content="#f59e0b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="QCoach Studio" />
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-black">
 
@@ -459,6 +463,22 @@
           </svg></div>
           </div>
 
+          <!-- 🎼 4-STRING UKULELE TAB HIGHWAY & WAIT MODE BANNER (Full Width) -->
+          <div id="waitModeBanner" class="hidden rounded-xl bg-amber-500/20 border-2 border-amber-400 px-3 py-2 flex items-center justify-between gap-2 animate-pulse">
+            <div class="text-xs sm:text-sm font-black text-amber-300" id="waitModeBannerText">⏸️ Wait Mode: Strum C cleanly to continue</div>
+            <button id="btnWaitModeSkip" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-black text-[11px] shrink-0">Skip →</button>
+          </div>
+          <div id="melodyTabHighway" class="hidden rounded-2xl bg-[#121212] border border-cyan-500/50 p-3 space-y-2 shadow-lg">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-cyan-500 text-black text-[10px] font-mono font-black uppercase">🎼 Live TAB Highway</span>
+                <span id="tabHighwayPatternLabel" class="text-xs font-mono text-qmuted">C Major Scale / Arpeggio</span>
+              </div>
+              <div id="tabLivePitchReadout" class="text-xs font-mono font-bold text-emerald-400">♪ Ready — pluck each highlighted fret</div>
+            </div>
+            <div id="tabHighwayRows" class="font-mono text-xs space-y-1 overflow-x-auto pb-1"></div>
+          </div>
+
           <!-- Melody View Single-Note Tab Bar (Visible only when Melody View is active) -->
           <div id="scaleGuideBox" class="hidden rounded-lg bg-[#121212] border border-cyan-500/50 px-2.5 py-1.5 space-y-1">
             <div class="flex items-center justify-between">
@@ -587,6 +607,18 @@
             <span id="stageListenDot" class="text-emerald-400">🎙️</span>
             <span id="stageListenBtnLabel">Listen: OFF</span>
           </button>
+          <button id="btnToggleWaitMode" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Yousician-Style Wait Mode — automatically pauses on any missed chord until your ukulele plays it cleanly">
+            <span>⏸️</span>
+            <span id="stageWaitModeLabel">Wait Mode: OFF</span>
+          </button>
+          <button id="btnToggleTabHighway" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-cyan-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Toggle 4-String Ukulele TAB Highway &amp; Single-Note Pitch Tracking">
+            <span>🎼</span>
+            <span id="stageTabHighwayLabel">TAB: Auto</span>
+          </button>
+          <button id="btnOpenMicCalib" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-emerald-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="5-Second Mic &amp; Speaker Echo Calibration">
+            <span>🎚️</span>
+            <span>Calib</span>
+          </button>
         </div>
 
         <div class="flex items-center gap-2">
@@ -698,6 +730,18 @@
             <div class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-mono font-bold text-emerald-400">
               ⭐ Stars: <span id="learnStarsCount">0</span>
             </div>
+            <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/50 text-xs font-mono font-bold text-amber-300 transition" title="2-Minute Skill Placement Check — jump straight to your true Unit">
+              🧭 Placement
+            </button>
+            <button id="btnOpenCreatorStudio" type="button" class="px-3 py-1.5 rounded-xl bg-fuchsia-500/15 hover:bg-fuchsia-500/25 border border-fuchsia-400/50 text-xs font-mono font-bold text-fuchsia-300 transition" title="Visual Tap-to-Sync Song &amp; Pack Creator Studio">
+              🛠️ Studio
+            </button>
+            <button id="btnOpenSetlistHub" type="button" class="px-3 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-xs font-mono font-bold text-emerald-300 transition" title="Worship-Group / Choir Setlist Builder &amp; Shareable Link">
+              🤝 Setlists
+            </button>
+            <button id="btnInstallPwaApp" type="button" class="hidden px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-mono font-black transition" title="Install QCoach Studio to your Home Screen">
+              📲 Install
+            </button>
             <button id="btnLoadHostedPacks" type="button" class="px-3 py-1.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-300 transition" title="Sync additional Song Packs from hosted packs/manifest.json">
               📦 Packs
             </button>
@@ -746,6 +790,40 @@
             </button>
             <button id="btnContinueNextLesson" type="button" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs sm:text-sm shadow transition">
               ▶ Continue Lesson
+            </button>
+          </div>
+        </div>
+
+        <!-- 📅 SMART 10-MINUTE DAILY / WEEKLY PRACTICE PLAN -->
+        <div id="weeklyPracticePlanCard" class="q-card rounded-2xl p-4 border border-cyan-500/35 bg-gradient-to-r from-cyan-500/5 via-transparent to-emerald-500/5 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-md bg-cyan-500 text-black text-[10px] font-mono font-black uppercase">📅 Smart 10-Min Routine</span>
+                <span id="weeklyPlanProgressBadge" class="text-[11px] font-mono font-bold text-emerald-400">0 / 3 Blocks Today</span>
+              </div>
+              <p class="text-xs text-qmuted mt-0.5">Auto-built for your level: Warm-Up → Focus Drill → Song Milestone.</p>
+            </div>
+          </div>
+          <div id="weeklyPlanBlocks" class="grid grid-cols-1 md:grid-cols-3 gap-2.5"></div>
+        </div>
+
+        <!-- 🧠 Adaptive Coach Weak-Spot Auto-Drill Card -->
+        <div id="coachWeakSpotCard" class="hidden q-card rounded-2xl p-4 border border-rose-500/40 bg-gradient-to-r from-rose-500/10 via-transparent to-amber-500/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-rose-500 text-white text-[10px] font-mono font-black uppercase">🧠 Adaptive Coach Focus</span>
+              <span id="coachWeakSpotMeta" class="text-[11px] font-mono text-amber-400 font-bold">Based on your live mic history</span>
+            </div>
+            <h4 id="coachWeakSpotTitle" class="text-sm sm:text-base font-black text-qtext">Tighten Up Your Weakest Chords</h4>
+            <p id="coachWeakSpotDesc" class="text-xs text-qmuted">Custom 8-bar transition drill generated automatically from your recent chord accuracy.</p>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button id="btnDrillWeakSpotsWait" type="button" class="px-3 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition" title="Launch Weak-Spot drill with Wait Mode ON">
+              ⏸️ Wait-Mode Drill
+            </button>
+            <button id="btnDrillWeakSpots" type="button" class="px-4 py-2 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-black text-xs shadow transition">
+              🎯 Drill Weak Spots
             </button>
           </div>
         </div>
@@ -845,6 +923,155 @@
     </div>
 
     <!-- CLOUD ACCOUNT & SUPABASE SYNC MODAL (Guest-First, Optional Sign-In) -->
+    <!-- 🎚️ 5-SECOND MIC & SPEAKER ECHO CALIBRATION MODAL -->
+    <div id="micCalibModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border border-emerald-500/40">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="px-2 py-0.5 rounded bg-emerald-500 text-black text-[10px] font-mono font-black uppercase">🎚️ Audio Calibration</span>
+            <h3 class="text-base font-black text-qtext mt-1">3-Second Mic &amp; Echo Calibration</h3>
+          </div>
+          <button id="btnCloseMicCalib" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+        <p class="text-xs text-qmuted">Measures your room's background noise and speaker bleed so chord detection ignores room noise and never false-triggers on phone speakers.</p>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span id="micCalibStatusText" class="text-amber-400">Ready — stay quiet for 3s when you click Start</span>
+            <span id="micCalibGateValue" class="text-emerald-400 font-bold">Gate: 0.008</span>
+          </div>
+          <div class="w-full h-2.5 rounded-full bg-zinc-800 overflow-hidden">
+            <div id="micCalibProgressBar" class="h-full bg-emerald-500 transition-all duration-150" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between gap-2">
+          <button id="btnResetMicCalib" type="button" class="px-3 py-2 rounded-xl bg-[#1C1C1E] hover:bg-[#2C2C2E] border border-[#2C2C2E] text-qmuted text-xs font-bold">Reset Default</button>
+          <button id="btnRunMicCalib" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs shadow">🎙️ Start 3-Sec Calibration</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🛠️ VISUAL TAP-TO-SYNC SONG & PACK CREATOR STUDIO MODAL -->
+    <div id="creatorStudioModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+      <div class="q-card rounded-2xl p-5 max-w-2xl w-full space-y-4 shadow-2xl border border-fuchsia-500/40 my-auto max-h-[92vh] overflow-y-auto">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="px-2 py-0.5 rounded bg-fuchsia-500 text-white text-[10px] font-mono font-black uppercase">🛠️ Song &amp; Pack Creator Studio</span>
+            <h3 class="text-base sm:text-lg font-black text-qtext mt-1">Create &amp; Tap-Sync a New Worship Song</h3>
+          </div>
+          <button id="btnCloseCreatorStudio" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <input id="csTitle" type="text" placeholder="Song Title (e.g. Shout to the Lord)" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext" />
+          <input id="csArtist" type="text" placeholder="Artist / Composer (e.g. Darlene Zschech)" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext" />
+          <div class="grid grid-cols-3 gap-2">
+            <select id="csCategory" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-2 py-2 text-xs text-qtext">
+              <option value="worship">Worship</option>
+              <option value="hindi">Hindi Gospel</option>
+              <option value="marathi">Marathi Gospel</option>
+              <option value="catholic">Catholic Hymn</option>
+              <option value="sword">Sword of Spirit</option>
+            </select>
+            <select id="csMeter" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-2 py-2 text-xs text-qtext">
+              <option value="4/4">4/4</option>
+              <option value="3/4">3/4</option>
+              <option value="6/8">6/8</option>
+            </select>
+            <input id="csBpm" type="number" value="76" min="48" max="150" placeholder="BPM" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-2 py-2 text-xs text-qtext font-mono" />
+          </div>
+          <input id="csYoutubeUrl" type="url" placeholder="Optional YouTube URL (https://youtu.be/...)" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext" />
+        </div>
+
+        <div class="space-y-1">
+          <label class="text-[11px] font-mono text-qmuted">Lyrics with inline [Chords] (one bar/line per row — e.g. <code>[C] My Jesus, my Savior</code>)</label>
+          <textarea id="csLyricsInput" rows="5" placeholder="[C] My Jesus, my Savior&#10;[G] Lord there is none like You&#10;[Am] All of my days I want to praise&#10;[F] The wonders of Your mighty love" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl p-3 text-xs font-mono text-qtext"></textarea>
+        </div>
+
+        <!-- Live Tap-to-Sync Bar -->
+        <div class="rounded-xl bg-[#121212] border border-fuchsia-500/30 p-3 space-y-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div class="text-xs font-mono text-qtext">
+              <strong class="text-fuchsia-400">Tap-to-Sync Timer:</strong> <span id="csTapStatus">Ready — click Start Tap-Sync, then tap per line</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button id="btnCsStartTap" type="button" class="px-3 py-1.5 rounded-lg bg-fuchsia-500 hover:bg-fuchsia-400 text-white font-black text-xs">▶ Start Tap-Sync</button>
+              <button id="btnCsTapLine" type="button" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-black text-xs">🥁 Tap Next Line (Space)</button>
+            </div>
+          </div>
+          <div id="csStampedPreview" class="text-[11px] font-mono text-emerald-400 max-h-20 overflow-y-auto">No timestamps stamped yet (optional for offline songs).</div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+          <button id="btnCsExportPack" type="button" class="px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/50 text-cyan-300 font-bold text-xs">⬇️ Export Pack JSON (for GitHub)</button>
+          <button id="btnCsSaveToApp" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs shadow">💾 Save &amp; Play in QCoach</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🤝 WORSHIP-GROUP / CHOIR SETLIST BUILDER MODAL -->
+    <div id="setlistHubModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+      <div class="q-card rounded-2xl p-5 max-w-xl w-full space-y-4 shadow-2xl border border-emerald-500/40 my-auto max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="px-2 py-0.5 rounded bg-emerald-500 text-black text-[10px] font-mono font-black uppercase">🤝 Worship Group &amp; Choir Setlists</span>
+            <h3 class="text-base sm:text-lg font-black text-qtext mt-1">Build &amp; Share a Group Practice Setlist</h3>
+          </div>
+          <button id="btnCloseSetlistHub" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <input id="setlistNameInput" type="text" value="Sunday Prayer Group Setlist" placeholder="Setlist Name" class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext font-bold" />
+          <input id="setlistSearchSong" type="text" placeholder="🔍 Search 221 songs to add..." class="bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext" />
+        </div>
+
+        <div id="setlistSearchResults" class="max-h-32 overflow-y-auto space-y-1"></div>
+
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-amber-400">Selected Setlist Songs (<span id="setlistCountBadge">0</span>)</span>
+            <button id="btnClearSetlist" type="button" class="text-[11px] font-mono text-rose-400 hover:underline">Clear</button>
+          </div>
+          <div id="setlistSelectedList" class="space-y-1.5 text-xs text-qmuted">Add 2–6 songs above to build your group setlist.</div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <button id="btnCopySetlistLink" type="button" class="px-3.5 py-2 rounded-xl bg-indigo-500/20 hover:bg-indigo-500/35 border border-indigo-400/50 text-indigo-300 font-bold text-xs">🔗 Copy Shareable Group Link</button>
+          <button id="btnPlaySetlistNow" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs shadow">▶ Open First Song on Stage</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🧭 2-MINUTE SKILL PLACEMENT CHECK MODAL -->
+    <div id="placementCheckModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border-2 border-amber-500/50">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="px-2 py-0.5 rounded-md bg-amber-500 text-black text-[10px] font-mono font-black uppercase">🧭 2-Minute Placement Check</span>
+            <h3 id="placementStageTitle" class="text-base font-black text-qtext mt-1">Stage 1 of 4 · Open Basics (C &amp; Am)</h3>
+          </div>
+          <button id="btnClosePlacementModal" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+
+        <p id="placementStageDesc" class="text-xs text-qmuted">Strum each chord cleanly on your ukulele (with live mic listening) or tap below if you already play these comfortably.</p>
+
+        <div id="placementChordChips" class="grid grid-cols-2 gap-2.5"></div>
+
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 flex items-center justify-between gap-2">
+          <div id="placementMicStatus" class="text-xs font-mono text-emerald-400">🎙️ Click "Listen &amp; Verify" or use manual check below</div>
+          <button id="btnPlacementListenToggle" type="button" class="px-2.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[11px] shrink-0">🎙️ Listen</button>
+        </div>
+
+        <div class="flex items-center justify-between gap-2 pt-1">
+          <button id="btnPlacementStopHere" type="button" class="px-3 py-2 rounded-xl bg-[#1C1C1E] hover:bg-[#2C2C2E] border border-[#2C2C2E] text-qmuted hover:text-qtext font-bold text-xs transition">
+            Start Learning Here
+          </button>
+          <button id="btnPlacementPassStage" type="button" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs shadow transition">
+            ✓ I Play These Cleanly →
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div id="cloudAuthModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
       <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border border-indigo-500/40">
         <div class="flex items-center justify-between">
@@ -857,6 +1084,10 @@
 
         <div id="cloudAuthStatusBox" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs font-mono text-qmuted">
           Status: <strong class="text-amber-400">Guest Mode (Saved Locally)</strong>
+        </div>
+        <div class="flex items-center justify-between gap-2 rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2">
+          <span class="text-[11px] font-mono text-qmuted">First time setting up Supabase?</span>
+          <button id="btnCopySupabaseSchema" type="button" class="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/35 border border-indigo-400/50 text-indigo-300 font-bold text-[11px] transition">📋 Copy schema.sql</button>
         </div>
 
         <div id="cloudAuthSignedOutControls" class="space-y-2.5">
@@ -2795,6 +3026,8 @@
       countdownEnabled: true,
       ytSyncEnabled: false,
       listenEnabled: false,
+      waitModeEnabled: false,
+      waitModePausedOnBar: false,
       listenBarResults: {},
       listenLastFeedback: '',
       listenLastStatus: 'idle', // 'idle' | 'hit' | 'miss'
@@ -7273,6 +7506,7 @@
     }
 
     function triggerSubdivisionAudioAndCues() {
+      if (typeof renderMelodyTabHighway === 'function') renderMelodyTabHighway();
       try {
         const song = getCurrentSong();
         const section = getCurrentSection();
@@ -7369,6 +7603,17 @@
       const ts = song.musicalMeta.timeSignature;
       const totalSubs = ts.beatsPerBar * ts.subdivisionsPerBeat;
 
+      if (state.waitModeEnabled && state.listenEnabled && state.currentSubdivisionIndex >= totalSubs - 1) {
+        if (!state.listenBarResults || state.listenBarResults[state.currentBarIndex] !== 'hit') {
+          if (!state.waitModePausedOnBar) {
+            state.waitModePausedOnBar = true;
+            const curB = bars[state.currentBarIndex] || bars[0];
+            const waitChord = curB ? getBarActiveChord(curB, song) : 'C';
+            updateWaitModeBanner(true, waitChord);
+          }
+          return;
+        }
+      }
       state.currentSubdivisionIndex++;
       if (state.currentSubdivisionIndex >= totalSubs) {
         state.currentSubdivisionIndex = 0;
@@ -7929,7 +8174,9 @@
             renderStageTick();
           }
         } else {
-          if (nowMs - state.lastStepTimeMs >= subDurationMs) {
+          if (state.waitModeEnabled && state.listenEnabled && state.waitModePausedOnBar) {
+            state.lastStepTimeMs = nowMs;
+          } else if (nowMs - state.lastStepTimeMs >= subDurationMs) {
             state.lastStepTimeMs = nowMs;
             try { advanceOneSubdivision(); } catch (e) {}
           }
@@ -8152,11 +8399,16 @@
         lvlBar.style.width = pct + '%';
       }
 
-      const isStrumOnset = rms > 0.008 && rms > listenEngine.prevRms * 1.24 && (nowMs - listenEngine.lastOnsetMs) > 140;
+      const dynGate = Math.max(0.005, Number(localStorage.getItem('qcoach_mic_noise_gate') || 0.008));
+      if (typeof handleMicCalibrationSample === 'function') handleMicCalibrationSample(rms);
+      const isStrumOnset = rms > dynGate && rms > listenEngine.prevRms * 1.24 && (nowMs - listenEngine.lastOnsetMs) > 140;
       listenEngine.prevRms = rms * 0.65 + listenEngine.prevRms * 0.35;
 
       // 2. Evaluate 12-bin chromagram (190 Hz - 1420 Hz) on strum onset or sustained ukulele ring
-      if (isStrumOnset || (rms > 0.010 && (nowMs - listenEngine.lastOnsetMs) > 180)) {
+      if (rms > dynGate && typeof evaluateSingleNoteTabPitch === 'function') {
+        evaluateSingleNoteTabPitch(listenEngine.timeData, listenEngine.ctx.sampleRate || 44100, rms);
+      }
+      if (isStrumOnset || (rms > Math.max(0.010, dynGate * 1.15) && (nowMs - listenEngine.lastOnsetMs) > 180)) {
         const sr = listenEngine.ctx.sampleRate || 44100;
         const binHz = sr / analyser.fftSize;
         const minBin = Math.max(1, Math.floor(190 / binHz));
@@ -8204,6 +8456,9 @@
               bestChord = ch;
             }
           }
+          if (typeof handlePlacementLiveChord === 'function' && bestScore >= 0.58) {
+            handlePlacementLiveChord(bestChord, bestScore);
+          }
 
           const mode = getEffectiveDifficultyMode();
           const minThresh = mode === 'beginner' ? 0.56 : (mode === 'intermediate' ? 0.62 : 0.67);
@@ -8247,6 +8502,12 @@
               state.listenChordStats[expectedChord].attempts++;
             }
             state.listenBarResults[state.currentBarIndex] = 'hit';
+            if (state.waitModeEnabled && state.waitModePausedOnBar) {
+              state.waitModePausedOnBar = false;
+              updateWaitModeBanner(false, expectedChord);
+              state.lastStepTimeMs = nowMs;
+              setTimeout(() => { if (state.isPlaying) advanceOneSubdivision(); }, 120);
+            }
           } else if (isStrumOnset && bestScore >= 0.62 && bestChord !== expectedChord) {
             state.listenLastStatus = 'miss';
             state.listenLastFeedback = `Heard ${bestChord} → ${expectedChord}`;
@@ -9570,6 +9831,7 @@
     }
 
     function openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, drillMeta) {
+      if (typeof recordChordHistoryFromSession === 'function') recordChordHistoryFromSession();
       const modal = document.getElementById('coachDiagnosisModal');
       if (!modal) return;
       document.getElementById('coachDiagTitle').textContent = finalPct >= 85
@@ -9608,6 +9870,576 @@
       }
       document.getElementById('coachDiagAdviceBox').innerHTML = adviceLines.join('');
       modal.classList.remove('hidden');
+    }
+
+    
+    // === PHASE 2 & 3 ENGINE: WAIT MODE, PLACEMENT CHECK & ADAPTIVE WEAK-SPOT COACH ===
+    const QCOACH_SUPABASE_SCHEMA_SQL = "-- QCoach v3.0 Phase 1 MVP Schema (Supabase / PostgreSQL)\n-- Run this in Supabase SQL Editor when ready to enable user accounts, streaks & cloud song packs.\n\ncreate table if not exists public.profiles (\n  id uuid primary key references auth.users(id) on delete cascade,\n  display_name text,\n  skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),\n  daily_streak int default 0,\n  last_practice_date date,\n  created_at timestamptz default now()\n);\n\ncreate table if not exists public.song_progress (\n  id uuid primary key default gen_random_uuid(),\n  user_id uuid references public.profiles(id) on delete cascade,\n  song_norm_key text not null,\n  best_listen_score int default 0,\n  stars int default 0 check (stars between 0 and 3),\n  loops_completed int default 0,\n  max_clean_bpm int default 72,\n  updated_at timestamptz default now(),\n  unique (user_id, song_norm_key)\n);\n\ncreate table if not exists public.community_song_submissions (\n  id uuid primary key default gen_random_uuid(),\n  submitted_by uuid references public.profiles(id) on delete set null,\n  title text not null,\n  artist text,\n  language text default 'en',\n  youtube_url text,\n  payload jsonb not null,\n  status text default 'pending' check (status in ('pending','verified','rejected')),\n  created_at timestamptz default now()\n);\n\nalter table public.profiles enable row level security;\nalter table public.song_progress enable row level security;\nalter table public.community_song_submissions enable row level security;\n\ncreate policy \"Users manage own profile\" on public.profiles\n  for all using (auth.uid() = id) with check (auth.uid() = id);\n\ncreate policy \"Users manage own progress\" on public.song_progress\n  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);\n\ncreate policy \"Users submit and read own submissions\" on public.community_song_submissions\n  for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);\n";
+    const CHORD_HISTORY_KEY = 'qcoach_chord_history_v1';
+
+    function updateWaitModeButtonUi() {
+      const btn = document.getElementById('btnToggleWaitMode');
+      const lbl = document.getElementById('stageWaitModeLabel');
+      if (!btn || !lbl) return;
+      if (state.waitModeEnabled) {
+        lbl.textContent = 'Wait Mode: ON';
+        btn.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500 text-black border border-amber-300 text-xs font-mono font-black shadow transition';
+      } else {
+        lbl.textContent = 'Wait Mode: OFF';
+        btn.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm';
+      }
+    }
+
+    function updateWaitModeBanner(show, chordName) {
+      const el = document.getElementById('waitModeBanner');
+      const txt = document.getElementById('waitModeBannerText');
+      if (!el) return;
+      if (show) {
+        if (txt) txt.textContent = `⏸️ Wait Mode: Fret & strum ${chordName || 'chord'} cleanly to continue`;
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    }
+
+    function getPersistentChordHistory() {
+      try { return JSON.parse(localStorage.getItem(CHORD_HISTORY_KEY) || '{}'); } catch (e) { return {}; }
+    }
+
+    function recordChordHistoryFromSession() {
+      if (!state.listenChordStats) return;
+      const hist = getPersistentChordHistory();
+      Object.entries(state.listenChordStats).forEach(([ch, st]) => {
+        if (!st || !st.attempts) return;
+        if (!hist[ch]) hist[ch] = { hits: 0, attempts: 0 };
+        hist[ch].hits += (st.hits || 0);
+        hist[ch].attempts += (st.attempts || 0);
+      });
+      try { localStorage.setItem(CHORD_HISTORY_KEY, JSON.stringify(hist)); } catch (e) {}
+    }
+
+    function getWeakestChordsList(limit = 3) {
+      const hist = getPersistentChordHistory();
+      return Object.entries(hist)
+        .filter(([, st]) => st && st.attempts >= 2)
+        .map(([chord, st]) => ({ chord, acc: Math.round((st.hits / st.attempts) * 100), attempts: st.attempts }))
+        .filter(item => item.acc < 85)
+        .sort((a, b) => a.acc - b.acc)
+        .slice(0, limit);
+    }
+
+    function renderCoachWeakSpotCard() {
+      const card = document.getElementById('coachWeakSpotCard');
+      if (!card) return;
+      const weak = getWeakestChordsList(3);
+      if (!weak.length) {
+        card.classList.add('hidden');
+        return;
+      }
+      card.classList.remove('hidden');
+      const titleEl = document.getElementById('coachWeakSpotTitle');
+      const descEl = document.getElementById('coachWeakSpotDesc');
+      const summary = weak.map(w => `${w.chord} (${w.acc}%)`).join(' · ');
+      if (titleEl) titleEl.textContent = `Focus Chords: ${summary}`;
+      if (descEl) descEl.textContent = `Your live mic history shows these chords need extra reps. Launch a custom 8-bar transition drill right now.`;
+    }
+
+    function launchWeakSpotAutoDrill(useWaitMode = false) {
+      const weak = getWeakestChordsList(3).map(w => w.chord);
+      const targets = weak.length >= 2 ? weak : (weak.length === 1 ? [weak[0], 'C'] : ['F', 'G']);
+      const seq = [];
+      for (let i = 0; i < 8; i++) seq.push(targets[i % targets.length]);
+      const customDrill = {
+        id: 'drill-auto-weakspot',
+        title: `Coach Weak-Spot Fix (${targets.join(' ↔ ')})`,
+        tier: 'intermediate',
+        badge: '🧠 Custom Focus',
+        desc: `Targeted transition reps for your lowest-accuracy chords: ${targets.join(', ')}.`,
+        chords: seq,
+        meter: '4/4',
+        strumCode: 'dn4',
+        bpm: 66,
+        tip: 'Keep transitions slow and relaxed—clean ringing beats fast buzzing every time!'
+      };
+      state.waitModeEnabled = !!useWaitMode;
+      updateWaitModeButtonUi();
+      launchInteractiveDrill(customDrill, false);
+    }
+
+    // 🧭 2-MINUTE SKILL PLACEMENT CHECK
+    const PLACEMENT_STAGES = [
+      { stage: 1, title: 'Stage 1 of 4 · Open Basics (C & Am)', desc: 'Play C Major and A Minor cleanly with zero buzz.', chords: ['C', 'Am'], unlockUnits: [] },
+      { stage: 2, title: 'Stage 2 of 4 · Worship Core (F & G)', desc: 'Play F Major and the 3-finger G triangle smoothly.', chords: ['F', 'G'], unlockUnits: [1] },
+      { stage: 3, title: 'Stage 3 of 4 · Intermediate Keys (Dm & D)', desc: 'Play D Minor and stacked D Major cleanly.', chords: ['Dm', 'D'], unlockUnits: [1, 2] },
+      { stage: 4, title: 'Stage 4 of 4 · Barre Readiness (Bb & Bm)', desc: 'Play partial-barre Bb and full-barre Bm cleanly.', chords: ['Bb', 'Bm'], unlockUnits: [1, 2, 3, 4] }
+    ];
+    const placementState = { open: false, stageIdx: 0, verified: {} };
+
+    function openPlacementCheckModal() {
+      placementState.open = true;
+      placementState.stageIdx = 0;
+      placementState.verified = {};
+      const bd = document.getElementById('placementCheckModalBackdrop');
+      if (bd) bd.classList.remove('hidden');
+      renderPlacementStage();
+    }
+
+    function closePlacementCheckModal() {
+      placementState.open = false;
+      const bd = document.getElementById('placementCheckModalBackdrop');
+      if (bd) bd.classList.add('hidden');
+    }
+
+    function renderPlacementStage() {
+      const st = PLACEMENT_STAGES[placementState.stageIdx];
+      if (!st) return;
+      const tEl = document.getElementById('placementStageTitle');
+      const dEl = document.getElementById('placementStageDesc');
+      const chipsEl = document.getElementById('placementChordChips');
+      if (tEl) tEl.textContent = st.title;
+      if (dEl) dEl.textContent = st.desc;
+      if (chipsEl) {
+        chipsEl.innerHTML = st.chords.map(ch => {
+          const ok = !!placementState.verified[ch];
+          const cData = (typeof getChordData === 'function') ? getChordData(ch) : CHORD_LIBRARY[ch];
+          const frets = (cData && cData.frets) ? cData.frets.join('-') : '';
+          return `<div class="rounded-xl p-3 border ${ok ? 'border-emerald-400 bg-emerald-500/15' : 'border-[#2C2C2E] bg-[#121212]'} text-center">
+            <div class="text-lg font-black ${ok ? 'text-emerald-300' : 'text-qtext'}">${ch} ${ok ? '✅' : ''}</div>
+            <div class="text-[11px] font-mono text-qmuted">Frets: ${frets}</div>
+          </div>`;
+        }).join('');
+      }
+    }
+
+    function handlePlacementLiveChord(detectedChord, score) {
+      if (!placementState.open) return;
+      const st = PLACEMENT_STAGES[placementState.stageIdx];
+      if (!st) return;
+      if (st.chords.includes(detectedChord) && !placementState.verified[detectedChord]) {
+        placementState.verified[detectedChord] = true;
+        const mEl = document.getElementById('placementMicStatus');
+        if (mEl) mEl.textContent = `✅ Heard ${detectedChord} cleanly!`;
+        renderPlacementStage();
+        if (st.chords.every(c => placementState.verified[c])) {
+          setTimeout(() => advancePlacementStage(), 450);
+        }
+      }
+    }
+
+    function applyPlacementResult(completedStageCount) {
+      // completedStageCount: 0 -> Unit 1, 1 -> Unit 2, 2 -> Unit 3, 3 -> Unit 4/5, 4 -> Unit 5/6
+      const unitsToCredit = completedStageCount >= 4 ? [1, 2, 3, 4]
+        : (completedStageCount === 3 ? [1, 2, 3]
+        : (completedStageCount === 2 ? [1, 2]
+        : (completedStageCount === 1 ? [1] : [])));
+      unitsToCredit.forEach(uNum => {
+        const unitObj = QCOACH_GUIDED_UNITS.find(u => u.unit === uNum);
+        if (unitObj) {
+          unitObj.lessonIds.forEach(lid => {
+            const item = findDrillById(lid);
+            if (item && getBestScoreForItem(item) < 80) saveDrillScore(lid, 80);
+          });
+        }
+      });
+      const newSkill = completedStageCount >= 4 ? 'expert' : (completedStageCount >= 2 ? 'intermediate' : 'beginner');
+      try { localStorage.setItem('qcoach_skill_level', newSkill); } catch (e) {}
+      closePlacementCheckModal();
+      renderLearnPathView();
+      const targetUnit = Math.min(6, unitsToCredit.length + 1);
+      showToast(`🧭 Placement Complete! Starting you at Unit ${targetUnit} (${newSkill.toUpperCase()}).`, 'success');
+    }
+
+    function advancePlacementStage() {
+      if (placementState.stageIdx + 1 >= PLACEMENT_STAGES.length) {
+        applyPlacementResult(4);
+      } else {
+        placementState.stageIdx += 1;
+        placementState.verified = {};
+        renderPlacementStage();
+      }
+    }
+
+
+    // === PHASE 3, 4 & 5 COMPLETE ENGINE: TAB HIGHWAY + SINGLE-NOTE PITCH + MIC CALIB + SONG STUDIO + SETLISTS + WEEKLY PLAN + PWA ===
+    const TAB_SCALE_PATTERNS = {
+      'drill-sc-cmaj': {
+        label: 'C Major Scale (Do–Re–Mi–Fa–So–La–Ti–Do)',
+        notes: [
+          { s: 1, f: 0, note: 'C4', hz: 261.63 }, { s: 1, f: 2, note: 'D4', hz: 293.66 },
+          { s: 2, f: 0, note: 'E4', hz: 329.63 }, { s: 2, f: 1, note: 'F4', hz: 349.23 },
+          { s: 2, f: 3, note: 'G4', hz: 392.00 }, { s: 3, f: 0, note: 'A4', hz: 440.00 },
+          { s: 3, f: 2, note: 'B4', hz: 493.88 }, { s: 3, f: 3, note: 'C5', hz: 523.25 }
+        ]
+      },
+      'drill-sc-pent': {
+        label: 'Worship Pentatonic (C–D–E–G–A–C–A–G)',
+        notes: [
+          { s: 1, f: 0, note: 'C4', hz: 261.63 }, { s: 1, f: 2, note: 'D4', hz: 293.66 },
+          { s: 2, f: 0, note: 'E4', hz: 329.63 }, { s: 2, f: 3, note: 'G4', hz: 392.00 },
+          { s: 3, f: 0, note: 'A4', hz: 440.00 }, { s: 3, f: 3, note: 'C5', hz: 523.25 },
+          { s: 3, f: 0, note: 'A4', hz: 440.00 }, { s: 2, f: 3, note: 'G4', hz: 392.00 }
+        ]
+      }
+    };
+    const UKULELE_OPEN_HZ = [392.00, 261.63, 329.63, 440.00]; // G4, C4, E4, A4
+    const tabHighwayState = { forcedMode: 'auto', hitSlots: {}, lastPitchEvalMs: 0 };
+
+    function isTabHighwayActive() {
+      if (tabHighwayState.forcedMode === 'on') return true;
+      if (tabHighwayState.forcedMode === 'off') return false;
+      const d = state.activeDrillMeta;
+      if (d && (d.playMode === 'scale' || ['arp4', 'trv4', 'arp3', 'arp6'].includes(d.strumCode))) return true;
+      return false;
+    }
+
+    function getActiveTabSequence() {
+      const d = state.activeDrillMeta;
+      if (d && TAB_SCALE_PATTERNS[d.id]) return TAB_SCALE_PATTERNS[d.id];
+      // Build dynamic 8-slot arpeggio TAB from current bar's chord frets!
+      const song = getCurrentSong();
+      const sec = getCurrentSection();
+      const bar = (sec && sec.bars && sec.bars[state.currentBarIndex]) || null;
+      const chName = bar ? getBarActiveChord(bar, song) : 'C';
+      const cData = (typeof getChordData === 'function') ? getChordData(chName) : CHORD_LIBRARY['C'];
+      const frets = (cData && cData.frets) ? cData.frets : [0, 0, 0, 3];
+      const order = [1, 2, 0, 3, 1, 2, 3, 2]; // C-E-G-A-C-E-A-E
+      const notes = order.map(sIdx => {
+        const f = Math.max(0, frets[sIdx] || 0);
+        const hz = UKULELE_OPEN_HZ[sIdx] * Math.pow(2, f / 12);
+        return { s: sIdx, f, note: `${['G','C','E','A'][sIdx]}${f}`, hz };
+      });
+      return { label: `${chName} Chord Fingerpicking TAB`, notes };
+    }
+
+    function renderMelodyTabHighway() {
+      const box = document.getElementById('melodyTabHighway');
+      const rowsEl = document.getElementById('tabHighwayRows');
+      const lblEl = document.getElementById('tabHighwayPatternLabel');
+      if (!box || !rowsEl) return;
+      const active = isTabHighwayActive();
+      box.classList.toggle('hidden', !active);
+      if (!active) return;
+
+      const seq = getActiveTabSequence();
+      if (lblEl) lblEl.textContent = seq.label;
+      const curSlot = (state.currentSubdivisionIndex || 0) % seq.notes.length;
+      const stringOrder = [
+        { sIdx: 3, name: 'A' },
+        { sIdx: 2, name: 'E' },
+        { sIdx: 1, name: 'C' },
+        { sIdx: 0, name: 'G' }
+      ];
+      rowsEl.innerHTML = stringOrder.map(st => {
+        const cells = seq.notes.map((n, idx) => {
+          const isCur = idx === curSlot;
+          const isHit = !!tabHighwayState.hitSlots[`${state.currentBarIndex}-${idx}`];
+          if (n.s === st.sIdx) {
+            const cls = isHit
+              ? 'bg-emerald-500 text-black font-black'
+              : (isCur ? 'bg-amber-400 text-black font-black ring-2 ring-amber-200' : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40');
+            return `<span class="inline-flex items-center justify-center w-7 h-5 rounded ${cls}">${n.f}</span>`;
+          }
+          return `<span class="inline-flex items-center justify-center w-7 h-5 text-zinc-600">──</span>`;
+        }).join('');
+        return `<div class="flex items-center gap-1"><span class="w-5 font-black text-amber-400">${st.name}|</span>${cells}</div>`;
+      }).join('');
+    }
+
+    // Autocorrelation Single-Note Pitch Detector (220 Hz - 950 Hz ukulele melody range)
+    function detectSingleNoteHz(buf, sampleRate) {
+      const size = buf.length;
+      const minLag = Math.floor(sampleRate / 950);
+      const maxLag = Math.min(Math.floor(size / 2), Math.ceil(sampleRate / 210));
+      let bestLag = -1;
+      let bestCorr = 0;
+      for (let lag = minLag; lag <= maxLag; lag++) {
+        let sum = 0, normA = 0, normB = 0;
+        for (let i = 0; i < size - lag; i += 2) {
+          const a = buf[i], b = buf[i + lag];
+          sum += a * b;
+          normA += a * a;
+          normB += b * b;
+        }
+        const denom = Math.sqrt(normA * normB) || 1;
+        const corr = sum / denom;
+        if (corr > bestCorr) { bestCorr = corr; bestLag = lag; }
+      }
+      return (bestCorr >= 0.72 && bestLag > 0) ? (sampleRate / bestLag) : 0;
+    }
+
+    function evaluateSingleNoteTabPitch(timeData, sampleRate, rms) {
+      if (!isTabHighwayActive()) return;
+      const now = performance.now();
+      if (now - tabHighwayState.lastPitchEvalMs < 95) return;
+      tabHighwayState.lastPitchEvalMs = now;
+
+      const hz = detectSingleNoteHz(timeData, sampleRate);
+      if (!hz) return;
+      const seq = getActiveTabSequence();
+      const curSlot = (state.currentSubdivisionIndex || 0) % seq.notes.length;
+      const target = seq.notes[curSlot];
+      if (!target) return;
+      const cents = Math.abs(1200 * Math.log2(hz / target.hz));
+      const readout = document.getElementById('tabLivePitchReadout');
+      if (cents <= 45) {
+        tabHighwayState.hitSlots[`${state.currentBarIndex}-${curSlot}`] = true;
+        if (readout) readout.textContent = `✅ Clean ${target.note} (${Math.round(hz)} Hz)`;
+        renderMelodyTabHighway();
+      } else {
+        if (readout) readout.textContent = `♪ Heard ${Math.round(hz)} Hz → Target ${target.note} (${Math.round(target.hz)} Hz)`;
+      }
+    }
+
+    // 🎚️ 5-SECOND MIC & SPEAKER ECHO CALIBRATION
+    const micCalibState = { running: false, samples: [], startMs: 0 };
+    function handleMicCalibrationSample(rms) {
+      if (!micCalibState.running) return;
+      micCalibState.samples.push(rms);
+      const elapsed = performance.now() - micCalibState.startMs;
+      const pct = Math.min(100, Math.round((elapsed / 3000) * 100));
+      const bar = document.getElementById('micCalibProgressBar');
+      if (bar) bar.style.width = pct + '%';
+      if (elapsed >= 3000) {
+        micCalibState.running = false;
+        const sorted = micCalibState.samples.slice().sort((a, b) => a - b);
+        const p90 = sorted[Math.floor(sorted.length * 0.9)] || 0.005;
+        const gate = Math.min(0.045, Math.max(0.006, Number((p90 * 1.45 + 0.003).toFixed(4))));
+        try { localStorage.setItem('qcoach_mic_noise_gate', String(gate)); } catch (e) {}
+        const stEl = document.getElementById('micCalibStatusText');
+        const gEl = document.getElementById('micCalibGateValue');
+        if (stEl) stEl.textContent = '✅ Calibrated! Background room noise filtered out.';
+        if (gEl) gEl.textContent = `Gate: ${gate}`;
+        showToast(`🎚️ Mic calibrated (Noise Gate: ${gate})`, 'success');
+      }
+    }
+
+    // 🛠️ VISUAL TAP-TO-SYNC SONG & PACK CREATOR STUDIO
+    const csState = { tapping: false, startMs: 0, lines: [], stamped: [] };
+    function parseCreatorLyrics(raw) {
+      return (raw || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean).map(line => {
+        const m = line.match(/\[([^\]]+)\]/);
+        const chord = m ? m[1].trim() : 'C';
+        const text = line.replace(/\[[^\]]+\]/g, '').trim() || line;
+        return { chord, text };
+      });
+    }
+    function buildCreatorSongObject() {
+      const title = (document.getElementById('csTitle')?.value || '').trim() || 'Untitled Worship Song';
+      const artist = (document.getElementById('csArtist')?.value || '').trim() || 'QCoach Creator';
+      const category = document.getElementById('csCategory')?.value || 'worship';
+      const meter = document.getElementById('csMeter')?.value || '4/4';
+      const bpm = Math.max(48, Math.min(160, Number(document.getElementById('csBpm')?.value || 76)));
+      const ytUrl = (document.getElementById('csYoutubeUrl')?.value || '').trim();
+      const parsed = parseCreatorLyrics(document.getElementById('csLyricsInput')?.value || '[C] Praise the Lord\n[G] With all my heart\n[Am] Forever and ever\n[F] Amen');
+      const bpb = meter === '3/4' ? 3 : (meter === '6/8' ? 6 : 4);
+      const subsPerBeat = bpb === 6 ? 1 : 2;
+      const strumCode = meter === '3/4' ? 'wlz3' : (meter === '6/8' ? 'rol6' : 'isl4');
+      const pal = PREPOPULATED_STRUM_PALETTE[strumCode] || PREPOPULATED_STRUM_PALETTE.dn4;
+      const bars = parsed.map((row, idx) => ({
+        barIndex: idx,
+        chordBeginner: row.chord,
+        chordIntermediate: row.chord,
+        chordExpert: row.chord,
+        lyric: row.text,
+        lyricText: row.text,
+        syllables: buildSyllablesFromLyricLine(row.text, { musicalMeta: { timeSignature: { beatsPerBar: bpb, subdivisionsPerBeat: subsPerBeat } } }, idx, null),
+        sectionPartName: 'Main'
+      }));
+      return {
+        id: 'custom-' + Date.now(),
+        isPreloaded: false,
+        arrangementVersion: QCOACH_ARRANGEMENT_VERSION,
+        title,
+        artist,
+        category,
+        sourceType: 'youtube',
+        mediaFormat: 'Creator Studio',
+        youtubeUrl: ytUrl,
+        youtubeUrlCustom: !!ytUrl,
+        autoSync: { beatOneOffsetSec: 0, detectionConfidence: 1, playbackRate: 1.0, audioMixMode: 'beat_only', manualStrumOverride: false },
+        musicalMeta: {
+          originalKey: parsed[0]?.chord || 'C',
+          activeKey: parsed[0]?.chord || 'C',
+          transposeSemitones: 0,
+          bpm,
+          timeSignature: { beatsPerBar: bpb, beatUnit: bpb === 6 ? 8 : 4, subdivisionsPerBeat: subsPerBeat },
+          strumPattern: pal.p.slice(),
+          strumPatternLabel: pal.l,
+          playingStyle: pal.l,
+          difficultyMode: 'beginner'
+        },
+        sections: [{ id: 'sec-main', name: 'Main', bars }],
+        masteryStats: { loopsCompleted: 0, maxCleanBpm: 0, bestListenScore: 0 },
+        _exportPack: {
+          title, artist, category, script: 'latin',
+          musicalMeta: { meter, bpm },
+          strums: { b: meter === '3/4' ? 'dn3' : (meter === '6/8' ? 'dn6' : 'dn4'), i: strumCode, e: [strumCode, strumCode, strumCode] },
+          offlineLines: parsed.map(r => [r.chord, r.text]),
+          youtubeSync: (ytUrl && csState.stamped.length >= 2) ? { url: ytUrl, lines: csState.stamped } : null
+        }
+      };
+    }
+
+    // 🤝 WORSHIP-GROUP / CHOIR SETLIST BUILDER & SHAREABLE LINK
+    const SETLIST_STORAGE_KEY = 'qcoach_group_setlist_v1';
+    function getSavedSetlist() {
+      try { return JSON.parse(localStorage.getItem(SETLIST_STORAGE_KEY) || '{"name":"Sunday Prayer Group Setlist","songKeys":[]}'); }
+      catch (e) { return { name: 'Sunday Prayer Group Setlist', songKeys: [] }; }
+    }
+    function saveGroupSetlist(sl) {
+      try { localStorage.setItem(SETLIST_STORAGE_KEY, JSON.stringify(sl)); } catch (e) {}
+    }
+    function renderSetlistModal() {
+      const sl = getSavedSetlist();
+      const nameIn = document.getElementById('setlistNameInput');
+      const cntEl = document.getElementById('setlistCountBadge');
+      const listEl = document.getElementById('setlistSelectedList');
+      if (nameIn && document.activeElement !== nameIn) nameIn.value = sl.name || 'Sunday Prayer Group Setlist';
+      if (cntEl) cntEl.textContent = String((sl.songKeys || []).length);
+      if (listEl) {
+        if (!sl.songKeys || !sl.songKeys.length) {
+          listEl.innerHTML = '<div class="text-qmuted">Add 2–6 songs above to build your group setlist.</div>';
+        } else {
+          listEl.innerHTML = sl.songKeys.map((sk, idx) => {
+            const sg = state.songs.find(s => normalizeSongTitleKey(s.title) === sk);
+            const label = sg ? sg.title : sk;
+            return `<div class="flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-lg bg-[#1C1C1E] border border-[#2C2C2E]">
+              <span class="font-bold text-qtext truncate">${idx + 1}. ${label}</span>
+              <div class="flex items-center gap-1.5 shrink-0">
+                <button type="button" data-sl-play="${sk}" class="px-2 py-0.5 rounded bg-emerald-500 text-black font-black text-[10px]">▶ Play</button>
+                <button type="button" data-sl-rm="${idx}" class="px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold text-[10px]">✕</button>
+              </div>
+            </div>`;
+          }).join('');
+          listEl.querySelectorAll('[data-sl-play]').forEach(b => b.addEventListener('click', () => {
+            const sk = b.getAttribute('data-sl-play');
+            const sg = state.songs.find(s => normalizeSongTitleKey(s.title) === sk);
+            if (sg) {
+              state.currentSongId = sg.id;
+              document.getElementById('setlistHubModalBackdrop')?.classList.add('hidden');
+              setActiveView('stage');
+              renderAll();
+            }
+          }));
+          listEl.querySelectorAll('[data-sl-rm]').forEach(b => b.addEventListener('click', () => {
+            const idx = Number(b.getAttribute('data-sl-rm'));
+            const cur = getSavedSetlist();
+            cur.songKeys.splice(idx, 1);
+            saveGroupSetlist(cur);
+            renderSetlistModal();
+          }));
+        }
+      }
+      renderSetlistSearchResults();
+    }
+    function renderSetlistSearchResults() {
+      const q = (document.getElementById('setlistSearchSong')?.value || '').trim().toLowerCase();
+      const wrap = document.getElementById('setlistSearchResults');
+      if (!wrap) return;
+      const matches = state.songs.filter(s => !s.isDrillSession && (!q || s.title.toLowerCase().includes(q))).slice(0, 8);
+      wrap.innerHTML = matches.map(s => {
+        const sk = normalizeSongTitleKey(s.title);
+        return `<button type="button" data-sl-add="${sk}" class="w-full text-left px-2.5 py-1.5 rounded-lg bg-[#121212] hover:bg-[#1C1C1E] border border-[#2C2C2E] flex items-center justify-between text-xs">
+          <span class="text-qtext truncate">${s.title}</span>
+          <span class="text-emerald-400 font-mono font-bold text-[10px] shrink-0">+ Add</span>
+        </button>`;
+      }).join('');
+      wrap.querySelectorAll('[data-sl-add]').forEach(b => b.addEventListener('click', () => {
+        const sk = b.getAttribute('data-sl-add');
+        const cur = getSavedSetlist();
+        cur.name = document.getElementById('setlistNameInput')?.value || cur.name;
+        if (!cur.songKeys.includes(sk)) cur.songKeys.push(sk);
+        saveGroupSetlist(cur);
+        renderSetlistModal();
+      }));
+    }
+    function checkSharedSetlistFromUrl() {
+      try {
+        const params = new URLSearchParams(location.search);
+        const raw = params.get('setlist');
+        if (!raw) return;
+        const decoded = JSON.parse(decodeURIComponent(atob(raw)));
+        if (decoded && Array.isArray(decoded.songKeys) && decoded.songKeys.length) {
+          saveGroupSetlist(decoded);
+          const firstMatch = state.songs.find(s => normalizeSongTitleKey(s.title) === decoded.songKeys[0]);
+          if (firstMatch) state.currentSongId = firstMatch.id;
+          document.getElementById('setlistHubModalBackdrop')?.classList.remove('hidden');
+          renderSetlistModal();
+          showToast(`🤝 Loaded shared setlist: "${decoded.name || 'Group Setlist'}" (${decoded.songKeys.length} songs)!`, 'success');
+        }
+      } catch (e) {}
+    }
+
+    // 📅 SMART 10-MINUTE DAILY / WEEKLY PRACTICE PLAN
+    function renderWeeklyPracticePlan() {
+      const wrap = document.getElementById('weeklyPlanBlocks');
+      const badge = document.getElementById('weeklyPlanProgressBadge');
+      if (!wrap) return;
+      const nextStep = getNextRecommendedGuidedStep();
+      const weak = getWeakestChordsList(2);
+      const unitObj = QCOACH_GUIDED_UNITS.find(u => u.unit === (nextStep ? nextStep.unit : 1)) || QCOACH_GUIDED_UNITS[0];
+      const mileId = unitObj.lessonIds[unitObj.lessonIds.length - 1];
+      const mileItem = findDrillById(mileId) || findDrillById('mile-1');
+      const warmItem = findDrillById('drill-wu-spider');
+
+      const todayKey = 'qcoach_plan_done_' + new Date().toISOString().slice(0, 10);
+      let doneMap = {};
+      try { doneMap = JSON.parse(localStorage.getItem(todayKey) || '{}'); } catch (e) {}
+
+      const blocks = [
+        {
+          key: 'warmup',
+          tag: '2 MIN · WARM-UP',
+          title: warmItem ? warmItem.title : '1-2-3-4 Finger Warm-Up',
+          sub: 'Loosen fingers & check clean fret tone',
+          onClick: () => { doneMap.warmup = true; localStorage.setItem(todayKey, JSON.stringify(doneMap)); if (warmItem) launchInteractiveDrill(warmItem, false); }
+        },
+        {
+          key: 'focus',
+          tag: weak.length ? '4 MIN · WEAK-SPOT FIX' : '4 MIN · PATH LESSON',
+          title: weak.length ? `Fix ${weak.map(w => w.chord).join(' ↔ ')}` : (nextStep ? nextStep.item.title : 'C Major Mastery'),
+          sub: weak.length ? 'Targeted Wait-Mode reps on weakest chords' : 'Your next guided syllabus step',
+          onClick: () => { doneMap.focus = true; localStorage.setItem(todayKey, JSON.stringify(doneMap)); if (weak.length) launchWeakSpotAutoDrill(true); else if (nextStep) launchInteractiveDrill(nextStep.item, false); }
+        },
+        {
+          key: 'song',
+          tag: '4 MIN · SONG MILESTONE',
+          title: mileItem ? mileItem.title : 'Amazing Grace',
+          sub: 'Apply your skills in a real worship song',
+          onClick: () => { doneMap.song = true; localStorage.setItem(todayKey, JSON.stringify(doneMap)); if (mileItem) launchInteractiveDrill(mileItem, false); }
+        }
+      ];
+
+      const doneCount = blocks.filter(b => doneMap[b.key]).length;
+      if (badge) badge.textContent = `${doneCount} / 3 Blocks Today`;
+      wrap.innerHTML = blocks.map(b => `
+        <button type="button" data-plan-block="${b.key}" class="text-left rounded-xl p-3 border ${doneMap[b.key] ? 'border-emerald-400/70 bg-emerald-500/10' : 'border-[#2C2C2E] bg-[#121212] hover:border-cyan-400/60'} transition flex flex-col justify-between gap-1.5">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-mono font-black text-cyan-400">${b.tag}</span>
+            <span class="text-xs">${doneMap[b.key] ? '✅' : '▶'}</span>
+          </div>
+          <div class="text-xs font-black text-qtext leading-snug">${b.title}</div>
+          <div class="text-[11px] text-qmuted">${b.sub}</div>
+        </button>
+      `).join('');
+      blocks.forEach(b => {
+        const btn = wrap.querySelector(`[data-plan-block="${b.key}"]`);
+        if (btn) btn.addEventListener('click', b.onClick);
+      });
+    }
+
+    // 📲 PWA SERVICE WORKER & INSTALL PROMPT
+    let deferredPwaPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPwaPrompt = e;
+      const btn = document.getElementById('btnInstallPwaApp');
+      if (btn) btn.classList.remove('hidden');
+    });
+    if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
     }
 
     function renderLearnPathView() {
@@ -9655,6 +10487,8 @@
       }
 
       // Toggle Guided Path vs Skill Gym containers
+      if (typeof renderWeeklyPracticePlan === 'function') renderWeeklyPracticePlan();
+      if (typeof renderCoachWeakSpotCard === 'function') renderCoachWeakSpotCard();
       const isPath = state.activeLearnMode !== 'gym';
       document.getElementById('learnGuidedPathContainer')?.classList.toggle('hidden', !isPath);
       document.getElementById('learnSkillGymContainer')?.classList.toggle('hidden', isPath);
@@ -9953,6 +10787,9 @@
     }
 
     function stopPlayback() {
+      if (typeof tabHighwayState !== 'undefined') tabHighwayState.hitSlots = {};
+      state.waitModePausedOnBar = false;
+      if (typeof updateWaitModeBanner === 'function') updateWaitModeBanner(false, '');
       cancelCountdown();
       stopVocalHumVoice(false);
       state.isPlaying = false;
@@ -11685,6 +12522,206 @@
         else startEarQuizRound();
       });
       loadExternalSyllabusIfAvailable();
+      updateWaitModeButtonUi();
+      const btnWait = document.getElementById('btnToggleWaitMode');
+      if (btnWait) btnWait.addEventListener('click', () => {
+        state.waitModeEnabled = !state.waitModeEnabled;
+        state.waitModePausedOnBar = false;
+        updateWaitModeBanner(false, '');
+        updateWaitModeButtonUi();
+        if (state.waitModeEnabled && !state.listenEnabled) {
+          startChordListener();
+        }
+        showToast(state.waitModeEnabled ? '⏸️ Wait Mode ON — pauses on any missed chord until you play it cleanly!' : 'Wait Mode OFF — continuous playback.', 'info');
+      });
+      const btnWaitSkip = document.getElementById('btnWaitModeSkip');
+      if (btnWaitSkip) btnWaitSkip.addEventListener('click', () => {
+        state.waitModePausedOnBar = false;
+        updateWaitModeBanner(false, '');
+        if (state.listenBarResults) state.listenBarResults[state.currentBarIndex] = 'hit';
+        if (state.isPlaying) advanceOneSubdivision();
+      });
+      const btnPlaceOpen = document.getElementById('btnStartPlacementCheck');
+      if (btnPlaceOpen) btnPlaceOpen.addEventListener('click', openPlacementCheckModal);
+      const btnPlaceClose = document.getElementById('btnClosePlacementModal');
+      if (btnPlaceClose) btnPlaceClose.addEventListener('click', closePlacementCheckModal);
+      const btnPlaceStop = document.getElementById('btnPlacementStopHere');
+      if (btnPlaceStop) btnPlaceStop.addEventListener('click', () => applyPlacementResult(placementState.stageIdx));
+      const btnPlacePass = document.getElementById('btnPlacementPassStage');
+      if (btnPlacePass) btnPlacePass.addEventListener('click', advancePlacementStage);
+      const btnPlaceMic = document.getElementById('btnPlacementListenToggle');
+      if (btnPlaceMic) btnPlaceMic.addEventListener('click', () => {
+        if (!state.listenEnabled) startChordListener();
+        const mEl = document.getElementById('placementMicStatus');
+        if (mEl) mEl.textContent = '🎙️ Listening live — strum the chords above!';
+      });
+      const btnWeak = document.getElementById('btnDrillWeakSpots');
+      if (btnWeak) btnWeak.addEventListener('click', () => launchWeakSpotAutoDrill(false));
+      const btnWeakWait = document.getElementById('btnDrillWeakSpotsWait');
+      if (btnWeakWait) btnWeakWait.addEventListener('click', () => launchWeakSpotAutoDrill(true));
+      const btnCopySql = document.getElementById('btnCopySupabaseSchema');
+      if (btnCopySql) btnCopySql.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(QCOACH_SUPABASE_SCHEMA_SQL);
+          showToast('📋 Copied supabase/schema.sql! Paste it into Supabase SQL Editor → Run.', 'success');
+        } catch (e) {
+          showToast('Open supabase/schema.sql in your GitHub repo to copy.', 'info');
+        }
+      });
+      // Wire Phase 3, 4 & 5 Controls
+      const btnTabTog = document.getElementById('btnToggleTabHighway');
+      if (btnTabTog) btnTabTog.addEventListener('click', () => {
+        const currentlyOn = isTabHighwayActive();
+        tabHighwayState.forcedMode = currentlyOn ? 'off' : 'on';
+        const lbl = document.getElementById('stageTabHighwayLabel');
+        if (lbl) lbl.textContent = tabHighwayState.forcedMode === 'on' ? 'TAB: ON' : 'TAB: OFF';
+        renderMelodyTabHighway();
+      });
+
+      const btnOpenCal = document.getElementById('btnOpenMicCalib');
+      if (btnOpenCal) btnOpenCal.addEventListener('click', () => {
+        const gEl = document.getElementById('micCalibGateValue');
+        if (gEl) gEl.textContent = 'Gate: ' + (localStorage.getItem('qcoach_mic_noise_gate') || '0.008');
+        document.getElementById('micCalibModalBackdrop')?.classList.remove('hidden');
+      });
+      document.getElementById('btnCloseMicCalib')?.addEventListener('click', () => {
+        micCalibState.running = false;
+        document.getElementById('micCalibModalBackdrop')?.classList.add('hidden');
+      });
+      document.getElementById('btnResetMicCalib')?.addEventListener('click', () => {
+        localStorage.removeItem('qcoach_mic_noise_gate');
+        const gEl = document.getElementById('micCalibGateValue');
+        if (gEl) gEl.textContent = 'Gate: 0.008';
+        showToast('Mic noise gate reset to default (0.008).', 'info');
+      });
+      document.getElementById('btnRunMicCalib')?.addEventListener('click', async () => {
+        if (!state.listenEnabled) await startChordListener();
+        if (!state.listenEnabled || !listenEngine.analyser) {
+          const stEl = document.getElementById('micCalibStatusText');
+          if (stEl) stEl.textContent = '⚠️ Microphone access is required to calibrate.';
+          return;
+        }
+        micCalibState.samples = [];
+        micCalibState.startMs = performance.now();
+        micCalibState.running = true;
+        const stEl = document.getElementById('micCalibStatusText');
+        if (stEl) stEl.textContent = '🤫 Listening to room noise (3 seconds)...';
+      });
+
+      // Song Creator Studio
+      document.getElementById('btnOpenCreatorStudio')?.addEventListener('click', () => {
+        document.getElementById('creatorStudioModalBackdrop')?.classList.remove('hidden');
+      });
+      document.getElementById('btnCloseCreatorStudio')?.addEventListener('click', () => {
+        csState.tapping = false;
+        document.getElementById('creatorStudioModalBackdrop')?.classList.add('hidden');
+      });
+      document.getElementById('btnCsStartTap')?.addEventListener('click', () => {
+        csState.lines = parseCreatorLyrics(document.getElementById('csLyricsInput')?.value || '');
+        csState.stamped = [];
+        csState.startMs = performance.now();
+        csState.tapping = true;
+        document.getElementById('csTapStatus').textContent = `Running! Tap for Line 1/${csState.lines.length}: "${csState.lines[0]?.text || ''}"`;
+        document.getElementById('csStampedPreview').textContent = 'Waiting for first tap...';
+      });
+      const doTapStamp = () => {
+        if (!csState.tapping || csState.stamped.length >= csState.lines.length) return;
+        const sec = Number(((performance.now() - csState.startMs) / 1000).toFixed(2));
+        const idx = csState.stamped.length;
+        csState.stamped.push([sec, csState.lines[idx].text]);
+        document.getElementById('csStampedPreview').textContent = csState.stamped.map(x => `[${x[0]}s] ${x[1]}`).join(' · ');
+        if (csState.stamped.length >= csState.lines.length) {
+          csState.tapping = false;
+          document.getElementById('csTapStatus').textContent = `✅ Stamped all ${csState.lines.length} lines!`;
+        } else {
+          const nxt = csState.lines[csState.stamped.length];
+          document.getElementById('csTapStatus').textContent = `Next (${csState.stamped.length + 1}/${csState.lines.length}): "${nxt.text}"`;
+        }
+      };
+      document.getElementById('btnCsTapLine')?.addEventListener('click', doTapStamp);
+      document.getElementById('btnCsSaveToApp')?.addEventListener('click', () => {
+        const sg = buildCreatorSongObject();
+        if (sg._exportPack && sg._exportPack.youtubeSync && sg._exportPack.youtubeSync.url && typeof extractYouTubeVideoId === 'function' && typeof PREPOPULATED_YOUTUBE_TRACKS !== 'undefined') {
+          const vid = extractYouTubeVideoId(sg._exportPack.youtubeSync.url);
+          if (vid) {
+            const lines = sg._exportPack.youtubeSync.lines || [];
+            const lastSec = lines.length ? Number(lines[lines.length - 1][0]) + 15 : 180;
+            PREPOPULATED_YOUTUBE_TRACKS[vid] = { dur: lastSec, verified: true, lines };
+          }
+        }
+        delete sg._exportPack;
+        state.songs.unshift(sg);
+        state.currentSongId = sg.id;
+        saveSongsToIndexedDB();
+        document.getElementById('creatorStudioModalBackdrop')?.classList.add('hidden');
+        setActiveView('stage');
+        renderAll();
+        showToast(`🛠️ Saved "${sg.title}" to your Songbook!`, 'success');
+      });
+      document.getElementById('btnCsExportPack')?.addEventListener('click', () => {
+        const sg = buildCreatorSongObject();
+        const pack = { packName: `${sg.title} Pack`, language: 'en', songs: [sg._exportPack] };
+        const blob = new Blob([JSON.stringify(pack, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = normalizeSongTitleKey(sg.title).replace(/\s+/g, '_') + '_pack.json';
+        a.click();
+        showToast('⬇️ Downloaded GitHub-ready Song Pack JSON!', 'success');
+      });
+
+      // Worship-Group Setlists
+      document.getElementById('btnOpenSetlistHub')?.addEventListener('click', () => {
+        document.getElementById('setlistHubModalBackdrop')?.classList.remove('hidden');
+        renderSetlistModal();
+      });
+      document.getElementById('btnCloseSetlistHub')?.addEventListener('click', () => {
+        document.getElementById('setlistHubModalBackdrop')?.classList.add('hidden');
+      });
+      document.getElementById('setlistSearchSong')?.addEventListener('input', renderSetlistSearchResults);
+      document.getElementById('btnClearSetlist')?.addEventListener('click', () => {
+        saveGroupSetlist({ name: document.getElementById('setlistNameInput')?.value || 'Sunday Prayer Group Setlist', songKeys: [] });
+        renderSetlistModal();
+      });
+      document.getElementById('btnCopySetlistLink')?.addEventListener('click', async () => {
+        const sl = getSavedSetlist();
+        sl.name = document.getElementById('setlistNameInput')?.value || sl.name;
+        saveGroupSetlist(sl);
+        const encoded = btoa(encodeURIComponent(JSON.stringify(sl)));
+        const base = location.origin && location.origin !== 'null' ? (location.origin + location.pathname) : 'https://tortoi-ship-it.github.io/qcoach-studio/';
+        const shareUrl = `${base}?setlist=${encoded}`;
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          showToast('🔗 Copied shareable Group Setlist link! Send it on WhatsApp or Email.', 'success');
+        } catch (e) {
+          showToast('Link ready: ' + shareUrl.slice(0, 60) + '...', 'info');
+        }
+      });
+      document.getElementById('btnPlaySetlistNow')?.addEventListener('click', () => {
+        const sl = getSavedSetlist();
+        if (!sl.songKeys || !sl.songKeys.length) {
+          showToast('Add at least one song to your setlist first!', 'warn');
+          return;
+        }
+        const sg = state.songs.find(s => normalizeSongTitleKey(s.title) === sl.songKeys[0]);
+        if (sg) {
+          state.currentSongId = sg.id;
+          document.getElementById('setlistHubModalBackdrop')?.classList.add('hidden');
+          setActiveView('stage');
+          renderAll();
+        }
+      });
+
+      // PWA Install Button
+      document.getElementById('btnInstallPwaApp')?.addEventListener('click', async () => {
+        if (!deferredPwaPrompt) return;
+        deferredPwaPrompt.prompt();
+        await deferredPwaPrompt.userChoice;
+        deferredPwaPrompt = null;
+        document.getElementById('btnInstallPwaApp')?.classList.add('hidden');
+      });
+
+      checkSharedSetlistFromUrl();
+
       const bModePath = document.getElementById('btnLearnModePath');
       const bModeGym = document.getElementById('btnLearnModeGym');
       if (bModePath) bModePath.addEventListener('click', () => { state.activeLearnMode = 'path'; renderLearnPathView(); });

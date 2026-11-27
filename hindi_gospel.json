@@ -1,0 +1,2143 @@
+{
+  "schemaVersion": "3.0",
+  "packName": "Hindi Gospel (Romanized)",
+  "language": "hi",
+  "songs": [
+    {
+      "id": "hindi-aradhana-yeshu-tera-naam",
+      "normKey": "aradhana",
+      "title": "Aradhana (Yeshu Tera Naam)",
+      "artist": "Yeshua Band · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu te-ra",
+          "naam sab-se",
+          "un-cha",
+          "hai"
+        ],
+        [
+          "Jis naam mein",
+          "hai muk-ti,",
+          "jis naam mein",
+          "hai shak-ti"
+        ],
+        [
+          "Jis naam mein",
+          "hai shan-ti,",
+          "de-ta woh naam",
+          "chan-gai"
+        ],
+        [
+          "Jis naam mein",
+          "hai zin-da-gi,",
+          "Ye-shu hai",
+          "woh naam"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "5p-gkCq82i0",
+        "youtubeUrl": "https://youtu.be/5p-gkCq82i0",
+        "videoTitle": "Yeshu Tera Naam Sabse Uncha Hai (YESHUA)",
+        "dur": 491,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            36,
+            "Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            50,
+            "Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            83,
+            "Jis naam mein hai mukti, jis naam mein hai shakti"
+          ],
+          [
+            90,
+            "Jis naam mein hai shanti, deta woh naam changai"
+          ],
+          [
+            105,
+            "Jis naam mein hai mukti, jis naam mein hai shakti, jis naam mein hai shanti, deta woh naam changai"
+          ],
+          [
+            120,
+            "Jis naam mein hai zindagi, Yeshu hai woh naam, jis naam mein hai bandagi, Yeshu hai woh naam"
+          ],
+          [
+            137,
+            "Yeshu tera naam sabse uncha hai, Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            151,
+            "Yeshu tera naam sabse uncha hai, Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            181,
+            "Jis naam mein hai mukti, jis naam mein hai shakti, jis naam mein hai shanti, deta woh naam changai"
+          ],
+          [
+            196,
+            "Jis naam mein hai zindagi, Yeshu hai woh naam, jis naam mein hai bandagi, Yeshu hai woh naam"
+          ],
+          [
+            211,
+            "Yeshu tera naam sabse uncha hai, Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            235,
+            "Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            303,
+            "Bimari se, garibi se, shraap se hai chhudata, woh naam hai jo andhon ko roshni bhi hai deta"
+          ],
+          [
+            325,
+            "Bimari se, garibi se, shraapon se hai chhudata"
+          ],
+          [
+            330,
+            "Woh naam hai jo andhon ko roshni bhi hai deta"
+          ],
+          [
+            345,
+            "Jis naam mein hai zindagi, Yeshu hai woh naam, jis naam mein hai bandagi, Yeshu hai woh naam"
+          ],
+          [
+            360,
+            "Yeshu tera naam sabse uncha hai, Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            389,
+            "Yeshu tera naam sabse uncha hai, Yeshu tera naam sabse uncha hai"
+          ],
+          [
+            413,
+            "Sabse uncha hai, sabse uncha hai"
+          ],
+          [
+            431,
+            "J-E-S-U-S"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-tu-hi-mera-yeshu-tu-hai-mahan",
+      "normKey": "tu hi mera",
+      "title": "Tu Hi Mera (Yeshu Tu Hai Mahan)",
+      "artist": "Mahi Gospel · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu tu",
+          "hai ma-han,",
+          "te-ri jai",
+          "te-ri jai"
+        ],
+        [
+          "Tu jo aa-ya",
+          "me-re jee-van",
+          "mein le-ke",
+          "khu-shi-yan pyaar"
+        ],
+        [
+          "Main paa-pon",
+          "mein doo-ba,",
+          "aan-khon mein",
+          "the aan-su"
+        ],
+        [
+          "Par tu aa-ya",
+          "me-re jee-van",
+          "mein le-ke",
+          "pyaar"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "V7rPIvMgBgI",
+        "youtubeUrl": "https://youtu.be/V7rPIvMgBgI",
+        "videoTitle": "Yeshu Tu Hai Mahan | Live Version | Mahi Gospel",
+        "dur": 410,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            29,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            36,
+            "Teri jai, teri jai, teri jai"
+          ],
+          [
+            44,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            50,
+            "Teri jai, teri jai, teri jai, tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            77,
+            "Tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            88,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            94,
+            "Teri jai, teri jai, teri jai"
+          ],
+          [
+            103,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            109,
+            "Teri jai, teri jai, teri jai, tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            134,
+            "Tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            161,
+            "Main paapon mein dooba, aisa dooba, aisa dooba"
+          ],
+          [
+            175,
+            "Aankhon mein the aansu, sabne chhoda, sabne chhoda"
+          ],
+          [
+            190,
+            "Main paapon mein dooba, aisa dooba, aisa dooba"
+          ],
+          [
+            204,
+            "Aankhon mein the aansu, sabne chhoda, sabne chhoda, par tu aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            234,
+            "Par tu aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            248,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            255,
+            "Teri jai, teri jai, teri jai"
+          ],
+          [
+            263,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            269,
+            "Teri jai, teri jai, teri jai, tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            295,
+            "Tu jo aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            306,
+            "Main duniya ki bheed mein tumhein dhoondhta tha, nafrat aur matlab ki duniya mein main ghoomta tha"
+          ],
+          [
+            339,
+            "Main duniya ki bheed mein tumhein dhoondhta tha, nafrat aur matlab ki duniya mein main ghoomta tha"
+          ],
+          [
+            371,
+            "Par tu aaya mere jeevan mein leke khushiyan leke pyaar"
+          ],
+          [
+            394,
+            "Yeshu tu hai mahan"
+          ],
+          [
+            400,
+            "Teri jai, teri jai, teri jai"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-aa-pavitra-aatma",
+      "normKey": "aa pavitra aatma",
+      "title": "Aa Pavitra Aatma (Pavitra Aatma Aa)",
+      "artist": "Hindi Charismatic Worship · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pa-vi-tra",
+          "Aat-ma,",
+          "Pa-vi-tra",
+          "Aat-ma"
+        ],
+        [
+          "Mu-jhe le jao",
+          "Ye-shu ke",
+          "char-no",
+          "mein"
+        ],
+        [
+          "Sirf te-re",
+          "li-ye, Ye-shu",
+          "te-re li-ye",
+          "haath u-tha-ta"
+        ],
+        [
+          "Ye-shu hi",
+          "marg hai,",
+          "sat-ya aur",
+          "jee-van hai"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "3GvJJyNySAk",
+        "youtubeUrl": "https://youtu.be/3GvJJyNySAk",
+        "videoTitle": "PAVITRA AATMA AH with Lyrics",
+        "dur": 281,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            21,
+            "Pavitra Aatma, Pavitra Aatma"
+          ],
+          [
+            30,
+            "Mujhe le jao Yeshu ke charno mein"
+          ],
+          [
+            39,
+            "Pavitra Aatma, Pavitra Aatma"
+          ],
+          [
+            49,
+            "Pavitra Aatma, mujhe le jao Yeshu ke charno mein"
+          ],
+          [
+            58,
+            "Pavitra Aatma"
+          ],
+          [
+            79,
+            "Sirf tere liye, Yeshu tere liye, sirf tere liye, Yeshu tere liye"
+          ],
+          [
+            89,
+            "Sirf tere liye, Yeshu tere liye, main haath uthata hoon, ghutne tika kar, sar jhuka kar, haath uthata tere liye"
+          ],
+          [
+            109,
+            "Ghutne tika kar, sar jhuka kar, haath uthata tere liye"
+          ],
+          [
+            120,
+            "Sirf tere liye, Yeshu tere liye, sirf tere liye, Yeshu tere liye, main sar jhukata hoon"
+          ],
+          [
+            139,
+            "Pavitra Aatma, Pavitra Aatma"
+          ],
+          [
+            147,
+            "Mujhe le jao Yeshu ke charno mein"
+          ],
+          [
+            158,
+            "Pavitra Aatma, Pavitra Aatma"
+          ],
+          [
+            167,
+            "Pavitra Aatma, mujhe le jao Yeshu ke charno mein"
+          ],
+          [
+            178,
+            "Pavitra Aatma"
+          ],
+          [
+            198,
+            "Sirf tere liye, Yeshu tere liye, sirf tere liye, Yeshu tere liye"
+          ],
+          [
+            210,
+            "Sirf tere liye, Yeshu tere liye, main sar jhukata hoon, Yeshu hi marg hai, Yeshu hi satya hai, Yeshu hi jeevan hai, Yeshu mera Prabhu"
+          ],
+          [
+            242,
+            "Yeshu hi marg hai, Yeshu hi satya hai, Yeshu hi jeevan hai, Yeshu mera Prabhu"
+          ],
+          [
+            266,
+            "Pavitra Aatma, mujhe le jao Yeshu ke charno mein"
+          ],
+          [
+            269,
+            "Pavitra Aatma"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-yeshu-naam-mein-hai-changai",
+      "normKey": "yeshu naam mein hai changai",
+      "title": "Yeshu Naam Mein Hai Changai",
+      "artist": "Joseph Raj Allam · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "E7"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Te-re naam",
+          "mein chan-gai",
+          "hai, te-re naam",
+          "mein ri-hai"
+        ],
+        [
+          "Te-re naam",
+          "mein du-hai",
+          "Ye-shu-ve,",
+          "Ye-shu-ve"
+        ],
+        [
+          "Jis-ne bhi",
+          "maan-ga tujh-se,",
+          "Ye-shu tu",
+          "de-ta u-se"
+        ],
+        [
+          "Ye-shu naam",
+          "mein sab kuch",
+          "mil-ta",
+          "hai"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "7qNG06CYWzc",
+        "youtubeUrl": "https://youtu.be/7qNG06CYWzc",
+        "videoTitle": "Yeshuve - Joseph Raj Allam (Hindi Christian Song)",
+        "dur": 333,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            16,
+            "Yeshuve"
+          ],
+          [
+            26,
+            "Yeshuve"
+          ],
+          [
+            31,
+            "Tere naam mein changai hai, tere naam mein rihai hai, tere naam mein duhai Yeshuve"
+          ],
+          [
+            47,
+            "Tere naam mein changai hai, tere naam mein rihai hai, tere naam mein duhai Yeshuve"
+          ],
+          [
+            66,
+            "Yeshuve"
+          ],
+          [
+            78,
+            "Yeshuve"
+          ],
+          [
+            108,
+            "Jisne bhi maanga tujhse, Yeshu tu deta use"
+          ],
+          [
+            121,
+            "Jisne bhi maanga tujhse, Yeshu tu deta use"
+          ],
+          [
+            132,
+            "Yeshu naam mein, Yeshu naam mein, Yeshu naam mein sab kuch milta hai"
+          ],
+          [
+            150,
+            "Yeshu naam mein, Yeshu naam mein, Yeshu naam mein sab kuch milta hai"
+          ],
+          [
+            167,
+            "Yeshuve, Yeshuve"
+          ],
+          [
+            180,
+            "Yeshuve"
+          ],
+          [
+            210,
+            "Sarvashreshtha hai Yeshu naam"
+          ],
+          [
+            215,
+            "Sarvagyani hai Yeshu naam"
+          ],
+          [
+            221,
+            "Sarvashreshtha hai Yeshu naam, sarvagyani hai Yeshu naam, us naam ke saamne"
+          ],
+          [
+            243,
+            "Har ghutna hai tekte, us naam ke saamne"
+          ],
+          [
+            253,
+            "Har ghutna hai tekte"
+          ],
+          [
+            272,
+            "Tere naam mein changai hai, tere naam mein rihai hai, tere naam mein duhai Yeshuve"
+          ],
+          [
+            287,
+            "Tere naam mein changai hai, tere naam mein rihai hai, tere naam mein duhai Yeshuve"
+          ],
+          [
+            308,
+            "Yeshuve, Yeshuve"
+          ],
+          [
+            328,
+            "Yeshuve"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-stuti-aradhana-upar-jaati-hai",
+      "normKey": "stuti aradhana upar jaati hai",
+      "title": "Stuti Aradhana Upar Jaati Hai",
+      "artist": "Traditional Praise · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 96,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Stu-ti aa-ra-",
+          "dha-na u-par",
+          "jaa-ti",
+          "hai"
+        ],
+        [
+          "Aa-shish le-kar",
+          "nee-che aa-ti",
+          "hai",
+          ""
+        ],
+        [
+          "Pra-bhu ha-ma-ra",
+          "kit-na ma-han,",
+          "de-kho hum-se",
+          "kar-ta pyaar"
+        ],
+        [
+          "Hal-le-lu-jah,",
+          "Hal-le-lu-jah,",
+          "Hal-le-lu-jah",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "zjEsT6vAT6U",
+        "youtubeUrl": "https://youtu.be/zjEsT6vAT6U",
+        "videoTitle": "STUTI ARADHNA UPER JATI HAI",
+        "dur": 335,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            4,
+            "Stuti aradhana upar jaati hai, aashish lekar neeche aati hai"
+          ],
+          [
+            24,
+            "Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            48,
+            "Hallelujah, Hallelujah, stuti aradhana upar jaati hai, aashish lekar neeche aati hai"
+          ],
+          [
+            69,
+            "Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            89,
+            "Hallelujah, Hallelujah"
+          ],
+          [
+            96,
+            "Hallelujah, Hallelujah"
+          ],
+          [
+            122,
+            "Vinti aur prarthana upar jaati hai, uttar lekar neeche aati hai"
+          ],
+          [
+            139,
+            "Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            160,
+            "Hallelujah, Hallelujah"
+          ],
+          [
+            165,
+            "Hallelujah, Hallelujah, stuti aradhana upar jaati hai, aashish lekar neeche aati hai"
+          ],
+          [
+            187,
+            "Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            208,
+            "Hallelujah, Hallelujah"
+          ],
+          [
+            213,
+            "Hallelujah, Hallelujah"
+          ],
+          [
+            227,
+            "Siyon mein stuti teri baat johti hai, dhanyavaad karna uski mahima hoti hai"
+          ],
+          [
+            241,
+            "Dhanyavaad karna uski mahima hoti hai, Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            261,
+            "Dekho humse karta hai pyaar, Hallelujah, Hallelujah"
+          ],
+          [
+            271,
+            "Hallelujah, Hallelujah, stuti aradhana upar jaati hai, aashish lekar neeche aati hai"
+          ],
+          [
+            292,
+            "Prabhu hamara kitna mahan, dekho humse karta hai pyaar"
+          ],
+          [
+            312,
+            "Hallelujah, Hallelujah, Hallelujah"
+          ],
+          [
+            323,
+            "Hallelujah, Hallelujah, Hallelujah, Hallelujah"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-dhanyavaad-ke-saath-stuti-gaoonga",
+      "normKey": "dhanyavaad ke saath stuti gaoonga",
+      "title": "Dhanyavaad Ke Saath Stuti Gaoonga",
+      "artist": "Shirin & Wilson George · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 82,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Dhan-ya-vaad",
+          "ke saath stu-ti",
+          "ga-oon-ga",
+          "he Ye-shu"
+        ],
+        [
+          "Up-kaar te-re",
+          "hain be-shu-maar,",
+          "ko-ti ko-ti",
+          "dhan-ya-vaad"
+        ],
+        [
+          "Yog-ya-ta se",
+          "badh ke di-ya",
+          "ap-ni da-ya",
+          "se tu-ne"
+        ],
+        [
+          "Tu hai sach-cha",
+          "zin-da Khu-da,",
+          "tujh par bha-ro-",
+          "sa me-ra"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "Jer0FgPZj6w",
+        "youtubeUrl": "https://youtu.be/Jer0FgPZj6w",
+        "videoTitle": "Dhanyawad Ke Saath | Shirin George, Wilson George & Daniel George",
+        "dur": 288,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            24,
+            "Dhanyavaad ke saath stuti gaoonga, he Yeshu mere Khuda, upkaar tere hain beshumaar, koti koti stuti dhanyavaad"
+          ],
+          [
+            50,
+            "Dhanyavaad ke saath stuti gaoonga, he Yeshu mere Khuda, upkaar tere hain beshumaar, koti koti stuti dhanyavaad"
+          ],
+          [
+            75,
+            "Yogyata se badh ke diya hai, apni daya se tune mujhe"
+          ],
+          [
+            98,
+            "Maangne se zyada mila mujhe, aabhari hoon Prabhu main"
+          ],
+          [
+            124,
+            "Dhanyavaad ke saath stuti gaoonga, he Yeshu mere Khuda, upkaar tere hain beshumaar, koti koti stuti"
+          ],
+          [
+            148,
+            "Dhanyavaad"
+          ],
+          [
+            177,
+            "Tu hai sachcha zinda Khuda, tujh par hi bharosa mera"
+          ],
+          [
+            202,
+            "Seva poori karke paoon inaam, Prabhu aisa do vardaan"
+          ],
+          [
+            229,
+            "Dhanyavaad ke saath stuti gaoonga, he Yeshu mere Khuda, upkaar tere hain beshumaar, koti koti stuti dhanyavaad"
+          ],
+          [
+            255,
+            "Dhanyavaad ke saath stuti gaoonga, he Yeshu mere Khuda, upkaar tere hain beshumaar, koti koti stuti dhanyavaad"
+          ],
+          [
+            286,
+            "Koti koti stuti dhanyavaad"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-krus-par-kurbaan-hai",
+      "normKey": "krus par kurbaan hai",
+      "title": "Krus Par Kurbaan Hai (Yeshu Masih)",
+      "artist": "Anil Horo · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "3/4",
+        "bpm": 68,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Jo krus pe",
+          "kur-baan hai,",
+          "wo me-ra ma-si-ha"
+        ],
+        [
+          "Har zakhm jo",
+          "us-ka hai,",
+          "wo me-re gu-naah"
+        ],
+        [
+          "Is du-ni-ya",
+          "mein le aa-ye",
+          "me-re hi gu-naah"
+        ],
+        [
+          "Wo pyar ka",
+          "da-ri-ya hai,",
+          "sa-chaai ka ras-ta"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "DyYhKXXOnkE",
+        "youtubeUrl": "https://youtu.be/DyYhKXXOnkE",
+        "videoTitle": "Jo Krus Pe Kurbaan Hai | Christian Song Lyrics",
+        "dur": 243,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            35,
+            "Jo krus pe kurbaan hai"
+          ],
+          [
+            40,
+            "Wo mera masiha hai"
+          ],
+          [
+            45,
+            "Har zakhm jo uska hai"
+          ],
+          [
+            50,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            55,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            60,
+            "Jo krus pe kurbaan hai"
+          ],
+          [
+            65,
+            "Wo mera masiha hai"
+          ],
+          [
+            70,
+            "Har zakhm jo uska hai"
+          ],
+          [
+            75,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            80,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            115,
+            "Is duniya mein le aaye"
+          ],
+          [
+            120,
+            "Mere hi gunaah usko"
+          ],
+          [
+            125,
+            "Mere hi gunaah usko"
+          ],
+          [
+            130,
+            "Ye zulm-o-sitam us par"
+          ],
+          [
+            135,
+            "Maine hi karaya hai"
+          ],
+          [
+            140,
+            "Jo krus pe kurbaan hai"
+          ],
+          [
+            145,
+            "Wo mera masiha hai"
+          ],
+          [
+            150,
+            "Har zakhm jo uska hai"
+          ],
+          [
+            155,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            160,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            190,
+            "Insaan hai wo kaamil"
+          ],
+          [
+            195,
+            "Aur sacha khuda wo hai"
+          ],
+          [
+            200,
+            "Aur sacha khuda wo hai"
+          ],
+          [
+            205,
+            "Wo pyar ka dariya hai"
+          ],
+          [
+            210,
+            "Sachaai ka rasta hai"
+          ],
+          [
+            215,
+            "Jo krus pe kurbaan hai"
+          ],
+          [
+            220,
+            "Wo mera masiha hai"
+          ],
+          [
+            225,
+            "Har zakhm jo uska hai"
+          ],
+          [
+            230,
+            "Wo mere gunaah ka hai"
+          ],
+          [
+            235,
+            "Wo mere gunaah ka hai"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-tere-paas-aata-hoon",
+      "normKey": "tere paas aata hoon",
+      "title": "Tere Paas Aata Hoon",
+      "artist": "James Lobo · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Te-re paas",
+          "aa-ta hoon,",
+          "Ye-shu te-re",
+          "paas"
+        ],
+        [
+          "Har din me-ri",
+          "har baat te-ri",
+          "ma-hi-ma gaa-ti",
+          "ra-he"
+        ],
+        [
+          "Har pal me-ri",
+          "har saans te-ri",
+          "stu-ti kar-ti",
+          "ra-he"
+        ],
+        [
+          "Ye-shu aa,",
+          "Ye-shu aa,",
+          "te-re paas",
+          "aa-ta hoon"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "ciWhvkP4O6M",
+        "youtubeUrl": "https://youtu.be/ciWhvkP4O6M",
+        "videoTitle": "Tere paas Aata hun | James Lobo",
+        "dur": 307,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            48,
+            "Tere paas aata hoon"
+          ],
+          [
+            56,
+            "Yeshu tere paas"
+          ],
+          [
+            62,
+            "Tere paas aata hoon"
+          ],
+          [
+            70,
+            "Yeshu tere paas"
+          ],
+          [
+            76,
+            "Har din meri har baat"
+          ],
+          [
+            83,
+            "Teri mahima gaati rahe"
+          ],
+          [
+            90,
+            "Har pal meri har saans"
+          ],
+          [
+            97,
+            "Teri stuti karti rahe"
+          ],
+          [
+            108,
+            "Tere paas aata hoon"
+          ],
+          [
+            112,
+            "Yeshu tere paas"
+          ],
+          [
+            118,
+            "Tere paas aata hoon, Yeshu tere paas"
+          ],
+          [
+            135,
+            "Har din meri har baat"
+          ],
+          [
+            138,
+            "Teri mahima gaati rahe"
+          ],
+          [
+            146,
+            "Har pal meri har saans"
+          ],
+          [
+            152,
+            "Teri stuti karti rahe"
+          ],
+          [
+            163,
+            "Har din meri har baat"
+          ],
+          [
+            166,
+            "Teri mahima gaati rahe"
+          ],
+          [
+            177,
+            "Har pal meri har saans"
+          ],
+          [
+            180,
+            "Teri stuti karti rahe"
+          ],
+          [
+            187,
+            "Yeshu aa, Yeshu aa"
+          ],
+          [
+            202,
+            "Yeshu aa, Yeshu aa"
+          ],
+          [
+            247,
+            "Tere paas aata hoon"
+          ],
+          [
+            251,
+            "Yeshu tere paas"
+          ],
+          [
+            265,
+            "Yeshu aa, Yeshu aa"
+          ],
+          [
+            278,
+            "Yeshu aa, Yeshu aa"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-bhar-de-mujhe-apne-aatma-se",
+      "normKey": "bhar de",
+      "title": "Bhar De (Mujhe Apne Aatma Se)",
+      "artist": "Sachin Bansal · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 80,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Aat-ma se",
+          "bhar de mu-jhe,",
+          "Pa-vi-tra Aat-ma",
+          "se bhar de"
+        ],
+        [
+          "Ja-han bhi main",
+          "jaa-un geet",
+          "te-re gaa-un",
+          "Ye-shu"
+        ],
+        [
+          "Mu-naj-ji me-ra,",
+          "ro-shan hai",
+          "cheh-ra te-ra",
+          ""
+        ],
+        [
+          "Tu de na-yi",
+          "zin-da-gi,",
+          "sab kuch ba-dal",
+          "de me-ra"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "y7Nrp_jE7CQ",
+        "youtubeUrl": "https://youtu.be/y7Nrp_jE7CQ",
+        "videoTitle": "Aatma se bhar de mujhe Pavitra atma se bhar de mujhe lyrics video",
+        "dur": 489,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            23,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            57,
+            "Aatma se bhar de mujhe"
+          ],
+          [
+            64,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            80,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            91,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            102,
+            "Jahan bhi main jaaun geet tere gaaun"
+          ],
+          [
+            110,
+            "Jahan bhi main jaaun geet tere gaaun, aisa Yeshu kar de mujhe"
+          ],
+          [
+            128,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            165,
+            "Munajji mera, roshan hai chehra tera"
+          ],
+          [
+            177,
+            "Munajji mera, roshan hai chehra tera"
+          ],
+          [
+            187,
+            "Tu de nayi zindagi, sab kuch badal de mera"
+          ],
+          [
+            208,
+            "Munajji mera, roshan hai chehra tera"
+          ],
+          [
+            219,
+            "Tu de nayi zindagi, sab kuch badal de mera"
+          ],
+          [
+            230,
+            "Jahan bhi main jaaun geet tere gaaun"
+          ],
+          [
+            240,
+            "Aisa Yeshu kar de mujhe, Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            257,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            284,
+            "Deta hai tu zindagi"
+          ],
+          [
+            292,
+            "Deta hai tu bandagi, deta hai tu zindagi"
+          ],
+          [
+            303,
+            "Deta hai tu bandagi, sab kuch tere paas hai, deta hai tu har khushi"
+          ],
+          [
+            323,
+            "Deta hai tu har khushi, deta hai tu zindagi"
+          ],
+          [
+            335,
+            "Deta hai tu bandagi, sab kuch tere paas hai, deta hai tu har khushi"
+          ],
+          [
+            353,
+            "Jahan bhi main jaaun geet tere gaaun, aisa Yeshu kar de mujhe"
+          ],
+          [
+            367,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            377,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            393,
+            "Aisa Yeshu kar de mujhe, Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            414,
+            "Aatma se bhar de mujhe, Pavitra Aatma se bhar de mujhe"
+          ],
+          [
+            448,
+            "Tere liye hi jiyun, tere liye hi marun, tere liye hi jiyun"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-chattan-yeshu-meri-chattan",
+      "normKey": "chattan",
+      "title": "Chattan (Yeshu Meri Chattan Hai)",
+      "artist": "Bridge Music · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 86,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Bha-war ke beech",
+          "mein tu keh-ta",
+          "hai tham",
+          "ja"
+        ],
+        [
+          "Tu me-ri taa-qat",
+          "hai, tu hi",
+          "me-ra i-maan",
+          ""
+        ],
+        [
+          "Uth-te hu-e",
+          "u-faa-non mein",
+          "tu hi me-ri",
+          "chat-tan"
+        ],
+        [
+          "Badh-ti hu-i",
+          "leh-ron pe te-re",
+          "kad-mon ke",
+          "ni-shaan"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "nPV9Fvo59L0",
+        "youtubeUrl": "https://youtu.be/nPV9Fvo59L0",
+        "videoTitle": "Chattan (Official) | Bridge Music",
+        "dur": 383,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            41,
+            "Bhawar ke beech mein, tu kehta hai tham ja"
+          ],
+          [
+            47,
+            "Tu meri taaqat hai, tu hi mera imaan"
+          ],
+          [
+            54,
+            "Bhawar ke beech mein, tu kehta hai tham ja"
+          ],
+          [
+            62,
+            "Tu meri taaqat hai, tu hi mera imaan"
+          ],
+          [
+            69,
+            "Beete kal mein tu saath mere tha, aaj bhi mere saath hai khada"
+          ],
+          [
+            80,
+            "Aane wale kal mein bhi hoga"
+          ],
+          [
+            87,
+            "Uthte hue ufaano mein, tu hi meri chattan"
+          ],
+          [
+            95,
+            "Badhti hui lehron pe, tere kadmon ke nishaan"
+          ],
+          [
+            123,
+            "Bimariyon mein tu kehta hai uth ja"
+          ],
+          [
+            130,
+            "Yehovah Rapha, tu hi meri shifa"
+          ],
+          [
+            147,
+            "Beete kal mein tu saath mere tha, aaj bhi mere saath hai khada"
+          ],
+          [
+            165,
+            "Aane wale kal mein bhi hoga"
+          ],
+          [
+            175,
+            "Uthte hue ufaano mein, tu hi meri chattan"
+          ],
+          [
+            187,
+            "Badhti hui lehron pe, tere kadmon ke nishaan"
+          ],
+          [
+            261,
+            "Bimari dekh tera sar jhuka, mujh par tera bas na chal saka"
+          ],
+          [
+            273,
+            "Aisa koi shastra na bana, jo kar sakega mera saamna"
+          ],
+          [
+            297,
+            "Uthte hue ufaano mein, tu hi meri chattan"
+          ],
+          [
+            309,
+            "Badhti hui lehron pe, tere kadmon ke nishaan"
+          ],
+          [
+            328,
+            "Mera bharosa tujh par khada hai, mera vishwas tujhmein hi bana hai"
+          ],
+          [
+            347,
+            "Tujhmein hi hai"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-hoshanna-tu-rajaon-ka-raja",
+      "normKey": "hoshanna",
+      "title": "Hoshanna (Tu Rajaon Ka Raja)",
+      "artist": "Yeshua Ministries · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 92,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu Ma-sih",
+          "te-re jai-sa",
+          "hai ko-i",
+          "na-hi"
+        ],
+        [
+          "Te-re char-no",
+          "mein jhu-ke",
+          "aas-maan aur",
+          "za-meen"
+        ],
+        [
+          "Hum gaa-yein",
+          "Ho-san-na, tu",
+          "ra-jaon ka hai",
+          "ra-ja"
+        ],
+        [
+          "Te-ri ma-hi-ma",
+          "ho-we sa-da,",
+          "tu ha-ma-ra",
+          "Khu-da"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "vYFxLu5o1Ig",
+        "youtubeUrl": "https://youtu.be/vYFxLu5o1Ig",
+        "videoTitle": "Yeshua Ministries - Hum Gaye Hosanna (Yeshua Band)",
+        "dur": 391,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            23,
+            "Yeshu Masih tere jaisa hai koi nahi"
+          ],
+          [
+            32,
+            "Tere charno mein jhuke aasmaan aur mahima gaaye zameen"
+          ],
+          [
+            42,
+            "Yeshu Masih tere jaisa hai koi nahi"
+          ],
+          [
+            50,
+            "Tere charno mein jhuke aasmaan aur mahima gaaye zameen"
+          ],
+          [
+            65,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            74,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            95,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            107,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            137,
+            "Pyaare Pita tune humse kitna pyaar kiya"
+          ],
+          [
+            148,
+            "Humein paapon se chhudane ko apne bete ko kurbaan kiya"
+          ],
+          [
+            158,
+            "Pyaare Pita tune humse kitna pyaar kiya"
+          ],
+          [
+            164,
+            "Humein paapon se chhudane ko apne bete ko kurbaan kiya"
+          ],
+          [
+            185,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            197,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            209,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            215,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            254,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            263,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            282,
+            "Tu rajaon ka hai raja, teri mahima howe sada"
+          ],
+          [
+            290,
+            "Yeshu tu hai Prabhu hamara Khuda"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-yeshu-masih-tere-jaisa-koi-nahi",
+      "normKey": "yeshu masih tere jaisa koi nahi",
+      "title": "Yeshu Masih Tere Jaisa Koi Nahi",
+      "artist": "James Varghese · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 66,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu Ma-sih",
+          "te-re jai-sa",
+          "hai ko-i na-hi"
+        ],
+        [
+          "Te-re char-no",
+          "mein jhu-ke",
+          "aas-maan za-meen"
+        ],
+        [
+          "Pyaa-re Pi-ta",
+          "tu-ne hum-se",
+          "kit-na pyaar ki-ya"
+        ],
+        [
+          "Hum gaa-yein",
+          "Ho-san-na,",
+          "tu ha-ma-ra Khu-da"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "BnAPK7f0VHQ",
+        "youtubeUrl": "https://youtu.be/BnAPK7f0VHQ",
+        "videoTitle": "Yeshu Masih Tere Jaisa Hai Koi Nahi - James Varghese",
+        "dur": 330,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            39,
+            "Yeshu Masih tere jaisa hai koi nahi"
+          ],
+          [
+            50,
+            "Tere charno mein jhuke aasmaan"
+          ],
+          [
+            55,
+            "Aur mahima gaaye zameen"
+          ],
+          [
+            63,
+            "Yeshu Masih tere jaisa hai koi nahi"
+          ],
+          [
+            74,
+            "Tere charno mein jhuke aasmaan aur mahima gaaye zameen"
+          ],
+          [
+            84,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            98,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            111,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            125,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            175,
+            "Pyaare Pita tune humse kitna pyaar kiya"
+          ],
+          [
+            188,
+            "Mere paapon se chhudane ko apne bete ko kurbaan kiya"
+          ],
+          [
+            203,
+            "Pyaare Pita tune humse kitna pyaar kiya"
+          ],
+          [
+            214,
+            "Mere paapon se chhudane ko apne bete ko kurbaan kiya"
+          ],
+          [
+            229,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            242,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            259,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            272,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            288,
+            "Hum gaayein Hosanna, tu rajaon ka hai raja"
+          ],
+          [
+            301,
+            "Teri mahima howe sada, tu hai Prabhu hamara Khuda"
+          ],
+          [
+            314,
+            "Tu hai Prabhu hamara Khuda, tu hai Prabhu hamara Khuda"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-tera-lahu-bada-keemti-hai",
+      "normKey": "tera lahu bada keemti hai",
+      "title": "Tera Lahu Bada Keemti Hai",
+      "artist": "Ankur Masih · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Te-ra la-hu",
+          "ba-da keem-ti",
+          "hai Pra-bhu"
+        ],
+        [
+          "Kyun-ki us la-hu",
+          "mein jo taa-qat",
+          "hai chhut-ka-ra"
+        ],
+        [
+          "Tu-ne woh la-hu",
+          "ba-haa-ya hai,",
+          "du-ni-ya ba-cha-ya"
+        ],
+        [
+          "Te-ra la-hu",
+          "ba-da keem-ti",
+          "hai Pra-bhu"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "4eZoz_lOBoU",
+        "youtubeUrl": "https://youtu.be/4eZoz_lOBoU",
+        "videoTitle": "Tera Lahu Bada Kimti Hai Prabhu | Ankur Masih",
+        "dur": 229,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            22,
+            "Tera lahu bada keemti hai Prabhu, tera lahu bada"
+          ],
+          [
+            30,
+            "Keemti hai, tera lahu bada keemti hai Prabhu, kyunki us lahu mein jo taqat"
+          ],
+          [
+            49,
+            "Hai jisse hum paate hain chhutkara, kyunki us lahu mein jo taqat"
+          ],
+          [
+            60,
+            "Hai jisse hum paate hain chhutkara, tera lahu bada keemti hai Prabhu"
+          ],
+          [
+            80,
+            "Tera lahu bada keemti hai Prabhu, tera lahu bada keemti hai"
+          ],
+          [
+            112,
+            "Tune woh lahu bahaya hai, saari duniya"
+          ],
+          [
+            119,
+            "Ko bachaya hai, tune woh lahu bahaya hai, saari duniya ko bachaya hai"
+          ],
+          [
+            140,
+            "Kabhi tune kisi se na kuch maanga, kabhi tune kisi se na kuch chaaha"
+          ],
+          [
+            149,
+            "Tera lahu bada keemti hai Prabhu, tera lahu bada keemti hai"
+          ],
+          [
+            169,
+            "Tera lahu bada keemti hai Prabhu, tera lahu bada keemti hai"
+          ],
+          [
+            180,
+            "Kyunki us lahu mein jo taqat hai jisse hum paate hain chhutkara"
+          ],
+          [
+            198,
+            "Hum paate hain chhutkara, tera lahu bada keemti hai Prabhu"
+          ],
+          [
+            209,
+            "Tera lahu bada keemti hai, tera lahu bada keemti hai Prabhu"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-mahima-ho-teri-sada-sarvada",
+      "normKey": "mahima ho teri",
+      "title": "Mahima Ho Teri (Sada Sarvada)",
+      "artist": "Aatmik Jagrati · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ma-hi-ma ma-hi-",
+          "ma ho te-ri,",
+          "Ye-shu te-ri",
+          "ma-hi-ma"
+        ],
+        [
+          "Kar-ta hoon main",
+          "sar-va-da,",
+          "ma-hi-ma ho",
+          "te-ri"
+        ],
+        [
+          "Te-re li-ye",
+          "ji-yun-ga,",
+          "te-re li-ye",
+          "ma-run-ga"
+        ],
+        [
+          "Sab-ka hu-a",
+          "hai ud-dhaar,",
+          "mi-li na-yi",
+          "zin-da-gi"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "O5Y0OPsNqoc",
+        "youtubeUrl": "https://youtu.be/O5Y0OPsNqoc",
+        "videoTitle": "Mahima Mahima Ho Teri (Hindi Worship Song)",
+        "dur": 286,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            38,
+            "Mahima mahima ho teri, mahima mahima ho teri, Yeshu teri mahima karta"
+          ],
+          [
+            58,
+            "Hoon main sarvada, Yeshu teri mahima karta hoon main sarvada"
+          ],
+          [
+            78,
+            "Mahima mahima ho teri, mahima mahima ho teri"
+          ],
+          [
+            113,
+            "Tere liye jiyunga, tere liye marunga, tere liye Yeshu har dard sahunga"
+          ],
+          [
+            123,
+            "Tere liye jiyunga, tere liye marunga, par main tere vachan ko baantta hi"
+          ],
+          [
+            139,
+            "Rahunga, par main tere vachan ko baantta hi rahunga, mahima mahima ho teri"
+          ],
+          [
+            158,
+            "Mahima mahima ho teri, mahima mahima ho teri"
+          ],
+          [
+            197,
+            "Tere maar khaane se, tere gaade jaane se, maut par bhi vijay paane se"
+          ],
+          [
+            208,
+            "Sabka hua hai uddhaar, sabko mili hai nayi zindagi"
+          ],
+          [
+            221,
+            "Sabka hua hai uddhaar, sabko mili hai nayi zindagi, mahima mahima ho teri"
+          ],
+          [
+            238,
+            "Mahima mahima ho teri, Yeshu teri mahima karte hain hum sarvada"
+          ],
+          [
+            259,
+            "Karte hain hum sarvada, mahima mahima ho teri, mahima mahima ho teri"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hindi-dil-se-aradhana-karoon",
+      "normKey": "dil se aradhana karoon",
+      "title": "Dil Se Aradhana Karoon",
+      "artist": "Pragati Vaish · Hindi Gospel",
+      "category": "Hindi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Dil se aa-ra-",
+          "dha-na ka-roon",
+          "main, aa-ra-dha-",
+          "na ka-roon"
+        ],
+        [
+          "Te-re fa-zal",
+          "mein, te-ri da-ya",
+          "mein lip-ta",
+          "reh-ta hoon"
+        ],
+        [
+          "Me-ri mush-ki-lon",
+          "mein har ka-dam",
+          "tu hi me-ra",
+          "saa-thi hai"
+        ],
+        [
+          "Kar-ta hoon te-ra",
+          "shuk-ri-ya main",
+          "Pra-bhu shuk-ri-",
+          "ya"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "5Y-0_NMXQQk",
+        "youtubeUrl": "https://youtu.be/5Y-0_NMXQQk",
+        "videoTitle": "DIL SE ARADHANA KARU MEIN | Pragati Vaish",
+        "dur": 424,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            36,
+            "Dil se aaradhana karoon main"
+          ],
+          [
+            47,
+            "Aaradhana karoon main"
+          ],
+          [
+            83,
+            "Tere fazal mein, teri daya mein, lipta main rehta hoon"
+          ],
+          [
+            115,
+            "Main rehta hoon"
+          ],
+          [
+            164,
+            "Meri mushkilon mein, har kadam mein, Khudawand tu hi mera saathi hai"
+          ],
+          [
+            180,
+            "Bechain kabhi teri rooh tab mujhko dhaaras de, Khudawand tu hi mera saathi hai"
+          ],
+          [
+            201,
+            "Karta hoon tera shukriya main Prabhu, karta hoon tera shukriya"
+          ],
+          [
+            223,
+            "Karta hoon tera shukriya"
+          ],
+          [
+            252,
+            "Lipta main rehta hoon, main rehta hoon"
+          ],
+          [
+            310,
+            "Tujhse mili har barkat mujhe, mehfooz tere sang main rehta hoon"
+          ],
+          [
+            332,
+            "Tab main dekhta hoon, mehfooz tere sang main rehta hoon, karta hoon tera shukriya"
+          ],
+          [
+            355,
+            "Prabhu karta hoon tera shukriya"
+          ],
+          [
+            368,
+            "Main Prabhu karta hoon tera shukriya"
+          ],
+          [
+            397,
+            "Lipta main rehta hoon, main rehta hoon"
+          ]
+        ]
+      }
+    }
+  ]
+}

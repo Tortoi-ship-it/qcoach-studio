@@ -1,0 +1,930 @@
+{
+  "schemaVersion": "3.1",
+  "updatedAt": "2026-11-26",
+  "rankThresholds": {
+    "intermediateStars": 30,
+    "expertStars": 70
+  },
+  "guidedUnits": [
+    {
+      "unit": 1,
+      "badge": "🌱 Unit 1 · First Chords & Steady Pulse",
+      "title": "C, Am, F & Steady Down-Strums (Beginner)",
+      "goal": "Build clean fingertip posture, lock onto a steady 4/4 pulse, and finish your first 3-chord worship song.",
+      "lessonIds": [
+        "drill-ch-c",
+        "drill-ch-am",
+        "drill-tr-c-am",
+        "drill-ch-f",
+        "drill-tr-c-f",
+        "mile-1"
+      ],
+      "testOutId": "mile-1"
+    },
+    {
+      "unit": 2,
+      "badge": "🎸 Unit 2 · The 4-Chord Worship Core",
+      "title": "G Major, Waltz 3/4, Island Groove & Hymns",
+      "goal": "Conquer the 3-finger G triangle, switch smoothly between C–F–G, and master the Island & Waltz strums.",
+      "lessonIds": [
+        "drill-ch-g",
+        "drill-tr-c-g",
+        "drill-tr-f-g",
+        "drill-st-waltz",
+        "drill-st-island",
+        "mile-2"
+      ],
+      "testOutId": "mile-2"
+    },
+    {
+      "unit": 3,
+      "badge": "🎼 Unit 3 · Expressive Minors, Key of G & Split Bars",
+      "title": "Dm, Em, D, A, G7/E7 & Fast 2-Chord Bars (Intermediate)",
+      "goal": "Break out of the Key of C into Key of G, add soulful minor & 7th chords, and handle split-bar changes.",
+      "lessonIds": [
+        "drill-ch-dm",
+        "drill-ch-d-a",
+        "drill-ch-g7",
+        "drill-tr-key-g",
+        "drill-tr-split-bar",
+        "mile-3"
+      ],
+      "testOutId": "mile-3"
+    },
+    {
+      "unit": 4,
+      "badge": "🪘 Unit 4 · Indian Worship Grooves",
+      "title": "Keherwa 8-Beat, Dadra 6/8 & Bhajan Progressions",
+      "goal": "Master authentic tabla-inspired Keherwa and Dadra grooves for Hindi & Marathi gospel worship.",
+      "lessonIds": [
+        "drill-st-keherwa",
+        "drill-tr-indian-minor",
+        "drill-st-dadra",
+        "drill-st-dadra-chuck",
+        "drill-tr-4chord",
+        "mile-4"
+      ],
+      "testOutId": "mile-4"
+    },
+    {
+      "unit": 5,
+      "badge": "💪 Unit 5 · Barre Chords & Dynamic Control",
+      "title": "Finger Strength, Bb, Bm, Key of D & Percussive Chucks",
+      "goal": "Clear the Intermediate-to-Advanced barre wall (Bb & Bm), play in Key of D, and drive live rhythm with chucks.",
+      "lessonIds": [
+        "drill-wu-spider",
+        "drill-wu-bb",
+        "drill-wu-bm",
+        "drill-tr-key-d",
+        "drill-st-chuck",
+        "mile-5"
+      ],
+      "testOutId": "mile-5"
+    },
+    {
+      "unit": 6,
+      "badge": "🔥 Unit 6 · Melody, Fingerpicking & Live Leadership",
+      "title": "Scales, Arpeggios, Travis Picking & 3-Key Transposition",
+      "goal": "Add melodic phrasing, fingerpicking accompaniment, and real-time transposition for leading worship.",
+      "lessonIds": [
+        "drill-sc-cmaj",
+        "drill-sc-pent",
+        "drill-sc-arp",
+        "drill-sc-travis",
+        "drill-ek-transpose",
+        "mile-6"
+      ],
+      "testOutId": "mile-6"
+    }
+  ],
+  "drillLibrary": {
+    "chords": [
+      {
+        "id": "drill-ch-c",
+        "title": "C Major Mastery",
+        "tier": "beginner",
+        "badge": "🌱 Step 1",
+        "desc": "Ring finger on A-string Fret 3. Keep thumb centered behind the neck.",
+        "chords": [
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 68,
+        "tip": "Curve your ring finger so the open E-string rings cleanly without buzzing."
+      },
+      {
+        "id": "drill-ch-am",
+        "title": "A Minor (Am) Mastery",
+        "tier": "beginner",
+        "badge": "🌱 Step 2",
+        "desc": "Middle finger on G-string Fret 2. One-finger warm minor chord.",
+        "chords": [
+          "Am",
+          "Am",
+          "Am",
+          "Am",
+          "Am",
+          "Am",
+          "Am",
+          "Am"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 68,
+        "tip": "Keep your middle finger arched high over the C-string so all 4 strings ring."
+      },
+      {
+        "id": "drill-ch-f",
+        "title": "F Major Mastery",
+        "tier": "beginner",
+        "badge": "🌱 Step 3",
+        "desc": "Index on E-Fret 1, Middle on G-Fret 2. Essential worship chord.",
+        "chords": [
+          "F",
+          "F",
+          "F",
+          "F",
+          "F",
+          "F",
+          "F",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 66,
+        "tip": "Keep your index fingertip vertical so the open A-string rings clearly."
+      },
+      {
+        "id": "drill-ch-g",
+        "title": "G Major Triangle",
+        "tier": "beginner",
+        "badge": "🌱 Step 4",
+        "desc": "3-finger triangle (0-2-3-2). Most important beginner milestone.",
+        "chords": [
+          "G",
+          "G",
+          "G",
+          "G",
+          "G",
+          "G",
+          "G",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 64,
+        "tip": "Tuck your elbow in slightly so your ring finger lands cleanly on E-string Fret 3."
+      },
+      {
+        "id": "drill-ch-dm",
+        "title": "D Minor & E Minor",
+        "tier": "intermediate",
+        "badge": "🎸 Level 2",
+        "desc": "Practice Dm (2-2-1-0) and Em (0-4-3-2) for expressive worship ballads.",
+        "chords": [
+          "Dm",
+          "Dm",
+          "Em",
+          "Em",
+          "Dm",
+          "Dm",
+          "Em",
+          "Em"
+        ],
+        "meter": "4/4",
+        "strumCode": "bal4",
+        "bpm": 70,
+        "tip": "For Em, build a staircase from A-Fret 2 up to C-Fret 4."
+      },
+      {
+        "id": "drill-ch-d-a",
+        "title": "D Major & A Major (Keys of G/D)",
+        "tier": "intermediate",
+        "badge": "🎸 Level 2",
+        "desc": "Stack 3 fingers on Fret 2 for D (2-2-2-0), and open A (2-1-0-0) cleanly.",
+        "chords": [
+          "D",
+          "D",
+          "A",
+          "A",
+          "D",
+          "D",
+          "A",
+          "A"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 72,
+        "tip": "Angle your hand slightly toward the headstock so all 3 fingers fit inside Fret 2 for D."
+      },
+      {
+        "id": "drill-ch-g7",
+        "title": "G7 & E7 Turnaround Chords",
+        "tier": "intermediate",
+        "badge": "🎸 Color Chords",
+        "desc": "Classic gospel turnarounds: G7 (0-2-1-2) and E7 (1-2-0-2) pull strongly back home.",
+        "chords": [
+          "G7",
+          "G7",
+          "C",
+          "C",
+          "E7",
+          "E7",
+          "Am",
+          "Am"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 74,
+        "tip": "Anchor your index finger on Fret 1 first for both G7 and E7."
+      }
+    ],
+    "transitions": [
+      {
+        "id": "drill-tr-c-am",
+        "title": "C ↔ Am Smooth Switch",
+        "tier": "beginner",
+        "badge": "🌱 Easiest Switch",
+        "desc": "Alternate 1-finger C and Am every bar with zero pause between beats.",
+        "chords": [
+          "C",
+          "Am",
+          "C",
+          "Am",
+          "C",
+          "Am",
+          "C",
+          "Am"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 72,
+        "tip": "Keep your hand relaxed; switch fingers right on the '&' of beat 4."
+      },
+      {
+        "id": "drill-tr-c-f",
+        "title": "C ↔ F Worship Switch",
+        "tier": "beginner",
+        "badge": "🌱 Core Switch",
+        "desc": "The #1 chord change in hymns & gospel songs. Nail clean F landings.",
+        "chords": [
+          "C",
+          "F",
+          "C",
+          "F",
+          "C",
+          "F",
+          "C",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 68,
+        "tip": "Hover your index finger over E-Fret 1 during beat 4 before lifting your ring finger."
+      },
+      {
+        "id": "drill-tr-c-g",
+        "title": "C ↔ G Anchor Switch",
+        "tier": "beginner",
+        "badge": "🌱 Core Switch",
+        "desc": "Use your ring finger on Fret 3 as a pivot from A-string to E-string.",
+        "chords": [
+          "C",
+          "G",
+          "C",
+          "G",
+          "C",
+          "G",
+          "C",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 70,
+        "tip": "Slide your ring finger from A-3 straight across to E-3—never lift your whole hand away."
+      },
+      {
+        "id": "drill-tr-f-g",
+        "title": "F ↔ G Challenge",
+        "tier": "intermediate",
+        "badge": "🎸 Key Milestone",
+        "desc": "Smoothly jump between F (2-0-1-0) and G (0-2-3-2) without breaking rhythm.",
+        "chords": [
+          "F",
+          "G",
+          "F",
+          "G",
+          "F",
+          "G",
+          "F",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 72,
+        "tip": "Move your middle finger down one string (G-2 to C-2) as your guide anchor."
+      },
+      {
+        "id": "drill-tr-4chord",
+        "title": "C → G → Am → F Anthem",
+        "tier": "intermediate",
+        "badge": "🎸 4-Chord Loop",
+        "desc": "The universal worship progression used in 100+ songs in QCoach.",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 76,
+        "tip": "Notice Am to F only requires adding your index finger on E-Fret 1—leave middle finger down!"
+      },
+      {
+        "id": "drill-tr-key-g",
+        "title": "Key of G Loop (G → D → Em → C)",
+        "tier": "intermediate",
+        "badge": "🎼 New Key",
+        "desc": "The #2 most common worship key—essential for singing higher-range hymns.",
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 76,
+        "tip": "Keep your index finger near Fret 2 as a bridge between G, D, and Em."
+      },
+      {
+        "id": "drill-tr-split-bar",
+        "title": "Split-Bar Changes (2 Chords/Bar)",
+        "tier": "intermediate",
+        "badge": "⚡ Fast Switch",
+        "desc": "Switch chords every 2 beats (C|G → Am|F)—the key bridge into intermediate songs.",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "splitBar": true,
+        "strumCode": "dn4",
+        "bpm": 70,
+        "tip": "Count '1 - 2 &' on the first chord, then land cleanly on Beat 3 for the second chord."
+      },
+      {
+        "id": "drill-tr-indian-minor",
+        "title": "Am → G → F → E7 Bhajan",
+        "tier": "intermediate",
+        "badge": "🪘 Indian Minor",
+        "desc": "Classic minor progression for Hindi & Marathi bhajans (Mann Aikena, Yeshu Naam).",
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "E7",
+          "Am",
+          "G",
+          "F",
+          "E7"
+        ],
+        "meter": "4/4",
+        "strumCode": "keh4",
+        "bpm": 82,
+        "tip": "Keep your strum wrist loose for the Keherwa off-beat accent on beat 3."
+      },
+      {
+        "id": "drill-tr-key-d",
+        "title": "Key of D Loop (D → A → Bm → G)",
+        "tier": "expert",
+        "badge": "🔥 Barre Key",
+        "desc": "Bright congregational key combining D, A, and the Bm full barre.",
+        "chords": [
+          "D",
+          "A",
+          "Bm",
+          "G",
+          "D",
+          "A",
+          "Bm",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "flk4",
+        "bpm": 80,
+        "tip": "Roll your index finger slightly onto its bony side edge so Bm rings clearly."
+      }
+    ],
+    "strumming": [
+      {
+        "id": "drill-st-down",
+        "title": "All-Down Metronome Lock",
+        "tier": "beginner",
+        "badge": "🌱 Rhythm 1",
+        "desc": "Hold C Major and lock every down-strum squarely on Beats 1–2–3–4.",
+        "chords": [
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 72,
+        "tip": "Strum over the sweet spot where the neck meets the body for warm nylon tone."
+      },
+      {
+        "id": "drill-st-waltz",
+        "title": "3/4 Worship Waltz",
+        "tier": "beginner",
+        "badge": "🌱 3/4 Meter",
+        "desc": "D - D U D U (1 - 2 & 3 &) for Amazing Grace & traditional Catholic hymns.",
+        "chords": [
+          "C",
+          "C",
+          "G",
+          "G",
+          "C",
+          "C",
+          "F",
+          "C"
+        ],
+        "meter": "3/4",
+        "strumCode": "wlz3",
+        "bpm": 74,
+        "tip": "Accent Beat 1 slightly stronger, then keep Beats 2 & 3 light and flowing."
+      },
+      {
+        "id": "drill-st-island",
+        "title": "Island / Calypso Groove",
+        "tier": "beginner",
+        "badge": "🌱 Rhythm 2",
+        "desc": "D - D U - U D U on C–G–Am–F. Keep your right hand swinging steadily.",
+        "chords": [
+          "C",
+          "C",
+          "G",
+          "G",
+          "Am",
+          "Am",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 78,
+        "tip": "Never stop your strumming hand on the silent beat 3—ghost-strum downward in the air!"
+      },
+      {
+        "id": "drill-st-keherwa",
+        "title": "Keherwa Worship (8-Beat)",
+        "tier": "intermediate",
+        "badge": "🪘 Indian Taal",
+        "desc": "D - D U X U D U — authentic Indian gospel groove with crisp chuck on beat 3.",
+        "chords": [
+          "C",
+          "C",
+          "F",
+          "F",
+          "G",
+          "G",
+          "C",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "keh4",
+        "bpm": 86,
+        "tip": "Mute the strings lightly with the edge of your palm on the X chuck for tabla-like snap."
+      },
+      {
+        "id": "drill-st-dadra",
+        "title": "6/8 Dadra Rolling Groove",
+        "tier": "intermediate",
+        "badge": "🪘 Indian Taal",
+        "desc": "D - D U D U in 6/8 for Khrist Guru Mauli, Kiti God, & Living Sacrifice.",
+        "chords": [
+          "C",
+          "C",
+          "F",
+          "G",
+          "C",
+          "C",
+          "F",
+          "C"
+        ],
+        "meter": "6/8",
+        "strumCode": "rol6",
+        "bpm": 82,
+        "tip": "Feel two big pulses per bar (1-2-3, 4-5-6) rather than six stiff beats."
+      },
+      {
+        "id": "drill-st-dadra-chuck",
+        "title": "Dadra 6/8 Chuck Accent",
+        "tier": "intermediate",
+        "badge": "🪘 Marathi Groove",
+        "desc": "D - D U X U in 6/8 — adds a lively dholak snap on beat 5.",
+        "chords": [
+          "Am",
+          "Am",
+          "F",
+          "G",
+          "Am",
+          "Am",
+          "E7",
+          "Am"
+        ],
+        "meter": "6/8",
+        "strumCode": "dad6",
+        "bpm": 84,
+        "tip": "Keep the X chuck crisp and light so the gentle 6/8 sway never rushes."
+      },
+      {
+        "id": "drill-st-chuck",
+        "title": "Percussive Island Chuck",
+        "tier": "expert",
+        "badge": "🔥 Dynamic Control",
+        "desc": "Master crisp muted chucks (X) on beats 2 & 4 for live group leadership.",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "chk4",
+        "bpm": 88,
+        "tip": "Drop your palm onto the strings at the exact split-second your index fingernail strikes."
+      },
+      {
+        "id": "drill-st-driving",
+        "title": "Driving 16th Worship Energy",
+        "tier": "expert",
+        "badge": "🔥 Chorus Lift",
+        "desc": "D U X U D U X U — high-energy praise groove for upbeat choruses.",
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C",
+          "G",
+          "D",
+          "C",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "drv4",
+        "bpm": 92,
+        "tip": "Stay loose in the wrist—use small, brisk strokes instead of swinging your whole elbow."
+      }
+    ],
+    "warmup": [
+      {
+        "id": "drill-wu-spider",
+        "title": "1-2-3-4 Finger Stretch Warm-Up",
+        "tier": "beginner",
+        "badge": "💪 60s Warm-Up",
+        "desc": "Wake up all four fretting fingers with clean slow changes across open & 3-finger shapes.",
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G",
+          "Dm",
+          "Em",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 62,
+        "tip": "Press just behind each metal fret wire—never right on top of it—for zero buzz."
+      },
+      {
+        "id": "drill-wu-buzz",
+        "title": "Clean-Fret Arpeggio Buzz Check",
+        "tier": "beginner",
+        "badge": "💪 Tone Check",
+        "desc": "Pick every string individually (C-E-G-A) to expose any muted or buzzing finger.",
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am",
+          "Dm",
+          "G7",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "arp4",
+        "bpm": 60,
+        "tip": "If a string thuds instead of ringing, curl your knuckle more vertically over the fretboard."
+      },
+      {
+        "id": "drill-wu-bb",
+        "title": "Bb Partial-Barre Mastery (3-2-1-1)",
+        "tier": "intermediate",
+        "badge": "💪 Barre Step 1",
+        "desc": "Flatten your index pad across E & A strings at Fret 1—the #1 gateway barre chord.",
+        "chords": [
+          "Bb",
+          "Bb",
+          "F",
+          "F",
+          "Bb",
+          "Bb",
+          "C",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 64,
+        "tip": "Pull your elbow gently toward your ribs and place your thumb directly behind Fret 1."
+      },
+      {
+        "id": "drill-wu-bm",
+        "title": "Bm Full-Barre Mastery (4-2-2-2)",
+        "tier": "expert",
+        "badge": "💪 Barre Step 2",
+        "desc": "Full index barre across Fret 2 with ring finger on G-Fret 4. Unlocks Key of D.",
+        "chords": [
+          "Bm",
+          "Bm",
+          "G",
+          "G",
+          "D",
+          "D",
+          "A",
+          "Bm"
+        ],
+        "meter": "4/4",
+        "strumCode": "bal4",
+        "bpm": 68,
+        "tip": "Roll your index finger slightly sideways toward the nut—the bony edge needs half the pressure."
+      },
+      {
+        "id": "drill-wu-barre-flow",
+        "title": "Barre Endurance Flow (F → Bb → C → F)",
+        "tier": "expert",
+        "badge": "🔥 Stamina",
+        "desc": "Build hand stamina switching smoothly in and out of Bb without cramping.",
+        "chords": [
+          "F",
+          "Bb",
+          "C",
+          "F",
+          "Dm",
+          "Bb",
+          "C",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 76,
+        "tip": "Release thumb squeeze for a split second during every chord switch so your hand stays fresh."
+      }
+    ],
+    "scales": [
+      {
+        "id": "drill-sc-cmaj",
+        "title": "C Major Scale (Do-Re-Mi)",
+        "tier": "beginner",
+        "badge": "🎼 Melody 1",
+        "desc": "Pluck single notes cleanly across C, E, and A strings in Melody View.",
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C",
+          "C",
+          "F",
+          "G",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "dn4",
+        "bpm": 68,
+        "playMode": "scale",
+        "tip": "Use your thumb for C/E strings and index finger for the A-string."
+      },
+      {
+        "id": "drill-sc-pent",
+        "title": "Worship Pentatonic Melody",
+        "tier": "intermediate",
+        "badge": "🎼 Melody 2",
+        "desc": "Build finger independence and pitch accuracy for hymn melodies.",
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "C",
+          "Am",
+          "G",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "bal4",
+        "bpm": 74,
+        "playMode": "scale",
+        "tip": "Let each note ring smoothly until the next subdivision dot lights up."
+      },
+      {
+        "id": "drill-sc-arp",
+        "title": "4-String Worship Arpeggio",
+        "tier": "expert",
+        "badge": "🎼 Fingerpick",
+        "desc": "C-E-G-A-C-E-A-E fingerpicking pattern for reflective prayer songs.",
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G",
+          "C",
+          "Am",
+          "F",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "arp4",
+        "bpm": 70,
+        "playMode": "chord",
+        "tip": "Assign Thumb to G/C, Index to E, and Middle finger to A so your hand stays steady."
+      },
+      {
+        "id": "drill-sc-travis",
+        "title": "Travis / PIMA Fingerpicking",
+        "tier": "expert",
+        "badge": "🔥 Fingerpick Pro",
+        "desc": "Alternating thumb-and-finger flow (C-E-G-E-A-E-G-E) for acoustic worship intros.",
+        "chords": [
+          "G",
+          "Em",
+          "C",
+          "D",
+          "G",
+          "Em",
+          "C",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "trv4",
+        "bpm": 74,
+        "playMode": "chord",
+        "tip": "Anchor your pinky gently on the soundboard below the A-string for steady spacing."
+      }
+    ],
+    "earkeys": [
+      {
+        "id": "drill-ek-transpose",
+        "title": "Same Song, 3 Keys (C → G → D)",
+        "tier": "expert",
+        "badge": "🎹 Transposition",
+        "desc": "Play the classic I–V–vi–IV progression seamlessly across Key of C, Key of G, and Key of D.",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "G",
+          "D",
+          "Em",
+          "C",
+          "D",
+          "A",
+          "Bm",
+          "G"
+        ],
+        "meter": "4/4",
+        "strumCode": "isl4",
+        "bpm": 74,
+        "tip": "Listen to how the emotional color stays identical even as the pitch shifts up to fit any singer!"
+      },
+      {
+        "id": "drill-ek-maj-min",
+        "title": "Major vs. Minor Ear Contrast",
+        "tier": "intermediate",
+        "badge": "👂 Ear Focus",
+        "desc": "Alternate bright Major chords with their relative Minors (C↔Am, F↔Dm, G↔Em) and hear the mood shift.",
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "Dm",
+          "G",
+          "Em",
+          "F",
+          "C"
+        ],
+        "meter": "4/4",
+        "strumCode": "bal4",
+        "bpm": 70,
+        "tip": "Notice how each Major chord sounds bright/open while its relative Minor feels reflective."
+      }
+    ],
+    "songs": [
+      {
+        "id": "mile-1",
+        "songKey": "this little light of mine",
+        "title": "Milestone 1: This Little Light of Mine",
+        "tier": "beginner",
+        "badge": "🌱 Unit 1 Exam",
+        "desc": "Score ≥75% with steady 4/4 strumming and clean beginner chord switches.",
+        "bpm": 76,
+        "tip": "Keep your right hand steady on every beat—focus on crisp C and F landings."
+      },
+      {
+        "id": "mile-2",
+        "songKey": "amazing grace",
+        "title": "Milestone 2: Amazing Grace",
+        "tier": "beginner",
+        "badge": "🎸 Unit 2 Exam",
+        "desc": "Score ≥75% in 3/4 Waltz using C, F, and G with live mic listening.",
+        "bpm": 70,
+        "tip": "Focus on smooth C → F → G transitions right on Beat 1."
+      },
+      {
+        "id": "mile-3",
+        "songKey": "here i am lord",
+        "title": "Milestone 3: Here I Am, Lord",
+        "tier": "intermediate",
+        "badge": "🎼 Unit 3 Exam",
+        "desc": "Score ≥75% with expressive minor chords and smooth verse-to-chorus flow.",
+        "bpm": 74,
+        "tip": "Let the gentle swell breathe on the verses, then open up on the refrain."
+      },
+      {
+        "id": "mile-4",
+        "songKey": "khrist guru mauli",
+        "title": "Milestone 4: Khrist Guru Mauli",
+        "tier": "intermediate",
+        "badge": "🪘 Unit 4 Exam",
+        "desc": "Rev. Narayan Vaman Tilak 6/8 Dadra mastery with live listening.",
+        "bpm": 82,
+        "tip": "Lock into the gentle 6/8 Dadra sway—feel two big pulses per bar."
+      },
+      {
+        "id": "mile-5",
+        "songKey": "in christ alone",
+        "title": "Milestone 5: In Christ Alone",
+        "tier": "expert",
+        "badge": "💪 Unit 5 Exam",
+        "desc": "Dynamic worship anthem testing barre confidence and steady rhythmic control.",
+        "bpm": 76,
+        "tip": "Keep your transitions quiet and controlled as the dynamics build."
+      },
+      {
+        "id": "mile-6",
+        "songKey": "days of elijah",
+        "title": "Milestone 6: Days of Elijah",
+        "tier": "expert",
+        "badge": "🔥 Unit 6 Mastery",
+        "desc": "Full leadership exam: driving rhythm, clean switches, and high energy at 92 BPM.",
+        "bpm": 92,
+        "tip": "Nail the driving chuck energy on the chorus without rushing the tempo."
+      },
+      {
+        "id": "mile-hindi-bonus",
+        "songKey": "aradhana",
+        "title": "Bonus Hindi Exam: Aradhana (Yeshu Tera Naam)",
+        "tier": "intermediate",
+        "badge": "🪘 Hindi Bonus",
+        "desc": "Master the joyful Keherwa 8-beat groove on a beloved Hindi worship anthem.",
+        "bpm": 84,
+        "tip": "Highlight the Keherwa chuck on beat 3 for authentic congregational feel."
+      }
+    ]
+  }
+}

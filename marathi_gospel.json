@@ -1,0 +1,2565 @@
+{
+  "schemaVersion": "3.0",
+  "packName": "Marathi Gospel & Upasana Sangeet",
+  "language": "mr",
+  "songs": [
+    {
+      "id": "marathi-prabhu-tu-maza-rakshanhar",
+      "normKey": "prabhu tu maza rakshanhar",
+      "title": "Prabhu Tu Maza Rakshanhar",
+      "artist": "Marathi Worship · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 78,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pra-bhu tu",
+          "ma-za rak-shan-",
+          "har, ma-za",
+          "ta-ran-har"
+        ],
+        [
+          "Tu-zhya char-ni",
+          "ye-to mi,",
+          "de ma-la",
+          "aa-dhar"
+        ],
+        [
+          "Ma-zhya jee-va-",
+          "cha tu naath,",
+          "dhar ma-za",
+          "haat"
+        ],
+        [
+          "Pra-bhu tu",
+          "ma-za rak-shan-",
+          "har sa-da",
+          "sa-va-da"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-yeshu-maza-raja",
+      "normKey": "yeshu maza raja",
+      "title": "Yeshu Maza Raja (Yeshu Maza Prabhu)",
+      "artist": "Marathi Praise · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 92,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu ma-za",
+          "ra-ja, Ye-shu",
+          "ma-za Pra-bhu",
+          ""
+        ],
+        [
+          "Tu-zhya naa-va-",
+          "cha jay-jay-kar",
+          "ka-ru ya",
+          "sa-da"
+        ],
+        [
+          "Hal-le-lu-jah",
+          "ga-u ya,",
+          "taa-lya va-ja-",
+          "vu ya"
+        ],
+        [
+          "Ye-shu ma-za",
+          "ra-ja, tu-ch",
+          "ma-za traa-ta",
+          ""
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-aaradhana-karu-ya",
+      "normKey": "aaradhana karu ya",
+      "title": "Aaradhana Karu Ya (Prabhuchi)",
+      "artist": "Marathi Worship · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Aa-ra-dha-na",
+          "ka-ru ya,",
+          "Pra-bhu-chi",
+          "stu-ti ga-u"
+        ],
+        [
+          "Hru-da-ya-tu-ni",
+          "na-man ka-ru",
+          "Ye-shu-chya",
+          "char-ni"
+        ],
+        [
+          "Tu-ch pa-vi-tra,",
+          "tu-ch ma-han,",
+          "tu-ch sar-va-",
+          "shresh-tha"
+        ],
+        [
+          "Aa-ra-dha-na",
+          "ka-ru ya",
+          "sa-da sar-va-",
+          "da"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-dhanyavad-prabhu",
+      "normKey": "dhanyavad prabhu",
+      "title": "Dhanyavad Prabhu (Kiti Karu Tujhe)",
+      "artist": "Marathi Bhajan · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 64,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Dhan-ya-vad Pra-bhu,",
+          "ki-ti ka-ru",
+          "tu-jhe up-kar"
+        ],
+        [
+          "Tu-zhya kru-pe-ne",
+          "bhar-la ma-za",
+          "jee-van san-sar"
+        ],
+        [
+          "Haat jo-du-ni",
+          "ye-to tu-zhya",
+          "pa-van char-ni"
+        ],
+        [
+          "Dhan-ya-vad Pra-bhu,",
+          "tu-ch ma-za",
+          "da-ya-lu sva-mi"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-tuzhya-krupene",
+      "normKey": "tuzhya krupene",
+      "title": "Tuzhya Krupene (Mi Jivant Aahe)",
+      "artist": "Marathi Worship · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 80,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Tu-zhya kru-pe-",
+          "ne mi ji-vant",
+          "aa-he Pra-bhu",
+          ""
+        ],
+        [
+          "Tu-zhya pre-ma-",
+          "ne ma-la na-ve",
+          "jee-van di-le",
+          ""
+        ],
+        [
+          "San-ka-tat tu",
+          "ma-zhya paa-thi-",
+          "shi u-bha",
+          "ra-hi-las"
+        ],
+        [
+          "Tu-zhya kru-pe-",
+          "ne mi gaa-to",
+          "tu-zhi ma-hi-ma",
+          ""
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-pavitra-aatmya-ye",
+      "normKey": "pavitra aatmya ye",
+      "title": "Pavitra Aatmya Ye (Majhya Hrudayat)",
+      "artist": "Marathi Charismatic · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pa-vi-tra Aat-",
+          "mya ye, ma-zhya",
+          "hru-da-yat",
+          "ye"
+        ],
+        [
+          "Tu-zhya a-bhi-",
+          "she-ka-ne ma-la",
+          "bha-run taak",
+          "re"
+        ],
+        [
+          "Na-vin shak-ti",
+          "de, na-vin bha-kti",
+          "de ma-la",
+          "Pra-bhu"
+        ],
+        [
+          "Pa-vi-tra Aat-",
+          "mya ye, ma-zhya",
+          "jee-va-nat",
+          "ye"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-he-prabhu-yeshu",
+      "normKey": "he prabhu yeshu",
+      "title": "He Prabhu Yeshu (Tujhya Charani)",
+      "artist": "Marathi Catholic Hymn · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 70,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "He Pra-bhu Ye-shu,",
+          "tu-zhya char-ni",
+          "ye-to mi"
+        ],
+        [
+          "Ma-zhya ma-na-",
+          "chi prar-tha-na",
+          "aik tu sva-mi"
+        ],
+        [
+          "Ksha-ma kar",
+          "ma-la, shud-dha",
+          "kar ma-ze man"
+        ],
+        [
+          "He Pra-bhu Ye-shu,",
+          "tu-ch ma-ze",
+          "jee-van"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-maza-yeshu-jivant-aahe",
+      "normKey": "maza yeshu jivant aahe",
+      "title": "Maza Yeshu Jivant Aahe",
+      "artist": "Christ For All · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 94,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ta-ra-na-ra",
+          "Ye-shu ma-za",
+          "ji-vant aa-he",
+          ""
+        ],
+        [
+          "Aa-di an-ta",
+          "Al-pha O-me-ga",
+          "to aa-he",
+          ""
+        ],
+        [
+          "Pran di-la",
+          "kru-sa-va-ri,",
+          "ji-vant zha-la",
+          "tis-rya di-va-shi"
+        ],
+        [
+          "Hal-le-lu-jah,",
+          "Hal-le-lu-jah,",
+          "ga-u ya",
+          "Hal-le-lu-jah"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "wlZDcJ_he9I",
+        "youtubeUrl": "https://youtu.be/wlZDcJ_he9I",
+        "videoTitle": "Tarnara Yeshu Maza Jivant Ahe | Marathi Jesus Song | Christ For All",
+        "dur": 288,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            15,
+            "Taranara Yeshu maza jivant aahe"
+          ],
+          [
+            22,
+            "Aadi anta Alpha Omega to aahe"
+          ],
+          [
+            29,
+            "Taranara Yeshu maza jivant aahe, aadi anta Alpha Omega to aahe"
+          ],
+          [
+            51,
+            "Hallelujah, Hallelujah, Hallelujah, Hallelujah"
+          ],
+          [
+            81,
+            "Tarandata Yeshu aala bhuvani, sarva jagachi pape gheuni swatahavari"
+          ],
+          [
+            99,
+            "Tarandata Yeshu aala bhuvani, sarva jagachi pape he swatahavari, pran dila krusavari"
+          ],
+          [
+            124,
+            "Jivant zala tisrya divashi, Hallelujah gauya Hallelujah"
+          ],
+          [
+            158,
+            "Taran nahi jagata Yeshu Khristavina, marga satya jivan to swargacha jina"
+          ],
+          [
+            177,
+            "Taran nahi jagata Yeshu Khristavina, ya ho Yeshula swikara"
+          ],
+          [
+            199,
+            "Anant jivan prapt kara, Hallelujah Hallelujah Hallelujah"
+          ],
+          [
+            222,
+            "Taranara Yeshu maza jivant aahe, aadi anta Alpha Omega to aahe"
+          ],
+          [
+            251,
+            "Hallelujah, Hallelujah, Hallelujah, Hallelujah"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-yeshu-naam-goad",
+      "normKey": "yeshu naam goad",
+      "title": "Yeshu Naam Goad (Ati Sundar Naam)",
+      "artist": "Marathi Bhajan · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 66,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ye-shu naam goad,",
+          "a-ti sun-dar",
+          "naam aa-he"
+        ],
+        [
+          "Ya naa-ma-madh-ye",
+          "shan-ti aa-ni",
+          "aa-nand aa-he"
+        ],
+        [
+          "Sa-ka-li san-dhya-",
+          "ka-li gaa-to",
+          "tu-zhe gaan"
+        ],
+        [
+          "Ye-shu naam goad,",
+          "ma-zhya pra-na-",
+          "cha vish-ram"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-stuti-karu-ya",
+      "normKey": "stuti karu ya",
+      "title": "Stuti Karu Ya (Prabhu Yeshuchi)",
+      "artist": "Marathi Praise · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 90,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Stu-ti ka-ru",
+          "ya Pra-bhu",
+          "Ye-shu-chi",
+          ""
+        ],
+        [
+          "Ma-hi-ma ga-u",
+          "ya sva-rgi-ya",
+          "Pi-tya-chi",
+          ""
+        ],
+        [
+          "Sar-va sru-shti",
+          "gaa-te tu-zhe",
+          "go-d geet",
+          ""
+        ],
+        [
+          "Stu-ti ka-ru",
+          "ya sa-da",
+          "sar-va-da",
+          ""
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-krusavarati",
+      "normKey": "krusavarati",
+      "title": "Krusavarati (Yeshune Pran Dila)",
+      "artist": "Marathi Lenten Hymn · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "3/4",
+        "bpm": 66,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn3",
+        "i": "wlz3",
+        "e": [
+          "arp3",
+          "wlz3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Kru-sa-va-ra-ti",
+          "Ye-shu-ne pran",
+          "di-la"
+        ],
+        [
+          "Ma-zhya paa-pan-",
+          "sa-thi rak-ta",
+          "saan-di-la"
+        ],
+        [
+          "Ki-ti mo-the",
+          "prem he De-va-",
+          "che a-paar"
+        ],
+        [
+          "Kru-sa-va-ra-ti",
+          "mi-laa-la ud-",
+          "dhaar"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-devache-prem-kiti-mahan",
+      "normKey": "devache prem kiti mahan",
+      "title": "Devache Prem Kiti Mahan",
+      "artist": "Marathi Worship · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 74,
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "De-va-che prem",
+          "ki-ti ma-han,",
+          "sa-ga-ra-pek-sha",
+          "kho-l"
+        ],
+        [
+          "Aa-ka-sha-pek-",
+          "sha un-cha te,",
+          "a-mo-l a-ni",
+          "go-d"
+        ],
+        [
+          "Ye-shu-madh-ye",
+          "pra-kat zha-le",
+          "Pi-tya-che",
+          "prem"
+        ],
+        [
+          "De-va-che prem",
+          "ki-ti ma-han,",
+          "sa-da ra-hil",
+          "ka-yam"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-jai-jai-yeshu",
+      "normKey": "jai jai yeshu",
+      "title": "Jai Jai Yeshu (Hallelujah)",
+      "artist": "Marathi Praise · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 98,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Jai jai Ye-shu,",
+          "jai jai Pra-bhu,",
+          "Hal-le-lu-jah",
+          ""
+        ],
+        [
+          "Vi-ja-yi ra-ja",
+          "tu aa-hes,",
+          "Hal-le-lu-jah",
+          ""
+        ],
+        [
+          "Naa-chu ya",
+          "gaa-u ya,",
+          "tu-zhya naa-va-",
+          "cha jay-kaar"
+        ],
+        [
+          "Jai jai Ye-shu,",
+          "mru-tyu-var tu",
+          "vi-jay mi-la-vi-la"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-tuzhya-vina-prabhu",
+      "normKey": "tuzhya vina prabhu",
+      "title": "Tuzhya Vina Prabhu (Koni Nahi Maza)",
+      "artist": "Marathi Devotional · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "6/8",
+        "bpm": 62,
+        "chords": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Tu-zhya vi-na",
+          "Pra-bhu ko-ni",
+          "na-hi ma-za"
+        ],
+        [
+          "Tu-ch ma-za",
+          "saa-thi, tu-ch",
+          "ma-za ra-ja"
+        ],
+        [
+          "An-dha-ra-tun",
+          "ne ma-la tu",
+          "pra-ka-sha-ka-de"
+        ],
+        [
+          "Tu-zhya vi-na",
+          "Pra-bhu jee-van",
+          "a-dhu-re ma-ze"
+        ]
+      ],
+      "youtubeSync": null
+    },
+    {
+      "id": "marathi-mauli-mariya",
+      "normKey": "mauli mariya",
+      "title": "Mauli Mariya (Ave Maria Marathi)",
+      "artist": "Cecilia Gonsalves · Marathi Catholic",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "3/4",
+        "bpm": 72,
+        "chords": [
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "wlz3",
+        "i": "wch3",
+        "e": [
+          "arp3",
+          "wch3",
+          "rif3"
+        ]
+      },
+      "offlineLines": [
+        [
+          "An-je-lus ghat",
+          "vaj-te, na-man-",
+          "kar bol-te"
+        ],
+        [
+          "Du-tan-ni di-",
+          "le-la ni-rop",
+          "ath-vi-te"
+        ],
+        [
+          "A-ve, A-ve,",
+          "A-ve Ma-ri-a!",
+          ""
+        ],
+        [
+          "A-ve, A-ve,",
+          "Ma-u-li Ma-ri-a!",
+          ""
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "SiCdgcqEQuc",
+        "youtubeUrl": "https://youtu.be/SiCdgcqEQuc",
+        "videoTitle": "Anjelus Ghat Vajte (Ave Maria Marathi) - Cecilia Gonsalves",
+        "dur": 109,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            17,
+            "Anjelus ghat vajte"
+          ],
+          [
+            21,
+            "Namankar bolte"
+          ],
+          [
+            26,
+            "Dutanni dilela"
+          ],
+          [
+            30,
+            "Nirop athvite"
+          ],
+          [
+            35,
+            "Ave, Ave, Ave Maria"
+          ],
+          [
+            44,
+            "Ave, Ave, Ave Maria"
+          ],
+          [
+            53,
+            "Bernardette navachi"
+          ],
+          [
+            57,
+            "Garib ek muli"
+          ],
+          [
+            61,
+            "Jate tee dongrashi"
+          ],
+          [
+            65,
+            "Jamvala kuri"
+          ],
+          [
+            70,
+            "Ave, Ave, Ave Maria"
+          ],
+          [
+            79,
+            "Ave, Ave, Ave Maria"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-khrist-guru-mauli",
+      "normKey": "khrist guru mauli",
+      "title": "Khrist Guru Mauli",
+      "artist": "Rev. Narayan Vaman Tilak (Bela Shende) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Khrist Gu-ru",
+          "Mau-li, ga",
+          "may ma-jhi"
+        ],
+        [
+          "Pa-pa-ta-pa",
+          "san-tra-sta",
+          "sa-u-li"
+        ],
+        [
+          "Ha-ke-sa-ra-",
+          "shi maj ta-",
+          "ra-ya dha-va-li"
+        ],
+        [
+          "Khrist Khrist jay,",
+          "bha-ja-ni ma-ti",
+          "ran-ga-li"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "OQinxjBEJ6Y",
+        "youtubeUrl": "https://youtu.be/OQinxjBEJ6Y",
+        "videoTitle": "Khrist Guru Mauli | Bela Shende | Upasana Sangeet (Rev. N.V. Tilak)",
+        "dur": 343,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            37,
+            "Khrist Guru Mauli, ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            56,
+            "Khrist Guru Mauli, ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            73,
+            "Papatapasantrastajanachi"
+          ],
+          [
+            87,
+            "Avinashi sauli"
+          ],
+          [
+            92,
+            "Ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            109,
+            "Hakesarashi maj taraya"
+          ],
+          [
+            121,
+            "Swargatun dhavali"
+          ],
+          [
+            129,
+            "Ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            167,
+            "Pashchattape dagdha sharanya"
+          ],
+          [
+            174,
+            "Nijashishyan pavali"
+          ],
+          [
+            181,
+            "Ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            203,
+            "Maj papyastava stambhavarchya"
+          ],
+          [
+            212,
+            "Marana sarasavali"
+          ],
+          [
+            222,
+            "Ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            250,
+            "Hrudayi majhya pahin jikade"
+          ],
+          [
+            262,
+            "Tikade ho mavali"
+          ],
+          [
+            270,
+            "Ga may majhi Khrist Guru Mauli"
+          ],
+          [
+            284,
+            "Khrist Khrist jay, Khrist Khrist jay"
+          ],
+          [
+            297,
+            "Bhajani mati rangali"
+          ],
+          [
+            317,
+            "Ga may majhi Khrist Guru Mauli"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-tav-sahavas-ghadava",
+      "normKey": "tav sahavas ghadava",
+      "title": "Tav Sahavas Ghadava",
+      "artist": "Rev. Narayan Vaman Tilak (Amos Tiwade) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Tav sa-ha-vas",
+          "gha-da-va,",
+          "Pra-bhu",
+          "re"
+        ],
+        [
+          "Ra-ho sun-dar",
+          "sa-da-ni na-ga-",
+          "ri kin-va",
+          "ra-ni"
+        ],
+        [
+          "Deh vi-bho ha",
+          "ma-jha, ko-the-hi",
+          "swar-gach",
+          "ji-va"
+        ],
+        [
+          "Khris-ta mat pri-ya",
+          "Khris-ta, a-vi-na-",
+          "shi tu vi-sa-",
+          "va"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "YJSM49mCeJI",
+        "youtubeUrl": "https://youtu.be/YJSM49mCeJI",
+        "videoTitle": "TAV SAHAVAS GHADAVA | N.V. TILAK | AMOS TIWADE",
+        "dur": 293,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            23,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            30,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            37,
+            "Tav sahavas ghadava"
+          ],
+          [
+            68,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            75,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            82,
+            "Tav sahavas ghadava"
+          ],
+          [
+            102,
+            "Raho sundar sadani nagari"
+          ],
+          [
+            111,
+            "Kinva rani parvat kuhari"
+          ],
+          [
+            116,
+            "Raho sundar sadani nagari"
+          ],
+          [
+            124,
+            "Kinva rani parvat kuhari"
+          ],
+          [
+            130,
+            "Deh vibho ha majha"
+          ],
+          [
+            137,
+            "Deh vibho ha majha"
+          ],
+          [
+            144,
+            "Kothehi mag swargach jiva"
+          ],
+          [
+            153,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            159,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            166,
+            "Tav sahavas ghadava"
+          ],
+          [
+            180,
+            "He priya kanda sarva sukhachya"
+          ],
+          [
+            186,
+            "Ghe ghe majhe tan man vacha"
+          ],
+          [
+            193,
+            "He priya kanda sarva sukhachya"
+          ],
+          [
+            200,
+            "Ghe ghe majhe tan man vacha"
+          ],
+          [
+            207,
+            "Khrista mat priya Khrista"
+          ],
+          [
+            214,
+            "Khrista mat priya Khrista"
+          ],
+          [
+            221,
+            "Avinashi tu matra visava"
+          ],
+          [
+            229,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            235,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            242,
+            "Tav sahavas ghadava"
+          ],
+          [
+            263,
+            "Tav sahavas ghadava, Prabhu re"
+          ],
+          [
+            270,
+            "Tav sahavas ghadava"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-khristarpanamastu",
+      "normKey": "khristarpanamastu",
+      "title": "Khristarpanamastu",
+      "artist": "Rev. Narayan Vaman Tilak · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Khris-tar-pa-na-",
+          "mas-tu, a-va-ghe",
+          "Khris-tar-pa-na-",
+          "mas-tu"
+        ],
+        [
+          "Ma-nat ye-i",
+          "vi-char to to",
+          "Khris-tar-pa-na-",
+          "mas-tu"
+        ],
+        [
+          "Mi-pa-na ma-jhe",
+          "a-va-ghe",
+          "Khris-tar-pa-na-",
+          "mas-tu"
+        ],
+        [
+          "Pra-pan-cha a-va-",
+          "gha, jag he",
+          "sa-re Khris-tar-pa-",
+          "na-mas-tu"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "_50pYOSqmXg",
+        "youtubeUrl": "https://youtu.be/_50pYOSqmXg",
+        "videoTitle": "Khristarpanamastu | Rev. Narayan Waman Tilak | Marathi Bhajan",
+        "dur": 401,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            44,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            55,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            65,
+            "Manat yei vichar to to Khristarpanamastu"
+          ],
+          [
+            77,
+            "Uchcharacha pravah sagala Khristarpanamastu"
+          ],
+          [
+            90,
+            "Acharanchi sarva malika Khristarpanamastu"
+          ],
+          [
+            107,
+            "Mipana majhe Khristarpanamastu"
+          ],
+          [
+            112,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            143,
+            "Bharya kanya putra bandhugan Khristarpanamastu"
+          ],
+          [
+            158,
+            "Mothepan va lahanapan he Khristarpanamastu"
+          ],
+          [
+            170,
+            "Nirdhanata ki dhanadhyatahi Khristarpanamastu"
+          ],
+          [
+            188,
+            "Prapancha avagha Khristarpanamastu"
+          ],
+          [
+            210,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            231,
+            "Pranapriya tar janmabhumi hi Khristarpanamastu"
+          ],
+          [
+            242,
+            "Dainya hi seva vaibhav hi majhe Khristarpanamastu"
+          ],
+          [
+            275,
+            "Marane vyartha kalpana Khristarpanamastu"
+          ],
+          [
+            291,
+            "Jag he sare avaghe Khristarpanamastu"
+          ],
+          [
+            306,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            351,
+            "Khristarpanamastu, avaghe Khristarpanamastu"
+          ],
+          [
+            371,
+            "Avaghe Khristarpanamastu"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-aaj-mi-khrista-pahila",
+      "normKey": "aaj mi khrista pahila",
+      "title": "Aaj Mi Khrista Pahila",
+      "artist": "Rev. Narayan Vaman Tilak (Joshua Katamala) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 92,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Aaj mi Khris-ta",
+          "pa-hi-la, aaj mi",
+          "Khris-ta pa-hi-",
+          "la"
+        ],
+        [
+          "Dag-dha hoy ji",
+          "a-sha-la-ti-ka",
+          "tich di-se ma-ja-",
+          "la"
+        ],
+        [
+          "A-jin-kya mru-tyu",
+          "sa-kal ja-ga-la",
+          "jin-kun aa-",
+          "la"
+        ],
+        [
+          "Ne-tri hru-da-yi",
+          "Pra-bhu san-cha-",
+          "ra-la, aaj mi",
+          "pa-hi-la"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "g9wVguAOB0Q",
+        "youtubeUrl": "https://youtu.be/g9wVguAOB0Q",
+        "videoTitle": "Aaj Mi Khrista Pahila | Narayan Waman Tilak | Tujhech Geet",
+        "dur": 453,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            49,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            58,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            68,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            77,
+            "Dagdha hoy ji ashalatika"
+          ],
+          [
+            85,
+            "Pushpaphalahi mandit punarapi"
+          ],
+          [
+            95,
+            "Tich dise majala"
+          ],
+          [
+            103,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            112,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            123,
+            "Ajinkya mrutyu sakal jagala"
+          ],
+          [
+            131,
+            "Pari tyalahi jinkun ala"
+          ],
+          [
+            147,
+            "Premanidhi to mam dubalichya"
+          ],
+          [
+            158,
+            "Aaj pudhe ramala"
+          ],
+          [
+            166,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            174,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            183,
+            "Priti mhanaje kay narala"
+          ],
+          [
+            191,
+            "Anubhav dyaya Prabhu nar jhala"
+          ],
+          [
+            207,
+            "Radala shramala amhakarita"
+          ],
+          [
+            218,
+            "Khambala khilala"
+          ],
+          [
+            227,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            236,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            253,
+            "Netri hrudayi Prabhu sancharala"
+          ],
+          [
+            263,
+            "Vishwapati to vishwi bharala"
+          ],
+          [
+            280,
+            "Khrista yapudhe atma majha"
+          ],
+          [
+            290,
+            "Vagavita kudila"
+          ],
+          [
+            299,
+            "Aaj mi Khrista pahila"
+          ],
+          [
+            307,
+            "Aaj mi Khrista pahila"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-pahila-ka-prabhu-khrista",
+      "normKey": "pahila ka prabhu khrista",
+      "title": "Pahila Ka Prabhu Khrista",
+      "artist": "Rev. Narayan Vaman Tilak (Gautam Jadhav) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "6/8",
+        "bpm": 82,
+        "chords": [
+          "Am",
+          "Dm",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Pa-hi-la ka",
+          "Pra-bhu Khris-ta",
+          "khi-la-le-la"
+        ],
+        [
+          "Pa-hi-le ka",
+          "khi-le u-ri,",
+          "da-ya pur-na"
+        ],
+        [
+          "Pa-hi-la ka",
+          "kan-ta-kan-cha",
+          "mu-kut shi-ri"
+        ],
+        [
+          "Va-hi-le ka",
+          "sar-va ji-ne",
+          "tya-chya pa-da-va-ri"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "F2fMq3oHnv8",
+        "youtubeUrl": "https://youtu.be/F2fMq3oHnv8",
+        "videoTitle": "Pahila Ka Prabhu Khrista | Narayan Waman Tilak | Good Friday Song",
+        "dur": 510,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            45,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            56,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            67,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            74,
+            "Pahile ka khile uri, padi daya purna kari"
+          ],
+          [
+            83,
+            "Pahile ka khile uri, padi daya purna kari"
+          ],
+          [
+            92,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            105,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            117,
+            "Pahila ka kantakancha mukut rutalela shiri"
+          ],
+          [
+            128,
+            "Pahila ka kantakancha mukut rutalela shiri"
+          ],
+          [
+            139,
+            "Pahile ka ghalaghala rakta gale bhumivari"
+          ],
+          [
+            149,
+            "Pahile ka ghalaghala rakta gale bhumivari"
+          ],
+          [
+            160,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            172,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            180,
+            "Pahile ka kon tyachi kshate khol khol kari"
+          ],
+          [
+            197,
+            "Pahile ka kon tyachi kshate khol khol kari"
+          ],
+          [
+            205,
+            "Pahile ka kon papi dag dei dukhavari"
+          ],
+          [
+            216,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            238,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            282,
+            "Pahile ka taravaya kavana to dukha vari"
+          ],
+          [
+            305,
+            "Pahile ka taravaya kavana to dukha vari"
+          ],
+          [
+            314,
+            "Pahile ka konakade premabhare pahi tari"
+          ],
+          [
+            324,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            358,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            371,
+            "Pahili ka priti ashi jagi kadhi swapni tari"
+          ],
+          [
+            388,
+            "Pahili ka priti ashi jagi kadhi swapni tari"
+          ],
+          [
+            397,
+            "Vahile ka sarva jine tuva tyachya padavari"
+          ],
+          [
+            405,
+            "Vahile ka sarva jine tuva tyachya padavari"
+          ],
+          [
+            427,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            448,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            470,
+            "Pahila ka Prabhu Khrista khilalela khambavari"
+          ],
+          [
+            489,
+            "Pahila ka Prabhu Khrista"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-mann-aikena",
+      "normKey": "mann aikena",
+      "title": "Mann Aikena",
+      "artist": "Rev. Narayan Vaman Tilak (Vijay Avale) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "Am",
+        "meter": "4/4",
+        "bpm": 88,
+        "chords": [
+          "Am",
+          "G",
+          "F",
+          "E7"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Mann ai-ke-na,",
+          "ai-ke-na, dur-vi-",
+          "ka-ri ke-li",
+          "dai-na"
+        ],
+        [
+          "Mann ko-na-che,",
+          "de-i de-va-la",
+          "de-va-che",
+          ""
+        ],
+        [
+          "Pra-bhu-madh-ye",
+          "mann ra-ho, ma-ni",
+          "Pra-bhu ghe-vo",
+          "tha-vo"
+        ],
+        [
+          "Ho-u de-va-che",
+          "le-ka-ru, Pra-bhu-",
+          "la jo va-hi-le-",
+          "la"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "skM6dQGteOA",
+        "youtubeUrl": "https://youtu.be/skM6dQGteOA",
+        "videoTitle": "Mann Aikena | Upasana Sangeet | N.V. Tilak | Vijay Avale",
+        "dur": 367,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            20,
+            "Mann aikena, aikena"
+          ],
+          [
+            28,
+            "Durvikari keli daina"
+          ],
+          [
+            38,
+            "Mann aikena, aikena"
+          ],
+          [
+            46,
+            "Durvikari keli daina"
+          ],
+          [
+            56,
+            "Mann aikena, aikena"
+          ],
+          [
+            62,
+            "Durvikari keli daina"
+          ],
+          [
+            98,
+            "Mann konache, konache"
+          ],
+          [
+            109,
+            "Dei devala devache"
+          ],
+          [
+            120,
+            "Prabhumadhye mann raho"
+          ],
+          [
+            140,
+            "Mani Prabhu ghevo thavo"
+          ],
+          [
+            155,
+            "Mann aikena, aikena"
+          ],
+          [
+            163,
+            "Durvikari keli daina"
+          ],
+          [
+            172,
+            "Mann aikena, aikena"
+          ],
+          [
+            218,
+            "Hou devache lekaru"
+          ],
+          [
+            232,
+            "Hou devache lekaru"
+          ],
+          [
+            243,
+            "Mi, mi karun nako maru"
+          ],
+          [
+            258,
+            "Daas mhane to mokala"
+          ],
+          [
+            283,
+            "Prabhula jo vahilela"
+          ],
+          [
+            295,
+            "Mann aikena, aikena"
+          ],
+          [
+            310,
+            "Mann aikena, aikena"
+          ],
+          [
+            325,
+            "Durvikari keli daina"
+          ],
+          [
+            335,
+            "Mann aikena, aikena"
+          ],
+          [
+            348,
+            "Mann aikena, aikena"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-paani-dya-paani",
+      "normKey": "paani dya paani trushit mi",
+      "title": "Paani Dya Paani, Trushit Mi",
+      "artist": "Rev. Narayan Vaman Tilak (Sunil Jadhav) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 96,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "C"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "keh4",
+        "e": [
+          "flk4",
+          "keh4",
+          "drv4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Paa-ni dya",
+          "paa-ni, tru-shit",
+          "mi, tru-shit",
+          "mi"
+        ],
+        [
+          "Na-ko ku-vya-che,",
+          "na-ko na-di-che,",
+          "aa-nil ja-ri",
+          "ko-ni"
+        ],
+        [
+          "Sar-va ja-la-shay",
+          "pa-hu-ni aa-lo,",
+          "shra-ma-lo mi",
+          "bhra-mu-ni"
+        ],
+        [
+          "Ja, ja ho-il",
+          "Pra-bhu Ye-shu-chya",
+          "trup-ti tu-jhi",
+          "cha-ra-ni"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "LqsmGOTo_BI",
+        "youtubeUrl": "https://youtu.be/LqsmGOTo_BI",
+        "videoTitle": "Paani Dya Paani, Trushit Mi | Narayan Waman Tilak | Sunil Jadhav",
+        "dur": 458,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            32,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            42,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            52,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            62,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            70,
+            "Nako kuvyache, nako nadiche"
+          ],
+          [
+            86,
+            "Nako kuvyache, nako nadiche"
+          ],
+          [
+            98,
+            "Aanil jari koni"
+          ],
+          [
+            109,
+            "Trushit mi, paani dya paani"
+          ],
+          [
+            120,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            131,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            141,
+            "Dya aise ki trusha na laage"
+          ],
+          [
+            155,
+            "Pita je phiruni"
+          ],
+          [
+            169,
+            "Pita je phiruni"
+          ],
+          [
+            182,
+            "Trushit mi, paani dya paani"
+          ],
+          [
+            192,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            208,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            218,
+            "Sarva jalashay pahuni aalo"
+          ],
+          [
+            232,
+            "Sarva jalashay pahuni aalo"
+          ],
+          [
+            242,
+            "Shramalo mi bhramuni"
+          ],
+          [
+            253,
+            "Shramalo mi bhramuni"
+          ],
+          [
+            263,
+            "Trushit mi, paani dya paani"
+          ],
+          [
+            272,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            285,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            296,
+            "Ja, ja hoil Prabhu Yeshuchya"
+          ],
+          [
+            312,
+            "Trupti tujhi charani"
+          ],
+          [
+            323,
+            "Trupti tujhi charani"
+          ],
+          [
+            335,
+            "Trushit mi, paani dya paani"
+          ],
+          [
+            343,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            358,
+            "Paani dya paani, trushit mi"
+          ],
+          [
+            365,
+            "Nako kuvyache, nako nadiche"
+          ],
+          [
+            387,
+            "Aanil jari koni"
+          ],
+          [
+            397,
+            "Trushit mi, paani dya paani"
+          ],
+          [
+            407,
+            "Paani dya paani, trushit mi"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-pushkal-ajuni-una",
+      "normKey": "pushkal ajuni una",
+      "title": "Pushkal Ajuni Una",
+      "artist": "Rev. Narayan Vaman Tilak (Tujhech Geet) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 84,
+        "chords": [
+          "C",
+          "Am",
+          "F",
+          "G"
+        ]
+      },
+      "strums": {
+        "b": "isl4",
+        "i": "flk4",
+        "e": [
+          "flk4",
+          "keh4",
+          "ich4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Push-kal a-ju-ni",
+          "u-na, Pra-bhu mi",
+          "push-kal a-ju-ni",
+          "u-na"
+        ],
+        [
+          "Ki-ti laa-ja-to",
+          "ma-nat tha-uk",
+          "tu-ja-van-chun he",
+          "ku-na re"
+        ],
+        [
+          "Ta-ka-u mi pa-ran-",
+          "tu sa-da-ya,",
+          "aa-va-da-lo tvan-",
+          "ma-na re"
+        ],
+        [
+          "Khris-ta, ghe ghe",
+          "a-va-gha ha",
+          "ma-jha mi-pa-na",
+          "re"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "fkpumvz9lDo",
+        "youtubeUrl": "https://youtu.be/fkpumvz9lDo",
+        "videoTitle": "Pushkal Ajuni Una | Narayan Waman Tilak | Upasana Sangeet #183",
+        "dur": 696,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            84,
+            "Pushkal ajuni una, Prabhu mi"
+          ],
+          [
+            95,
+            "Pushkal ajuni una, Prabhu mi"
+          ],
+          [
+            107,
+            "Pushkal ajuni una, Prabhu mi"
+          ],
+          [
+            118,
+            "Khanditun rati nahi phedile"
+          ],
+          [
+            143,
+            "Bandhubhaginichya runa re"
+          ],
+          [
+            155,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            163,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            227,
+            "Kiti laajato manat thauk"
+          ],
+          [
+            251,
+            "Tujavanchun he kuna re"
+          ],
+          [
+            262,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            270,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            342,
+            "Takau mi parantu sadaya"
+          ],
+          [
+            425,
+            "Takau mi parantu sadaya"
+          ],
+          [
+            441,
+            "Aavadalo tvanmana re"
+          ],
+          [
+            452,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            462,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            541,
+            "Khrista, Khrista, ghe ghe avagha"
+          ],
+          [
+            565,
+            "Khrista, Khrista, ghe ghe avagha"
+          ],
+          [
+            580,
+            "Ha majha mipana re"
+          ],
+          [
+            588,
+            "Ha majha mipana re"
+          ],
+          [
+            598,
+            "Prabhu mi pushkal ajuni una"
+          ],
+          [
+            606,
+            "Prabhu mi pushkal ajuni una"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-ya-pudhe-prabhu-tu-majha",
+      "normKey": "ya pudhe prabhu tu majha",
+      "title": "Ya Pudhe Prabhu Tu Majha",
+      "artist": "Rev. Narayan Vaman Tilak (Bela Shende) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "4/4",
+        "bpm": 76,
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am"
+        ]
+      },
+      "strums": {
+        "b": "dn4",
+        "i": "bal4",
+        "e": [
+          "bal4",
+          "flk4",
+          "arp4"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ya pu-dhe, Pra-bhu,",
+          "tu ma-jha, pri-ya",
+          "ban-dhu sva-mi",
+          "ra-ja"
+        ],
+        [
+          "Tav se-va he",
+          "mam an-na, tav",
+          "chin-tan mam sha-",
+          "yan"
+        ],
+        [
+          "Tav na-ma-cha",
+          "ja-ya-ghosh ha",
+          "ma-jha shva-soch-chhva-",
+          "sa"
+        ],
+        [
+          "Mi muk-ta, su-khi",
+          "mi shant, sa-da",
+          "svar-gat ya pu-",
+          "dhe"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "GyOjo6ATZxA",
+        "youtubeUrl": "https://youtu.be/GyOjo6ATZxA",
+        "videoTitle": "Ya Pudhe Prabhu | Bela Shende | Sacred Hymns | Upasana Sangeet",
+        "dur": 241,
+        "source": "lyric_video_frames",
+        "verified": true,
+        "lines": [
+          [
+            48,
+            "Ya pudhe, Prabhu, tu majha"
+          ],
+          [
+            54,
+            "Priya bandhu, swami raja"
+          ],
+          [
+            59,
+            "Ya pudhe"
+          ],
+          [
+            62,
+            "Tav seva he mam anna"
+          ],
+          [
+            68,
+            "Tav chintan he mam shayan"
+          ],
+          [
+            73,
+            "Ya pudhe"
+          ],
+          [
+            76,
+            "Tav namacha jayaghosh"
+          ],
+          [
+            82,
+            "Ha majha shvasochchhvas"
+          ],
+          [
+            87,
+            "Ya pudhe"
+          ],
+          [
+            90,
+            "Hi drushti jagala vitali"
+          ],
+          [
+            95,
+            "Tujhya padi jadali"
+          ],
+          [
+            98,
+            "Prabhu, tu majha"
+          ],
+          [
+            104,
+            "Priya bandhu, swami raja"
+          ],
+          [
+            110,
+            "Ya pudhe"
+          ],
+          [
+            124,
+            "Tujasathi gruhasutadara"
+          ],
+          [
+            130,
+            "Tujasathi sarva pasara"
+          ],
+          [
+            135,
+            "Ya pudhe"
+          ],
+          [
+            138,
+            "Tujasathi vasati dehi"
+          ],
+          [
+            144,
+            "Tujasathi disha hya dahi"
+          ],
+          [
+            150,
+            "Ya pudhe"
+          ],
+          [
+            153,
+            "He svatva arpile, ghei"
+          ],
+          [
+            157,
+            "Evadhe dei"
+          ],
+          [
+            160,
+            "Prabhu, tu majha"
+          ],
+          [
+            166,
+            "Priya bandhu, swami raja"
+          ],
+          [
+            172,
+            "Ya pudhe"
+          ],
+          [
+            186,
+            "Mam vichar, tu mam ukti"
+          ],
+          [
+            192,
+            "Tu yukti, bhukti, mukti"
+          ],
+          [
+            198,
+            "Ya pudhe"
+          ],
+          [
+            200,
+            "Mi tu ha bhedach nurala"
+          ],
+          [
+            206,
+            "Urala tari to disanyala"
+          ],
+          [
+            212,
+            "Ya pudhe"
+          ],
+          [
+            214,
+            "Mi mukta, sukhi mi shant, sada svargat"
+          ],
+          [
+            222,
+            "Prabhu, tu majha"
+          ],
+          [
+            228,
+            "Priya bandhu, swami raja"
+          ],
+          [
+            233,
+            "Ya pudhe"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "marathi-tilak-kiti-god-kiti-god",
+      "normKey": "kiti god kiti god",
+      "title": "Kiti God, Kiti God",
+      "artist": "Rev. Narayan Vaman Tilak (Shamuvel Pehalwan) · Marathi Gospel",
+      "category": "Marathi Gospel",
+      "script": "latin",
+      "musicalMeta": {
+        "key": "C",
+        "meter": "6/8",
+        "bpm": 92,
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ]
+      },
+      "strums": {
+        "b": "dn6",
+        "i": "rol6",
+        "e": [
+          "arp6",
+          "dad6",
+          "rol6"
+        ]
+      },
+      "offlineLines": [
+        [
+          "Ki-ti god, ki-ti",
+          "god, ki-ti god",
+          "ki-ti re"
+        ],
+        [
+          "God naam tav",
+          "vaa-te, man prem",
+          "khal-kha-la-te"
+        ],
+        [
+          "Sa-ha-vaas pu-re",
+          "tav hyaas swarg",
+          "mag Ye-shu"
+        ],
+        [
+          "Tu prem murt",
+          "De-va, he aa-yu",
+          "tu-jhech vhaa-ve"
+        ]
+      ],
+      "youtubeSync": {
+        "videoId": "XWy5ZzrlMA0",
+        "youtubeUrl": "https://youtu.be/XWy5ZzrlMA0",
+        "videoTitle": "Kiti God, Kiti God | Rev. N.V. Tilak | Shamuvel Pehalwan | Tujhech Geet",
+        "dur": 389,
+        "source": "yt_transcript",
+        "verified": true,
+        "lines": [
+          [
+            62,
+            "Kiti god, kiti god, kiti god kiti re"
+          ],
+          [
+            74,
+            "God naam tav vaate"
+          ],
+          [
+            80,
+            "Man prem rasachya ule khalkhalate"
+          ],
+          [
+            92,
+            "Kiti god, kiti god, kiti god kiti re"
+          ],
+          [
+            106,
+            "Kiti god, kiti god, kiti god kiti re"
+          ],
+          [
+            147,
+            "Sahavaas pure tav hyaas swarg mag Yeshu"
+          ],
+          [
+            156,
+            "Nach duja dakhavi sharan tujhe aashu"
+          ],
+          [
+            164,
+            "Hrutpati tujhi gomati, murti vasaleli"
+          ],
+          [
+            172,
+            "Ti ubhich majhya pudhe aso keli"
+          ],
+          [
+            185,
+            "Kiti god, kiti god, kiti god kiti re"
+          ],
+          [
+            242,
+            "Tu prem murt, tu prem prem tu Deva"
+          ],
+          [
+            260,
+            "Prabhu rupa aishi dharun Yeshu naava"
+          ],
+          [
+            283,
+            "Man mana ek vasana, tujhya saha jaave"
+          ],
+          [
+            304,
+            "He aayu yethale tujhech te vhaave"
+          ],
+          [
+            322,
+            "Kiti god, kiti god, kiti god kiti re"
+          ],
+          [
+            338,
+            "God naam tav vaate"
+          ],
+          [
+            346,
+            "Man prem rasachya ule khalkhalate"
+          ]
+        ]
+      }
+    }
+  ]
+}
