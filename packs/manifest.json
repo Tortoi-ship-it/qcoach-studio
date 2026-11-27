@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "3.0",
+  "updatedAt": "2026-11-26T10:09:16.892811+00:00",
+  "packs": [
+    {
+      "id": "catholic_and_hymns",
+      "name": "Catholic & Classic Hymns",
+      "language": "en",
+      "songCount": 56,
+      "url": "./packs/catholic_and_hymns.json"
+    },
+    {
+      "id": "christmas_and_worship",
+      "name": "Christmas & Modern Worship",
+      "language": "en",
+      "songCount": 99,
+      "url": "./packs/christmas_and_worship.json"
+    },
+    {
+      "id": "hindi_gospel",
+      "name": "Hindi Gospel (Romanized)",
+      "language": "hi",
+      "songCount": 15,
+      "url": "./packs/hindi_gospel.json"
+    },
+    {
+      "id": "marathi_gospel",
+      "name": "Marathi Gospel & Upasana Sangeet",
+      "language": "mr",
+      "songCount": 25,
+      "url": "./packs/marathi_gospel.json"
+    },
+    {
+      "id": "sword_of_the_spirit",
+      "name": "Sword of the Spirit Worship",
+      "language": "en",
+      "songCount": 23,
+      "url": "./packs/sword_of_the_spirit.json"
+    }
+  ]
+}

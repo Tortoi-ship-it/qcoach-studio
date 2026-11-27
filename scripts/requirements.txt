@@ -1,0 +1,6 @@
+# Optional dependencies for full WhisperX / YouTube song-pack ingestion pipeline
+yt-dlp>=2024.10.0
+youtube-transcript-api>=0.6.2
+rapidfuzz>=3.9.0
+indic-transliteration>=2.3.59
+pydantic>=2.7.0
