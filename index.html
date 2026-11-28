@@ -676,6 +676,11 @@
               <button type="button" data-sb-cat="catholic" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Catholic &amp; Hymns</button>
               <button type="button" data-sb-cat="hindi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Hindi Gospel</button>
               <button type="button" data-sb-cat="marathi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Marathi Gospel</button>
+              <span class="mx-1 text-zinc-700">|</span>
+              <button type="button" data-sb-cat="lvl_beginner" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-emerald-400 border border-zinc-800 hover:text-emerald-300">Beginner</button>
+              <button type="button" data-sb-cat="lvl_strummer" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-amber-400 border border-zinc-800 hover:text-amber-300">Strummer</button>
+              <button type="button" data-sb-cat="lvl_band" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-cyan-400 border border-zinc-800 hover:text-cyan-300">Band Player</button>
+              <button type="button" data-sb-cat="lvl_maestro" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-fuchsia-400 border border-zinc-800 hover:text-fuchsia-300">Maestro</button>
             </div>
           </div>
         </div>
@@ -2432,17 +2437,37 @@
     }
 
     function getPatternLabelForSong(song) {
-      if (!song || !song.musicalMeta) return 'Island Strum (D - D U - U D U)';
-      const pat = song.musicalMeta.strumPattern || [];
-      const patKey = pat.join(',');
-      for (const k of Object.keys(STRUM_PATTERN_CATALOG)) {
-        if (STRUM_PATTERN_CATALOG[k].slots.join(',') === patKey) {
-          return STRUM_PATTERN_CATALOG[k].label;
+      if (!song || !song.musicalMeta) return 'Island Groove (D - D U - U D U)';
+      if (typeof getEffectiveStrumInfo === 'function') {
+        const eff = getEffectiveStrumInfo(song, (state && state.currentBarIndex) || 0, null, 1);
+        if (eff && Array.isArray(eff.pattern) && eff.pattern.length) {
+          const cleanBadge = String(eff.badge || '').replace(/^[🌱🎸⚡🔥🎵]+\s*/, '').trim();
+          return `${cleanBadge || 'Strum'} (${eff.pattern.join(' ')})`;
         }
       }
+      const pat = song.musicalMeta.strumPattern || [];
       const isFp = pat.some(x => ['G', 'C', 'E', 'A'].includes(x));
       const compact = pat.join(' ');
-      return isFp ? `Fingerpick (${compact})` : `Custom Strum (${compact})`;
+      return isFp ? `Fingerpick (${compact})` : `Strum (${compact})`;
+    }
+
+    function getSongMusicalLevel(song) {
+      if (!song) return 'Beginner';
+      const chordSet = new Set();
+      (song.sections || []).forEach(sec => (sec.bars || []).forEach(b => {
+        const c = b.chordBeginner || b.chordIntermediate || b.chordExpert;
+        if (c) chordSet.add(String(c).trim());
+      }));
+      const chords = Array.from(chordSet);
+      const hasBarre = chords.some(c => /^(Bb|Bm|F#m|B|C#m|Cm|Fm|Gm|Eb|Ab)/.test(c));
+      const bpm = Number(song.musicalMeta && song.musicalMeta.bpm) || 76;
+      const bpb = Number(song.musicalMeta && song.musicalMeta.timeSignature && song.musicalMeta.timeSignature.beatsPerBar) || 4;
+      const eff = (typeof getEffectiveStrumInfo === 'function') ? getEffectiveStrumInfo(song, 0) : null;
+      const isFp = !!(eff && eff.isFingerpick);
+      if (hasBarre || isFp || bpm >= 104) return 'Maestro';
+      if (chords.length >= 5 || bpb === 6 || chords.some(c => /^(D|A|E7|G7|A7|D7)$/.test(c))) return 'Band Player';
+      if (chords.length >= 4 || bpb === 3 || bpm >= 84) return 'Strummer';
+      return 'Beginner';
     }
 
     function getChordTiersSafe(chord) {
@@ -7190,6 +7215,11 @@
         if (cat === 'catholic' && !((sg.mediaFormat || '').toLowerCase().includes('catholic') || (sg.artist || '').toLowerCase().includes('hymn') || (sg.artist || '').toLowerCase().includes('catholic'))) return false;
         if (cat === 'hindi' && !isHindi) return false;
         if (cat === 'marathi' && !isMarathi) return false;
+        const songLvl = getSongMusicalLevel(sg);
+        if (cat === 'lvl_beginner' && songLvl !== 'Beginner') return false;
+        if (cat === 'lvl_strummer' && songLvl !== 'Strummer') return false;
+        if (cat === 'lvl_band' && songLvl !== 'Band Player') return false;
+        if (cat === 'lvl_maestro' && songLvl !== 'Maestro') return false;
         if (!filterQ) return true;
 
         const patText = getPatternLabelForSong(sg).toLowerCase();
@@ -7227,31 +7257,35 @@
         const secCount = (song.sections || []).length;
         const totalBars = (song.sections || []).reduce((acc, s) => acc + (s.bars ? s.bars.length : 0), 0);
         const patLabel = getPatternLabelForSong(song);
-        const isFp = (song.musicalMeta.strumPattern || []).some(x => ['G', 'C', 'E', 'A'].includes(x));
+        const effInfo = (typeof getEffectiveStrumInfo === 'function') ? getEffectiveStrumInfo(song, 0) : null;
+        const isFp = !!(effInfo && effInfo.isFingerpick);
+        const lvlName = getSongMusicalLevel(song);
+        const lvlCls = lvlName === 'Maestro'
+          ? 'bg-fuchsia-500/20 text-fuchsia-300 border-fuchsia-500/40'
+          : (lvlName === 'Band Player'
+            ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
+            : (lvlName === 'Strummer'
+              ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+              : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'));
         card.innerHTML = `
           <div class="space-y-1.5">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-xs font-mono uppercase px-2 py-0.5 rounded ${
-                song.sourceType === 'local_audio' ? 'bg-cyan-500/20 text-cyan-300' : 'bg-amber-500/20 text-amber-300'
-              }">${song.sourceType === 'local_audio' ? (song.mediaFormat || 'MP3') + ' + Auto-Sync' : (song.mediaFormat || 'YouTube / Online')}</span>
-              <span class="text-xs font-mono text-emerald-400 font-bold">${song.musicalMeta.bpm} BPM · ${ts.beatsPerBar}/${ts.beatUnit}</span>
+              <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded border ${lvlCls}">${lvlName}</span>
+              <span class="text-xs font-mono text-qmuted font-bold">${song.musicalMeta.bpm} BPM · ${ts.beatsPerBar}/${ts.beatUnit}</span>
             </div>
             <h3 class="font-bold text-base text-qtext">${song.title}</h3>
             <p class="text-xs text-qmuted">${song.artist}</p>
             <div class="flex flex-wrap items-center gap-1 pt-0.5 text-xs font-mono">
               <span class="px-1.5 py-0.5 rounded ${isFp ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30' : 'bg-zinc-900 text-amber-300 border border-zinc-800'}">${isFp ? '🤌' : '🎸'} ${patLabel}</span>
-              <span class="px-1.5 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">${secCount} Sec · ${totalBars}b</span>
-              ${song.lyricsHydrated ? `<span class="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold">✓ ${song.lyricsSource || 'Full Lyrics'}</span>` : ''}
             </div>
           </div>
           <div class="flex items-center gap-1.5 pt-2 border-t border-zinc-800">
             <button type="button" data-load-song="${song.id}" class="btn-load-songbook flex-1 py-1.5 rounded-lg ${
               isCurrent ? 'bg-amber-500 text-black font-black' : 'bg-zinc-800 hover:bg-zinc-700 text-qtext font-semibold'
             } text-xs transition">
-              ${isCurrent ? '✓ Active on Stage' : 'Load onto Stage'}
+              ${isCurrent ? '✓ Active on Stage' : '▶ Play on Stage'}
             </button>
-            ${song.sourceType !== 'local_audio' ? `<button type="button" data-autofill-song="${song.id}" class="btn-autofill-card px-2 py-1.5 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/30 text-xs font-bold transition" title="Auto-Fill full synced lyrics &amp; tabs from LRCLIB">✨</button>` : ''}
-            ${song.isPreloaded ? '<span class="px-2 py-1 text-xs font-mono text-zinc-500 border border-zinc-800 rounded-lg" title="Preloaded core songbook (locked)">🔒</span>' : `<button type="button" data-delete-song="${song.id}" class="btn-delete-songbook px-2.5 py-1.5 rounded-lg bg-red-500/15 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-bold transition" title="Delete custom song from Songbook">🗑️</button>`}
+            ${song.isPreloaded ? '' : `<button type="button" data-delete-song="${song.id}" class="btn-delete-songbook px-2.5 py-1.5 rounded-lg bg-red-500/15 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs font-bold transition" title="Delete custom song">🗑️</button>`}
           </div>
         `;
         grid.appendChild(card);
@@ -8122,6 +8156,21 @@
               }
               if (pill) pill.textContent = `${modeLabel} · ${ytTime.toFixed(1)}s (B${newBarIdx + 1}/${sectionBars})`;
 
+              if (state.waitModeEnabled && state.listenEnabled && newBarIdx > state.currentBarIndex) {
+                if (!state.listenBarResults || state.listenBarResults[state.currentBarIndex] !== 'hit') {
+                  if (!state.waitModePausedOnBar) {
+                    state.waitModePausedOnBar = true;
+                    const curB = getCurrentSection().bars[state.currentBarIndex];
+                    const waitCh = curB ? getBarActiveChord(curB, activeSong) : 'C';
+                    updateWaitModeBanner(true, waitCh);
+                    if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
+                      try { ytPlayer.pauseVideo(); } catch (e) {}
+                    }
+                  }
+                  state.rafId = requestAnimationFrame(tickLoop);
+                  return;
+                }
+              }
               if (newBarIdx !== state.currentBarIndex || newSubIdx !== state.currentSubdivisionIndex) {
                 state.currentBarIndex = newBarIdx;
                 state.currentSubdivisionIndex = newSubIdx;
@@ -8456,9 +8505,20 @@
           }
 
           const mode = getEffectiveDifficultyMode();
-          const minThresh = mode === 'beginner' ? 0.56 : (mode === 'intermediate' ? 0.62 : 0.67);
-          const margin = mode === 'beginner' ? 0.08 : (mode === 'intermediate' ? 0.05 : 0.03);
-          const isHit = expScore >= minThresh && (bestChord === expectedChord || (bestScore - expScore) <= margin);
+          const minThresh = mode === 'beginner' ? 0.66 : (mode === 'intermediate' ? 0.71 : 0.75);
+          const margin = mode === 'beginner' ? 0.015 : 0.0;
+          const rootMatch = String(expectedChord || 'C').match(/^([A-G][#b]?)/);
+          const rootPc = rootMatch && CHORD_PC_ROOTS[rootMatch[1]] !== undefined ? CHORD_PC_ROOTS[rootMatch[1]] : -1;
+          const hasRootEnergy = rootPc < 0 || chroma[rootPc] >= 0.16;
+          const rawHit = hasRootEnergy && expScore >= minThresh && (bestChord === expectedChord || (bestScore - expScore) <= margin);
+          if (rawHit) {
+            listenEngine.confirmCount = (listenEngine.confirmChord === expectedChord ? (listenEngine.confirmCount || 0) + 1 : 1);
+            listenEngine.confirmChord = expectedChord;
+          } else {
+            listenEngine.confirmCount = 0;
+            listenEngine.confirmChord = '';
+          }
+          const isHit = rawHit && listenEngine.confirmCount >= 2;
 
           let timingTag = '';
           if (isStrumOnset) {
@@ -8506,7 +8566,11 @@
               state.waitModePausedOnBar = false;
               updateWaitModeBanner(false, expectedChord);
               state.lastStepTimeMs = nowMs;
-              setTimeout(() => { if (state.isPlaying) advanceOneSubdivision(); }, 120);
+              if (state.ytSyncEnabled && ytPlayer && typeof ytPlayer.playVideo === 'function') {
+                try { ytPlayer.playVideo(); } catch (e) {}
+              } else {
+                setTimeout(() => { if (state.isPlaying) advanceOneSubdivision(); }, 120);
+              }
             }
           } else if (isStrumOnset && bestScore >= 0.62 && bestChord !== expectedChord) {
             state.listenLastStatus = 'miss';
@@ -13349,7 +13413,11 @@
         state.waitModePausedOnBar = false;
         updateWaitModeBanner(false, '');
         if (state.listenBarResults) state.listenBarResults[state.currentBarIndex] = 'hit';
-        if (state.isPlaying) advanceOneSubdivision();
+        if (state.ytSyncEnabled && ytPlayer && typeof ytPlayer.playVideo === 'function') {
+          try { ytPlayer.playVideo(); } catch (e) {}
+        } else if (state.isPlaying) {
+          advanceOneSubdivision();
+        }
       });
       document.getElementById('btnOpenChordRush')?.addEventListener('click', () => {
         document.getElementById('chordRushModalBackdrop')?.classList.remove('hidden');
