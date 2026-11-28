@@ -1139,7 +1139,7 @@
       <div class="q-card rounded-2xl p-5 max-w-2xl mx-auto space-y-5">
         <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#2C2C2E] pb-3">
           <div class="flex flex-wrap items-center gap-3">
-            <h2 id="tunerMainHeading" class="text-xl font-black text-qtext font-mono tracking-tight">G4 · C4 · E4 · A4</h2>
+            <h2 id="tunerMainHeading" class="text-xl font-black text-qtext tracking-tight">Tuner</h2>
             <div class="inline-flex items-center gap-0.5 bg-[#121212] p-0.5 rounded-lg border border-[#2C2C2E]">
               <button type="button" data-g-mode="high" class="tuner-g-mode-btn px-2.5 py-1 rounded-md text-xs font-mono font-bold bg-amber-500 text-black transition">High G</button>
               <button type="button" data-g-mode="low" class="tuner-g-mode-btn px-2.5 py-1 rounded-md text-xs font-mono font-semibold text-qmuted hover:text-qtext transition">Low G</button>
@@ -10785,14 +10785,18 @@
           document.head.appendChild(s);
         });
       }
-      qcoachSupabaseClient = window.supabase.createClient(cfg.url, cfg.anonKey);
+      qcoachSupabaseClient = window.supabase.createClient(cfg.url, cfg.anonKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
       qcoachSupabaseClient.auth.onAuthStateChange(async (event, session) => {
         const u = (session && session.user) || null;
-        if (u && (!qcoachCloudUser || qcoachCloudUser.id !== u.id)) {
+        if (u) {
+          const isNew = !qcoachCloudUser || qcoachCloudUser.id !== u.id;
           qcoachCloudUser = u;
           setCachedCloudUser(u);
-          await pullAndMergeCloudProgress();
-          await syncCloudProgressQuietly();
+          document.getElementById('cloudAuthModalBackdrop')?.classList.add('hidden');
+          if (isNew) {
+            await pullAndMergeCloudProgress();
+            await syncCloudProgressQuietly();
+          }
           updateCloudAuthUi();
           if (typeof renderLearnPathView === 'function') renderLearnPathView();
         } else if (event === 'SIGNED_OUT') {
@@ -10949,12 +10953,26 @@
       if (kIn) kIn.value = cfg.anonKey;
       if (!cfg.url || !cfg.anonKey) { updateCloudAuthUi(); renderLearnPathView(); return; }
       try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const hashParams = new URLSearchParams((window.location.hash || '').replace(/^#/, ''));
+        const authErr = urlParams.get('error_description') || hashParams.get('error_description') || urlParams.get('error') || hashParams.get('error');
+        if (authErr && typeof showToast === 'function') {
+          showToast('Sign-in error: ' + decodeURIComponent(authErr.replace(/\+/g, ' ')), 'warn');
+        }
         const sb = await ensureSupabaseClient();
         if (navigator.onLine) {
-          const { data } = await sb.auth.getUser();
-          qcoachCloudUser = (data && data.user) || null;
+          const { data: sessData } = await sb.auth.getSession();
+          let user = (sessData && sessData.session && sessData.session.user) || null;
+          if (!user) {
+            const { data } = await sb.auth.getUser();
+            user = (data && data.user) || null;
+          }
+          qcoachCloudUser = user;
           if (qcoachCloudUser) {
             setCachedCloudUser(qcoachCloudUser);
+            if (window.location.hash && window.location.hash.includes('access_token')) {
+              try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) {}
+            }
             await pullAndMergeCloudProgress();
             await syncCloudProgressQuietly();
           }
@@ -11032,7 +11050,7 @@
       const simG = document.getElementById('btnSimStringG');
 
       if (badge) badge.textContent = isLow ? 'Low G · Linear Tuning' : 'High G · Concert Re-Entrant';
-      if (heading) heading.textContent = `${gName} · C4 · E4 · A4`;
+      if (heading) heading.textContent = 'Tuner';
       if (cardG) cardG.setAttribute('data-string', gName);
       if (cardGSub) cardGSub.textContent = isLow ? 'String 4 (Low G)' : 'String 4 (High G)';
       if (cardGName) cardGName.textContent = gName;
@@ -13020,7 +13038,8 @@
           if (!email) { showToast('Enter your email address first.', 'warn'); return; }
           const sb = await ensureSupabaseClient();
           if (!sb) { showToast('Add your Supabase Project Keys below first.', 'warn'); return; }
-          const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: window.location.href } });
+          const cleanRedirect = window.location.origin + window.location.pathname;
+          const { error } = await sb.auth.signInWithOtp({ email, options: { emailRedirectTo: cleanRedirect } });
           showToast(error ? error.message : `Magic sign-in link sent to ${email}!`, error ? 'warn' : 'success');
         });
       }
@@ -13029,7 +13048,8 @@
         btnGoogle.addEventListener('click', async () => {
           const sb = await ensureSupabaseClient();
           if (!sb) { showToast('Add your Supabase Project Keys below first.', 'warn'); return; }
-          const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
+          const cleanRedirect = window.location.origin + window.location.pathname;
+          const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: cleanRedirect, queryParams: { prompt: 'select_account' } } });
           if (error) showToast(error.message, 'warn');
         });
       }

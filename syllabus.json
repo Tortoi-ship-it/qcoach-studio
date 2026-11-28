@@ -8,7 +8,7 @@
   "guidedUnits": [
     {
       "unit": 1,
-      "badge": "🌱 Unit 1 · First Chords & Steady Pulse",
+      "badge": "Unit 1 · First Chords & Steady Pulse",
       "title": "C, Am, F & Steady Down-Strums (Beginner)",
       "goal": "Build clean fingertip posture, lock onto a steady 4/4 pulse, and finish your first 3-chord worship song.",
       "lessonIds": [
@@ -103,7 +103,7 @@
         "id": "drill-ch-c",
         "title": "C Major Mastery",
         "tier": "beginner",
-        "badge": "🌱 Step 1",
+        "badge": "Step 1",
         "desc": "Ring finger on A-string Fret 3. Keep thumb centered behind the neck.",
         "chords": [
           "C",
@@ -124,7 +124,7 @@
         "id": "drill-ch-am",
         "title": "A Minor (Am) Mastery",
         "tier": "beginner",
-        "badge": "🌱 Step 2",
+        "badge": "Step 2",
         "desc": "Middle finger on G-string Fret 2. One-finger warm minor chord.",
         "chords": [
           "Am",
@@ -145,7 +145,7 @@
         "id": "drill-ch-f",
         "title": "F Major Mastery",
         "tier": "beginner",
-        "badge": "🌱 Step 3",
+        "badge": "Step 3",
         "desc": "Index on E-Fret 1, Middle on G-Fret 2. Essential worship chord.",
         "chords": [
           "F",
@@ -166,7 +166,7 @@
         "id": "drill-ch-g",
         "title": "G Major Triangle",
         "tier": "beginner",
-        "badge": "🌱 Step 4",
+        "badge": "Step 4",
         "desc": "3-finger triangle (0-2-3-2). Most important beginner milestone.",
         "chords": [
           "G",
@@ -252,7 +252,7 @@
         "id": "drill-tr-c-am",
         "title": "C ↔ Am Smooth Switch",
         "tier": "beginner",
-        "badge": "🌱 Easiest Switch",
+        "badge": "Easiest Switch",
         "desc": "Alternate 1-finger C and Am every bar with zero pause between beats.",
         "chords": [
           "C",
@@ -273,7 +273,7 @@
         "id": "drill-tr-c-f",
         "title": "C ↔ F Worship Switch",
         "tier": "beginner",
-        "badge": "🌱 Core Switch",
+        "badge": "Core Switch",
         "desc": "The #1 chord change in hymns & gospel songs. Nail clean F landings.",
         "chords": [
           "C",
@@ -294,7 +294,7 @@
         "id": "drill-tr-c-g",
         "title": "C ↔ G Anchor Switch",
         "tier": "beginner",
-        "badge": "🌱 Core Switch",
+        "badge": "Core Switch",
         "desc": "Use your ring finger on Fret 3 as a pivot from A-string to E-string.",
         "chords": [
           "C",
@@ -444,7 +444,7 @@
         "id": "drill-st-down",
         "title": "All-Down Metronome Lock",
         "tier": "beginner",
-        "badge": "🌱 Rhythm 1",
+        "badge": "Rhythm 1",
         "desc": "Hold C Major and lock every down-strum squarely on Beats 1–2–3–4.",
         "chords": [
           "C",
@@ -465,7 +465,7 @@
         "id": "drill-st-waltz",
         "title": "3/4 Worship Waltz",
         "tier": "beginner",
-        "badge": "🌱 3/4 Meter",
+        "badge": "3/4 Meter",
         "desc": "D - D U D U (1 - 2 & 3 &) for Amazing Grace & traditional Catholic hymns.",
         "chords": [
           "C",
@@ -486,7 +486,7 @@
         "id": "drill-st-island",
         "title": "Island / Calypso Groove",
         "tier": "beginner",
-        "badge": "🌱 Rhythm 2",
+        "badge": "Rhythm 2",
         "desc": "D - D U - U D U on C–G–Am–F. Keep your right hand swinging steadily.",
         "chords": [
           "C",
@@ -860,7 +860,7 @@
         "songKey": "this little light of mine",
         "title": "Milestone 1: This Little Light of Mine",
         "tier": "beginner",
-        "badge": "🌱 Unit 1 Exam",
+        "badge": "Unit 1 Exam",
         "desc": "Score ≥75% with steady 4/4 strumming and clean beginner chord switches.",
         "bpm": 76,
         "tip": "Keep your right hand steady on every beat—focus on crisp C and F landings."
