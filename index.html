@@ -620,7 +620,7 @@
           <button id="btnStageGoogleLyrics" type="button" class="hidden px-2 py-0.5 rounded-full bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/40 text-xs font-mono font-bold transition" title="Search official lyrics on Google and paste into Songsheet Editor">
             🔎 Google Lyrics
           </button>
-          <button id="btnStageAutoFillLyrics" type="button" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-500/60 text-xs font-mono text-qmuted hover:text-qtext transition shadow-sm" title="Auto-fill full lyrics &amp; bars for the currently playing song only">
+          <button id="btnStageAutoFillLyrics" type="button" class="hidden inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-500/60 text-xs font-mono text-qmuted hover:text-qtext transition shadow-sm" title="Auto-fill full lyrics &amp; bars for the currently playing song only">
             <span id="stageAutoFillDot" class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
             <span id="stageAutoFillLabel">Auto-Fill This Song</span>
           </button>
@@ -1181,21 +1181,7 @@
           </div>
         </div>
 
-        <!-- 4 Clean Ukulele String Indicators -->
-        <div class="grid grid-cols-4 gap-2.5">
-          <div id="tunerCardG" data-string="G4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
-            <div id="tunerCardGName" class="text-2xl font-black text-qtext font-mono">G4</div>
-          </div>
-          <div data-string="C4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
-            <div class="text-2xl font-black text-qtext font-mono">C4</div>
-          </div>
-          <div data-string="E4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
-            <div class="text-2xl font-black text-qtext font-mono">E4</div>
-          </div>
-          <div data-string="A4" class="tuner-string-card rounded-xl bg-[#121212] border border-[#2C2C2E] py-3 text-center">
-            <div class="text-2xl font-black text-qtext font-mono">A4</div>
-          </div>
-        </div>
+
       </div>
     </div>
 
@@ -1363,11 +1349,11 @@
           </button>
         </div>
 
-        <!-- 3-Tab Settings Navigation (Practice · Audio · Library) -->
-        <div class="grid grid-cols-3 gap-1.5 bg-[#121212] p-1 rounded-xl border border-[#2C2C2E]" role="tablist" aria-label="Settings Categories">
+        <!-- Settings Navigation (Practice · Audio for Users; 🛡️ Admin unlocked for authorized admins) -->
+        <div id="settingsTabGrid" class="grid grid-cols-2 gap-1.5 bg-[#121212] p-1 rounded-xl border border-[#2C2C2E]" role="tablist" aria-label="Settings Categories">
           <button type="button" data-settings-tab="practice" class="settings-tab-btn py-2 px-2 rounded-lg text-xs font-extrabold bg-amber-500 text-black transition">🎸 Practice</button>
           <button type="button" data-settings-tab="audio" class="settings-tab-btn py-2 px-2 rounded-lg text-xs font-semibold text-qmuted hover:text-qtext transition">🎛️ Audio</button>
-          <button type="button" data-settings-tab="library" class="settings-tab-btn py-2 px-2 rounded-lg text-xs font-semibold text-qmuted hover:text-qtext transition">📚 Library</button>
+          <button id="btnSettingsAdminTab" type="button" data-settings-tab="library" class="hidden settings-tab-btn py-2 px-2 rounded-lg text-xs font-semibold text-qmuted hover:text-qtext transition">🛡️ Admin</button>
         </div>
 
         <!-- DISPLAY THEME: Auto (Phone Default) / Dark / Gray Tone / Bright -->
@@ -1382,7 +1368,6 @@
             <button type="button" data-theme-pref="gray" class="theme-pref-btn py-1.5 px-2 rounded-lg text-xs font-semibold border transition bg-zinc-900 text-qmuted border-zinc-800 hover:text-qtext">🌫️ Gray</button>
             <button type="button" data-theme-pref="light" class="theme-pref-btn py-1.5 px-2 rounded-lg text-xs font-bold border transition bg-amber-500 text-black border-amber-300">☀️ Bright</button>
           </div>
-          <p class="text-[11px] text-qmuted">Defaults to Bright. Switch anytime to Gray Tone, Dark, or Auto (matches your phone display setting).</p>
         </div>
 
         <!-- SECTION 1: Skill Level Mode (Beginner / Intermediate / Expert) & Coach Toggles -->
@@ -1421,6 +1406,25 @@
             <button id="btnToggleNextDiagram" type="button" class="px-2.5 py-1 rounded-lg text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700">
               Hidden (Badge Only)
             </button>
+          </div>
+        </div>
+
+        <!-- 🛡️ ADMIN SONG REQUEST QUEUE (Approve / Reject / Export for Sync Pipeline) -->
+        <div data-settings-panel="library" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-amber-500/40 p-4 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">📋 Song Request Queue</h3>
+              <p class="text-[11px] text-qmuted mt-0.5">Approve user requests for your YouTube-sync pipeline.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5">
+              <button id="btnAdminRefreshRequests" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-amber-300 text-[11px] font-mono font-bold transition">🔄 Load</button>
+              <button id="btnAdminExportApproved" type="button" class="px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/50 text-emerald-300 text-[11px] font-mono font-bold transition" title="Download all Approved songs as JSON for your sync script">⬇️ Approved JSON</button>
+              <a href="https://github.com/Tortoi-ship-it/qcoach-studio/actions/workflows/sync-approved-songs.yml" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/50 text-cyan-300 text-[11px] font-mono font-bold transition" title="Auto-process Approved songs &amp; commit directly to GitHub">⚡ Auto-Publish</a>
+              <a href="https://colab.research.google.com/github/Tortoi-ship-it/qcoach-studio/blob/main/scripts/QCoach_Song_Sync_Pipeline.ipynb" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/35 border border-indigo-400/50 text-indigo-300 text-[11px] font-mono font-bold transition" title="Optional: Open Google Colab Notebook">🚀 Colab</a>
+            </div>
+          </div>
+          <div id="adminSongRequestsList" class="space-y-2 max-h-64 overflow-y-auto text-xs text-qmuted">
+            Click <strong>🔄 Load</strong> to fetch pending song requests from Supabase.
           </div>
         </div>
 
@@ -1643,87 +1647,82 @@
           </div>
         </div>
 
-        <!-- SECTION 3: Musical Key Transpose, Time Signature Meter & Bar Chord Editor -->
+        <!-- SECTION 3: Simple Key Transpose & Loop (User-Facing) -->
         <div data-settings-panel="practice" class="settings-tab-panel rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-3">
           <div class="flex items-center justify-between">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">3. Key Transpose, Meter &amp; Bar Editor</h3>
-            <span id="headerKeyBadge" class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold">Key: C (Orig: B +1)</span>
+            <h3 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold">Song Key &amp; Loop</h3>
+            <span id="headerKeyBadge" class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold">Key: C</span>
           </div>
-
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <!-- Transpose (-6 to +6) -->
+          <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-1.5 bg-zinc-900 px-3 py-1.5 rounded-xl border border-zinc-800">
-              <span class="text-xs font-mono text-qmuted mr-1">Transpose:</span>
+              <span class="text-xs font-mono text-qmuted mr-1">Key:</span>
               <button id="btnTransposeDown" type="button" class="w-7 h-7 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono font-bold text-qtext">-</button>
-              <span id="transposeReadout" class="w-9 text-center text-xs font-mono font-bold text-amber-400">+1</span>
+              <span id="transposeReadout" class="w-9 text-center text-xs font-mono font-bold text-amber-400">0</span>
               <button id="btnTransposeUp" type="button" class="w-7 h-7 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono font-bold text-qtext">+</button>
             </div>
-
-            <!-- Meter Selector (3/4, 4/4, 6/8) -->
-            <div class="flex items-center gap-1 bg-zinc-900 px-2.5 py-1.5 rounded-xl border border-zinc-800">
-              <span class="text-xs font-mono text-qmuted mr-1">Meter:</span>
-              <button type="button" data-meter="3/4" class="meter-btn px-2.5 py-1 rounded text-xs font-mono text-qmuted hover:text-qtext">3/4</button>
-              <button type="button" data-meter="4/4" class="meter-btn px-2.5 py-1 rounded text-xs font-mono bg-amber-500 text-black font-bold">4/4</button>
-              <button type="button" data-meter="6/8" class="meter-btn px-2.5 py-1 rounded text-xs font-mono text-qmuted hover:text-qtext">6/8</button>
+            <div class="flex items-center gap-1.5 bg-zinc-900 px-2.5 py-1.5 rounded-xl border border-zinc-800">
+              <select id="selectSection" class="bg-transparent text-xs font-bold text-qtext focus:outline-none cursor-pointer"><option value="-1">🎵 Full Song</option></select>
+              <button id="btnToggleLoop" type="button" class="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-zinc-800 text-qmuted border border-zinc-700 transition">➡ 1-Pass</button>
             </div>
           </div>
+          <div class="flex items-center justify-between gap-3 pt-1">
+            <span class="text-xs font-mono text-qmuted shrink-0">Tempo:</span>
+            <input id="sliderBpm" type="range" min="40" max="140" value="74" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer">
+          </div>
+        </div>
 
-          <!-- Picking / Strumming Pattern Style + Re-Analyze MP3 -->
-          <div class="pt-2 border-t border-zinc-800 space-y-2">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <span class="text-xs font-mono text-qmuted">Picking / Strum Pattern:</span>
-              <div class="flex items-center gap-1.5">
-                <select id="selectStageStrumStyle" class="bg-zinc-900 text-xs font-mono font-bold text-cyan-300 border border-zinc-700 rounded-lg px-2 py-1 focus:outline-none">
-                  <option value="auto">🎯 Auto Pattern (From Song/MP3)</option>
-                  <option value="fp_arpeggio">🤌 Fingerpick: Arpeggio (C-E-G-A-C-E-A-E)</option>
-                  <option value="fp_travis">🤌 Fingerpick: Travis (C-E-G-E-A-E-G-E)</option>
-                  <option value="fp_waltz">🤌 Fingerpick: 3/4 Waltz (C-E-G-A-E-G)</option>
-                  <option value="st_island">🎸 Strum: Island (D - D U - U D U)</option>
-                  <option value="st_folk">🎸 Strum: Folk (D - D U D - D U)</option>
-                  <option value="st_down">🎸 Strum: Downbeats (D - D - D - D -)</option>
-                </select>
-                <button id="btnStageReanalyzeMp3" type="button" class="hidden px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold transition">
-                  🔄 Re-Analyze MP3
-                </button>
-              </div>
-            </div>
+        <!-- ACCOUNT: Sign In / Sign Out & Switch Account (Always accessible in Settings) -->
+        <div data-settings-panel="practice" class="settings-tab-panel rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold">Account</h3>
+            <span id="settingsAccountEmail" class="text-xs font-mono text-qmuted truncate">Not signed in</span>
+          </div>
+          <div id="settingsAccountSignedOut" class="flex items-center gap-2">
+            <button id="btnSettingsSignIn" type="button" class="w-full py-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-bold text-xs transition">
+              ☁️ Sign In with Google or Email
+            </button>
+          </div>
+          <div id="settingsAccountSignedIn" class="hidden flex items-center gap-2">
+            <button id="btnSettingsSyncNow" type="button" class="flex-1 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/50 text-emerald-300 font-bold text-xs transition">
+              🔄 Sync Now
+            </button>
+            <button id="btnSettingsSignOut" type="button" class="flex-1 py-2 rounded-xl bg-rose-500/15 hover:bg-rose-500/30 border border-rose-400/50 text-rose-300 font-bold text-xs transition">
+              Sign Out / Switch
+            </button>
+          </div>
+        </div>
 
-            <!-- Section Selector, Loop Mode & Fine Tempo Slider -->
-            <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
-              <span class="text-xs font-mono text-qmuted">Practice Section &amp; Loop:</span>
-              <div class="flex items-center gap-1.5 bg-zinc-900 px-2.5 py-1 rounded-lg border border-zinc-800">
-                <select id="selectSection" class="bg-transparent text-xs font-bold text-qtext focus:outline-none cursor-pointer"><option value="-1">🎵 Full Song (12 Bars)</option><option value="0">↳ Practice: Chorus 1 (8b)</option><option value="1">↳ Practice: Verse 1 (4b)</option></select>
-                <button id="btnToggleLoop" type="button" class="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-zinc-800 text-qmuted border border-zinc-700 transition">
-                  ➡ 1-Pass
-                </button>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-between gap-3 pt-1">
-              <span class="text-xs font-mono text-qmuted shrink-0">Fine Tempo Slider:</span>
-              <input id="sliderBpm" type="range" min="40" max="140" value="74" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer">
+        <!-- ADMIN-ONLY: Meter, Strum Override & Bar Chord Editor -->
+        <div data-settings-panel="library" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-3">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">🛡️ Admin · Meter, Strum &amp; Bar Editor</h3>
+          <div class="flex items-center gap-1 bg-zinc-900 px-2.5 py-1.5 rounded-xl border border-zinc-800 w-fit">
+            <span class="text-xs font-mono text-qmuted mr-1">Meter:</span>
+            <button type="button" data-meter="3/4" class="meter-btn px-2.5 py-1 rounded text-xs font-mono text-qmuted hover:text-qtext">3/4</button>
+            <button type="button" data-meter="4/4" class="meter-btn px-2.5 py-1 rounded text-xs font-mono bg-amber-500 text-black font-bold">4/4</button>
+            <button type="button" data-meter="6/8" class="meter-btn px-2.5 py-1 rounded text-xs font-mono text-qmuted hover:text-qtext">6/8</button>
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="text-xs font-mono text-qmuted">Strum Override:</span>
+            <div class="flex items-center gap-1.5">
+              <select id="selectStageStrumStyle" class="bg-zinc-900 text-xs font-mono font-bold text-cyan-300 border border-zinc-700 rounded-lg px-2 py-1 focus:outline-none">
+                <option value="auto">🎯 Auto Pattern</option>
+                <option value="fp_arpeggio">🤌 Fingerpick: Arpeggio</option>
+                <option value="fp_travis">🤌 Fingerpick: Travis</option>
+                <option value="fp_waltz">🤌 Fingerpick: 3/4 Waltz</option>
+                <option value="st_island">🎸 Strum: Island</option>
+                <option value="st_folk">🎸 Strum: Folk</option>
+                <option value="st_down">🎸 Strum: Downbeats</option>
+              </select>
+              <button id="btnStageReanalyzeMp3" type="button" class="hidden px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 text-xs font-mono font-bold transition">🔄 Re-Analyze MP3</button>
             </div>
           </div>
-
-          <!-- Inline Bar Chord Override -->
           <div class="pt-2 border-t border-zinc-800 flex items-center justify-between gap-2">
-            <span class="text-xs font-mono text-qmuted">Edit Active Bar (<span id="editBarNumLabel">1</span>) Chord:</span>
+            <span class="text-xs font-mono text-qmuted">Edit Bar (<span id="editBarNumLabel">1</span>) Chord:</span>
             <div class="flex items-center gap-2">
               <select id="selectInlineChord" class="bg-zinc-900 border border-zinc-700 rounded-lg px-2.5 py-1 text-xs text-qtext font-mono">
-                <option value="C">C</option>
-                <option value="G">G</option>
-                <option value="Am">Am</option>
-                <option value="F">F</option>
-                <option value="Dm">Dm</option>
-                <option value="Em">Em</option>
-                <option value="D">D</option>
-                <option value="A">A</option>
-                <option value="E7">E7</option>
-                <option value="G7">G7</option>
+                <option value="C">C</option><option value="G">G</option><option value="Am">Am</option><option value="F">F</option><option value="Dm">Dm</option><option value="Em">Em</option><option value="D">D</option><option value="A">A</option><option value="E7">E7</option><option value="G7">G7</option>
               </select>
-              <button id="btnSaveInlineChord" type="button" class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-bold text-xs">
-                Save Bar
-              </button>
+              <button id="btnSaveInlineChord" type="button" class="px-3 py-1 rounded-lg bg-emerald-500 text-black font-bold text-xs">Save Bar</button>
             </div>
           </div>
         </div>
@@ -9867,7 +9866,7 @@
 
     
     // === PHASE 2 & 3 ENGINE: WAIT MODE, PLACEMENT CHECK & ADAPTIVE WEAK-SPOT COACH ===
-    const QCOACH_SUPABASE_SCHEMA_SQL = "-- QCoach Studio v4.2 Cloud Sync Schema (Supabase / PostgreSQL)\n-- Run this in Supabase SQL Editor to enable user accounts, cross-device journey sync & future paid tiers.\n\ncreate table if not exists public.profiles (\n  id uuid primary key references auth.users(id) on delete cascade,\n  display_name text,\n  skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),\n  subscription_tier text default 'free' check (subscription_tier in ('free','pro')),\n  daily_streak int default 0,\n  last_practice_date date,\n  learning_state jsonb default '{}'::jsonb,\n  created_at timestamptz default now()\n);\n\nalter table public.profiles add column if not exists subscription_tier text default 'free';\nalter table public.profiles add column if not exists learning_state jsonb default '{}'::jsonb;\n\ncreate table if not exists public.song_progress (\n  id uuid primary key default gen_random_uuid(),\n  user_id uuid references public.profiles(id) on delete cascade,\n  song_norm_key text not null,\n  best_listen_score int default 0,\n  stars int default 0 check (stars between 0 and 3),\n  loops_completed int default 0,\n  max_clean_bpm int default 72,\n  updated_at timestamptz default now(),\n  unique (user_id, song_norm_key)\n);\n\ncreate table if not exists public.community_song_submissions (\n  id uuid primary key default gen_random_uuid(),\n  submitted_by uuid references public.profiles(id) on delete set null,\n  title text not null,\n  artist text,\n  language text default 'en',\n  youtube_url text,\n  payload jsonb not null,\n  status text default 'pending' check (status in ('pending','verified','rejected')),\n  created_at timestamptz default now()\n);\n\nalter table public.profiles enable row level security;\nalter table public.song_progress enable row level security;\nalter table public.community_song_submissions enable row level security;\n\ndrop policy if exists \"Users manage own profile\" on public.profiles;\ncreate policy \"Users manage own profile\" on public.profiles\n  for all using (auth.uid() = id) with check (auth.uid() = id);\n\ndrop policy if exists \"Users manage own progress\" on public.song_progress;\ncreate policy \"Users manage own progress\" on public.song_progress\n  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);\n\ndrop policy if exists \"Users submit and read own submissions\" on public.community_song_submissions;\ncreate policy \"Users submit and read own submissions\" on public.community_song_submissions\n  for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);\n";
+    const QCOACH_SUPABASE_SCHEMA_SQL = "-- QCoach Studio v4.12 Cloud Sync, Dynamic Admin Roles & Song Request Pipeline (Supabase / PostgreSQL)\n-- Run this in Supabase SQL Editor. Safe to re-run on an existing project.\n\ncreate table if not exists public.profiles (\n  id uuid primary key references auth.users(id) on delete cascade,\n  display_name text,\n  skill_level text default 'beginner' check (skill_level in ('beginner','intermediate','expert')),\n  role text default 'user' check (role in ('user','admin')),\n  subscription_tier text default 'free' check (subscription_tier in ('free','pro')),\n  daily_streak int default 0,\n  last_practice_date date,\n  learning_state jsonb default '{}'::jsonb,\n  created_at timestamptz default now()\n);\n\nalter table public.profiles add column if not exists role text default 'user';\nalter table public.profiles add column if not exists subscription_tier text default 'free';\nalter table public.profiles add column if not exists learning_state jsonb default '{}'::jsonb;\n\n-- Helper function: checks if current logged-in user has role = 'admin' in public.profiles\ncreate or replace function public.is_admin()\nreturns boolean\nlanguage sql\nsecurity definer\nstable\nas $$\n  select exists (\n    select 1 from public.profiles\n    where id = auth.uid() and role = 'admin'\n  );\n$$;\n\ncreate table if not exists public.song_progress (\n  id uuid primary key default gen_random_uuid(),\n  user_id uuid references public.profiles(id) on delete cascade,\n  song_norm_key text not null,\n  best_listen_score int default 0,\n  stars int default 0 check (stars between 0 and 3),\n  loops_completed int default 0,\n  max_clean_bpm int default 72,\n  updated_at timestamptz default now(),\n  unique (user_id, song_norm_key)\n);\n\ncreate table if not exists public.community_song_submissions (\n  id uuid primary key default gen_random_uuid(),\n  submitted_by uuid references public.profiles(id) on delete set null,\n  title text not null,\n  artist text,\n  language text default 'en',\n  youtube_url text,\n  payload jsonb not null default '{}'::jsonb,\n  status text default 'pending' check (status in ('pending','approved','published','rejected')),\n  created_at timestamptz default now()\n);\n\n-- Allow new 'approved' and 'published' workflow states on existing tables\nalter table public.community_song_submissions drop constraint if exists community_song_submissions_status_check;\nalter table public.community_song_submissions\n  add constraint community_song_submissions_status_check\n  check (status in ('pending','approved','published','rejected'));\n\nalter table public.profiles enable row level security;\nalter table public.song_progress enable row level security;\nalter table public.community_song_submissions enable row level security;\n\ndrop policy if exists \"Users manage own profile\" on public.profiles;\ncreate policy \"Users manage own profile\" on public.profiles\n  for all using (auth.uid() = id) with check (auth.uid() = id);\n\ndrop policy if exists \"Users manage own progress\" on public.song_progress;\ncreate policy \"Users manage own progress\" on public.song_progress\n  for all using (auth.uid() = user_id) with check (auth.uid() = user_id);\n\ndrop policy if exists \"Users submit and read own submissions\" on public.community_song_submissions;\ncreate policy \"Users submit and read own submissions\" on public.community_song_submissions\n  for all using (auth.uid() = submitted_by) with check (auth.uid() = submitted_by);\n\ndrop policy if exists \"Admins manage all song submissions\" on public.community_song_submissions;\ncreate policy \"Admins manage all song submissions\" on public.community_song_submissions\n  for all using (public.is_admin()) with check (public.is_admin());\n\n-- Bootstrap primary owner as admin (add more admins anytime in Table Editor -> profiles -> role = 'admin')\nupdate public.profiles set role = 'admin' where lower(display_name) = 'joy.tuscano@gmail.com';\n";
     const CHORD_HISTORY_KEY = 'qcoach_chord_history_v1';
 
     function updateWaitModeButtonUi() {
@@ -10745,6 +10744,38 @@
     // =========================================================================
     const QCOACH_SUPABASE_DEFAULT = { url: 'https://ismsbmehuzzgypdovawu.supabase.co', anonKey: 'sb_publishable_CWhJ53WEYYBF090QgZkXgw_qun67IqC' };
     const QCOACH_CACHED_USER_KEY = 'qcoach_cached_cloud_user_v1';
+    const QCOACH_ADMIN_BOOTSTRAP_EMAILS = ['joy.tuscano@gmail.com'];
+    let qcoachCloudRole = null;
+    function getCachedCloudRole() {
+      try { return localStorage.getItem('qcoach_cached_cloud_role_v1') || 'user'; } catch (e) { return 'user'; }
+    }
+    function setCachedCloudRole(r) {
+      qcoachCloudRole = r || 'user';
+      try {
+        if (r) localStorage.setItem('qcoach_cached_cloud_role_v1', r);
+        else localStorage.removeItem('qcoach_cached_cloud_role_v1');
+      } catch (e) {}
+    }
+    function isCurrentUserAdmin() {
+      const u = qcoachCloudUser || getCachedCloudUser();
+      if (!u) return false;
+      const role = qcoachCloudRole || getCachedCloudRole();
+      if (role === 'admin') return true;
+      const em = (u.email ? String(u.email) : '').trim().toLowerCase();
+      return !!em && QCOACH_ADMIN_BOOTSTRAP_EMAILS.includes(em);
+    }
+    function updateAdminUiVisibility() {
+      const isAdmin = isCurrentUserAdmin();
+      const adminTab = document.getElementById('btnSettingsAdminTab');
+      const tabGrid = document.getElementById('settingsTabGrid');
+      const autoFillBtn = document.getElementById('btnStageAutoFillLyrics');
+      if (adminTab) adminTab.classList.toggle('hidden', !isAdmin);
+      if (tabGrid) {
+        tabGrid.classList.toggle('grid-cols-3', isAdmin);
+        tabGrid.classList.toggle('grid-cols-2', !isAdmin);
+      }
+      if (autoFillBtn) autoFillBtn.classList.toggle('hidden', !isAdmin);
+    }
     let qcoachSupabaseClient = null;
     let qcoachCloudUser = null;
 
@@ -10802,6 +10833,7 @@
         } else if (event === 'SIGNED_OUT') {
           qcoachCloudUser = null;
           setCachedCloudUser(null);
+          setCachedCloudRole(null);
           updateCloudAuthUi();
           if (typeof renderLearnPathView === 'function') renderLearnPathView();
         }
@@ -10830,6 +10862,13 @@
         if (outC) outC.classList.remove('hidden');
         if (inC) inC.classList.add('hidden');
       }
+      const sEmail = document.getElementById('settingsAccountEmail');
+      const sOut = document.getElementById('settingsAccountSignedOut');
+      const sIn = document.getElementById('settingsAccountSignedIn');
+      if (sEmail) sEmail.textContent = activeUser ? (activeUser.email || 'Signed in') : 'Not signed in';
+      if (sOut) sOut.classList.toggle('hidden', !!activeUser);
+      if (sIn) sIn.classList.toggle('hidden', !activeUser);
+      if (typeof updateAdminUiVisibility === 'function') updateAdminUiVisibility();
     }
 
     async function pullAndMergeCloudProgress() {
@@ -10838,6 +10877,7 @@
         if (!sb || !qcoachCloudUser || !navigator.onLine) return;
         const { data: prof } = await sb.from('profiles').select('*').eq('id', qcoachCloudUser.id).maybeSingle();
         if (prof) {
+          if (prof.role) setCachedCloudRole(prof.role);
           const localStreak = Number(localStorage.getItem('qcoach_streak_count') || 0);
           if ((prof.daily_streak || 0) > localStreak) {
             localStorage.setItem('qcoach_streak_count', String(prof.daily_streak));
@@ -12849,6 +12889,72 @@
         showToast(savedCloud ? `🎵 Requested "${title}" — sent to QCoach team!` : `🎵 Saved request for "${title}"! Sign in to sync requests.`, 'success');
       });
 
+      // 🛡️ Admin Song Request Queue (Load, Approve, Reject, Export Approved JSON)
+      let cachedAdminSubmissions = [];
+      async function loadAdminSongRequests() {
+        const listEl = document.getElementById('adminSongRequestsList');
+        if (!listEl) return;
+        if (!isCurrentUserAdmin()) { listEl.innerHTML = 'Admin access required.'; return; }
+        listEl.innerHTML = 'Loading requests from Supabase…';
+        try {
+          const sb = await ensureSupabaseClient();
+          if (!sb || !qcoachCloudUser) { listEl.innerHTML = 'Sign in online to load requests.'; return; }
+          const { data, error } = await sb.from('community_song_submissions')
+            .select('*')
+            .in('status', ['pending', 'approved'])
+            .order('created_at', { ascending: false })
+            .limit(50);
+          if (error) { listEl.innerHTML = `<span class="text-rose-400">Error: ${error.message}</span>`; return; }
+          cachedAdminSubmissions = data || [];
+          if (!cachedAdminSubmissions.length) {
+            listEl.innerHTML = '<div class="text-emerald-400">✓ Queue is empty — no pending song requests!</div>';
+            return;
+          }
+          listEl.innerHTML = cachedAdminSubmissions.map(r => {
+            const isApp = r.status === 'approved';
+            const badge = isApp
+              ? '<span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">APPROVED</span>'
+              : '<span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] font-bold">PENDING</span>';
+            const ytLink = r.youtube_url ? `<a href="${r.youtube_url}" target="_blank" rel="noopener" class="text-cyan-400 underline text-[11px]">YouTube ↗</a>` : '';
+            return `<div class="rounded-lg bg-zinc-900 border border-zinc-800 p-2.5 flex items-center justify-between gap-2">
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5">${badge}<span class="font-bold text-qtext truncate">${r.title}</span></div>
+                <div class="text-[11px] text-qmuted truncate">${r.artist || 'Unknown artist'} · ${(r.language || 'en').toUpperCase()} ${ytLink}</div>
+              </div>
+              <div class="flex items-center gap-1 shrink-0">
+                ${!isApp ? `<button type="button" data-req-approve="${r.id}" class="px-2 py-1 rounded bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[10px]">✓ Approve</button>` : ''}
+                <button type="button" data-req-reject="${r.id}" class="px-2 py-1 rounded bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 font-bold text-[10px]">✕</button>
+              </div>
+            </div>`;
+          }).join('');
+          listEl.querySelectorAll('[data-req-approve]').forEach(b => b.addEventListener('click', async () => {
+            const id = b.getAttribute('data-req-approve');
+            await sb.from('community_song_submissions').update({ status: 'approved' }).eq('id', id);
+            showToast('✅ Song approved for sync pipeline!', 'success');
+            loadAdminSongRequests();
+          }));
+          listEl.querySelectorAll('[data-req-reject]').forEach(b => b.addEventListener('click', async () => {
+            const id = b.getAttribute('data-req-reject');
+            await sb.from('community_song_submissions').update({ status: 'rejected' }).eq('id', id);
+            showToast('Request dismissed.', 'info');
+            loadAdminSongRequests();
+          }));
+        } catch (e) {
+          listEl.innerHTML = 'Could not load requests right now.';
+        }
+      }
+      document.getElementById('btnAdminRefreshRequests')?.addEventListener('click', loadAdminSongRequests);
+      document.getElementById('btnAdminExportApproved')?.addEventListener('click', () => {
+        const approved = cachedAdminSubmissions.filter(r => r.status === 'approved');
+        if (!approved.length) { showToast('No approved songs loaded yet — click 🔄 Load first.', 'warn'); return; }
+        const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), songs: approved }, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'qcoach_approved_song_queue.json';
+        a.click();
+        showToast(`⬇️ Exported ${approved.length} approved song(s) for processing!`, 'success');
+      });
+
       // Song Creator Studio (in Settings → Library)
       document.getElementById('btnOpenCreatorStudio')?.addEventListener('click', () => {
         document.getElementById('settingsModalBackdrop')?.classList.add('hidden');
@@ -13067,18 +13173,38 @@
       document.getElementById('btnLearnGateToSongs')?.addEventListener('click', () => {
         setActiveView('songs');
       });
-      const btnSignOut = document.getElementById('btnCloudSignOut');
-      if (btnSignOut) {
-        btnSignOut.addEventListener('click', async () => {
+      async function performFullSignOut() {
+        try {
           const sb = await ensureSupabaseClient();
           if (sb) await sb.auth.signOut();
-          qcoachCloudUser = null;
-          setCachedCloudUser(null);
-          updateCloudAuthUi();
-          renderLearnPathView();
-          showToast('Signed out (Guest Mode active).', 'info');
-        });
+        } catch (e) {}
+        qcoachCloudUser = null;
+        setCachedCloudUser(null);
+        setCachedCloudRole(null);
+        // Clear user-specific local progress so another user on this device starts cleanly
+        ['qcoach_drill_scores_v3', 'qcoach_streak_count', 'qcoach_streak_last_date',
+         'qcoach_today_lessons', 'qcoach_today_date', 'qcoach_chord_history_v1',
+         'qcoach_group_setlist_v1'].forEach(k => { try { localStorage.removeItem(k); } catch (e) {} });
+        document.getElementById('cloudAuthModalBackdrop')?.classList.add('hidden');
+        document.getElementById('settingsModalBackdrop')?.classList.add('hidden');
+        updateCloudAuthUi();
+        renderLearnPathView();
+        showToast('Signed out — ready for another account to sign in.', 'info');
       }
+      const btnSignOut = document.getElementById('btnCloudSignOut');
+      if (btnSignOut) btnSignOut.addEventListener('click', performFullSignOut);
+      document.getElementById('btnSettingsSignOut')?.addEventListener('click', performFullSignOut);
+      document.getElementById('btnSettingsSignIn')?.addEventListener('click', () => {
+        document.getElementById('settingsModalBackdrop')?.classList.add('hidden');
+        initCloudAuthIfConfigured();
+        document.getElementById('cloudAuthModalBackdrop')?.classList.remove('hidden');
+      });
+      document.getElementById('btnSettingsSyncNow')?.addEventListener('click', async () => {
+        await pullAndMergeCloudProgress();
+        await syncCloudProgressQuietly();
+        renderLearnPathView();
+        showToast('☁️ Progress synced!', 'success');
+      });
       if (btnPacks) btnPacks.addEventListener('click', syncHostedSongPacks);
       const sbFilter = document.getElementById('songbookFilterInput');
       if (sbFilter) sbFilter.addEventListener('input', renderSongbook);
