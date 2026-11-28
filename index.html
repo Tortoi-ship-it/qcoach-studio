@@ -702,7 +702,7 @@
         </div>
         <h2 class="text-xl sm:text-2xl font-black text-qtext tracking-tight">Sign In to Unlock Your Personal Ukulele Coach</h2>
         <p class="text-xs sm:text-sm text-qmuted max-w-xl mx-auto leading-relaxed">
-          Your <strong>Songbook, Stage, YouTube Sync &amp; Tuner</strong> are always free without signing in. Sign in with Google or Email to unlock the <strong>6-Unit Guided Path, Skill Gym, Placement Check &amp; Adaptive Weak-Spot Coach</strong>—and keep your stars, streaks, and progress synced across all your devices (even offline!).
+          Follow a <strong>guided, step-by-step, self-paced 8-Unit Journey</strong> designed to take you from <strong>Beginner (400)</strong> all the way to <strong>Maestro (3000)</strong>—building real mastery across chords, strumming, percussion, lead melody, and live songs. Your Songbook, Stage, and Tuner are always free; sign in to save your rating and sync across all your devices (even offline!).
         </p>
         <div id="guestPlacementResultBox" class="hidden max-w-md mx-auto rounded-2xl bg-[#121212] border-2 border-amber-400/70 p-4 space-y-1.5 text-center shadow-lg">
           <div class="text-[11px] font-mono uppercase text-amber-400 font-bold">🎯 Your Ukulele Rating Result</div>
@@ -2438,13 +2438,15 @@
 
     function getPatternLabelForSong(song) {
       if (!song || !song.musicalMeta) return 'Island Groove (D - D U - U D U)';
-      if (typeof getEffectiveStrumInfo === 'function') {
-        const eff = getEffectiveStrumInfo(song, (state && state.currentBarIndex) || 0, null, 1);
-        if (eff && Array.isArray(eff.pattern) && eff.pattern.length) {
-          const cleanBadge = String(eff.badge || '').replace(/^[🌱🎸⚡🔥🎵]+\s*/, '').trim();
-          return `${cleanBadge || 'Strum'} (${eff.pattern.join(' ')})`;
+      try {
+        if (typeof getEffectiveStrumInfo === 'function' && typeof state !== 'undefined' && typeof PREPOPULATED_SONG_STRUMS !== 'undefined') {
+          const eff = getEffectiveStrumInfo(song, (state && state.currentBarIndex) || 0, null, 1);
+          if (eff && Array.isArray(eff.pattern) && eff.pattern.length) {
+            const cleanBadge = String(eff.badge || '').replace(/^[🌱🎸⚡🔥🎵]+\s*/, '').trim();
+            return `${cleanBadge || 'Strum'} (${eff.pattern.join(' ')})`;
+          }
         }
-      }
+      } catch (e) {}
       const pat = song.musicalMeta.strumPattern || [];
       const isFp = pat.some(x => ['G', 'C', 'E', 'A'].includes(x));
       const compact = pat.join(' ');
@@ -7640,10 +7642,11 @@
           if (state.loopEnabled) {
             state.currentBarIndex = 0;
             state.loopsSinceRamp++;
-            if (state.autoRampEnabled && state.loopsSinceRamp >= 2) {
+            if (state.autoRampEnabled && state.loopsSinceRamp >= 1) {
               state.loopsSinceRamp = 0;
               song.musicalMeta.bpm = Math.min(140, song.musicalMeta.bpm + 5);
-              showToast(`Auto-Ramp: Tempo +5 BPM → ${song.musicalMeta.bpm} BPM`, 'success');
+              if (typeof renderSettingsAndBottomDock === 'function') renderSettingsAndBottomDock();
+              showToast(`📈 Auto-Ramp: +5 BPM → ${song.musicalMeta.bpm} BPM`, 'success');
             }
             syncAudioElementToBar(0);
           } else {
@@ -14539,6 +14542,10 @@
       document.getElementById('btnToggleAutoRamp').addEventListener('click', (e) => {
         state.autoRampEnabled = !state.autoRampEnabled;
         state.loopsSinceRamp = 0;
+        if (state.autoRampEnabled && !state.loopEnabled) {
+          state.loopEnabled = true;
+          if (typeof renderSettingsAndBottomDock === 'function') renderSettingsAndBottomDock();
+        }
         e.target.textContent = state.autoRampEnabled ? '📈 +5' : '📈 Ramp';
         e.target.className = state.autoRampEnabled
           ? 'min-h-[40px] px-3 py-1.5 rounded-xl text-xs font-mono font-black bg-emerald-500 text-black border border-emerald-300 shadow transition'
