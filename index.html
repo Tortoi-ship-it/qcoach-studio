@@ -469,7 +469,7 @@
           <div id="melodyTabHighway" class="hidden rounded-2xl bg-[#121212] border border-cyan-500/50 p-3 space-y-2 shadow-lg">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded bg-cyan-500 text-black text-[10px] font-mono font-black uppercase">🎼 Live TAB Highway</span>
+                <span class="px-2 py-0.5 rounded bg-cyan-500 text-black text-[10px] font-mono font-black uppercase">🎼 Note Guide</span>
                 <span id="tabHighwayPatternLabel" class="text-xs font-mono text-qmuted">C Major Scale / Arpeggio</span>
               </div>
               <div id="tabLivePitchReadout" class="text-xs font-mono font-bold text-emerald-400">♪ Ready — pluck each highlighted fret</div>
@@ -529,7 +529,7 @@
             <!-- PITCH METER (MELODY CONTOUR + STRUM / PICKING SUBDIVISION LANE + INLINE VOICE SEPARATION PILLS) -->
             <div class="w-full h-28 sm:h-36 bg-zinc-950/95 rounded-lg border border-zinc-800/90 p-1.5 relative overflow-hidden flex flex-col justify-between">
               <div class="flex items-center justify-between gap-1 px-0.5">
-                <span id="contourHeaderTitle" class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold truncate">🎼 Melody Pitch Contour + Strum Beat Track</span>
+                <span id="contourHeaderTitle" class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold truncate">🎼 Melody &amp; Beat</span>
                 <div class="inline-flex flex-wrap items-center gap-1 bg-[#121212] p-0.5 rounded-lg border border-[#2C2C2E] shrink-0" role="group" aria-label="Stage Audio Mode">
                   <button type="button" data-mix="full_song" class="mix-preset-btn px-2 py-1 rounded-md text-xs font-mono font-semibold text-qmuted hover:text-qtext transition" title="Full Song (Ukulele + Vocals)">🎵 Song</button>
                   <button type="button" data-mix="vocal_focus" class="mix-preset-btn px-2 py-1 rounded-md text-xs font-mono font-semibold text-qmuted hover:text-qtext transition" title="Vocal Focus (Lead Melody Highlighted)">🎤 Vocals</button>
@@ -599,7 +599,7 @@
         <div class="flex flex-wrap items-center gap-1.5">
           <button id="btnToggleStageYouTube" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-red-500/50 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Play &amp; sync the real YouTube recording with your chords, Beat LEDs, and lyrics">
           <span class="text-red-400">▶</span>
-          <span id="stageYouTubeBtnLabel">YouTube Vocal Sync: OFF</span>
+          <span id="stageYouTubeBtnLabel">YouTube: OFF</span>
         </button>
           <button id="btnToggleStageListen" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-emerald-500/50 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Real-Time Chord &amp; Strum Listening — uses your mic to score chord accuracy &amp; rhythm live (100% offline)">
             <span id="stageListenDot" class="text-emerald-400">🎙️</span>
@@ -607,11 +607,11 @@
           </button>
           <button id="btnToggleWaitMode" type="button" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Yousician-Style Wait Mode — automatically pauses on any missed chord until your ukulele plays it cleanly">
             <span>⏸️</span>
-            <span id="stageWaitModeLabel">Wait Mode: OFF</span>
+            <span id="stageWaitModeLabel">Wait for Me: OFF</span>
           </button>
           <button id="btnToggleTabHighway" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-cyan-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm" title="Toggle 4-String Ukulele TAB Highway &amp; Single-Note Pitch Tracking">
             <span>🎼</span>
-            <span id="stageTabHighwayLabel">TAB: Auto</span>
+            <span id="stageTabHighwayLabel">Note Guide</span>
           </button>
 
         </div>
@@ -716,12 +716,20 @@
         <p class="text-xs sm:text-sm text-qmuted max-w-xl mx-auto leading-relaxed">
           Your <strong>Songbook, Stage, YouTube Sync &amp; Tuner</strong> are always free without signing in. Sign in with Google or Email to unlock the <strong>6-Unit Guided Path, Skill Gym, Placement Check &amp; Adaptive Weak-Spot Coach</strong>—and keep your stars, streaks, and progress synced across all your devices (even offline!).
         </p>
+        <div id="guestPlacementResultBox" class="hidden max-w-md mx-auto rounded-2xl bg-[#121212] border-2 border-amber-400/70 p-4 space-y-1.5 text-center shadow-lg">
+          <div class="text-[11px] font-mono uppercase text-amber-400 font-bold">🎯 Your Ukulele Rating Result</div>
+          <div id="guestPlacementScoreLine" class="text-xl font-black text-qtext">Rating 800 · Strummer</div>
+          <p id="guestPlacementChallengeLine" class="text-xs text-qmuted">You're one step below the next tier—sign in free to save your rating and prove you belong higher!</p>
+        </div>
         <div class="flex flex-wrap items-center justify-center gap-3 pt-1">
+          <button id="btnLearnGatePlacement" type="button" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs sm:text-sm shadow-lg transition">
+            🧭 Free 2-Min Rating Test
+          </button>
           <button id="btnLearnGateSignIn" type="button" class="px-5 py-2.5 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-xs sm:text-sm shadow-lg transition">
-            ☁️ Sign In with Google or Email
+            ☁️ Sign In to Save &amp; Learn
           </button>
           <button id="btnLearnGateToSongs" type="button" class="px-4 py-2.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-qtext font-bold text-xs sm:text-sm transition">
-            🎵 Browse Free Songbook
+            🎵 Free Songbook
           </button>
         </div>
       </div>
@@ -750,13 +758,20 @@
           </div>
         </div>
 
-        <!-- Coach Level Progress Bar -->
-        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2 space-y-1.5">
+        <!-- 3000-Point Ukulele Rating & 4-Pillar Breakdown -->
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2.5 space-y-2">
           <div class="flex items-center justify-between text-[11px] font-mono">
-            <span id="learnRankProgressLabel" class="text-qtext font-bold">Intermediate: 0 / 30 ⭐</span>
+            <span id="learnRankProgressLabel" class="text-qtext font-bold">Rating 400 / 3000 · Next: Strummer (800)</span>
+            <span id="learnRatingNumber" class="text-amber-400 font-black">400</span>
           </div>
           <div class="w-full h-2 rounded-full bg-zinc-800 overflow-hidden">
             <div id="learnRankProgressBar" class="h-full bg-gradient-to-r from-emerald-500 to-amber-400 transition-all duration-300" style="width: 4%;"></div>
+          </div>
+          <div id="learnRatingPillars" class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-0.5 text-[10px] font-mono">
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Chords</span><span id="pillarChordsVal" class="text-emerald-400 font-bold">0/700</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Rhythm</span><span id="pillarRhythmVal" class="text-amber-400 font-bold">0/650</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Lead</span><span id="pillarLeadVal" class="text-cyan-400 font-bold">0/650</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Songs</span><span id="pillarSongsVal" class="text-indigo-400 font-bold">0/600</span></div>
           </div>
         </div>
       </div>
@@ -767,6 +782,9 @@
           <button id="btnLearnModePath" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-black bg-amber-500 text-black shadow transition">🗺️ Guided Path</button>
           <button id="btnLearnModeGym" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-qmuted hover:text-qtext transition">🏋️ Skill Gym</button>
         </div>
+        <button id="btnOpenChordRush" type="button" class="px-3.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 text-xs font-black shadow transition">
+          ⚡ 60s Chord Rush <span id="chordRushBestPill" class="ml-1 text-[10px] font-mono opacity-85"></span>
+        </button>
       </div>
 
       <!-- MODE A (DEFAULT): 🗺️ LINEAR GUIDED PATH -->
@@ -910,6 +928,10 @@
             <div id="coachDiagTiming" class="text-lg font-black text-cyan-400">88%</div>
           </div>
         </div>
+        <div id="coachDiagBarStripWrap" class="hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-2.5 space-y-1.5">
+          <div class="text-[10px] font-mono uppercase text-qmuted font-bold">Bar-by-Bar Review</div>
+          <div id="coachDiagBarStrip" class="flex flex-wrap gap-1"></div>
+        </div>
         <div id="coachDiagAdviceBox" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs text-qtext space-y-1.5 leading-relaxed"></div>
         <div class="flex items-center justify-end gap-2">
           <button id="btnCoachDiagBackLearn" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold text-xs transition">🎓 Back to Learn</button>
@@ -920,6 +942,39 @@
     </div>
 
       </div>
+
+    <!-- ⚡ 60-SECOND CHORD RUSH MODAL (Chess.com Puzzle Rush for Ukulele) -->
+    <div id="chordRushModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="q-card rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl border-2 border-amber-500/60 text-center">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-amber-500 text-black text-xs font-black uppercase">⚡ 60s Chord Rush</span>
+          <button id="btnCloseChordRush" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+        <div class="grid grid-cols-3 gap-2 font-mono">
+          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+            <div class="text-[10px] text-qmuted">TIME</div>
+            <div id="crTimerVal" class="text-xl font-black text-amber-400">60s</div>
+          </div>
+          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+            <div class="text-[10px] text-qmuted">SCORE</div>
+            <div id="crScoreVal" class="text-xl font-black text-emerald-400">0</div>
+          </div>
+          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+            <div class="text-[10px] text-qmuted">LIVES</div>
+            <div id="crLivesVal" class="text-lg font-black text-rose-400">❤️❤️❤️</div>
+          </div>
+        </div>
+        <div id="crTargetCard" class="rounded-2xl bg-[#121212] border-2 border-amber-500/50 p-4 space-y-2 transition">
+          <div id="crPromptLabel" class="text-xs font-mono text-qmuted">Press Start, then strum each chord cleanly!</div>
+          <div id="crChordName" class="text-5xl font-black text-amber-400 font-mono">C</div>
+          <div id="crFretCode" class="text-xs font-mono text-zinc-300">Frets: 0-0-0-3</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btnCrStart" type="button" class="flex-1 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-sm shadow transition">▶ Start Rush</button>
+          <button id="btnCrSkip" type="button" class="hidden px-3.5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qmuted font-bold text-xs transition">Skip (-❤️)</button>
+        </div>
+      </div>
+    </div>
 
     <!-- CLOUD ACCOUNT & SUPABASE SYNC MODAL (Guest-First, Optional Sign-In) -->
     <!-- 🎚️ 5-SECOND MIC & SPEAKER ECHO CALIBRATION MODAL -->
@@ -1370,42 +1425,28 @@
           </div>
         </div>
 
-        <!-- SECTION 1: Skill Level Mode (Beginner / Intermediate / Expert) & Coach Toggles -->
+        <!-- SECTION 1: Skill Level & Self-Explanatory Practice Toggles -->
         <div data-settings-panel="practice" class="settings-tab-panel rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-3">
           <div class="flex items-center justify-between">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">1. Player Skill Level &amp; Coach Prompts</h3>
-            <span id="ActiveSkillLabelSettings" class="text-xs font-mono text-emerald-400 font-bold">Beginner Mode</span>
+            <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">Skill Level</h3>
+            <span id="ActiveSkillLabelSettings" class="text-xs font-mono text-emerald-400 font-bold">Beginner</span>
           </div>
 
-          <!-- 3-Tier Mode Selector: Beginner | Intermediate | Expert -->
           <div class="grid grid-cols-3 gap-2">
-            <button type="button" data-skill="beginner" class="skill-mode-btn py-2 px-2.5 rounded-xl text-xs font-bold border transition bg-emerald-500 text-black border-emerald-300">🌱 Beginner<div class="text-xs font-normal opacity-80">Open Chords + Full Visual Guide</div></button>
-            <button type="button" data-skill="intermediate" class="skill-mode-btn py-2 px-2.5 rounded-xl text-xs font-semibold border transition bg-zinc-900 text-qmuted border-zinc-800 hover:text-qtext">🎸 Intermediate<div class="text-xs font-normal opacity-80">Rich Chords + Streamlined Stage</div></button>
-            <button type="button" data-skill="expert" class="skill-mode-btn py-2 px-2.5 rounded-xl text-xs font-semibold border transition bg-zinc-900 text-qmuted border-zinc-800 hover:text-qtext">⚡ Expert<div class="text-xs font-normal opacity-80">Full Voicings (Cmaj7/G6) · Pure Stage</div></button>
+            <button type="button" data-skill="beginner" class="skill-mode-btn py-2 px-2 rounded-xl text-xs font-bold border transition bg-emerald-500 text-black border-emerald-300">Beginner<div class="text-[11px] font-normal opacity-80">Easy Chords</div></button>
+            <button type="button" data-skill="intermediate" class="skill-mode-btn py-2 px-2 rounded-xl text-xs font-semibold border transition bg-zinc-900 text-qmuted border-zinc-800 hover:text-qtext">Intermediate<div class="text-[11px] font-normal opacity-80">Full Grooves</div></button>
+            <button type="button" data-skill="expert" class="skill-mode-btn py-2 px-2 rounded-xl text-xs font-semibold border transition bg-zinc-900 text-qmuted border-zinc-800 hover:text-qtext">Expert<div class="text-[11px] font-normal opacity-80">Pro Chords</div></button>
           </div>
 
-          <!-- Voice Coach, TTS Lyrics & High-Neck Chord Voicing Toggles inside Settings -->
-          <div class="pt-2 border-t border-zinc-800 space-y-2">
-            <div class="grid grid-cols-2 gap-2">
-              <button id="btnStageVoiceCoach" type="button" class="py-1.5 px-2.5 rounded-xl text-xs font-mono font-semibold border transition bg-zinc-800 text-qmuted border-zinc-700 hover:text-qtext flex items-center justify-center gap-1">
-                <span>🔇 Voice Coach: OFF</span>
-              </button>
-              <button id="btnStageTtsLyrics" type="button" class="py-1.5 px-2.5 rounded-xl text-xs font-mono font-semibold border transition bg-zinc-800 text-qmuted border-zinc-700 hover:text-qtext flex items-center justify-center gap-1">
-                <span>💬 TTS Lyrics: OFF</span>
-              </button>
-            </div>
-            <div class="flex items-center justify-between pt-1 text-xs text-qmuted">
-              <span>Ukulele Chord Voicing Position:</span>
-              <button id="btnToggleHighChordVoicing" type="button" class="px-2 py-0.5 rounded-md bg-zinc-800 hover:bg-zinc-700 text-xs font-mono text-amber-300 border border-zinc-700 transition">Voicing: Open</button>
-            </div>
-          </div>
-
-          <!-- Optional Up-Next Mini Diagram Toggle -->
-          <div class="flex items-center justify-between pt-1 text-xs text-qmuted">
-            <span>Show extra mini fretboard diagram for Up Next chord:</span>
-            <button id="btnToggleNextDiagram" type="button" class="px-2.5 py-1 rounded-lg text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700">
-              Hidden (Badge Only)
+          <div class="pt-2 border-t border-zinc-800">
+            <button id="btnStageVoiceCoach" type="button" class="w-full py-2 px-3 rounded-xl text-xs font-bold border transition bg-zinc-800 text-qmuted border-zinc-700 hover:text-qtext flex items-center justify-center gap-1.5">
+              <span>🔇 Voice Coach: OFF</span>
             </button>
+            <div class="hidden" aria-hidden="true">
+              <button id="btnStageTtsLyrics" type="button"></button>
+              <button id="btnToggleHighChordVoicing" type="button"></button>
+              <button id="btnToggleNextDiagram" type="button"></button>
+            </div>
           </div>
         </div>
 
@@ -1727,50 +1768,21 @@
           </div>
         </div>
 
-        <!-- SECTION 4: 3-Channel Audio Mixer, Presets & Beat-1 Fine-Tune Sync -->
-        <div data-settings-panel="audio" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-3">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">4. Metronome, Audio Mixer &amp; Sync</h3>
-            <span id="syncConfidenceBadge" class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300">Beat 1 Locked (94%)</span>
-          </div>
+        <!-- SECTION 4: Simple Sound & Volume Controls (Zero Engineering Jargon) -->
+        <div data-settings-panel="audio" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 space-y-4">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">Sound &amp; Volume</h3>
 
-          <!-- Traditional Metronome + Chord-Change Cue Toggle -->
-          <div class="flex items-center justify-between gap-2 pb-2 border-b border-zinc-800">
-            <div>
-              <div class="text-xs font-semibold text-qtext">🔔 Metronome Chord-Change Cue</div>
-              <div class="text-xs text-qmuted">Traditional TOCK/tick + distinct chime when chord changes</div>
-            </div>
-            <button id="btnToggleChordChangeCue" type="button" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shrink-0 transition">
-              ON
-            </button>
-          </div>
+          <button id="btnToggleChordChangeCue" type="button" class="w-full py-2 px-3 rounded-xl text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 transition flex items-center justify-center gap-1.5">
+            🔔 Chord-Change Chime: ON
+          </button>
 
-          <!-- Real Human Hum Sampler (Record 2s of your own real "mmm" hum for 100% natural vocal flow) -->
-          <div class="space-y-2 pb-2 border-b border-zinc-800">
-            <div class="flex items-center justify-between gap-2">
-              <div>
-                <div class="text-xs font-semibold text-qtext">🎙️ Real Human Hum Voice</div>
-                <div id="humVoiceSourceLabel" class="text-xs text-qmuted">Built-in LF-Glottal Hum (or record 2s of your real hum)</div>
-              </div>
-              <div class="flex items-center gap-1.5 shrink-0">
-                <button id="btnRecordRealHum" type="button" class="px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 transition">
-                  🎙️ Record 2s Hum
-                </button>
-                <button id="btnResetRealHum" type="button" class="hidden px-2 py-1.5 rounded-lg text-xs font-mono bg-zinc-800 hover:bg-zinc-700 text-qmuted border border-zinc-700 transition" title="Reset back to built-in LF-Glottal hum">
-                  ↺
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3-Channel Sliders -->
-          <div class="space-y-2">
+          <div class="space-y-3">
             <div class="space-y-1">
               <div class="flex items-center justify-between text-xs">
-                <span class="font-semibold text-qtext">1. Beat Click &amp; LIFT Woodblock</span>
+                <span class="font-semibold text-qtext">🥁 Beat Click</span>
                 <div class="flex items-center gap-1.5">
                   <span id="valBeatVol" class="text-[11px] font-mono text-amber-400">85%</span>
-                  <button id="btnMuteBeat" type="button" class="px-1.5 py-0.5 rounded text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
+                  <button id="btnMuteBeat" type="button" class="px-2 py-0.5 rounded text-xs font-bold bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
                 </div>
               </div>
               <input id="sliderBeatVol" type="range" min="0" max="100" value="85" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer">
@@ -1778,49 +1790,46 @@
 
             <div class="space-y-1">
               <div class="flex items-center justify-between text-xs">
-                <span id="labelMusicChannel" class="font-semibold text-qtext">2. Ukulele / Backing Track</span>
+                <span id="labelMusicChannel" class="font-semibold text-qtext">🎸 Ukulele</span>
                 <div class="flex items-center gap-1.5">
                   <span id="valMusicVol" class="text-[11px] font-mono text-amber-400">90%</span>
-                  <button id="btnMuteMusic" type="button" class="px-1.5 py-0.5 rounded text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
+                  <button id="btnMuteMusic" type="button" class="px-2 py-0.5 rounded text-xs font-bold bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
                 </div>
               </div>
               <input id="sliderMusicVol" type="range" min="0" max="100" value="90" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer">
             </div>
 
-            <div id="vocalChannelContainer" class="space-y-1 pt-1">
+            <div id="vocalChannelContainer" class="space-y-1">
               <div class="flex items-center justify-between text-xs">
-                <span class="font-semibold text-cyan-300">3. Vocals (Mid-Side 1.2kHz EQ)</span>
+                <span class="font-semibold text-cyan-300">🎤 Vocals</span>
                 <div class="flex items-center gap-1.5">
                   <span id="valVocalVol" class="text-[11px] font-mono text-cyan-400">100%</span>
-                  <button id="btnMuteVocal" type="button" class="px-1.5 py-0.5 rounded text-xs font-mono bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
+                  <button id="btnMuteVocal" type="button" class="px-2 py-0.5 rounded text-xs font-bold bg-zinc-800 text-zinc-300 border border-zinc-700">ON</button>
                 </div>
               </div>
               <input id="sliderVocalVol" type="range" min="0" max="125" value="100" class="w-full h-1.5 bg-zinc-800 rounded-lg cursor-pointer">
             </div>
           </div>
 
-          <!-- 1-Click MP3 Mix Presets -->
-          <div class="pt-1">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-mono uppercase text-qmuted">MP3 Mix Preset</span>
-              <span id="activeMixPresetLabel" class="text-xs font-mono text-cyan-400 font-bold">Beat Only</span>
-            </div>
+          <div class="pt-2 border-t border-zinc-800 space-y-1.5">
+            <span id="activeMixPresetLabel" class="hidden">Beat Only</span>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
-              <button type="button" data-mix="full_song" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">Full Song</button>
-              <button type="button" data-mix="vocal_focus" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">Vocal Focus</button>
-              <button type="button" data-mix="karaoke_backing" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">Karaoke</button>
+              <button type="button" data-mix="full_song" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">🎵 Song</button>
+              <button type="button" data-mix="vocal_focus" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">🎤 Vocals</button>
+              <button type="button" data-mix="karaoke_backing" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-semibold bg-zinc-900 border border-zinc-800 text-qmuted hover:text-qtext">🎸 Karaoke</button>
               <button type="button" data-mix="beat_only" class="mix-preset-btn py-1.5 px-2 rounded-lg text-[11px] font-bold bg-cyan-500/20 border border-cyan-500 text-cyan-300">🥁 Beat Only</button>
             </div>
           </div>
 
-          <!-- Beat 1 Timing Nudge (-50ms / +50ms) -->
-          <div class="pt-2 border-t border-zinc-800 flex items-center justify-between gap-2">
-            <span id="syncOffsetReadout" class="text-xs font-mono text-qmuted">Beat 1 Offset: <strong class="text-amber-400">3.42s</strong></span>
-            <div class="flex items-center gap-1">
-              <button id="btnNudgeMinus50" type="button" class="px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-xs font-mono text-amber-300 border border-zinc-700">-50ms</button>
-              <button id="btnResetSyncOffset" type="button" class="px-2 py-1 rounded bg-zinc-900 hover:bg-zinc-800 text-[11px] font-mono text-qmuted border border-zinc-800">Reset</button>
-              <button id="btnNudgePlus50" type="button" class="px-2 py-1 rounded bg-zinc-800 hover:bg-zinc-700 text-xs font-mono text-amber-300 border border-zinc-700">+50ms</button>
-            </div>
+          <div class="hidden" aria-hidden="true">
+            <span id="syncConfidenceBadge"></span>
+            <span id="humVoiceSourceLabel"></span>
+            <button id="btnRecordRealHum" type="button"></button>
+            <button id="btnResetRealHum" type="button"></button>
+            <span id="syncOffsetReadout"></span>
+            <button id="btnNudgeMinus50" type="button"></button>
+            <button id="btnResetSyncOffset" type="button"></button>
+            <button id="btnNudgePlus50" type="button"></button>
           </div>
         </div>
 
@@ -7130,9 +7139,9 @@
         const bMode = btn.getAttribute('data-skill');
         const isCur = bMode === mode;
         const TitleMap = {
-          beginner: '🌱 Beginner<div class="text-xs font-normal opacity-80">Open Chords + Full Visual Guide</div>',
-          intermediate: '🎸 Intermediate<div class="text-xs font-normal opacity-80">Rich Chords + Streamlined Stage</div>',
-          expert: '⚡ Expert<div class="text-xs font-normal opacity-80">Full Voicings (Cmaj7/G6) · Pure Stage</div>'
+          beginner: 'Beginner<div class="text-[11px] font-normal opacity-80">Easy Chords</div>',
+          intermediate: 'Intermediate<div class="text-[11px] font-normal opacity-80">Full Grooves</div>',
+          expert: 'Expert<div class="text-[11px] font-normal opacity-80">Pro Chords</div>'
         };
         btn.innerHTML = TitleMap[bMode];
         btn.className = isCur
@@ -7731,8 +7740,8 @@
           lbl.textContent = 'YouTube Sync: Finding…';
         } else {
           lbl.textContent = state.ytSyncEnabled
-            ? (vid ? 'YouTube Vocal Sync: ON' : 'YouTube Sync: Add Link')
-            : (vid ? 'YouTube Sync: Ready' : 'YouTube Vocal Sync: OFF');
+            ? (vid ? 'YouTube: ON' : 'YouTube Sync: Add Link')
+            : (vid ? 'YouTube Sync: Ready' : 'YouTube: OFF');
         }
       }
       if (btn) {
@@ -8447,6 +8456,9 @@
           }
           if (typeof handlePlacementLiveChord === 'function' && bestScore >= 0.58) {
             handlePlacementLiveChord(bestChord, bestScore);
+          }
+          if (typeof handleChordRushLiveHit === 'function' && bestScore >= 0.58) {
+            handleChordRushLiveHit(bestChord, bestScore);
           }
 
           const mode = getEffectiveDifficultyMode();
@@ -9723,7 +9735,123 @@
       const intReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.intermediateStars) || 30;
       const expReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.expertStars) || 70;
       const rank = totalStars >= expReq ? 'expert' : (totalStars >= intReq ? 'intermediate' : 'beginner');
-      return { streak, totalStars, rank };
+      const ratingInfo = computeUkuleleRating3000(drillScores);
+      return { streak, totalStars, rank, ...ratingInfo };
+    }
+
+    const QCOACH_RATING_TIERS = [
+      { min: 400,  max: 799,  label: 'Beginner',         nextLabel: 'Strummer',         nextAt: 800 },
+      { min: 800,  max: 1199, label: 'Strummer',         nextLabel: 'Rhythm Player',    nextAt: 1200 },
+      { min: 1200, max: 1599, label: 'Rhythm Player',    nextLabel: 'Band Player',      nextAt: 1600 },
+      { min: 1600, max: 1999, label: 'Band Player',      nextLabel: 'Worship Leader',   nextAt: 2000 },
+      { min: 2000, max: 2399, label: 'Worship Leader',   nextLabel: 'Concert Virtuoso', nextAt: 2400 },
+      { min: 2400, max: 2799, label: 'Concert Virtuoso', nextLabel: 'Maestro',          nextAt: 2800 },
+      { min: 2800, max: 3000, label: 'Maestro',          nextLabel: 'Max 3000',         nextAt: 3000 }
+    ];
+
+    function computeUkuleleRating3000(drillScores) {
+      const ds = drillScores || getDrillScoresMap();
+      const scorePane = (paneNames, maxPts) => {
+        let sum = 0, count = 0;
+        paneNames.forEach(p => {
+          (QCOACH_DRILL_LIBRARY[p] || []).forEach(it => {
+            count++;
+            const sc = Number(ds[it.id] || 0);
+            if (sc > 0) sum += Math.min(100, sc);
+          });
+        });
+        return count > 0 ? Math.min(maxPts, Math.round((sum / (count * 100)) * maxPts)) : 0;
+      };
+      const pChords = scorePane(['chords', 'transitions', 'warmup'], 700);
+      const pRhythm = scorePane(['strumming'], 650);
+      const pLead   = scorePane(['scales', 'earkeys'], 650);
+      let songPts = 0;
+      (state.songs || []).forEach(sg => {
+        const sc = Number(sg && sg.masteryStats && sg.masteryStats.bestListenScore) || 0;
+        if (sc >= 65) songPts += Math.round((sc / 100) * 30);
+      });
+      const crBest = Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0);
+      const pSongs = Math.min(600, songPts + Math.min(150, crBest * 6));
+      const rating = Math.min(3000, 400 + pChords + pRhythm + pLead + pSongs);
+      const tier = QCOACH_RATING_TIERS.find(t => rating >= t.min && rating <= t.max) || QCOACH_RATING_TIERS[0];
+      return { rating, tier, pillars: { chords: pChords, rhythm: pRhythm, lead: pLead, songs: pSongs }, chordRushBest: crBest };
+    }
+
+    // ⚡ 60-SECOND CHORD RUSH ENGINE (Chess.com Puzzle Rush for Ukulele)
+    const chordRushState = { active: false, timeLeft: 60, score: 0, lives: 3, target: 'C', timerId: null, lastHitMs: 0 };
+    function pickNextChordRushTarget(score, prev) {
+      const pool = score < 5 ? ['C', 'Am', 'F', 'G']
+        : (score < 12 ? ['C', 'Am', 'F', 'G', 'Dm', 'Em', 'D', 'A', 'G7']
+        : ['C', 'Am', 'F', 'G', 'Dm', 'Em', 'D', 'A', 'G7', 'E7', 'Bb', 'Bm']);
+      const choices = pool.filter(c => c !== prev);
+      return choices[Math.floor(Math.random() * choices.length)] || 'C';
+    }
+    function renderChordRushUi(flashCls = '') {
+      const tEl = document.getElementById('crTimerVal');
+      const sEl = document.getElementById('crScoreVal');
+      const lEl = document.getElementById('crLivesVal');
+      const cEl = document.getElementById('crChordName');
+      const fEl = document.getElementById('crFretCode');
+      const card = document.getElementById('crTargetCard');
+      if (tEl) tEl.textContent = `${chordRushState.timeLeft}s`;
+      if (sEl) sEl.textContent = String(chordRushState.score);
+      if (lEl) lEl.textContent = '❤️'.repeat(Math.max(0, chordRushState.lives)) || '💀';
+      if (cEl) cEl.textContent = chordRushState.target;
+      const cData = (typeof getChordData === 'function') ? getChordData(chordRushState.target) : CHORD_LIBRARY[chordRushState.target];
+      if (fEl) fEl.textContent = cData && cData.frets ? `Frets: ${cData.frets.join('-')}` : '';
+      if (card && flashCls) {
+        card.classList.add(flashCls);
+        setTimeout(() => card.classList.remove(flashCls), 250);
+      }
+    }
+    function endChordRushGame() {
+      chordRushState.active = false;
+      if (chordRushState.timerId) { clearInterval(chordRushState.timerId); chordRushState.timerId = null; }
+      const prevBest = Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0);
+      const isNewBest = chordRushState.score > prevBest;
+      if (isNewBest) {
+        try { localStorage.setItem('qcoach_chord_rush_best_v1', String(chordRushState.score)); } catch (e) {}
+        if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
+      }
+      const pEl = document.getElementById('crPromptLabel');
+      if (pEl) pEl.textContent = isNewBest ? `🏆 New Personal Best: ${chordRushState.score} chords!` : `Time's up! Score: ${chordRushState.score} (Best: ${Math.max(prevBest, chordRushState.score)})`;
+      document.getElementById('btnCrStart')?.classList.remove('hidden');
+      const stBtn = document.getElementById('btnCrStart');
+      if (stBtn) stBtn.textContent = '🔁 Play Again';
+      document.getElementById('btnCrSkip')?.classList.add('hidden');
+      if (typeof renderLearnPathView === 'function') renderLearnPathView();
+    }
+    async function startChordRushGame() {
+      if (!state.listenEnabled) await startChordListener();
+      chordRushState.active = true;
+      chordRushState.timeLeft = 60;
+      chordRushState.score = 0;
+      chordRushState.lives = 3;
+      chordRushState.target = pickNextChordRushTarget(0, '');
+      chordRushState.lastHitMs = performance.now();
+      const pEl = document.getElementById('crPromptLabel');
+      if (pEl) pEl.textContent = '🎙️ Strum the chord below as fast as you can!';
+      document.getElementById('btnCrStart')?.classList.add('hidden');
+      document.getElementById('btnCrSkip')?.classList.remove('hidden');
+      renderChordRushUi();
+      if (chordRushState.timerId) clearInterval(chordRushState.timerId);
+      chordRushState.timerId = setInterval(() => {
+        if (!chordRushState.active) return;
+        chordRushState.timeLeft--;
+        renderChordRushUi();
+        if (chordRushState.timeLeft <= 0) endChordRushGame();
+      }, 1000);
+    }
+    function handleChordRushLiveHit(detectedChord, score) {
+      if (!chordRushState.active) return;
+      const now = performance.now();
+      if (now - chordRushState.lastHitMs < 420) return;
+      if (detectedChord === chordRushState.target) {
+        chordRushState.lastHitMs = now;
+        chordRushState.score++;
+        chordRushState.target = pickNextChordRushTarget(chordRushState.score, chordRushState.target);
+        renderChordRushUi('border-emerald-400');
+      }
     }
 
     function getTodaysDailyChallenge() {
@@ -9860,6 +9988,24 @@
       if (drillMeta && drillMeta.tip) {
         adviceLines.push(`<div>💡 <strong>Coach tip:</strong> ${drillMeta.tip}</div>`);
       }
+      const stripWrap = document.getElementById('coachDiagBarStripWrap');
+      const stripEl = document.getElementById('coachDiagBarStrip');
+      const curSec = (typeof getCurrentSection === 'function') ? getCurrentSection() : null;
+      const curSong = (typeof getCurrentSong === 'function') ? getCurrentSong() : null;
+      if (stripWrap && stripEl && curSec && Array.isArray(curSec.bars) && curSec.bars.length) {
+        stripWrap.classList.remove('hidden');
+        stripEl.innerHTML = curSec.bars.slice(0, 16).map((b, i) => {
+          const ch = (typeof getBarActiveChord === 'function') ? getBarActiveChord(b, curSong) : (b.chordBeginner || 'C');
+          const r = state.listenBarResults && state.listenBarResults[i];
+          const cls = r === 'hit'
+            ? 'bg-emerald-500/20 border-emerald-400/60 text-emerald-300'
+            : (r === 'miss' ? 'bg-rose-500/20 border-rose-400/60 text-rose-300' : 'bg-zinc-900 border-zinc-700 text-zinc-500');
+          const sym = r === 'hit' ? '✓' : (r === 'miss' ? '✕' : '·');
+          return `<span class="px-1.5 py-0.5 rounded border text-[10px] font-mono font-bold ${cls}">${sym} ${ch}</span>`;
+        }).join('');
+      } else if (stripWrap) {
+        stripWrap.classList.add('hidden');
+      }
       document.getElementById('coachDiagAdviceBox').innerHTML = adviceLines.join('');
       modal.classList.remove('hidden');
     }
@@ -9874,10 +10020,10 @@
       const lbl = document.getElementById('stageWaitModeLabel');
       if (!btn || !lbl) return;
       if (state.waitModeEnabled) {
-        lbl.textContent = 'Wait Mode: ON';
+        lbl.textContent = 'Wait for Me: ON';
         btn.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500 text-black border border-amber-300 text-xs font-mono font-black shadow transition';
       } else {
-        lbl.textContent = 'Wait Mode: OFF';
+        lbl.textContent = 'Wait for Me: OFF';
         btn.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] hover:border-amber-400/60 text-xs font-mono font-bold text-qmuted hover:text-qtext transition shadow-sm';
       }
     }
@@ -10019,26 +10165,42 @@
     }
 
     function applyPlacementResult(completedStageCount) {
-      // completedStageCount: 0 -> Unit 1, 1 -> Unit 2, 2 -> Unit 3, 3 -> Unit 4/5, 4 -> Unit 5/6
-      const unitsToCredit = completedStageCount >= 4 ? [1, 2, 3, 4]
-        : (completedStageCount === 3 ? [1, 2, 3]
-        : (completedStageCount === 2 ? [1, 2]
-        : (completedStageCount === 1 ? [1] : [])));
+      // One-Level-Below Placement Strategy (motivates players to prove themselves & climb):
+      // 0-1 stages -> Unit 1 (Beginner), 2 stages -> Unit 2 (Strummer),
+      // 3 stages -> Unit 3 (Rhythm Player), 4 stages -> Unit 4 (Band Player)
+      const unitsToCredit = completedStageCount >= 4 ? [1, 2, 3]
+        : (completedStageCount === 3 ? [1, 2]
+        : (completedStageCount === 2 ? [1] : []));
       unitsToCredit.forEach(uNum => {
         const unitObj = QCOACH_GUIDED_UNITS.find(u => u.unit === uNum);
         if (unitObj) {
           unitObj.lessonIds.forEach(lid => {
             const item = findDrillById(lid);
-            if (item && getBestScoreForItem(item) < 80) saveDrillScore(lid, 80);
+            if (item && getBestScoreForItem(item) < 78) saveDrillScore(lid, 78);
           });
         }
       });
-      const newSkill = completedStageCount >= 4 ? 'expert' : (completedStageCount >= 2 ? 'intermediate' : 'beginner');
+      const newSkill = completedStageCount >= 4 ? 'intermediate' : 'beginner';
       try { localStorage.setItem('qcoach_skill_level', newSkill); } catch (e) {}
       closePlacementCheckModal();
-      renderLearnPathView();
+      const stats = getLearnStats();
       const targetUnit = Math.min(6, unitsToCredit.length + 1);
-      showToast(`🧭 Placement Complete! Starting you at Unit ${targetUnit} (${newSkill.toUpperCase()}).`, 'success');
+      const nextTierLabel = (stats.tier && stats.tier.nextLabel) || 'Strummer';
+      const tierLabel = (stats.tier && stats.tier.label) || 'Beginner';
+
+      if (typeof isCloudUserSignedIn === 'function' && !isCloudUserSignedIn()) {
+        const resBox = document.getElementById('guestPlacementResultBox');
+        const scoreLine = document.getElementById('guestPlacementScoreLine');
+        const chalLine = document.getElementById('guestPlacementChallengeLine');
+        if (resBox) resBox.classList.remove('hidden');
+        if (scoreLine) scoreLine.textContent = `Rating ${stats.rating} · ${tierLabel}`;
+        if (chalLine) chalLine.textContent = `We placed you at Unit ${targetUnit} — right below ${nextTierLabel}. Sign in free to save your rating and prove you can climb higher!`;
+        showToast(`🎯 Rated ${stats.rating} (${tierLabel})! Sign in to save & climb to ${nextTierLabel}.`, 'success');
+      } else {
+        renderLearnPathView();
+        if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
+        showToast(`🎯 Rated ${stats.rating} (${tierLabel}) — starting at Unit ${targetUnit}. Ready to beat ${nextTierLabel}?`, 'success');
+      }
     }
 
     function advancePlacementStage() {
@@ -10469,29 +10631,30 @@
       if (sEl) sEl.textContent = stats.streak;
       if (stEl) stEl.textContent = stats.totalStars;
 
-      // Update Rank Badge & Promotion Progress Bar
+      // Update 3000-Point Ukulele Rating, Tier Badge & 4 Musical Pillars
       const rankBadge = document.getElementById('learnRankBadge');
       const rankLbl = document.getElementById('learnRankProgressLabel');
       const rankBar = document.getElementById('learnRankProgressBar');
-      if (rankBadge && rankLbl && rankBar) {
-        const intReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.intermediateStars) || 30;
-        const expReq = (QCOACH_RANK_THRESHOLDS && QCOACH_RANK_THRESHOLDS.expertStars) || 70;
-        if (stats.rank === 'expert') {
-          rankBadge.textContent = '🔥 Advanced';
-          if (rankLbl) rankLbl.textContent = `Mastery Unlocked · ${stats.totalStars} Stars Earned`;
-          if (rankBar) rankBar.style.width = '100%';
-        } else if (stats.rank === 'intermediate') {
-          rankBadge.textContent = '🎸 Intermediate';
-          const pct = Math.min(100, Math.round(((stats.totalStars - intReq) / Math.max(1, expReq - intReq)) * 100));
-          if (rankLbl) rankLbl.textContent = `Next Level: Advanced · ${stats.totalStars} / ${expReq} ⭐`;
-          if (rankBar) rankBar.style.width = `${Math.max(8, pct)}%`;
-        } else {
-          rankBadge.textContent = 'Beginner';
-          const pct = Math.min(100, Math.round((stats.totalStars / Math.max(1, intReq)) * 100));
-          if (rankLbl) rankLbl.textContent = `Next Level: Intermediate · ${stats.totalStars} / ${intReq} ⭐`;
-          if (rankBar) rankBar.style.width = `${Math.max(5, pct)}%`;
-        }
+      const ratingNumEl = document.getElementById('learnRatingNumber');
+      if (rankBadge && rankLbl && rankBar && stats.tier) {
+        rankBadge.textContent = `${stats.tier.label} · ${stats.rating}`;
+        if (ratingNumEl) ratingNumEl.textContent = `${stats.rating} / 3000`;
+        const span = Math.max(1, stats.tier.nextAt - stats.tier.min);
+        const pct = stats.rating >= 3000 ? 100 : Math.min(100, Math.round(((stats.rating - stats.tier.min) / span) * 100));
+        rankLbl.textContent = stats.rating >= 2800
+          ? `🎼 Maestro Tier · ${stats.rating} / 3000`
+          : `Next Tier: ${stats.tier.nextLabel} (${stats.tier.nextAt})`;
+        rankBar.style.width = `${Math.max(4, pct)}%`;
       }
+      if (stats.pillars) {
+        const setTxt = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+        setTxt('pillarChordsVal', `${stats.pillars.chords}/700`);
+        setTxt('pillarRhythmVal', `${stats.pillars.rhythm}/650`);
+        setTxt('pillarLeadVal',   `${stats.pillars.lead}/650`);
+        setTxt('pillarSongsVal',  `${stats.pillars.songs}/600`);
+      }
+      const crPill = document.getElementById('chordRushBestPill');
+      if (crPill) crPill.textContent = stats.chordRushBest > 0 ? `(Best: ${stats.chordRushBest})` : '';
 
       // Update Today's Goal counter (minimum 1/day, unlimited pace)
       const todayCnt = getTodayLessonsCompleted();
@@ -10915,6 +11078,9 @@
             const curSl = getSavedSetlist();
             if (!curSl.songKeys || !curSl.songKeys.length) saveGroupSetlist(ls.setlist);
           }
+          if (Number(ls.chordRushBest || 0) > Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0)) {
+            localStorage.setItem('qcoach_chord_rush_best_v1', String(ls.chordRushBest));
+          }
         }
         const { data: songRows } = await sb.from('song_progress').select('*').eq('user_id', qcoachCloudUser.id);
         if (Array.isArray(songRows) && songRows.length) {
@@ -10955,7 +11121,10 @@
           chordHistory: getPersistentChordHistory(),
           todayDate: today,
           todayLessons: getTodayLessonsCompleted(),
-          setlist: getSavedSetlist()
+          setlist: getSavedSetlist(),
+          chordRushBest: Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0),
+          rating: stats.rating || 400,
+          tier: (stats.tier && stats.tier.label) || 'Beginner'
         };
         await sb.from('profiles').upsert({
           id: qcoachCloudUser.id,
@@ -12811,6 +12980,23 @@
         if (state.listenBarResults) state.listenBarResults[state.currentBarIndex] = 'hit';
         if (state.isPlaying) advanceOneSubdivision();
       });
+      document.getElementById('btnOpenChordRush')?.addEventListener('click', () => {
+        document.getElementById('chordRushModalBackdrop')?.classList.remove('hidden');
+        renderChordRushUi();
+      });
+      document.getElementById('btnCloseChordRush')?.addEventListener('click', () => {
+        chordRushState.active = false;
+        if (chordRushState.timerId) { clearInterval(chordRushState.timerId); chordRushState.timerId = null; }
+        document.getElementById('chordRushModalBackdrop')?.classList.add('hidden');
+      });
+      document.getElementById('btnCrStart')?.addEventListener('click', startChordRushGame);
+      document.getElementById('btnCrSkip')?.addEventListener('click', () => {
+        if (!chordRushState.active) return;
+        chordRushState.lives--;
+        if (chordRushState.lives <= 0) { renderChordRushUi('border-rose-500'); endChordRushGame(); return; }
+        chordRushState.target = pickNextChordRushTarget(chordRushState.score, chordRushState.target);
+        renderChordRushUi('border-rose-500');
+      });
       const btnPlaceOpen = document.getElementById('btnStartPlacementCheck');
       if (btnPlaceOpen) btnPlaceOpen.addEventListener('click', openPlacementCheckModal);
       const btnPlaceClose = document.getElementById('btnClosePlacementModal');
@@ -12844,7 +13030,7 @@
         const currentlyOn = isTabHighwayActive();
         tabHighwayState.forcedMode = currentlyOn ? 'off' : 'on';
         const lbl = document.getElementById('stageTabHighwayLabel');
-        if (lbl) lbl.textContent = tabHighwayState.forcedMode === 'on' ? 'TAB: ON' : 'TAB: OFF';
+        if (lbl) lbl.textContent = tabHighwayState.forcedMode === 'on' ? 'Note Guide: ON' : 'Note Guide: OFF';
         renderMelodyTabHighway();
       });
 
@@ -13166,6 +13352,9 @@
           showToast('☁️ Progress synced to Supabase!', 'success');
         });
       }
+      document.getElementById('btnLearnGatePlacement')?.addEventListener('click', () => {
+        openPlacementCheckModal();
+      });
       document.getElementById('btnLearnGateSignIn')?.addEventListener('click', () => {
         initCloudAuthIfConfigured();
         document.getElementById('cloudAuthModalBackdrop')?.classList.remove('hidden');
@@ -13184,7 +13373,7 @@
         // Clear user-specific local progress so another user on this device starts cleanly
         ['qcoach_drill_scores_v3', 'qcoach_streak_count', 'qcoach_streak_last_date',
          'qcoach_today_lessons', 'qcoach_today_date', 'qcoach_chord_history_v1',
-         'qcoach_group_setlist_v1'].forEach(k => { try { localStorage.removeItem(k); } catch (e) {} });
+         'qcoach_group_setlist_v1', 'qcoach_chord_rush_best_v1'].forEach(k => { try { localStorage.removeItem(k); } catch (e) {} });
         document.getElementById('cloudAuthModalBackdrop')?.classList.add('hidden');
         document.getElementById('settingsModalBackdrop')?.classList.add('hidden');
         updateCloudAuthUi();
