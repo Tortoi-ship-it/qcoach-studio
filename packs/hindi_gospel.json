@@ -145,7 +145,8 @@
             "J-E-S-U-S"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-tu-hi-mera-yeshu-tu-hai-mahan",
@@ -309,7 +310,8 @@
             "Teri jai, teri jai, teri jai"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "hindi-aa-pavitra-aatma",
@@ -449,7 +451,8 @@
             "Pavitra Aatma"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "hindi-yeshu-naam-mein-hai-changai",
@@ -597,7 +600,8 @@
             "Yeshuve"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "hindi-stuti-aradhana-upar-jaati-hai",
@@ -741,7 +745,8 @@
             "Hallelujah, Hallelujah, Hallelujah, Hallelujah"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "hindi-dhanyavaad-ke-saath-stuti-gaoonga",
@@ -849,7 +854,8 @@
             "Koti koti stuti dhanyavaad"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-krus-par-kurbaan-hai",
@@ -1029,7 +1035,8 @@
             "Wo mere gunaah ka hai"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "hindi-tere-paas-aata-hoon",
@@ -1193,7 +1200,8 @@
             "Yeshu aa, Yeshu aa"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "hindi-bhar-de-mujhe-apne-aatma-se",
@@ -1365,7 +1373,8 @@
             "Tere liye hi jiyun, tere liye hi marun, tere liye hi jiyun"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-chattan-yeshu-meri-chattan",
@@ -1509,7 +1518,8 @@
             "Tujhmein hi hai"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "hindi-hoshanna-tu-rajaon-ka-raja",
@@ -1653,7 +1663,8 @@
             "Yeshu tu hai Prabhu hamara Khuda"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "hindi-yeshu-masih-tere-jaisa-koi-nahi",
@@ -1793,7 +1804,8 @@
             "Tu hai Prabhu hamara Khuda, tu hai Prabhu hamara Khuda"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-tera-lahu-bada-keemti-hai",
@@ -1905,7 +1917,8 @@
             "Tera lahu bada keemti hai, tera lahu bada keemti hai Prabhu"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-mahima-ho-teri-sada-sarvada",
@@ -2017,7 +2030,8 @@
             "Karte hain hum sarvada, mahima mahima ho teri, mahima mahima ho teri"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "hindi-dil-se-aradhana-karoon",
@@ -2137,7 +2151,8 @@
             "Lipta main rehta hoon, main rehta hoon"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     }
   ]
 }

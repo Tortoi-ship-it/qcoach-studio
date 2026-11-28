@@ -225,7 +225,8 @@
             "We will do"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-god-alone",
@@ -344,7 +345,8 @@
             "For you, there is God, and God alone"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-your-glorious-grace",
@@ -395,7 +397,8 @@
           "grace"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-living-sacrifice",
@@ -446,7 +449,8 @@
           "ho-ly fire"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-we-come-to-you",
@@ -637,7 +641,8 @@
             "O Son of God, we come to You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-more-of-you",
@@ -845,7 +850,8 @@
             "We want more"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-there-is-power",
@@ -1051,7 +1057,8 @@
             "To proclaim, to heal, to conquer, and to live"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-a-new-spirit",
@@ -1235,7 +1242,8 @@
             "We are Yours, we surrender and we yield"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-all-blessing-all-glory",
@@ -1439,7 +1447,8 @@
             "You are holy"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-the-lord-is-my-rock",
@@ -1490,7 +1499,8 @@
           "my rock!"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-fill-me",
@@ -1541,7 +1551,8 @@
           "sac-ri-fice"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-holy-holy-holy-lord",
@@ -1697,7 +1708,8 @@
             "God in three Persons, blessed Trinity"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-seated-on-the-throne",
@@ -1747,7 +1759,8 @@
           "the glo-ry!"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-hail-the-conqueror",
@@ -1798,7 +1811,8 @@
           "is cast out"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-i-saw-the-king",
@@ -1990,7 +2004,8 @@
             "Jesus reigns forevermore"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "sots-strong-the-chains",
@@ -2041,7 +2056,8 @@
           "a-bove"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-glorious-and-mighty",
@@ -2091,7 +2107,8 @@
           "and worth"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-all-that-is-good",
@@ -2251,7 +2268,8 @@
             "You are worthy, O Lord Most High"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-song-of-patrick",
@@ -2427,7 +2445,8 @@
             "Threeness of Persons, Trinity blest!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-arise-o-lord",
@@ -2571,7 +2590,8 @@
             "Remember your promise to us, and arise"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-create-in-me-psalm51",
@@ -2751,7 +2771,8 @@
             "Create in me a clean heart"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "sots-i-delight-in-your-will",
@@ -2915,7 +2936,8 @@
             "For You have set me free"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "sots-my-glorious-victor",
@@ -3015,7 +3037,8 @@
             "Freely I come and freely stay"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     }
   ]
 }

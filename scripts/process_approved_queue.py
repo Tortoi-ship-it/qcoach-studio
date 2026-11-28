@@ -193,15 +193,42 @@ def assign_strums(language: str, meter: str = "4/4") -> dict:
     return {"b": "isl4", "i": "ich4", "e": ["trv4", "ich4", "wlk4"]}
 
 
+
+def classify_song_level(title: str, chords: list, meter: str, bpm: int, strums: dict) -> str:
+    """Curriculum-aligned 6-tier song level classifier matching QCoach Studio."""
+    cset = set(chords or [])
+    b_code = (strums or {}).get("b", "dn4")
+    i_code = (strums or {}).get("i", "isl4")
+    pts = 0
+    if any(c.startswith(("Bb","Bm","F#m","Cm","Fm","Gm","Eb","Ab","Cmaj7","Fmaj7")) for c in cset):
+        pts += 6
+    elif any(c in ("Dm","Em","G7","E7","D","A","D7","A7") for c in cset):
+        pts += 4
+    elif len(cset) >= 4:
+        pts += 2
+    elif "G" in cset:
+        pts += 1
+    if i_code in ("trv4","arp4","arp3","arp6","wlk4","rif4","srf4","drv4"):
+        pts += 4
+    elif meter == "6/8" or i_code in ("keh4","dad6","rol6","chk4","wch3"):
+        pts += 3
+    elif meter == "3/4" or i_code in ("syn4","ich4","wlz3"):
+        pts += 2
+    elif b_code == "isl4" or i_code == "flk4":
+        pts += 1
+    if bpm >= 106: pts += 2
+    elif bpm >= 86: pts += 1
+    if pts <= 2: return "Beginner"
+    if pts <= 4: return "Strummer"
+    if pts <= 5: return "Rhythm Player"
+    if pts <= 6: return "Band Player"
+    if pts <= 7: return "Worship Leader"
+    return "Maestro"
+
 def choose_pack_file(language: str, title: str, artist: str) -> str:
-    if language == "hi":
-        return "hindi_gospel.json"
-    if language == "mr":
-        return "marathi_gospel.json"
-    hint = f"{title} {artist}".lower()
-    if any(w in hint for w in ("hymn", "catholic", "mary", "maria", "ave", "mass", "psalm")):
-        return "catholic_and_hymns.json"
-    return "christmas_and_worship.json"
+    # Centralized Remote Song Bank: all newly approved songs publish to packs/community_catalog.json
+    # so mobile/App Store builds pull new songs automatically without ever updating the core app bundle!
+    return "community_catalog.json"
 
 
 def load_existing_norm_keys(packs_dir: str) -> set:
@@ -294,6 +321,7 @@ def process_queue(queue_path: str, packs_dir: str) -> int:
             "language": language,
             "script": "latin",
             "copyrightStatus": copyright_mode,
+            "musicalLevel": classify_song_level(title, chords, meter, bpm, strums),
             "musicalMeta": {"key": chords[0], "meter": meter, "bpm": bpm, "chords": chords},
             "strums": strums,
             "offlineLines": offline_lines,

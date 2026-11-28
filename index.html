@@ -676,10 +676,14 @@
               <button type="button" data-sb-cat="catholic" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Catholic &amp; Hymns</button>
               <button type="button" data-sb-cat="hindi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Hindi Gospel</button>
               <button type="button" data-sb-cat="marathi" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-qmuted border border-zinc-800 hover:text-qtext">Marathi Gospel</button>
-              <span class="mx-1 text-zinc-700">|</span>
+            </div>
+            <div class="w-full flex flex-wrap items-center gap-1.5 pt-1">
+              <span class="text-[11px] font-mono text-qmuted mr-1">Level:</span>
               <button type="button" data-sb-cat="lvl_beginner" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-emerald-400 border border-zinc-800 hover:text-emerald-300">Beginner</button>
               <button type="button" data-sb-cat="lvl_strummer" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-amber-400 border border-zinc-800 hover:text-amber-300">Strummer</button>
+              <button type="button" data-sb-cat="lvl_rhythm" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-sky-400 border border-zinc-800 hover:text-sky-300">Rhythm Player</button>
               <button type="button" data-sb-cat="lvl_band" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-cyan-400 border border-zinc-800 hover:text-cyan-300">Band Player</button>
+              <button type="button" data-sb-cat="lvl_leader" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-indigo-400 border border-zinc-800 hover:text-indigo-300">Worship Leader</button>
               <button type="button" data-sb-cat="lvl_maestro" class="sb-cat-btn px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-zinc-900 text-fuchsia-400 border border-zinc-800 hover:text-fuchsia-300">Maestro</button>
             </div>
           </div>
@@ -2453,23 +2457,66 @@
       return isFp ? `Fingerpick (${compact})` : `Strum (${compact})`;
     }
 
+    const CAPSTONE_SONG_LEVELS = {
+      'this little light of mine': 'Beginner',
+      'amazing grace': 'Strummer',
+      'here i am lord': 'Rhythm Player',
+      'khrist guru mauli': 'Band Player',
+      'in christ alone': 'Band Player',
+      'days of elijah': 'Worship Leader',
+      'how great thou art': 'Maestro',
+      'be thou my vision': 'Maestro'
+    };
+
     function getSongMusicalLevel(song) {
       if (!song) return 'Beginner';
+      if (song.musicalLevel) return song.musicalLevel;
+      const nk = (typeof normalizeSongTitleKey === 'function') ? normalizeSongTitleKey(song.title || '') : '';
+      if (nk && CAPSTONE_SONG_LEVELS[nk]) return CAPSTONE_SONG_LEVELS[nk];
       const chordSet = new Set();
       (song.sections || []).forEach(sec => (sec.bars || []).forEach(b => {
         const c = b.chordBeginner || b.chordIntermediate || b.chordExpert;
         if (c) chordSet.add(String(c).trim());
       }));
       const chords = Array.from(chordSet);
-      const hasBarre = chords.some(c => /^(Bb|Bm|F#m|B|C#m|Cm|Fm|Gm|Eb|Ab)/.test(c));
       const bpm = Number(song.musicalMeta && song.musicalMeta.bpm) || 76;
       const bpb = Number(song.musicalMeta && song.musicalMeta.timeSignature && song.musicalMeta.timeSignature.beatsPerBar) || 4;
-      const eff = (typeof getEffectiveStrumInfo === 'function') ? getEffectiveStrumInfo(song, 0) : null;
-      const isFp = !!(eff && eff.isFingerpick);
-      if (hasBarre || isFp || bpm >= 104) return 'Maestro';
-      if (chords.length >= 5 || bpb === 6 || chords.some(c => /^(D|A|E7|G7|A7|D7)$/.test(c))) return 'Band Player';
-      if (chords.length >= 4 || bpb === 3 || bpm >= 84) return 'Strummer';
-      return 'Beginner';
+      const meter = bpb === 3 ? '3/4' : (bpb === 6 ? '6/8' : '4/4');
+      let bCode = 'dn4', iCode = 'isl4';
+      try {
+        if (typeof PREPOPULATED_SONG_STRUMS !== 'undefined' && nk && PREPOPULATED_SONG_STRUMS[nk]) {
+          bCode = PREPOPULATED_SONG_STRUMS[nk].b || 'dn4';
+          iCode = PREPOPULATED_SONG_STRUMS[nk].i || 'isl4';
+        }
+      } catch (e) {}
+
+      // Evaluate Beginner-tier open chords (first 8 bars / core progression) + meter + groove + BPM
+      const coreChords = new Set();
+      const firstSec = (song.sections && song.sections[0]) || null;
+      const sampleBars = (firstSec && firstSec.bars ? firstSec.bars.slice(0, 8) : []);
+      sampleBars.forEach(b => { if (b && b.chordBeginner) coreChords.add(String(b.chordBeginner).trim()); });
+      const activeChords = coreChords.size ? Array.from(coreChords) : chords;
+
+      let pts = 0;
+      if (activeChords.some(c => /^(Bb|Bm|F#m|Cm|Fm|Gm|Eb|Ab|Cmaj7|Fmaj7)/.test(c))) pts += 5;
+      else if (activeChords.some(c => /^(Dm|Em|G7|E7|D|A|D7|A7)$/.test(c))) pts += 3;
+      else if (activeChords.length >= 4) pts += 2;
+      else if (activeChords.includes('G')) pts += 1;
+
+      if (['trv4','arp4','arp3','arp6','wlk4','rif4','srf4','drv4'].includes(iCode)) pts += 4;
+      else if (meter === '6/8' || ['keh4','dad6','rol6','chk4','wch3'].includes(iCode)) pts += 3;
+      else if (meter === '3/4' || ['syn4','ich4','wlz3'].includes(iCode)) pts += 2;
+      else if (bCode === 'isl4' || iCode === 'flk4') pts += 1;
+
+      if (bpm >= 108) pts += 2;
+      else if (bpm >= 90) pts += 1;
+
+      if (pts <= 3) return 'Beginner';
+      if (pts <= 4) return 'Strummer';
+      if (pts <= 5) return 'Rhythm Player';
+      if (pts <= 6) return 'Band Player';
+      if (pts <= 7) return 'Worship Leader';
+      return 'Maestro';
     }
 
     function getChordTiersSafe(chord) {
@@ -7220,7 +7267,9 @@
         const songLvl = getSongMusicalLevel(sg);
         if (cat === 'lvl_beginner' && songLvl !== 'Beginner') return false;
         if (cat === 'lvl_strummer' && songLvl !== 'Strummer') return false;
+        if (cat === 'lvl_rhythm' && songLvl !== 'Rhythm Player') return false;
         if (cat === 'lvl_band' && songLvl !== 'Band Player') return false;
+        if (cat === 'lvl_leader' && songLvl !== 'Worship Leader') return false;
         if (cat === 'lvl_maestro' && songLvl !== 'Maestro') return false;
         if (!filterQ) return true;
 
@@ -7264,15 +7313,29 @@
         const lvlName = getSongMusicalLevel(song);
         const lvlCls = lvlName === 'Maestro'
           ? 'bg-fuchsia-500/20 text-fuchsia-300 border-fuchsia-500/40'
-          : (lvlName === 'Band Player'
-            ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
-            : (lvlName === 'Strummer'
-              ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
-              : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'));
+          : (lvlName === 'Worship Leader'
+            ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
+            : (lvlName === 'Band Player'
+              ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
+              : (lvlName === 'Rhythm Player'
+                ? 'bg-sky-500/20 text-sky-300 border-sky-500/40'
+                : (lvlName === 'Strummer'
+                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                  : 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'))));
         card.innerHTML = `
           <div class="space-y-1.5">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded border ${lvlCls}">${lvlName}</span>
+              <div class="flex items-center gap-1.5">
+                <span class="text-[11px] font-mono font-bold px-2 py-0.5 rounded border ${lvlCls}">${lvlName}</span>
+                ${(() => {
+                  const reqMap = { 'Beginner': 400, 'Strummer': 800, 'Rhythm Player': 1200, 'Band Player': 1600, 'Worship Leader': 2000, 'Maestro': 2400 };
+                  const userRating = (typeof getLearnStats === 'function') ? (getLearnStats().rating || 400) : 400;
+                  const ready = userRating >= (reqMap[lvlName] || 400);
+                  return ready
+                    ? '<span class="text-[10px] font-mono text-emerald-400 font-bold">✓ Ready</span>'
+                    : '<span class="text-[10px] font-mono text-amber-400/90">🎯 Stretch</span>';
+                })()}
+              </div>
               <span class="text-xs font-mono text-qmuted font-bold">${song.musicalMeta.bpm} BPM · ${ts.beatsPerBar}/${ts.beatUnit}</span>
             </div>
             <h3 class="font-bold text-base text-qtext">${song.title}</h3>
@@ -11294,6 +11357,58 @@
       });
     }
 
+    // App-Store & PWA Ready Centralized Remote Song Bank (pulls new songs without app re-install!)
+    const QCOACH_REMOTE_CATALOG_BASE = (location.protocol === 'https:' && location.hostname === 'tortoi-ship-it.github.io')
+      ? './'
+      : 'https://tortoi-ship-it.github.io/qcoach-studio/';
+
+    async function autoSyncRemoteCatalogQuietly() {
+      try {
+        if (!navigator.onLine) return;
+        const mUrl = QCOACH_REMOTE_CATALOG_BASE + 'packs/manifest.json';
+        const res = await fetch(mUrl, { cache: 'no-store' });
+        if (!res.ok) return;
+        const manifest = await res.json();
+        const remoteStamp = String(manifest.updatedAt || '');
+        const lastStamp = localStorage.getItem('qcoach_catalog_synced_at') || '';
+        const packs = Array.isArray(manifest.packs) ? manifest.packs : [];
+        if (remoteStamp && remoteStamp === lastStamp) return;
+
+        let totalAdded = 0;
+        const byKey = new Map();
+        state.songs.forEach((sg, idx) => byKey.set(normalizeSongTitleKey(sg.title), idx));
+        for (const p of packs) {
+          const relUrl = String(p.url || '').replace(/^\.\//, '');
+          const pr = await fetch(QCOACH_REMOTE_CATALOG_BASE + relUrl, { cache: 'no-store' });
+          if (!pr.ok) continue;
+          const pData = await pr.json();
+          const list = Array.isArray(pData.songs) ? pData.songs : [];
+          list.forEach((raw, idx) => {
+            const expanded = expandImportedSongPackItem(raw, idx);
+            if (!expanded) return;
+            const nk = normalizeSongTitleKey(expanded.title);
+            if (!byKey.has(nk)) {
+              byKey.set(nk, state.songs.length);
+              state.songs.push(expanded);
+              totalAdded++;
+            } else {
+              const existing = state.songs[byKey.get(nk)];
+              if (existing && raw.musicalLevel && !existing.musicalLevel) {
+                existing.musicalLevel = raw.musicalLevel;
+              }
+            }
+          });
+        }
+        if (remoteStamp) localStorage.setItem('qcoach_catalog_synced_at', remoteStamp);
+        if (totalAdded > 0) {
+          hydrateCustomPackMapsFromSongs(state.songs);
+          await saveSongsToIndexedDB();
+          renderSongbook();
+          showToast(`🎵 ${totalAdded} new song(s) added from QCoach Song Bank!`, 'success');
+        }
+      } catch (e) {}
+    }
+
     async function syncHostedSongPacks() {
       try {
         showToast('Checking hosted packs/manifest.json…', 'info');
@@ -13701,6 +13816,7 @@
 
       checkSharedSetlistFromUrl();
       if (typeof initCloudAuthIfConfigured === 'function') initCloudAuthIfConfigured();
+      if (typeof autoSyncRemoteCatalogQuietly === 'function') autoSyncRemoteCatalogQuietly();
 
       const bModePath = document.getElementById('btnLearnModePath');
       const bModeGym = document.getElementById('btnLearnModeGym');

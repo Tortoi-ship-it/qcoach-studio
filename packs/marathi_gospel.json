@@ -56,7 +56,8 @@
           "sa-va-da"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Beginner"
     },
     {
       "id": "marathi-yeshu-maza-raja",
@@ -111,7 +112,8 @@
           ""
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Band Player"
     },
     {
       "id": "marathi-aaradhana-karu-ya",
@@ -166,7 +168,8 @@
           "da"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-dhanyavad-prabhu",
@@ -217,7 +220,8 @@
           "da-ya-lu sva-mi"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-tuzhya-krupene",
@@ -272,7 +276,8 @@
           ""
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-pavitra-aatmya-ye",
@@ -327,7 +332,8 @@
           "ye"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Beginner"
     },
     {
       "id": "marathi-he-prabhu-yeshu",
@@ -378,7 +384,8 @@
           "jee-van"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-maza-yeshu-jivant-aahe",
@@ -490,7 +497,8 @@
             "Hallelujah, Hallelujah, Hallelujah, Hallelujah"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-yeshu-naam-goad",
@@ -541,7 +549,8 @@
           "cha vish-ram"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-stuti-karu-ya",
@@ -596,7 +605,8 @@
           ""
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Band Player"
     },
     {
       "id": "marathi-krusavarati",
@@ -647,7 +657,8 @@
           "dhaar"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Band Player"
     },
     {
       "id": "marathi-devache-prem-kiti-mahan",
@@ -702,7 +713,8 @@
           "ka-yam"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Beginner"
     },
     {
       "id": "marathi-jai-jai-yeshu",
@@ -756,7 +768,8 @@
           "vi-jay mi-la-vi-la"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-tuzhya-vina-prabhu",
@@ -807,7 +820,8 @@
           "a-dhu-re ma-ze"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-mauli-mariya",
@@ -915,7 +929,8 @@
             "Ave, Ave, Ave Maria"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-tilak-khrist-guru-mauli",
@@ -1055,7 +1070,8 @@
             "Ga may majhi Khrist Guru Mauli"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "marathi-tilak-tav-sahavas-ghadava",
@@ -1231,7 +1247,8 @@
             "Tav sahavas ghadava"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "marathi-tilak-khristarpanamastu",
@@ -1371,7 +1388,8 @@
             "Avaghe Khristarpanamastu"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "marathi-tilak-aaj-mi-khrista-pahila",
@@ -1539,7 +1557,8 @@
             "Aaj mi Khrista pahila"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-tilak-pahila-ka-prabhu-khrista",
@@ -1723,7 +1742,8 @@
             "Pahila ka Prabhu Khrista"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "marathi-tilak-mann-aikena",
@@ -1879,7 +1899,8 @@
             "Mann aikena, aikena"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "marathi-tilak-paani-dya-paani",
@@ -2075,7 +2096,8 @@
             "Paani dya paani, trushit mi"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "marathi-tilak-pushkal-ajuni-una",
@@ -2227,7 +2249,8 @@
             "Prabhu mi pushkal ajuni una"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "marathi-tilak-ya-pudhe-prabhu-tu-majha",
@@ -2431,7 +2454,8 @@
             "Ya pudhe"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "marathi-tilak-kiti-god-kiti-god",
@@ -2559,7 +2583,8 @@
             "Man prem rasachya ule khalkhalate"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     }
   ]
 }

@@ -107,7 +107,8 @@
             "Lord Have Mercy"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "cath-gloria-in-excelsis",
@@ -263,7 +264,8 @@
             "Amen"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-immaculate-mary",
@@ -403,7 +405,8 @@
             "Ave, ave, ave Maria."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "cath-abba-father",
@@ -607,7 +610,8 @@
             "Abba"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "cath-lord-is-my-hope",
@@ -747,7 +751,8 @@
             "I will rely on the Lord"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "cath-here-i-am-lord",
@@ -923,7 +928,8 @@
             "I will hold your people in my heart."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "cath-be-not-afraid",
@@ -1072,7 +1078,8 @@
             "and I will give you rest."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-on-eagles-wings",
@@ -1265,7 +1272,8 @@
             "And hold you in the palm of His hand."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-take-and-receive",
@@ -1372,7 +1380,8 @@
             "These make me rich, all else will I forego"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-pescador",
@@ -1542,7 +1551,8 @@
             "now with you, I will seek other seas."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-holy-god-we-praise",
@@ -1666,7 +1676,8 @@
             "\"Holy, holy, holy Lord!\""
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-panis-angelicus",
@@ -1806,7 +1817,8 @@
             "Servus et humilis."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "cath-salve-regina",
@@ -1932,7 +1944,8 @@
             "Virgo Maria."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-tantum-ergo",
@@ -2041,7 +2054,8 @@
             "Amen."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-taste-and-see",
@@ -2152,7 +2166,8 @@
             "O, taste and see. Taste and see the goodness of the Lord, of the Lord."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-one-bread-one-body",
@@ -2292,7 +2307,8 @@
             "We are one body in this one Lord."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-table-of-plenty",
@@ -2459,7 +2475,8 @@
             "Here at the table of plenty."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-city-of-god",
@@ -2600,7 +2617,8 @@
             "Has turned our night into day!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "cath-prayer-of-st-francis",
@@ -2754,7 +2772,8 @@
             "And where there's doubt, true faith in you"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "cath-seek-ye-first",
@@ -2879,7 +2898,8 @@
             "Hallelu, Hallelujah!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-0",
@@ -3063,7 +3083,8 @@
             "How great Thou art, how great Thou art."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "classic-4",
@@ -3185,7 +3206,8 @@
             "Jesus, Lord at Thy birth"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-15",
@@ -3389,7 +3411,8 @@
             "He's got the whole world in His hands"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "classic-16",
@@ -3585,7 +3608,8 @@
             "When the saints go marching in"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "classic-17",
@@ -3749,7 +3773,8 @@
             "Comin' for to carry me home"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-18",
@@ -3868,7 +3893,8 @@
             "O Lord, kumbaya."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-20",
@@ -4008,7 +4034,8 @@
             "There's no turning back, no turning back"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-24",
@@ -4179,7 +4206,8 @@
             "Shall come to you, O Israel!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-27",
@@ -4351,7 +4379,8 @@
             "Glory to the newborn King"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-28",
@@ -4450,7 +4479,8 @@
             "And take us to heaven to live with Thee there."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-30",
@@ -4566,7 +4596,8 @@
             "Ours the cross, the grave, the skies, Alleluia!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-61",
@@ -4736,7 +4767,8 @@
             "Alleluia, Alleluia, Alleluia"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-62",
@@ -4858,7 +4890,8 @@
             "Still be my Vision, O Ruler of all"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "bonus-23",
@@ -4928,7 +4961,8 @@
             "in eyes that see me, in ears that hear me, Christ ever be."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-24",
@@ -5085,7 +5119,8 @@
             "Oh, Lord, lead me."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-25",
@@ -5195,7 +5230,8 @@
             "Ora, ora pro nobis."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-26",
@@ -5264,7 +5300,8 @@
             "Call me and bid me Come to thee on high Where I may praise thee With thy saints for ay."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-27",
@@ -5338,7 +5375,8 @@
             "moment thine!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-28",
@@ -5432,7 +5470,8 @@
             "And the Church the strain re-echoes unto earth's remotest ends."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-29",
@@ -5590,7 +5629,8 @@
             "Teach us wisdom, teach us love."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-30",
@@ -5719,7 +5759,8 @@
             "Ave Maria"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "bonus-31",
@@ -5905,7 +5946,8 @@
             "Christ, be our light! Shine in your church gathered today"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-32",
@@ -6018,7 +6060,8 @@
             "Fire of love in our flesh and our bone"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-33",
@@ -6167,7 +6210,8 @@
             "All are welcome, all are welcome, all are welcome in this place."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-34",
@@ -6260,7 +6304,8 @@
             "Rejoice and be glad! Yours is the kingdom of God."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-35",
@@ -6386,7 +6431,8 @@
             "And you lead me in ways everlasting"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-36",
@@ -6496,7 +6542,8 @@
             "With water from the rock."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-37",
@@ -6686,7 +6733,8 @@
             "The Bread of Life to eat."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-38",
@@ -6804,7 +6852,8 @@
             "Ubi caritas est vera, est vera: Deus ibi est, Deus ibi est."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-39",
@@ -6930,7 +6979,8 @@
             "and I will raise you up on the last day."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-40",
@@ -7040,7 +7090,8 @@
             "Your peace in our hearts, Lord, at the end of the day."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-41",
@@ -7162,7 +7213,8 @@
             "Amen."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-42",
@@ -7272,7 +7324,8 @@
             "and with your presence blest."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-43",
@@ -7473,7 +7526,8 @@
             "Were you there when he rose up from the grave?"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-44",
@@ -7567,7 +7621,8 @@
             "where the angels ever sing. Alleluia!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-45",
@@ -7741,7 +7796,8 @@
             "In the Eucharistic feast."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     }
   ]
 }

@@ -242,7 +242,8 @@
             "Feliz Navidad, próspero año y felicidad"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "xmas-we-wish-you",
@@ -397,7 +398,8 @@
             "We wish you a Merry Christmas and a Happy New Year"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "xmas-o-holy-night",
@@ -543,7 +545,8 @@
             "O night, O night divine"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "xmas-first-noel",
@@ -701,7 +704,8 @@
             "Noel, Noel"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "xmas-go-tell-it",
@@ -891,7 +895,8 @@
             "That Jesus Christ is born"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "xmas-angels-from-realms",
@@ -1041,7 +1046,8 @@
             "Worship Christ, the newborn King."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "xmas-little-drummer-boy",
@@ -1183,7 +1189,8 @@
             "Me and my drum"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "xmas-mary-did-you-know",
@@ -1361,7 +1368,8 @@
             "Mary, did you know?"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "xmas-o-little-town",
@@ -1535,7 +1543,8 @@
             "Our Lord Emmanuel"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "xmas-come-thou-long-expected",
@@ -1717,7 +1726,8 @@
             "Come Thou long expected King"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-1",
@@ -1901,7 +1911,8 @@
             "It is well, it is well with my soul"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-2",
@@ -2049,7 +2060,8 @@
             "God in three Persons, blessed Trinity"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-3",
@@ -2240,7 +2252,8 @@
             "So faithful to me"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-5",
@@ -2356,7 +2369,8 @@
             "Joyful music lifts us sunward, in the triumph song of life"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-6",
@@ -2460,7 +2474,8 @@
             "I triumph still, if You abide with me."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-7",
@@ -2564,7 +2579,8 @@
             "Nearer, my God, to thee, Nearer to thee!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-8",
@@ -2723,7 +2739,8 @@
             "Praising my Savior all the day long"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-9",
@@ -2885,7 +2902,8 @@
             "Everything to God in prayer"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-10",
@@ -3071,7 +3089,8 @@
             "Seal it for Thy courts above"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-11",
@@ -3189,7 +3208,8 @@
             "I'll stand"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-12",
@@ -3367,7 +3387,8 @@
             "With Christ, my Savior and my God"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-13",
@@ -3561,7 +3582,8 @@
             "I surrender all"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-14",
@@ -3707,7 +3729,8 @@
             "In the light of His glory and grace."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-19",
@@ -3867,7 +3890,8 @@
             "Let it shine, let it shine, let it shine!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-21",
@@ -4047,7 +4071,8 @@
             "throughout eternity"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-22",
@@ -4169,7 +4194,8 @@
             "Gladly forever adore Him"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-23",
@@ -4363,7 +4389,8 @@
             "His kingdom is forever."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-25",
@@ -4510,7 +4537,8 @@
             "And wonders, wonders, of His love."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-26",
@@ -4646,7 +4674,8 @@
             "Christ the Lord!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-29",
@@ -4792,7 +4821,8 @@
             "The Babe, the Son of Mary!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "classic-31",
@@ -4944,7 +4974,8 @@
             "And life is worth the living, just because He lives"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-32",
@@ -5114,7 +5145,8 @@
             "Oh, Your wounds have paid my ransom"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-33",
@@ -5309,7 +5341,8 @@
             "Forever, forever"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "classic-34",
@@ -5604,7 +5637,8 @@
             "Then what could stand against"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-35",
@@ -5900,7 +5934,8 @@
             "Is always by my side"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-36",
@@ -6123,7 +6158,8 @@
             "Lord of all"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-37",
@@ -6313,7 +6349,8 @@
             "Hosanna, Hosanna"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-38",
@@ -6516,7 +6553,8 @@
             "You lift us up on wings like eagles"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-39",
@@ -6711,7 +6749,8 @@
             "Oh, God, how I need You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-40",
@@ -6975,7 +7014,8 @@
             "Rise up from the grave"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-41",
@@ -7174,7 +7214,8 @@
             "It's enough for me"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "classic-42",
@@ -7390,7 +7431,8 @@
             "Let us experience the glory of Your goodness, Lord"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-43",
@@ -7655,7 +7697,8 @@
             "Reckless love of God"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-44",
@@ -7875,7 +7918,8 @@
             "Jesus Christ, You're my living hope"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-45",
@@ -8038,7 +8082,8 @@
             "Praise forever to the King of Kings"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-46",
@@ -8324,7 +8369,8 @@
             "You're the only one who can, You're the only one who can"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-47",
@@ -8494,7 +8540,8 @@
             "I'm safe with You, I'm gonna make it, standing strong on You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-48",
@@ -8739,7 +8786,8 @@
             "Hallelujah"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-49",
@@ -8985,7 +9033,8 @@
             "You will always be, Holy"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-50",
@@ -9143,7 +9192,8 @@
             "Shout Jesus for my family, Jesus for my city, I speak the holy name Jesus"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-51",
@@ -9264,7 +9314,8 @@
             "There to my heart was the blood applied, glory to His name"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-52",
@@ -9454,7 +9505,8 @@
             "Praise the Lord, Praise the Lord"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "classic-53",
@@ -9676,7 +9728,8 @@
             "He is for you!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-54",
@@ -9882,7 +9935,8 @@
             "And I believe I'll see You do it again"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-55",
@@ -10008,7 +10062,8 @@
             "Yet not I, but through Christ in me!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-56",
@@ -10150,7 +10205,8 @@
             "For my God is, the Ancient of Days"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-57",
@@ -10368,7 +10424,8 @@
             "Christ our hope in life and death"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-58",
@@ -10626,7 +10683,8 @@
             "He is"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-59",
@@ -10832,7 +10890,8 @@
             "He will hold me fast"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-60",
@@ -11037,7 +11096,8 @@
             "As we will be when He comes"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-63",
@@ -11073,7 +11133,8 @@
           "I shall not want"
         ]
       ],
-      "youtubeSync": null
+      "youtubeSync": null,
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-64",
@@ -11267,7 +11328,8 @@
             "Nothing compares to, The promise I have in You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-65",
@@ -11448,7 +11510,8 @@
             "Above all"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-66",
@@ -11613,7 +11676,8 @@
             "I could sing of Your love forever"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "classic-67",
@@ -11815,7 +11879,8 @@
             "Send forth Your word, Lord, and let there be light"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "classic-68",
@@ -11956,7 +12021,8 @@
             "And I long to worship Thee"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "classic-69",
@@ -12158,7 +12224,8 @@
             "El Shaddai"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "classic-70",
@@ -12387,7 +12454,8 @@
             "Our God is an awesome God"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "classic-71",
@@ -12549,7 +12617,8 @@
             "You're the light unto my path"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-0",
@@ -12722,7 +12791,8 @@
             "The Bible tells me so"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-1",
@@ -12935,7 +13005,8 @@
             "In all I do, let me honor You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-2",
@@ -13136,7 +13207,8 @@
             "I'm laying them down for the joy of the Lord"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-3",
@@ -13361,7 +13433,8 @@
             "Better is one day"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-4",
@@ -13543,7 +13616,8 @@
             "Help me know You are near"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-5",
@@ -13673,7 +13747,8 @@
             "I'm lost without You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-6",
@@ -13814,7 +13889,8 @@
             "In Your ear"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-7",
@@ -13963,7 +14039,8 @@
             "Sanctuary for You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-8",
@@ -14104,7 +14181,8 @@
             "And renew a right spirit within me"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-9",
@@ -14230,7 +14308,8 @@
             "Come and fill Your lambs"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "bonus-10",
@@ -14364,7 +14443,8 @@
             "I want to pass it on"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-11",
@@ -14525,7 +14605,8 @@
             "Bind us together with love"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-12",
@@ -14627,7 +14708,8 @@
             "Spirit of the Living God, fall afresh on me"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-13",
@@ -14775,7 +14857,8 @@
             "How wonderful You are"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-14",
@@ -14901,7 +14984,8 @@
             "How I love You"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-15",
@@ -15059,7 +15143,8 @@
             "Is the Lamb"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-16",
@@ -15185,7 +15270,8 @@
             "And I will follow You all of my days"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-17",
@@ -15431,7 +15517,8 @@
             "And out of Zion's hill, salvation comes"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "bonus-18",
@@ -15573,7 +15660,8 @@
             "And let the God of my salvation be exalted!"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-19",
@@ -15795,7 +15883,8 @@
             "In you, it's in you"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Worship Leader"
     },
     {
       "id": "bonus-20",
@@ -15973,7 +16062,8 @@
             "Living Word"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-21",
@@ -16174,7 +16264,8 @@
             "King of all kings"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-22",
@@ -16280,7 +16371,8 @@
             "Lord is in this place."
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-46",
@@ -16494,7 +16586,8 @@
             "Forevermore"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     },
     {
       "id": "bonus-47",
@@ -16612,7 +16705,8 @@
             "We want to see Jesus"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-48",
@@ -16710,7 +16804,8 @@
             "That Jesus Christ is Lord"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Beginner"
     },
     {
       "id": "bonus-49",
@@ -16804,7 +16899,8 @@
             "His name is called Emmanuel"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Maestro"
     },
     {
       "id": "bonus-50",
@@ -16934,7 +17030,8 @@
             "Glorify Thy Name in all the earth"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Band Player"
     },
     {
       "id": "bonus-51",
@@ -17068,7 +17165,8 @@
             "I will worship You until the very end"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Rhythm Player"
     },
     {
       "id": "bonus-52",
@@ -17186,7 +17284,8 @@
             "To love like You love"
           ]
         ]
-      }
+      },
+      "musicalLevel": "Strummer"
     }
   ]
 }
