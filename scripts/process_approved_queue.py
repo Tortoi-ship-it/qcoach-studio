@@ -243,7 +243,19 @@ def discover_youtube_video(title: str, artist: str, language: str, pinned_url: s
                 else:
                     print(f"  [WARN] Pinned YouTube URL title '{meta['videoTitle']}' did not match request '{title}' (conf={conf}); falling back to search.")
         else:
-            print(f"  [WARN] Pinned YouTube URL invalid/unavailable ({pinned_url}); falling back to fuzzy search.")
+            # On GitHub Actions datacenter IPs, YouTube sometimes blocks yt-dlp metadata fetch.
+            # If the user supplied a valid 11-char YouTube ID, trust the pinned link as a fallback!
+            print(f"  [INFO] yt-dlp metadata lookup blocked/unavailable for {vid}; trusting user-pinned YouTube link.")
+            return {
+                "videoId": vid,
+                "youtubeUrl": f"https://youtu.be/{vid}",
+                "videoTitle": title,
+                "resolvedTitle": title,
+                "resolvedArtist": artist or "Worship",
+                "dur": 210,
+                "confidence": 0.72,
+                "signals": {"pinnedUrlFallback": True},
+            }
 
     # 3B. Progressive multi-query fuzzy search (handles artist typos, title typos, and lyric phrases!)
     queries = []
@@ -562,8 +574,16 @@ def process_queue(queue_path: str, packs_dir: str, report_out: str = "") -> int:
 
         pack_fname = choose_pack_file(language, final_title, final_artist)
         pack_path = os.path.join(packs_dir, pack_fname)
-        with open(pack_path, "r", encoding="utf-8") as pf:
-            pdata = json.load(pf)
+        if os.path.exists(pack_path):
+            with open(pack_path, "r", encoding="utf-8") as pf:
+                pdata = json.load(pf)
+        else:
+            pdata = {
+                "id": "community-catalog",
+                "name": "Community Song Bank",
+                "description": "Centralized remote song catalog auto-synced from approved community requests.",
+                "songs": []
+            }
         pdata.setdefault("songs", []).append(song_obj)
         with open(pack_path, "w", encoding="utf-8") as pf:
             json.dump(pdata, pf, indent=2, ensure_ascii=False)

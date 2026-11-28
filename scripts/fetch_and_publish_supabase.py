@@ -8,10 +8,11 @@ import json
 import os
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 
-SUPABASE_URL = (os.environ.get("SUPABASE_URL") or "").rstrip("/")
-SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or ""
+SUPABASE_URL = (os.environ.get("SUPABASE_URL") or "").strip().rstrip("/")
+SUPABASE_KEY = (os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or "").strip()
 
 
 def sb_request(method: str, path: str, payload=None):
@@ -24,9 +25,18 @@ def sb_request(method: str, path: str, payload=None):
         "Prefer": "return=representation",
     }
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=20) as resp:
-        body = resp.read().decode("utf-8")
-        return json.loads(body) if body else []
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            body = resp.read().decode("utf-8")
+            return json.loads(body) if body else []
+    except urllib.error.HTTPError as e:
+        err_body = ""
+        try:
+            err_body = e.read().decode("utf-8", errors="ignore")[:300]
+        except Exception:
+            pass
+        print(f"[SUPABASE ERROR] {method} {path} -> HTTP {e.code}: {err_body}")
+        raise
 
 
 def main():
