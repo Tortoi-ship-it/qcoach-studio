@@ -896,45 +896,6 @@
       </div>
     </div>
 
-    <!-- 🧠 LIVE COACH DIAGNOSIS MODAL (Shown After Every Drill / Listen Pass) -->
-    <div id="coachDiagnosisModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border-2 border-emerald-500/60">
-        <div class="flex items-center justify-between">
-          <div>
-            <div class="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold">🧠 QCoach Session Diagnosis</div>
-            <h3 id="coachDiagTitle" class="text-lg font-black text-qtext">Great Session!</h3>
-          </div>
-          <div id="coachDiagStars" class="text-2xl">⭐⭐⭐</div>
-        </div>
-        <div class="grid grid-cols-3 gap-2 text-center">
-          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
-            <div class="text-[10px] font-mono text-qmuted">OVERALL</div>
-            <div id="coachDiagOverall" class="text-lg font-black text-emerald-400">92%</div>
-          </div>
-          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
-            <div class="text-[10px] font-mono text-qmuted">CHORDS</div>
-            <div id="coachDiagChords" class="text-lg font-black text-amber-400">95%</div>
-          </div>
-          <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
-            <div class="text-[10px] font-mono text-qmuted">TIMING</div>
-            <div id="coachDiagTiming" class="text-lg font-black text-cyan-400">88%</div>
-          </div>
-        </div>
-        <div id="coachDiagBarStripWrap" class="hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-2.5 space-y-1.5">
-          <div class="text-[10px] font-mono uppercase text-qmuted font-bold">Bar-by-Bar Review</div>
-          <div id="coachDiagBarStrip" class="flex flex-wrap gap-1"></div>
-        </div>
-        <div id="coachDiagAdviceBox" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs text-qtext space-y-1.5 leading-relaxed"></div>
-        <div class="flex items-center justify-end gap-2">
-          <button id="btnCoachDiagBackLearn" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold text-xs transition">🎓 Back to Learn</button>
-          <button id="btnCoachDiagRetry" type="button" class="px-3 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition">🔁 Retry</button>
-          <button id="btnCoachDiagNextLesson" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">▶ Next Lesson →</button>
-        </div>
-      </div>
-    </div>
-
-      </div>
-
     <!-- ⚡ 60-SECOND CHORD RUSH MODAL (Chess.com Puzzle Rush for Ukulele) -->
     <div id="chordRushModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
       <div class="q-card rounded-2xl p-5 max-w-sm w-full space-y-4 shadow-2xl border-2 border-amber-500/60 text-center">
@@ -1238,6 +1199,47 @@
     </div>
 
   </main>
+
+  <!-- 🧠 LIVE COACH DIAGNOSIS MODAL (Root-level: pops up immediately on Stage!) -->
+  <div id="coachDiagnosisModal" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="q-card rounded-2xl p-5 max-w-md w-full space-y-4 shadow-2xl border-2 border-emerald-500/60">
+      <div class="flex items-start justify-between gap-2">
+        <div>
+          <div id="coachDiagSubLabel" class="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold">🧠 Session Review</div>
+          <h3 id="coachDiagTitle" class="text-lg font-black text-qtext">Great Session!</h3>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <div id="coachDiagStars" class="text-2xl">⭐⭐⭐</div>
+          <button id="btnCoachDiagCloseX" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-2 text-center">
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+          <div class="text-[10px] font-mono text-qmuted">OVERALL</div>
+          <div id="coachDiagOverall" class="text-lg font-black text-emerald-400">92%</div>
+        </div>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+          <div class="text-[10px] font-mono text-qmuted">CHORDS</div>
+          <div id="coachDiagChords" class="text-lg font-black text-amber-400">95%</div>
+        </div>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+          <div class="text-[10px] font-mono text-qmuted">TIMING</div>
+          <div id="coachDiagTiming" class="text-lg font-black text-cyan-400">88%</div>
+        </div>
+      </div>
+      <div id="coachDiagBarStripWrap" class="hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-2.5 space-y-1.5">
+        <div class="text-[10px] font-mono uppercase text-qmuted font-bold">Bar-by-Bar Review</div>
+        <div id="coachDiagBarStrip" class="flex flex-wrap gap-1"></div>
+      </div>
+      <div id="coachDiagAdviceBox" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 text-xs text-qtext space-y-1.5 leading-relaxed"></div>
+      <div class="flex flex-wrap items-center justify-end gap-2">
+        <button id="btnCoachDiagClose" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold text-xs transition">✕ Close</button>
+        <button id="btnCoachDiagBackLearn" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold text-xs transition">🎓 Back to Learn</button>
+        <button id="btnCoachDiagRetry" type="button" class="px-3.5 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition">🔁 Replay to Improve</button>
+        <button id="btnCoachDiagNextLesson" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">▶ Next Lesson →</button>
+      </div>
+    </div>
+  </div>
 
   <!-- HELP & QUICK GUIDE MODAL -->
   <div id="helpModalBackdrop" class="hidden fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5">
@@ -10474,6 +10476,17 @@
         stripWrap.classList.add('hidden');
       }
       document.getElementById('coachDiagAdviceBox').innerHTML = adviceLines.join('');
+      const isLesson = !!(drillMeta && drillMeta.id);
+      const subEl = document.getElementById('coachDiagSubLabel');
+      if (subEl) subEl.textContent = isLesson ? '🎓 Lesson Review' : '🎵 Song Review';
+      if (!isLesson) {
+        document.getElementById('coachDiagTitle').textContent = finalPct >= 85
+          ? '🎉 Amazing Performance!'
+          : (finalPct >= 65 ? '👏 Nice Run — Getting Tighter!' : '🎸 Good Practice — Try Again!');
+      }
+      document.getElementById('btnCoachDiagNextLesson')?.classList.toggle('hidden', !isLesson);
+      document.getElementById('btnCoachDiagBackLearn')?.classList.toggle('hidden', !isLesson);
+      document.getElementById('btnCoachDiagClose')?.classList.toggle('hidden', isLesson);
       modal.classList.remove('hidden');
     }
 
@@ -13826,6 +13839,12 @@
       if (bCont) bCont.addEventListener('click', () => { const ns = getNextRecommendedGuidedStep(); if (ns) launchInteractiveDrill(ns.item, false); });
       const bContDrill = document.getElementById('btnContinueNextLessonDrill');
       if (bContDrill) bContDrill.addEventListener('click', () => { const ns = getNextRecommendedGuidedStep(); if (ns) launchInteractiveDrill(ns.item, true); });
+      document.getElementById('btnCoachDiagCloseX')?.addEventListener('click', () => {
+        document.getElementById('coachDiagnosisModal')?.classList.add('hidden');
+      });
+      document.getElementById('btnCoachDiagClose')?.addEventListener('click', () => {
+        document.getElementById('coachDiagnosisModal')?.classList.add('hidden');
+      });
       const bDiagNext = document.getElementById('btnCoachDiagNextLesson');
       if (bDiagNext) {
         bDiagNext.addEventListener('click', () => {

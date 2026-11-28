@@ -1,6 +1,6 @@
 {
   "schemaVersion": "3.0",
-  "updatedAt": "2026-11-28T10:36:00.666772+00:00",
+  "updatedAt": "2026-11-28T10:36:18.548066+00:00",
   "packs": [
     {
       "id": "catholic_and_hymns",
@@ -15,6 +15,13 @@
       "language": "en",
       "songCount": 99,
       "url": "./packs/christmas_and_worship.json"
+    },
+    {
+      "id": "community_catalog",
+      "name": "QCoach Live Song Bank (Server Catalog)",
+      "language": "multi",
+      "songCount": 0,
+      "url": "./packs/community_catalog.json"
     },
     {
       "id": "hindi_gospel",
