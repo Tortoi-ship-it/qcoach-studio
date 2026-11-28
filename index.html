@@ -627,45 +627,28 @@
         </div>
       </div>
 
-      <!-- Collapsible Official YouTube IFrame Vocal Sync Panel (Loads API on demand) -->
-      <div id="stageYouTubePanel" class="hidden q-card rounded-xl p-3 flex flex-col sm:flex-row items-stretch gap-3 border-red-500/30">
-        <div class="w-full sm:w-[320px] h-[200px] rounded-lg overflow-hidden bg-zinc-950 border border-[#2C2C2E] shrink-0 flex items-center justify-center relative">
+      <!-- Clean Compact YouTube Player Drawer (Curated Links Only — Zero DIY Clutter) -->
+      <div id="stageYouTubePanel" class="hidden q-card rounded-xl p-2.5 flex flex-col items-center gap-2 border-red-500/30">
+        <div class="w-full max-w-md flex items-center justify-between text-xs font-mono">
+          <span class="text-red-400 font-bold">▶ YouTube</span>
+          <span id="ytSyncStatusPill" class="text-emerald-400 font-bold">Ready</span>
+        </div>
+        <div class="w-full max-w-md h-[185px] sm:h-[210px] rounded-lg overflow-hidden bg-zinc-950 border border-[#2C2C2E] flex items-center justify-center relative">
           <div id="ytStagePlayerMount" class="w-full h-full"></div>
-          <div id="ytStageEmptyNotice" class="hidden absolute inset-0 flex flex-col items-center justify-center p-4 text-center space-y-2 bg-zinc-950">
-            <div class="text-xs font-mono font-bold text-amber-400">No YouTube link linked to this song yet</div>
-            <p class="text-xs text-qmuted">Find the song on YouTube, paste its link on the right, and click Save.</p>
+          <div id="ytStageEmptyNotice" class="hidden absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-zinc-950">
+            <div class="text-xs font-mono font-bold text-amber-400">No YouTube video linked to this song yet</div>
           </div>
         </div>
-        <div class="flex-1 flex flex-col justify-between gap-2 min-w-0">
-          <div class="space-y-1.5">
-            <div class="flex items-center justify-between gap-2">
-              <span class="text-xs font-mono uppercase tracking-wider text-red-400 font-bold">▶ YouTube Real-Vocal Sync</span>
-              <span id="ytSyncStatusPill" class="text-xs font-mono text-emerald-400 font-bold">Ready</span>
-            </div>
-            <p class="text-xs text-qmuted">Hands-free sync: automatically locks to synced lyric timestamps (or auto-scales to the video’s length). Use <strong>🎯 Tap Beat</strong> only if a video has a long intro. Switching to <strong>🥁 Beat Only</strong> mutes YouTube automatically.</p>
-            <div class="flex flex-wrap items-center gap-1.5 pt-0.5">
-              <button id="btnYtMarkBeatOne" type="button" class="px-3 py-1 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs font-mono transition" title="Optional: tap 1-2-3-4 once if a video has a long intro">🎯 Tap Beat (1-2-3-4)</button>
-              <button id="btnYtFindKaraoke" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-cyan-300 border border-zinc-700 text-xs font-mono font-semibold transition" title="Search YouTube for a Karaoke / Instrumental version of this song">🎸 Karaoke</button>
-            </div>
-          </div>
-          <div class="space-y-2">
-            <div class="flex items-center gap-1.5">
-              <input id="inputStageYtUrl" type="text" placeholder="Paste YouTube URL (e.g. https://youtu.be/...)" class="flex-1 bg-zinc-900 border border-zinc-700 rounded-lg px-2.5 py-1.5 text-xs font-mono text-qtext placeholder-qmuted focus:outline-none focus:border-amber-500">
-              <button id="btnSaveStageYtUrl" type="button" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs shrink-0 transition">Save Link</button>
-            </div>
-            <div class="flex flex-wrap items-center justify-between gap-2">
-              <div class="flex flex-wrap items-center gap-1.5">
-                <button id="btnAutoFindStageYt" type="button" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-bold transition">✨ Auto-Find Video</button>
-                <button id="btnFindSongOnYouTube" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qtext border border-zinc-700 text-xs font-mono font-semibold transition">🔎 Search YouTube</button>
-                <a id="linkOpenYtExternal" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="hidden px-2.5 py-1 rounded-lg bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 text-xs font-mono font-bold transition">↗ Open on YouTube</a>
-              </div>
-              <button id="btnToggleYtApiKeyRow" type="button" class="text-xs font-mono text-qmuted hover:text-amber-400 underline">🔑 Optional Free YT API Key</button>
-            </div>
-            <div id="ytApiKeyRow" class="hidden flex items-center gap-1.5 pt-1 border-t border-zinc-800">
-              <input id="inputYtApiKey" type="password" placeholder="Optional free YouTube Data API v3 key (for 100% reliable auto-find)..." class="flex-1 bg-zinc-900 border border-zinc-700 rounded-lg px-2.5 py-1 text-xs font-mono text-qtext placeholder-qmuted focus:outline-none focus:border-cyan-500">
-              <button id="btnSaveYtApiKey" type="button" class="px-2.5 py-1 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xs shrink-0">Save Key</button>
-            </div>
-          </div>
+        <div class="hidden" aria-hidden="true">
+          <button id="btnYtMarkBeatOne" type="button"></button>
+          <button id="btnYtFindKaraoke" type="button"></button>
+          <input id="inputStageYtUrl" type="text">
+          <button id="btnSaveStageYtUrl" type="button"></button>
+          <button id="btnAutoFindStageYt" type="button"></button>
+          <button id="btnFindSongOnYouTube" type="button"></button>
+          <a id="linkOpenYtExternal" href="#"></a>
+          <button id="btnToggleYtApiKeyRow" type="button"></button>
+          <div id="ytApiKeyRow"><input id="inputYtApiKey" type="password"><button id="btnSaveYtApiKey" type="button"></button></div>
         </div>
       </div>
     </div>
@@ -750,7 +733,7 @@
               🔥 <span id="learnStreakCount">0</span>d
             </div>
             <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-xs font-mono font-bold text-qtext transition" title="Quickly skip to your current level">
-              🧭 Placement
+              🧭 2-Min Rating Test
             </button>
             <button id="btnOpenCloudAuth" type="button" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-xs font-mono font-bold text-indigo-300 transition">
               ☁️ <span id="cloudAuthBtnLabel">Sign In</span>
@@ -1110,9 +1093,14 @@
 
         <div id="placementChordChips" class="grid grid-cols-2 gap-2.5"></div>
 
-        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 flex items-center justify-between gap-2">
-          <div id="placementMicStatus" class="text-xs font-mono text-emerald-400">🎙️ Click "Listen &amp; Verify" or use manual check below</div>
-          <button id="btnPlacementListenToggle" type="button" class="px-2.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[11px] shrink-0">🎙️ Listen</button>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-2">
+          <div class="flex items-center justify-between gap-2">
+            <div id="placementMicStatus" class="text-xs font-mono text-emerald-400">🎙️ Tap Listen, then strum each chord cleanly</div>
+            <button id="btnPlacementListenToggle" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[11px] shrink-0 transition">🎙️ Listen</button>
+          </div>
+          <div class="w-full h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+            <div id="placementMicLevelBar" class="h-full bg-emerald-500 transition-all duration-75" style="width: 0%;"></div>
+          </div>
         </div>
 
         <div class="flex items-center justify-between gap-2 pt-1">
@@ -3655,6 +3643,7 @@
       const q = encodeURIComponent(`${cleanTitle} ${cleanArtist} lyrics chords`);
       window.open(`https://www.google.com/search?q=${q}`, '_blank', 'noopener,noreferrer');
       switchSettingsTab('library');
+      if (typeof updateAdminUiVisibility === 'function') updateAdminUiVisibility();
       document.getElementById('settingsModalBackdrop').classList.remove('hidden');
       const drawer = document.getElementById('pasteLyricsDrawer');
       if (drawer) drawer.classList.remove('hidden');
@@ -7650,6 +7639,11 @@
 
     function startPlayback(skipCountdown = false) {
       if (state.isPlaying || state.isCountingDown) return;
+      if (state.currentBarIndex === 0 && state.currentSubdivisionIndex === 0) {
+        if (typeof resetListenSessionScores === 'function') resetListenSessionScores();
+        if (typeof tabHighwayState !== 'undefined') tabHighwayState.hitSlots = {};
+        if (typeof renderTeleprompterAndContour === 'function') renderTeleprompterAndContour();
+      }
       try {
         const ctx = ensureAudioContext();
         if (ctx && ctx.state === 'suspended') ctx.resume().catch(() => {});
@@ -8393,10 +8387,10 @@
 
       // Update live mic level meter bar so user immediately sees mic input
       const lvlBar = document.getElementById('listenMicLevelBar');
-      if (lvlBar) {
-        const pct = Math.min(100, Math.round(Math.min(1, rms / 0.08) * 100));
-        lvlBar.style.width = pct + '%';
-      }
+      const pct = Math.min(100, Math.round(Math.min(1, rms / 0.08) * 100));
+      if (lvlBar) lvlBar.style.width = pct + '%';
+      const pLvlBar = document.getElementById('placementMicLevelBar');
+      if (pLvlBar) pLvlBar.style.width = pct + '%';
 
       const dynGate = (typeof updateAdaptiveNoiseGate === 'function') ? updateAdaptiveNoiseGate(rms, nowMs) : 0.008;
       const isStrumOnset = rms > dynGate && rms > listenEngine.prevRms * 1.24 && (nowMs - listenEngine.lastOnsetMs) > 140;
@@ -8438,7 +8432,7 @@
           const curBar = bars[state.currentBarIndex] || bars[0];
           const expectedChord = curBar ? getBarActiveChord(curBar, song) : 'C';
 
-          const candSet = new Set([expectedChord, 'C', 'G', 'F', 'Am', 'Dm', 'Em', 'D', 'A', 'G7', 'D7', 'A7', 'Bb']);
+          const candSet = new Set([expectedChord, 'C', 'G', 'F', 'Am', 'Dm', 'Em', 'D', 'A', 'G7', 'D7', 'A7', 'Bb', 'Bm', 'B', 'E', 'E7', 'F#m']);
           bars.forEach(b => candSet.add(getBarActiveChord(b, song)));
 
           const expTpl = getChordPitchClassTemplate(expectedChord);
@@ -8490,6 +8484,11 @@
             }
           }
 
+          if (state.isCountingDown) {
+            updateListenStageUi();
+            listenEngine.rafId = requestAnimationFrame(chordListenLoop);
+            return;
+          }
           const prevBarResult = state.listenBarResults[state.currentBarIndex];
           if (state.listenChordStats && !state.listenChordStats[expectedChord]) {
             state.listenChordStats[expectedChord] = { hits: 0, attempts: 0 };
@@ -8603,8 +8602,14 @@
       listenEngine.source = null;
       listenEngine.analyser = null;
       state.listenEnabled = false;
+      if (!silent && state.waitModeEnabled) {
+        state.waitModeEnabled = false;
+        state.waitModePausedOnBar = false;
+        if (typeof updateWaitModeBanner === 'function') updateWaitModeBanner(false, '');
+        if (typeof updateWaitModeButtonUi === 'function') updateWaitModeButtonUi();
+      }
       updateListenStageUi();
-      if (!silent) showToast('🎙️ Chord Listening OFF', 'info');
+      if (!silent) showToast('🎙️ Listen OFF', 'info');
     }
 
 
@@ -10443,14 +10448,33 @@
       { stage: 3, title: 'Stage 3 of 4 · Intermediate Keys (Dm & D)', desc: 'Play D Minor and stacked D Major cleanly.', chords: ['Dm', 'D'], unlockUnits: [1, 2] },
       { stage: 4, title: 'Stage 4 of 4 · Barre Readiness (Bb & Bm)', desc: 'Play partial-barre Bb and full-barre Bm cleanly.', chords: ['Bb', 'Bm'], unlockUnits: [1, 2, 3, 4] }
     ];
-    const placementState = { open: false, stageIdx: 0, verified: {} };
+    const placementState = { open: false, stageIdx: 0, verified: {}, stageReadyMs: 0 };
+
+    function updatePlacementListenBtnUi() {
+      const b = document.getElementById('btnPlacementListenToggle');
+      const mEl = document.getElementById('placementMicStatus');
+      if (!b) return;
+      if (state.listenEnabled) {
+        b.textContent = '🛑 Stop Mic';
+        b.className = 'px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-400 text-white font-black text-[11px] shrink-0 transition';
+        if (mEl && !mEl.textContent.includes('Heard')) mEl.textContent = '🎙️ Listening live — strum the chords above!';
+      } else {
+        b.textContent = '🎙️ Listen';
+        b.className = 'px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[11px] shrink-0 transition';
+        if (mEl) mEl.textContent = '🎙️ Tap Listen, then strum each chord cleanly';
+        const pBar = document.getElementById('placementMicLevelBar');
+        if (pBar) pBar.style.width = '0%';
+      }
+    }
 
     function openPlacementCheckModal() {
       placementState.open = true;
       placementState.stageIdx = 0;
       placementState.verified = {};
+      placementState.stageReadyMs = performance.now() + 500;
       const bd = document.getElementById('placementCheckModalBackdrop');
       if (bd) bd.classList.remove('hidden');
+      updatePlacementListenBtnUi();
       renderPlacementStage();
     }
 
@@ -10483,16 +10507,20 @@
 
     function handlePlacementLiveChord(detectedChord, score) {
       if (!placementState.open) return;
+      if (performance.now() < (placementState.stageReadyMs || 0)) return;
       const st = PLACEMENT_STAGES[placementState.stageIdx];
       if (!st) return;
-      if (st.chords.includes(detectedChord) && !placementState.verified[detectedChord]) {
+      const mEl = document.getElementById('placementMicStatus');
+      if (st.chords.includes(detectedChord) && score >= 0.62 && !placementState.verified[detectedChord]) {
         placementState.verified[detectedChord] = true;
-        const mEl = document.getElementById('placementMicStatus');
-        if (mEl) mEl.textContent = `✅ Heard ${detectedChord} cleanly!`;
+        if (mEl) mEl.textContent = `✅ Clean ${detectedChord}!`;
         renderPlacementStage();
         if (st.chords.every(c => placementState.verified[c])) {
-          setTimeout(() => advancePlacementStage(), 450);
+          placementState.stageReadyMs = performance.now() + 900;
+          setTimeout(() => advancePlacementStage(), 550);
         }
+      } else if (mEl && score >= 0.62) {
+        mEl.textContent = `🎙️ Listening… (hearing ${detectedChord} — play ${st.chords.filter(c => !placementState.verified[c]).join(' or ')})`;
       }
     }
 
@@ -10541,6 +10569,9 @@
       } else {
         placementState.stageIdx += 1;
         placementState.verified = {};
+        placementState.stageReadyMs = performance.now() + 850;
+        const mEl = document.getElementById('placementMicStatus');
+        if (mEl && state.listenEnabled) mEl.textContent = '🎙️ Listening live — strum the new chords above!';
         renderPlacementStage();
       }
     }
@@ -11270,6 +11301,10 @@
         tabGrid.classList.toggle('grid-cols-2', !isAdmin);
       }
       if (autoFillBtn) autoFillBtn.classList.toggle('hidden', !isAdmin);
+      if (!isAdmin) {
+        document.querySelectorAll('[data-settings-panel="library"]').forEach(el => el.classList.add('hidden'));
+        if (typeof switchSettingsTab === 'function') switchSettingsTab('practice');
+      }
     }
     let qcoachSupabaseClient = null;
     let qcoachCloudUser = null;
@@ -13298,6 +13333,10 @@
       if (btnWait) btnWait.addEventListener('click', () => {
         state.waitModeEnabled = !state.waitModeEnabled;
         state.waitModePausedOnBar = false;
+        if (state.waitModeEnabled && typeof resetListenSessionScores === 'function') {
+          resetListenSessionScores();
+          if (typeof renderTeleprompterAndContour === 'function') renderTeleprompterAndContour();
+        }
         updateWaitModeBanner(false, '');
         updateWaitModeButtonUi();
         if (state.waitModeEnabled && !state.listenEnabled) {
@@ -13338,10 +13377,13 @@
       const btnPlacePass = document.getElementById('btnPlacementPassStage');
       if (btnPlacePass) btnPlacePass.addEventListener('click', advancePlacementStage);
       const btnPlaceMic = document.getElementById('btnPlacementListenToggle');
-      if (btnPlaceMic) btnPlaceMic.addEventListener('click', () => {
-        if (!state.listenEnabled) startChordListener();
-        const mEl = document.getElementById('placementMicStatus');
-        if (mEl) mEl.textContent = '🎙️ Listening live — strum the chords above!';
+      if (btnPlaceMic) btnPlaceMic.addEventListener('click', async () => {
+        if (state.listenEnabled) {
+          stopChordListener(false);
+        } else {
+          await startChordListener();
+        }
+        updatePlacementListenBtnUi();
       });
       const btnWeak = document.getElementById('btnDrillWeakSpots');
       if (btnWeak) btnWeak.addEventListener('click', () => launchWeakSpotAutoDrill(false));
@@ -14367,6 +14409,10 @@
       document.getElementById('btnRestartSection').addEventListener('click', () => {
         state.currentBarIndex = 0;
         state.currentSubdivisionIndex = 0;
+        state.waitModePausedOnBar = false;
+        if (typeof updateWaitModeBanner === 'function') updateWaitModeBanner(false, '');
+        if (typeof resetListenSessionScores === 'function') resetListenSessionScores();
+        if (typeof tabHighwayState !== 'undefined') tabHighwayState.hitSlots = {};
         syncAudioElementToBar(0);
         if (state.ytSyncEnabled) syncYouTubeToBar(0, state.isPlaying);
         renderAll();
