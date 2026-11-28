@@ -1133,7 +1133,7 @@
           <button id="btnCloseRequestSong" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold shrink-0">✕</button>
         </div>
         <div class="space-y-2.5">
-          <input id="reqSongTitle" type="text" placeholder="Song Title (required)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+          <input id="reqSongTitle" type="text" placeholder="Song Title or a line of lyrics (required)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
           <input id="reqSongArtist" type="text" placeholder="Artist / Hymnbook (optional)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
           <select id="reqSongLang" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
             <option value="en">English / Worship / Hymn</option>
@@ -1141,6 +1141,7 @@
             <option value="mr">Marathi Gospel</option>
           </select>
           <input id="reqSongYoutube" type="url" placeholder="YouTube Link (optional)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
+          <input id="reqSongLyricsHint" type="text" placeholder="Lyric phrase or chorus line (optional — helps if unsure of title)" class="w-full bg-[#121212] border border-[#2C2C2E] rounded-xl px-3 py-2 text-xs text-qtext focus:outline-none focus:border-amber-400">
         </div>
         <button id="btnSubmitRequestSong" type="button" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs sm:text-sm shadow transition">
           Send Request
@@ -1449,22 +1450,20 @@
           </div>
         </div>
 
-        <!-- 🛡️ ADMIN SONG REQUEST QUEUE (Approve / Reject / Export for Sync Pipeline) -->
+        <!-- 🛡️ ADMIN SONG REQUEST QUEUE (Approve / Reject / Auto-Publish) -->
         <div data-settings-panel="library" class="settings-tab-panel hidden rounded-xl bg-[#121212] border border-amber-500/40 p-4 space-y-3">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
               <h3 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">📋 Song Request Queue</h3>
-              <p class="text-[11px] text-qmuted mt-0.5">Approve user requests for your YouTube-sync pipeline.</p>
+              <p class="text-[11px] text-qmuted mt-0.5">Approve requests below. Approved songs publish automatically daily at 7:30 AM, or tap Publish Now.</p>
             </div>
             <div class="flex flex-wrap items-center gap-1.5">
-              <button id="btnAdminRefreshRequests" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-amber-300 text-[11px] font-mono font-bold transition">🔄 Load</button>
-              <button id="btnAdminExportApproved" type="button" class="px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/35 border border-emerald-400/50 text-emerald-300 text-[11px] font-mono font-bold transition" title="Download all Approved songs as JSON for your sync script">⬇️ Approved JSON</button>
-              <a href="https://github.com/Tortoi-ship-it/qcoach-studio/actions/workflows/sync-approved-songs.yml" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/50 text-cyan-300 text-[11px] font-mono font-bold transition" title="Auto-process Approved songs &amp; commit directly to GitHub">⚡ Auto-Publish</a>
-              <a href="https://colab.research.google.com/github/Tortoi-ship-it/qcoach-studio/blob/main/scripts/QCoach_Song_Sync_Pipeline.ipynb" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/35 border border-indigo-400/50 text-indigo-300 text-[11px] font-mono font-bold transition" title="Optional: Open Google Colab Notebook">🚀 Colab</a>
+              <button id="btnAdminRefreshRequests" type="button" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/50 text-amber-300 text-[11px] font-mono font-bold transition">🔄 Refresh</button>
+              <a href="https://github.com/Tortoi-ship-it/qcoach-studio/actions/workflows/sync-approved-songs.yml" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/35 border border-cyan-400/50 text-cyan-300 text-[11px] font-mono font-bold transition" title="Run the automated GitHub sync right now instead of waiting for 7:30 AM">⚡ Publish Approved Now</a>
             </div>
           </div>
           <div id="adminSongRequestsList" class="space-y-2 max-h-64 overflow-y-auto text-xs text-qmuted">
-            Click <strong>🔄 Load</strong> to fetch pending song requests from Supabase.
+            Loading song requests…
           </div>
         </div>
 
@@ -11552,6 +11551,7 @@
           if (isNew) {
             await pullAndMergeCloudProgress();
             await syncCloudProgressQuietly();
+            if (typeof flushLocalSongRequestsToCloud === 'function') await flushLocalSongRequestsToCloud();
           }
           updateCloudAuthUi();
           if (typeof renderLearnPathView === 'function') renderLearnPathView();
@@ -13616,39 +13616,95 @@
       document.getElementById('btnCloseRequestSong')?.addEventListener('click', () => {
         document.getElementById('requestSongModalBackdrop')?.classList.add('hidden');
       });
+      async function ensureUserProfileForSubmission(sb, user) {
+        if (!sb || !user) return;
+        try {
+          await sb.from('profiles').upsert(
+            { id: user.id, display_name: user.email || user.user_metadata?.full_name || 'Player' },
+            { onConflict: 'id', ignoreDuplicates: true }
+          );
+        } catch (e) {}
+      }
+
+      async function flushLocalSongRequestsToCloud() {
+        try {
+          const prev = JSON.parse(localStorage.getItem('qcoach_song_requests_v1') || '[]');
+          if (!Array.isArray(prev) || !prev.length) return 0;
+          const sb = await ensureSupabaseClient();
+          if (!sb || !qcoachCloudUser || !navigator.onLine) return 0;
+          await ensureUserProfileForSubmission(sb, qcoachCloudUser);
+          const remaining = [];
+          let flushed = 0;
+          for (const item of prev) {
+            if (!item || !item.title) continue;
+            const { error } = await sb.from('community_song_submissions').insert({
+              submitted_by: qcoachCloudUser.id,
+              title: item.title,
+              artist: item.artist || '',
+              language: item.language || 'en',
+              youtube_url: item.youtube_url || '',
+              payload: { requestedVia: 'songbook_modal', lyricHint: item.lyricHint || '', flushedFromLocal: true }
+            });
+            if (!error) flushed++;
+            else remaining.push(item);
+          }
+          localStorage.setItem('qcoach_song_requests_v1', JSON.stringify(remaining));
+          return flushed;
+        } catch (e) {
+          return 0;
+        }
+      }
+
       document.getElementById('btnSubmitRequestSong')?.addEventListener('click', async () => {
         const title = (document.getElementById('reqSongTitle')?.value || '').trim();
         const artist = (document.getElementById('reqSongArtist')?.value || '').trim();
         const language = document.getElementById('reqSongLang')?.value || 'en';
         const youtube_url = (document.getElementById('reqSongYoutube')?.value || '').trim();
-        if (!title) { showToast('Please enter the song title.', 'warn'); return; }
+        const lyricHint = (document.getElementById('reqSongLyricsHint')?.value || '').trim();
+        if (!title) { showToast('Please enter the song title or a line of lyrics.', 'warn'); return; }
         let savedCloud = false;
+        let cloudErrMsg = '';
         try {
           const sb = await ensureSupabaseClient();
           if (sb && qcoachCloudUser && navigator.onLine) {
+            await ensureUserProfileForSubmission(sb, qcoachCloudUser);
             const { error } = await sb.from('community_song_submissions').insert({
               submitted_by: qcoachCloudUser.id,
               title, artist, language, youtube_url,
-              payload: { requestedVia: 'songbook_modal' }
+              payload: { requestedVia: 'songbook_modal', lyricHint }
             });
             if (!error) savedCloud = true;
+            else {
+              cloudErrMsg = error.message || 'Server error';
+              console.error('Song request insert failed:', error);
+            }
           }
-        } catch (e) {}
+        } catch (e) {
+          cloudErrMsg = (e && e.message) || 'Network error';
+        }
         if (!savedCloud) {
           try {
             const prev = JSON.parse(localStorage.getItem('qcoach_song_requests_v1') || '[]');
-            prev.push({ title, artist, language, youtube_url, at: new Date().toISOString() });
+            prev.push({ title, artist, language, youtube_url, lyricHint, at: new Date().toISOString() });
             localStorage.setItem('qcoach_song_requests_v1', JSON.stringify(prev));
           } catch (e) {}
         }
         document.getElementById('reqSongTitle').value = '';
         document.getElementById('reqSongArtist').value = '';
         document.getElementById('reqSongYoutube').value = '';
+        const lHintEl = document.getElementById('reqSongLyricsHint');
+        if (lHintEl) lHintEl.value = '';
         document.getElementById('requestSongModalBackdrop')?.classList.add('hidden');
-        showToast(savedCloud ? `🎵 Requested "${title}" — sent to QCoach team!` : `🎵 Saved request for "${title}"! Sign in to sync requests.`, 'success');
+        if (savedCloud) {
+          showToast(`🎵 Requested "${title}" — sent to QCoach team!`, 'success');
+        } else if (cloudErrMsg) {
+          showToast(`⚠️ Saved "${title}" on this device — will retry sync (${cloudErrMsg}).`, 'warn');
+        } else {
+          showToast(`🎵 Saved "${title}" on this device — sign in to send it to the QCoach team!`, 'info');
+        }
       });
 
-      // 🛡️ Admin Song Request Queue (Load, Approve, Reject, Export Approved JSON)
+      // 🛡️ Admin Song Request Queue (Load, Approve, Reject)
       let cachedAdminSubmissions = [];
       async function loadAdminSongRequests() {
         const listEl = document.getElementById('adminSongRequestsList');
@@ -13658,6 +13714,7 @@
         try {
           const sb = await ensureSupabaseClient();
           if (!sb || !qcoachCloudUser) { listEl.innerHTML = 'Sign in online to load requests.'; return; }
+          await flushLocalSongRequestsToCloud();
           const { data, error } = await sb.from('community_song_submissions')
             .select('*')
             .in('status', ['pending', 'approved'])
@@ -13675,10 +13732,12 @@
               ? '<span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">APPROVED</span>'
               : '<span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] font-bold">PENDING</span>';
             const ytLink = r.youtube_url ? `<a href="${r.youtube_url}" target="_blank" rel="noopener" class="text-cyan-400 underline text-[11px]">YouTube ↗</a>` : '';
+            const lHint = (r.payload && r.payload.lyricHint) ? `<div class="text-[10px] text-amber-300/80 italic truncate">"${r.payload.lyricHint}"</div>` : '';
             return `<div class="rounded-lg bg-zinc-900 border border-zinc-800 p-2.5 flex items-center justify-between gap-2">
               <div class="min-w-0">
                 <div class="flex items-center gap-1.5">${badge}<span class="font-bold text-qtext truncate">${r.title}</span></div>
                 <div class="text-[11px] text-qmuted truncate">${r.artist || 'Unknown artist'} · ${(r.language || 'en').toUpperCase()} ${ytLink}</div>
+                ${lHint}
               </div>
               <div class="flex items-center gap-1 shrink-0">
                 ${!isApp ? `<button type="button" data-req-approve="${r.id}" class="px-2 py-1 rounded bg-emerald-500 hover:bg-emerald-400 text-black font-black text-[10px]">✓ Approve</button>` : ''}
@@ -13689,7 +13748,7 @@
           listEl.querySelectorAll('[data-req-approve]').forEach(b => b.addEventListener('click', async () => {
             const id = b.getAttribute('data-req-approve');
             await sb.from('community_song_submissions').update({ status: 'approved' }).eq('id', id);
-            showToast('✅ Song approved for sync pipeline!', 'success');
+            showToast('✅ Song approved — ready for Auto-Publish!', 'success');
             loadAdminSongRequests();
           }));
           listEl.querySelectorAll('[data-req-reject]').forEach(b => b.addEventListener('click', async () => {
@@ -13703,16 +13762,6 @@
         }
       }
       document.getElementById('btnAdminRefreshRequests')?.addEventListener('click', loadAdminSongRequests);
-      document.getElementById('btnAdminExportApproved')?.addEventListener('click', () => {
-        const approved = cachedAdminSubmissions.filter(r => r.status === 'approved');
-        if (!approved.length) { showToast('No approved songs loaded yet — click 🔄 Load first.', 'warn'); return; }
-        const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), songs: approved }, null, 2)], { type: 'application/json' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'qcoach_approved_song_queue.json';
-        a.click();
-        showToast(`⬇️ Exported ${approved.length} approved song(s) for processing!`, 'success');
-      });
 
       // Song Creator Studio (in Settings → Library)
       document.getElementById('btnOpenCreatorStudio')?.addEventListener('click', () => {
@@ -15198,6 +15247,9 @@
         const match = panel.getAttribute('data-settings-panel') === target;
         panel.classList.toggle('hidden', !match);
       });
+      if (target === 'library' && typeof loadAdminSongRequests === 'function') {
+        loadAdminSongRequests();
+      }
     }
 
     function initFirstLaunchWelcomeStrip() {

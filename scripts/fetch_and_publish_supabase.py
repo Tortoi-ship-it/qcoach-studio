@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-QCoach Studio v4.14 — Automated Supabase -> packs/*.json -> Supabase Published Bridge
+QCoach Studio v5.11 — Automated Supabase -> packs/community_catalog.json -> Supabase Published/Rejected Bridge
 Called by GitHub Actions (.github/workflows/sync-approved-songs.yml).
 Reads SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY from environment secrets.
 """
@@ -39,29 +39,50 @@ def main():
         print("No approved songs waiting in Supabase queue. Nothing to do.")
         sys.exit(0)
 
-    print(f"Found {len(approved)} approved song(s) in Supabase. Running sync pipeline...")
+    print(f"Found {len(approved)} approved song(s) in Supabase. Running fuzzy multi-signal sync pipeline...")
     queue_file = "/tmp/qcoach_approved_queue.json"
+    report_file = "/tmp/qcoach_sync_report.json"
     with open(queue_file, "w", encoding="utf-8") as f:
         json.dump({"songs": approved}, f, indent=2, ensure_ascii=False)
 
     rc = subprocess.run([
         sys.executable, "scripts/process_approved_queue.py",
         "--queue", queue_file,
-        "--packs-dir", "packs"
+        "--packs-dir", "packs",
+        "--report-out", report_file,
     ]).returncode
 
     if rc != 0:
-        print("Pipeline or pack validation failed. Not marking songs as published.")
+        print("Pipeline or pack validation failed. Not updating Supabase statuses.")
         sys.exit(rc)
 
-    # Mark processed rows as 'published' in Supabase
+    results_by_id = {}
+    if os.path.exists(report_file):
+        with open(report_file, "r", encoding="utf-8") as rf:
+            rep = json.load(rf)
+            for item in rep.get("results", []):
+                if item.get("id"):
+                    results_by_id[item["id"]] = item
+
+    # Update Supabase status per song: 'published' for added/duplicate, 'rejected' for quarantined
     for row in approved:
         rid = row.get("id")
-        if rid:
+        if not rid:
+            continue
+        outcome = results_by_id.get(rid, {"status": "added"})
+        if outcome.get("status") == "quarantined":
+            prev_payload = row.get("payload") if isinstance(row.get("payload"), dict) else {}
+            prev_payload["rejectReason"] = outcome.get("reason", "Low confidence match")
+            sb_request("PATCH", f"community_song_submissions?id=eq.{rid}", {
+                "status": "rejected",
+                "payload": prev_payload,
+            })
+            print(f"Quarantined -> marked rejected in Supabase: {row.get('title')} ({prev_payload['rejectReason']})")
+        else:
             sb_request("PATCH", f"community_song_submissions?id=eq.{rid}", {"status": "published"})
             print(f"Marked published in Supabase: {row.get('title')}")
 
-    print("All approved songs processed, validated, and marked published!")
+    print("All approved songs processed, validated, and synced with Supabase!")
 
 
 if __name__ == "__main__":
