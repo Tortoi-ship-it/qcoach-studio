@@ -1,6 +1,6 @@
 {
   "schemaVersion": "3.0",
-  "updatedAt": "2026-11-28T12:11:43.992727+00:00",
+  "updatedAt": "2026-11-28T17:21:35.643081+00:00",
   "packs": [
     {
       "id": "catholic_and_hymns",
@@ -20,7 +20,7 @@
       "id": "community_catalog",
       "name": "QCoach Live Song Bank (Server Catalog)",
       "language": "multi",
-      "songCount": 0,
+      "songCount": 4,
       "url": "./packs/community_catalog.json"
     },
     {
