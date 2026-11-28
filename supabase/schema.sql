@@ -1,5 +1,5 @@
--- QCoach Studio v4.12 Cloud Sync, Dynamic Admin Roles & Song Request Pipeline (Supabase / PostgreSQL)
--- Run this in Supabase SQL Editor. Safe to re-run on an existing project.
+-- QCoach Studio v4.15 Cloud Sync, Dynamic Admin Roles & Song Request Pipeline
+-- Safe to run / re-run in Supabase SQL Editor.
 
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
@@ -17,7 +17,6 @@ alter table public.profiles add column if not exists role text default 'user';
 alter table public.profiles add column if not exists subscription_tier text default 'free';
 alter table public.profiles add column if not exists learning_state jsonb default '{}'::jsonb;
 
--- Helper function: checks if current logged-in user has role = 'admin' in public.profiles
 create or replace function public.is_admin()
 returns boolean
 language sql
@@ -54,7 +53,6 @@ create table if not exists public.community_song_submissions (
   created_at timestamptz default now()
 );
 
--- Allow new 'approved' and 'published' workflow states on existing tables
 alter table public.community_song_submissions drop constraint if exists community_song_submissions_status_check;
 alter table public.community_song_submissions
   add constraint community_song_submissions_status_check
@@ -80,5 +78,8 @@ drop policy if exists "Admins manage all song submissions" on public.community_s
 create policy "Admins manage all song submissions" on public.community_song_submissions
   for all using (public.is_admin()) with check (public.is_admin());
 
--- Bootstrap primary owner as admin (add more admins anytime in Table Editor -> profiles -> role = 'admin')
+grant usage on schema public to anon, authenticated;
+grant select, insert, update, delete on public.profiles, public.song_progress, public.community_song_submissions to authenticated;
+grant execute on function public.is_admin() to authenticated;
+
 update public.profiles set role = 'admin' where lower(display_name) = 'joy.tuscano@gmail.com';
