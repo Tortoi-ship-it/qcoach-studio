@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "5.4",
+  "schemaVersion": "5.13",
   "updatedAt": "2026-11-28",
   "rankThresholds": {
     "intermediateStars": 30,
@@ -9,32 +9,36 @@
     {
       "unit": 1,
       "badge": "Unit 1 · Beginner (400–799)",
-      "title": "First Chords, Steady Pulse & Down-Up Strumming",
-      "goal": "Build clean fingertip posture, lock onto a steady 4/4 pulse, and play smooth Down-Up strums.",
+      "title": "First 4 Chords (C, Am, F, G) & Steady Pulse",
+      "goal": "Master C, Am, F, and G one chord at a time with steady down-strums before playing your first full song.",
       "lessonIds": [
         "drill-ch-c",
         "drill-ch-am",
         "drill-st-down",
         "drill-ch-f",
-        "drill-st-downup",
+        "drill-ch-g",
         "mile-1"
       ],
-      "testOutId": "mile-1"
+      "testOutId": "mile-1",
+      "passPct": 65,
+      "timingWindowMs": 185
     },
     {
       "unit": 2,
       "badge": "Unit 2 · Strummer (800–1199)",
-      "title": "G Major, Island Strum, 3/4 Waltz & Folk Drive",
-      "goal": "Conquer the 3-finger G triangle and master the three essential strumming grooves.",
+      "title": "Down-Up Strumming, Anchor Switches, 3/4 Waltz & Island Groove",
+      "goal": "Connect your first 4 chords smoothly using Down-Up, 3/4 Waltz, Island, and Folk strumming grooves.",
       "lessonIds": [
-        "drill-ch-g",
+        "drill-st-downup",
         "drill-tr-c-g",
         "drill-st-waltz",
         "drill-st-island",
         "drill-st-folk",
         "mile-2"
       ],
-      "testOutId": "mile-2"
+      "testOutId": "mile-2",
+      "passPct": 70,
+      "timingWindowMs": 165
     },
     {
       "unit": 3,
@@ -49,7 +53,9 @@
         "drill-tr-split-bar",
         "mile-3"
       ],
-      "testOutId": "mile-3"
+      "testOutId": "mile-3",
+      "passPct": 74,
+      "timingWindowMs": 150
     },
     {
       "unit": 4,
@@ -64,7 +70,9 @@
         "drill-tr-4chord",
         "mile-4"
       ],
-      "testOutId": "mile-4"
+      "testOutId": "mile-4",
+      "passPct": 78,
+      "timingWindowMs": 135
     },
     {
       "unit": 5,
@@ -79,7 +87,9 @@
         "drill-tr-key-d",
         "mile-5"
       ],
-      "testOutId": "mile-5"
+      "testOutId": "mile-5",
+      "passPct": 82,
+      "timingWindowMs": 120
     },
     {
       "unit": 6,
@@ -94,37 +104,43 @@
         "drill-ek-ear-triads",
         "mile-6"
       ],
-      "testOutId": "mile-6"
+      "testOutId": "mile-6",
+      "passPct": 86,
+      "timingWindowMs": 110
     },
     {
       "unit": 7,
       "badge": "Unit 7 · Concert Virtuoso (2400–2799)",
-      "title": "Lead Scales, Melodic Fills & Chord-Melody",
-      "goal": "Play single-note lead melodies, hybrid strum-pick fills, and solo chord-melody arrangements.",
+      "title": "Lead Scales, Chord-Melody & Treble Staff Sight-Reading",
+      "goal": "Play single-note lead melodies, solo chord-melody, and read real treble-staff notation.",
       "lessonIds": [
         "drill-sc-cmaj",
         "drill-sc-pent",
         "drill-sc-melodic-fill",
         "drill-sc-chord-melody",
-        "drill-wu-spider",
+        "drill-sr-treble",
         "mile-7"
       ],
-      "testOutId": "mile-7"
+      "testOutId": "mile-7",
+      "passPct": 90,
+      "timingWindowMs": 95
     },
     {
       "unit": 8,
       "badge": "Unit 8 · Maestro (2800–3000)",
-      "title": "Syncopated Riffs, Color Voicings & Live Modulations",
-      "goal": "Earn full Maestro certification across syncopated percussion, jazz voicings, and Nashville theory.",
+      "title": "Syncopated Riffs, Color Voicings & Maestro Notation",
+      "goal": "Earn full Maestro certification across syncopated percussion, jazz voicings, and full musical notation.",
       "lessonIds": [
         "drill-st-sync-riff",
         "drill-ch-jazz-worship",
         "drill-tr-modulation",
         "drill-sc-arp6-master",
-        "drill-ek-nashville",
+        "drill-sr-rhythm-keys",
         "mile-8"
       ],
-      "testOutId": "mile-8"
+      "testOutId": "mile-8",
+      "passPct": 93,
+      "timingWindowMs": 85
     }
   ],
   "drillLibrary": {
@@ -1068,6 +1084,27 @@
         "bpm": 86,
         "playMode": "scale",
         "tip": "Assign one finger per string (Thumb=G/C, Index=E, Middle=A) for effortless speed."
+      },
+      {
+        "id": "drill-sc-waltz-riff",
+        "title": "3/4 Waltz Melody Riff (Virtuoso)",
+        "tier": "expert",
+        "badge": "🏆 Level 7",
+        "desc": "Weave single-note melody fills between 3/4 worship chords in concert timing.",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "Dm",
+          "Em",
+          "G",
+          "C"
+        ],
+        "meter": "3/4",
+        "strumCode": "rif3",
+        "bpm": 78,
+        "tip": "Let the melody note on beat 3 ring clearly into the next chord change."
       }
     ],
     "earkeys": [
@@ -1162,6 +1199,42 @@
         "strumCode": "ich4",
         "bpm": 90,
         "tip": "Think in numbers (1–5–6m–4) instead of letter names so you can follow any band leader live."
+      },
+      {
+        "id": "drill-sr-treble",
+        "title": "🎼 Sight-Reading: Treble Staff Notes (C4–A5)",
+        "tier": "expert",
+        "badge": "🎼 Level 7",
+        "desc": "Read real notes on the 5-line treble clef staff for Concert Ukulele (score ≥ 90% to unlock Concert Virtuoso).",
+        "chords": [
+          "C",
+          "F",
+          "G",
+          "Am"
+        ],
+        "meter": "4/4",
+        "strumCode": "arp4",
+        "bpm": 72,
+        "sightReadingMode": "staff",
+        "tip": "Lines from bottom to top: E–G–B–D–F. Spaces: F–A–C–E. Middle C sits on the ledger line below."
+      },
+      {
+        "id": "drill-sr-rhythm-keys",
+        "title": "🎼 Maestro Notation: Keys, Rhythms & Symbols",
+        "tier": "expert",
+        "badge": "🎼 Level 8",
+        "desc": "Master key signatures, note/rest durations, time signatures, and expression marks (score ≥ 93% for Maestro).",
+        "chords": [
+          "C",
+          "G",
+          "D",
+          "F"
+        ],
+        "meter": "4/4",
+        "strumCode": "arp4",
+        "bpm": 76,
+        "sightReadingMode": "symbols",
+        "tip": "Sharps order: F–C–G–D–A–E–B. Flats order: B–E–A–D–G–C–F. Every Maestro reads both pitch and dynamics."
       }
     ],
     "songs": [
