@@ -410,6 +410,18 @@
           <button id="btnDismissWelcomeStrip" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qtext border border-zinc-700 text-xs font-bold transition">Got it ✕</button>
         </div>
       </div>
+      <!-- Persistent Lesson / Warm-Up Instruction Banner (replaces fleeting 2s toast) -->
+      <div id="stageLessonGoalBanner" class="hidden q-card rounded-xl px-3.5 py-2.5 border border-emerald-500/45 bg-emerald-500/10 flex flex-wrap items-center justify-between gap-2">
+        <div class="min-w-0 space-y-0.5">
+          <div class="flex flex-wrap items-center gap-2">
+            <span id="stageLessonGoalBadge" class="px-2 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-400/50 text-[11px] font-mono font-bold text-emerald-300">Unit 1 · Lesson 1.1</span>
+            <span id="stageLessonGoalTitle" class="text-xs sm:text-sm font-black text-qtext">C Major Mastery</span>
+            <span id="stageLessonGoalTarget" class="text-[11px] font-mono font-bold text-amber-400">Pass ≥ 65% · ±185ms</span>
+          </div>
+          <p id="stageLessonGoalDesc" class="text-xs text-qmuted leading-snug">Press ▶ PLAY when ready. Listen is ON and will grade each bar cleanly.</p>
+        </div>
+        <button id="btnExitLessonMode" type="button" class="px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted hover:text-qtext border border-zinc-700 text-[11px] font-bold shrink-0 transition">← Learn</button>
+      </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 sm:gap-3 items-stretch">
 
         <!-- TOP / LEFT PANEL (5 cols): ACTIVE CHORD + FRETBOARD + UP NEXT (Always Side-by-Side on Mobile!) -->
@@ -735,14 +747,18 @@
             <span id="learnRankBadge" class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-xs sm:text-sm font-black text-emerald-400">Beginner</span>
           </div>
           <div class="flex flex-wrap items-center gap-2">
-            <div class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-mono font-bold text-emerald-400">
-              ⭐ <span id="learnStarsCount">0</span>
+            <div class="px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-mono font-bold text-amber-400" title="Hard Work / Practice Effort Points (never inflates your Grade)">
+              ⚡ <span id="learnEffortPoints">0</span> Effort
             </div>
-            <div class="px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-mono font-bold text-amber-400">
+            <div id="learnDailyRingPill" class="px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-300" title="Complete 3 practice runs today to close your Daily Ring">
+              🎯 <span id="learnDailyRingCount">0</span>/3 Today
+            </div>
+            <div class="px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-mono font-bold text-emerald-400">
               🔥 <span id="learnStreakCount">0</span>d
             </div>
-            <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-xs font-mono font-bold text-qtext transition" title="Quickly skip to your current level">
-              🧭 2-Min Rating Test
+            <span id="learnStarsCount" class="hidden">0</span>
+            <button id="btnStartPlacementCheck" type="button" class="px-3 py-1.5 rounded-xl bg-[#1C1C1E] hover:bg-zinc-800 border border-[#2C2C2E] text-xs font-mono font-bold text-qtext transition" title="2-Minute Indicative Diagnostic + Gate-Pass Verification">
+              🧭 2-Min Diagnostic
             </button>
             <button id="btnOpenCloudAuth" type="button" class="px-3 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-xs font-mono font-bold text-indigo-300 transition">
               ☁️ <span id="cloudAuthBtnLabel">Sign In</span>
@@ -753,18 +769,23 @@
         <!-- 3000-Point Ukulele Rating & 4-Pillar Breakdown -->
         <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] px-3 py-2.5 space-y-2">
           <div class="flex items-center justify-between text-[11px] font-mono">
-            <span id="learnRankProgressLabel" class="text-qtext font-bold">Rating 400 / 3000 · Next: Strummer (800)</span>
-            <span id="learnRatingNumber" class="text-amber-400 font-black">400</span>
+            <span id="learnRankProgressLabel" class="text-qtext font-bold">Grade 1 Exam Readiness · Next: Grade 2 (Strummer)</span>
+            <span id="learnRatingNumber" class="text-amber-400 font-black">0% Ready</span>
           </div>
           <div class="w-full h-2 rounded-full bg-zinc-800 overflow-hidden">
             <div id="learnRankProgressBar" class="h-full bg-gradient-to-r from-emerald-500 to-amber-400 transition-all duration-300" style="width: 4%;"></div>
           </div>
           <div id="learnRatingPillars" class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 pt-0.5 text-[10px] font-mono">
-            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Chords</span><span id="pillarChordsVal" class="text-emerald-400 font-bold">0/700</span></div>
-            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Rhythm</span><span id="pillarRhythmVal" class="text-amber-400 font-bold">0/650</span></div>
-            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Lead</span><span id="pillarLeadVal" class="text-cyan-400 font-bold">0/650</span></div>
-            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">Songs</span><span id="pillarSongsVal" class="text-indigo-400 font-bold">0/600</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">🎯 Precision</span><span id="pillarChordsVal" class="text-emerald-400 font-bold">—</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">⏱️ Timing</span><span id="pillarRhythmVal" class="text-amber-400 font-bold">—</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">🌊 Fluency</span><span id="pillarLeadVal" class="text-cyan-400 font-bold">—</span></div>
+            <div class="px-2 py-1 rounded-lg bg-zinc-900 border border-zinc-800 flex justify-between"><span class="text-qmuted">🎼 Reading</span><span id="pillarSongsVal" class="text-indigo-400 font-bold">—</span></div>
           </div>
+          <div id="learnGradeGrindRow" class="flex flex-wrap items-center justify-between gap-2 text-[10px] font-mono text-qmuted pt-0.5">
+            <span id="learnGradeGrindLabel">Grade 1 Coursework: 0 / 6 clean runs</span>
+            <span id="learnGradeExamTarget">Gate-Pass Exam: Precision ≥65% · Timing ≥60% · Fluency ≥60%</span>
+          </div>
+          <div id="learnPromotionGateBanner" class="hidden rounded-lg bg-amber-500/10 border border-amber-500/40 px-2.5 py-1.5 text-[11px] text-amber-200 leading-snug"></div>
         </div>
       </div>
 
@@ -774,13 +795,67 @@
           <button id="btnLearnModePath" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-black bg-amber-500 text-black shadow transition">🗺️ Guided Path</button>
           <button id="btnLearnModeGym" type="button" class="px-3.5 py-1.5 rounded-lg text-xs font-bold text-qmuted hover:text-qtext transition">🏋️ Skill Gym</button>
         </div>
-        <button id="btnOpenChordRush" type="button" class="px-3.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 text-xs font-black shadow transition">
-          ⚡ 60s Chord Rush <span id="chordRushBestPill" class="ml-1 text-[10px] font-mono opacity-85"></span>
-        </button>
+        <div class="flex flex-wrap items-center gap-1.5">
+          <button id="btnPreviewSightReading" type="button" class="px-3 py-1.5 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-300 text-xs font-bold shadow transition" title="Preview the Grade 7-8 Treble Staff &amp; Musical Notation Trainer">
+            🎼 Sight-Reading Preview
+          </button>
+          <button id="btnOpenChordRush" type="button" class="px-3.5 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 text-xs font-black shadow transition">
+            ⚡ 60s Chord Rush <span id="chordRushBestPill" class="ml-1 text-[10px] font-mono opacity-85"></span>
+          </button>
+        </div>
       </div>
 
       <!-- MODE A (DEFAULT): 🗺️ LINEAR GUIDED PATH -->
       <div id="learnGuidedPathContainer" class="space-y-4">
+        <!-- 🧭 INDICATIVE PLACEMENT VERIFICATION CARD (Two-Stage Diagnostic -> Gate-Pass Exam) -->
+        <div id="indicativePlacementCard" class="hidden q-card rounded-2xl p-4 border-2 border-amber-400/70 bg-gradient-to-r from-amber-500/15 via-transparent to-indigo-500/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-amber-500 text-black text-[10px] font-mono font-black uppercase">🧭 Indicative Level (Unverified)</span>
+              <span id="indicativeGradeBadge" class="text-xs font-mono font-bold text-amber-300">Grade 3 · Rhythm Player</span>
+            </div>
+            <p id="indicativeGradeDesc" class="text-xs text-qtext leading-snug">Take the Grade 3 Gate-Pass Exam now to officially verify and unlock Grade 3, or start smoothly one grade below.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <button id="btnStartBelowIndicative" type="button" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-qtext font-bold text-xs transition">Start 1 Grade Below</button>
+            <button id="btnVerifyIndicativeNow" type="button" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-black text-xs shadow transition">🎓 Verify Grade Now</button>
+          </div>
+        </div>
+
+        <!-- 📘 UNIT 0: ABSOLUTE BEGINNER ESSENTIALS (Collapsible, non-blocking for experienced players) -->
+        <details id="unit0AbsoluteBeginnerCard" class="q-card rounded-2xl p-4 border border-cyan-500/40 bg-gradient-to-r from-cyan-500/5 via-transparent to-emerald-500/5">
+          <summary class="cursor-pointer list-none flex flex-wrap items-center justify-between gap-2 select-none">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-md bg-cyan-500 text-black text-[10px] font-mono font-black uppercase">📘 Unit 0 · Absolute Beginner</span>
+              <span class="text-xs sm:text-sm font-black text-qtext">Holding, Strings (G-C-E-A), Diagrams &amp; How to Strum</span>
+            </div>
+            <span class="text-[11px] font-mono text-cyan-400 font-bold">Tap to Read ▾</span>
+          </summary>
+          <div class="mt-3 pt-3 border-t border-[#2C2C2E] space-y-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
+              <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-1">
+                <div class="font-black text-emerald-400">1. Hold at Chest Height</div>
+                <p class="text-qmuted leading-relaxed">Rest the ukulele body against your chest and gently cradle the lower edge with your strumming forearm. Keep your left thumb flat behind the middle of the neck — never grip it like a baseball bat.</p>
+              </div>
+              <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-1">
+                <div class="font-black text-cyan-400">2. The 4 Strings (G – C – E – A)</div>
+                <p class="text-qmuted leading-relaxed">Top string (closest to your chin) to bottom (closest to floor): <strong>G – C – E – A</strong> (<em>"Good Cats Eat Apples"</em>). Press with your <strong>fingertip</strong> just behind the metal fret wire, arched like a bridge so other strings ring cleanly.</p>
+              </div>
+              <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-1">
+                <div class="font-black text-amber-400">3. How to Read Chord Diagrams</div>
+                <p class="text-qmuted leading-relaxed"><strong>Vertical lines</strong> = the 4 strings (left to right: G, C, E, A). <strong>Horizontal bars</strong> = Frets 1, 2, 3, 4. <strong>Numbered dots</strong> = left-hand fingers (<code>1</code> Index, <code>2</code> Middle, <code>3</code> Ring, <code>4</code> Pinky). <code>O</code> = play string open.</p>
+              </div>
+              <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-3 space-y-1">
+                <div class="font-black text-fuchsia-400">4. Down (↓ D), Up (↑ U), Rest (-) &amp; Chuck (✕)</div>
+                <p class="text-qmuted leading-relaxed">Strum gently where the neck meets the body with a loose wrist: <strong>D</strong> = index fingernail brushes down across all 4 strings; <strong>U</strong> = soft fingertip pad brushes up; <strong>-</strong> = ghost-miss to keep your wrist moving; <strong>✕</strong> = light palm mute.</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-emerald-500/10 border border-emerald-500/35 px-3 py-2">
+              <span class="text-xs text-qtext"><strong>Ready to try your first strum?</strong> Practice a slow 60 BPM all-down pulse before starting Unit 1.</span>
+              <button id="btnUnit0OpenStrum" type="button" class="px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition shrink-0">🎸 Try First Strum (60 BPM)</button>
+            </div>
+          </div>
+        </details>
         <!-- Hero Continue Next Lesson Card -->
         <div class="q-card rounded-2xl p-4 sm:p-5 border-2 border-emerald-500/60 bg-gradient-to-r from-emerald-500/10 via-transparent to-amber-500/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div class="space-y-1">
@@ -1074,6 +1149,9 @@
         </div>
 
         <div class="flex items-center justify-between gap-2 pt-1">
+          <button id="btnPlacementBrandNew" type="button" class="px-3 py-2 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 font-bold text-xs transition">
+            📘 Brand New → Step 0
+          </button>
           <button id="btnPlacementStopHere" type="button" class="px-3 py-2 rounded-xl bg-[#1C1C1E] hover:bg-[#2C2C2E] border border-[#2C2C2E] text-qmuted hover:text-qtext font-bold text-xs transition">
             Start Learning Here
           </button>
@@ -1214,18 +1292,22 @@
           <button id="btnCoachDiagCloseX" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
         </div>
       </div>
-      <div class="grid grid-cols-3 gap-2 text-center">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
         <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
-          <div class="text-[10px] font-mono text-qmuted">OVERALL</div>
-          <div id="coachDiagOverall" class="text-lg font-black text-emerald-400">92%</div>
-        </div>
-        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
-          <div class="text-[10px] font-mono text-qmuted">CHORDS</div>
-          <div id="coachDiagChords" class="text-lg font-black text-amber-400">95%</div>
+          <div class="text-[10px] font-mono text-qmuted">PRECISION</div>
+          <div id="coachDiagChords" class="text-base sm:text-lg font-black text-emerald-400">95%</div>
         </div>
         <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
           <div class="text-[10px] font-mono text-qmuted">TIMING</div>
-          <div id="coachDiagTiming" class="text-lg font-black text-cyan-400">88%</div>
+          <div id="coachDiagTiming" class="text-base sm:text-lg font-black text-amber-400">88%</div>
+        </div>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+          <div class="text-[10px] font-mono text-qmuted">FLUENCY</div>
+          <div id="coachDiagFluency" class="text-base sm:text-lg font-black text-cyan-400">90%</div>
+        </div>
+        <div class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-2">
+          <div class="text-[10px] font-mono text-qmuted">EFFORT</div>
+          <div id="coachDiagOverall" class="text-base sm:text-lg font-black text-amber-400">+38</div>
         </div>
       </div>
       <div id="coachDiagBarStripWrap" class="hidden rounded-xl bg-[#121212] border border-[#2C2C2E] p-2.5 space-y-1.5">
@@ -1239,6 +1321,28 @@
         <button id="btnCoachDiagRetry" type="button" class="px-3.5 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition">🔁 Replay to Improve</button>
         <button id="btnCoachDiagNextLesson" type="button" class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">▶ Next Lesson →</button>
       </div>
+    </div>
+  </div>
+
+  <!-- 🎼 CONSERVATORY SIGHT-READING & MUSICAL NOTATION TRAINER (Required for Concert Virtuoso & Maestro) -->
+  <div id="sightReadingModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="q-card rounded-2xl p-5 max-w-lg w-full space-y-4 border-2 border-cyan-500/50 shadow-2xl">
+      <div class="flex items-start justify-between gap-2">
+        <div>
+          <span id="srModeBadge" class="px-2 py-0.5 rounded-md bg-cyan-500/20 border border-cyan-400/50 text-[10px] font-mono font-bold text-cyan-300 uppercase">🎼 Conservatory Sight-Reading</span>
+          <h3 id="srTitle" class="text-base sm:text-lg font-black text-qtext mt-1">Treble Staff &amp; Musical Notation</h3>
+        </div>
+        <button id="btnCloseSightReading" type="button" class="px-2 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-qmuted text-xs font-bold">✕</button>
+      </div>
+      <div class="flex items-center justify-between text-xs font-mono">
+        <span id="srProgressLabel" class="text-qmuted">Question 1 / 10</span>
+        <span id="srScoreLabel" class="text-emerald-400 font-bold">Score: 0 / 0</span>
+        <span id="srTargetLabel" class="text-amber-400 font-bold">Pass: ≥ 90%</span>
+      </div>
+      <div id="srVisualStage" class="rounded-xl bg-[#121212] border border-[#2C2C2E] p-4 flex flex-col items-center justify-center min-h-[150px] space-y-2"></div>
+      <p id="srPromptText" class="text-xs sm:text-sm font-bold text-qtext text-center">Identify this note on the treble clef staff:</p>
+      <div id="srChoicesGrid" class="grid grid-cols-2 gap-2"></div>
+      <div id="srFeedbackBar" class="text-xs font-mono text-center min-h-[18px] text-qmuted"></div>
     </div>
   </div>
 
@@ -8449,13 +8553,21 @@
         }
         return;
       }
+      const barIndices = Object.keys(state.listenBarResults).map(Number).sort((a, b) => a - b);
       const hits = vals.filter(v => v === 'hit').length;
       const chordPct = Math.round((hits / vals.length) * 100);
       const rhythmPct = listenEngine.onsetCount > 0
         ? Math.round((listenEngine.onBeatCount / listenEngine.onsetCount) * 100)
         : chordPct;
-      const finalPct = Math.round(chordPct * 0.75 + rhythmPct * 0.25);
-      const stars = finalPct >= 85 ? '⭐⭐⭐' : (finalPct >= 65 ? '⭐⭐' : '⭐');
+      // Transition Fluency: % of consecutive bar-to-bar transitions landed cleanly without dropping Beat 1
+      let transTotal = 0, transClean = 0;
+      for (let i = 1; i < barIndices.length; i++) {
+        transTotal++;
+        if (state.listenBarResults[barIndices[i - 1]] === 'hit' && state.listenBarResults[barIndices[i]] === 'hit') transClean++;
+      }
+      const fluencyPct = transTotal > 0 ? Math.round((transClean / transTotal) * 100) : chordPct;
+      const finalPct = Math.round(chordPct * 0.50 + rhythmPct * 0.25 + fluencyPct * 0.25);
+      const stars = finalPct >= 88 ? '⭐⭐⭐' : (finalPct >= 70 ? '⭐⭐' : '⭐');
 
       const song = getCurrentSong();
       let bestNote = '';
@@ -8469,7 +8581,13 @@
       }
       recordDailyPracticeStreak();
       incrementTodayLessonsCompleted();
-      if (state.smartDrillActive && finalPct >= 80 && song && song.musicalMeta) {
+
+      // Apply Chess-style Elo + Rolling Proficiency update (can go UP or DOWN!)
+      const evalOutcome = (typeof recordProficiencySession === 'function')
+        ? recordProficiencySession({ chordPct, rhythmPct, fluencyPct, finalPct, drillMeta: state.activeDrillMeta })
+        : { eloDelta: 0, passedAllSubjects: finalPct >= 65, failedSubjects: [], promotedToGrade: null };
+
+      if (state.smartDrillActive && evalOutcome.passedAllSubjects && song && song.musicalMeta) {
         const curB = Number(song.musicalMeta.bpm) || 72;
         const tgtB = Number(state.smartDrillTargetBpm) || curB;
         if (curB < tgtB) {
@@ -8481,11 +8599,14 @@
           bestNote += ' · 🏆 Target Tempo Mastered!';
         }
       }
-      if (state.activeDrillMeta && state.activeDrillMeta.id) saveDrillScore(state.activeDrillMeta.id, finalPct);
+      if (state.activeDrillMeta && state.activeDrillMeta.id && evalOutcome.passedAllSubjects) {
+        saveDrillScore(state.activeDrillMeta.id, finalPct);
+      }
       if (typeof renderLearnPathView === 'function') renderLearnPathView();
       if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
-      if (typeof openCoachDiagnosisCard === 'function') openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, state.activeDrillMeta);
-      showToast(`${stars} ${finalPct}% Accuracy (${hits}/${vals.length} bars · ${rhythmPct}% On-Beat)${bestNote}`, finalPct >= 65 ? 'success' : 'info');
+      if (typeof openCoachDiagnosisCard === 'function') {
+        openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, state.activeDrillMeta, fluencyPct, evalOutcome);
+      }
     }
 
     function chordListenLoop() {
@@ -8572,7 +8693,9 @@
           }
 
           const mode = getEffectiveDifficultyMode();
-          const minThresh = mode === 'beginner' ? 0.66 : (mode === 'intermediate' ? 0.71 : 0.75);
+          const activeUnitNum = (state.activeDrillMeta && typeof getLessonUnitNumber === 'function') ? getLessonUnitNumber(state.activeDrillMeta.id) : 0;
+          const activeRules = activeUnitNum > 0 && typeof getUnitMasteryRules === 'function' ? getUnitMasteryRules(activeUnitNum) : null;
+          const minThresh = activeRules ? activeRules.chordThresh : (mode === 'beginner' ? 0.65 : (mode === 'intermediate' ? 0.70 : 0.75));
           const margin = mode === 'beginner' ? 0.015 : 0.0;
           const rootMatch = String(expectedChord || 'C').match(/^([A-G][#b]?)/);
           const rootPc = rootMatch && CHORD_PC_ROOTS[rootMatch[1]] !== undefined ? CHORD_PC_ROOTS[rootMatch[1]] : -1;
@@ -8585,7 +8708,8 @@
             listenEngine.confirmCount = 0;
             listenEngine.confirmChord = '';
           }
-          const isHit = rawHit && listenEngine.confirmCount >= 2;
+          const reqFrames = (activeUnitNum >= 7) ? 3 : 2;
+          const isHit = rawHit && listenEngine.confirmCount >= reqFrames;
 
           let timingTag = '';
           if (isStrumOnset) {
@@ -8597,7 +8721,8 @@
               const subMs = (60000 / Math.max(40, effBpm)) / Math.max(1, ts.subdivisionsPerBeat || 2);
               const deltaMs = nowMs - state.lastStepTimeMs;
               const distToBeat = Math.min(Math.abs(deltaMs), Math.abs(deltaMs - subMs));
-              if (distToBeat <= 115) {
+              const timingWinMs = activeRules ? activeRules.timingWindowMs : (mode === 'beginner' ? 175 : (mode === 'intermediate' ? 130 : 95));
+              if (distToBeat <= timingWinMs) {
                 listenEngine.onBeatCount++;
                 if (state.listenTimingStats) state.listenTimingStats.onBeat++;
                 timingTag = ' · On Beat';
@@ -9689,6 +9814,27 @@
       "bpm": 86,
       "playMode": "scale",
       "tip": "Assign one finger per string (Thumb=G/C, Index=E, Middle=A) for effortless speed."
+    },
+    {
+      "id": "drill-sc-waltz-riff",
+      "title": "3/4 Waltz Melody Riff (Virtuoso)",
+      "tier": "expert",
+      "badge": "🏆 Level 7",
+      "desc": "Weave single-note melody fills between 3/4 worship chords in concert timing.",
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "Dm",
+        "Em",
+        "G",
+        "C"
+      ],
+      "meter": "3/4",
+      "strumCode": "rif3",
+      "bpm": 78,
+      "tip": "Let the melody note on beat 3 ring clearly into the next chord change."
     }
   ],
   "earkeys": [
@@ -9783,6 +9929,42 @@
       "strumCode": "ich4",
       "bpm": 90,
       "tip": "Think in numbers (1–5–6m–4) instead of letter names so you can follow any band leader live."
+    },
+    {
+      "id": "drill-sr-treble",
+      "title": "🎼 Sight-Reading: Treble Staff Notes (C4–A5)",
+      "tier": "expert",
+      "badge": "🎼 Level 7",
+      "desc": "Read real notes on the 5-line treble clef staff for Concert Ukulele (score ≥ 90% to unlock Concert Virtuoso).",
+      "chords": [
+        "C",
+        "F",
+        "G",
+        "Am"
+      ],
+      "meter": "4/4",
+      "strumCode": "arp4",
+      "bpm": 72,
+      "sightReadingMode": "staff",
+      "tip": "Lines from bottom to top: E–G–B–D–F. Spaces: F–A–C–E. Middle C sits on the ledger line below."
+    },
+    {
+      "id": "drill-sr-rhythm-keys",
+      "title": "🎼 Maestro Notation: Keys, Rhythms & Symbols",
+      "tier": "expert",
+      "badge": "🎼 Level 8",
+      "desc": "Master key signatures, note/rest durations, time signatures, and expression marks (score ≥ 93% for Maestro).",
+      "chords": [
+        "C",
+        "G",
+        "D",
+        "F"
+      ],
+      "meter": "4/4",
+      "strumCode": "arp4",
+      "bpm": 76,
+      "sightReadingMode": "symbols",
+      "tip": "Sharps order: F–C–G–D–A–E–B. Flats order: B–E–A–D–G–C–F. Every Maestro reads both pitch and dynamics."
     }
   ],
   "songs": [
@@ -9882,32 +10064,36 @@
   {
     "unit": 1,
     "badge": "Unit 1 · Beginner (400–799)",
-    "title": "First Chords, Steady Pulse & Down-Up Strumming",
-    "goal": "Build clean fingertip posture, lock onto a steady 4/4 pulse, and play smooth Down-Up strums.",
+    "title": "First 4 Chords (C, Am, F, G) & Steady Pulse",
+    "goal": "Master C, Am, F, and G one chord at a time with steady down-strums before playing your first full song.",
     "lessonIds": [
       "drill-ch-c",
       "drill-ch-am",
       "drill-st-down",
       "drill-ch-f",
-      "drill-st-downup",
+      "drill-ch-g",
       "mile-1"
     ],
-    "testOutId": "mile-1"
+    "testOutId": "mile-1",
+    "passPct": 65,
+    "timingWindowMs": 185
   },
   {
     "unit": 2,
     "badge": "Unit 2 · Strummer (800–1199)",
-    "title": "G Major, Island Strum, 3/4 Waltz & Folk Drive",
-    "goal": "Conquer the 3-finger G triangle and master the three essential strumming grooves.",
+    "title": "Down-Up Strumming, Anchor Switches, 3/4 Waltz & Island Groove",
+    "goal": "Connect your first 4 chords smoothly using Down-Up, 3/4 Waltz, Island, and Folk strumming grooves.",
     "lessonIds": [
-      "drill-ch-g",
+      "drill-st-downup",
       "drill-tr-c-g",
       "drill-st-waltz",
       "drill-st-island",
       "drill-st-folk",
       "mile-2"
     ],
-    "testOutId": "mile-2"
+    "testOutId": "mile-2",
+    "passPct": 70,
+    "timingWindowMs": 165
   },
   {
     "unit": 3,
@@ -9922,7 +10108,9 @@
       "drill-tr-split-bar",
       "mile-3"
     ],
-    "testOutId": "mile-3"
+    "testOutId": "mile-3",
+    "passPct": 74,
+    "timingWindowMs": 150
   },
   {
     "unit": 4,
@@ -9937,7 +10125,9 @@
       "drill-tr-4chord",
       "mile-4"
     ],
-    "testOutId": "mile-4"
+    "testOutId": "mile-4",
+    "passPct": 78,
+    "timingWindowMs": 135
   },
   {
     "unit": 5,
@@ -9952,7 +10142,9 @@
       "drill-tr-key-d",
       "mile-5"
     ],
-    "testOutId": "mile-5"
+    "testOutId": "mile-5",
+    "passPct": 82,
+    "timingWindowMs": 120
   },
   {
     "unit": 6,
@@ -9967,37 +10159,43 @@
       "drill-ek-ear-triads",
       "mile-6"
     ],
-    "testOutId": "mile-6"
+    "testOutId": "mile-6",
+    "passPct": 86,
+    "timingWindowMs": 110
   },
   {
     "unit": 7,
     "badge": "Unit 7 · Concert Virtuoso (2400–2799)",
-    "title": "Lead Scales, Melodic Fills & Chord-Melody",
-    "goal": "Play single-note lead melodies, hybrid strum-pick fills, and solo chord-melody arrangements.",
+    "title": "Lead Scales, Chord-Melody & Treble Staff Sight-Reading",
+    "goal": "Play single-note lead melodies, solo chord-melody, and read real treble-staff notation.",
     "lessonIds": [
       "drill-sc-cmaj",
       "drill-sc-pent",
       "drill-sc-melodic-fill",
       "drill-sc-chord-melody",
-      "drill-wu-spider",
+      "drill-sr-treble",
       "mile-7"
     ],
-    "testOutId": "mile-7"
+    "testOutId": "mile-7",
+    "passPct": 90,
+    "timingWindowMs": 95
   },
   {
     "unit": 8,
     "badge": "Unit 8 · Maestro (2800–3000)",
-    "title": "Syncopated Riffs, Color Voicings & Live Modulations",
-    "goal": "Earn full Maestro certification across syncopated percussion, jazz voicings, and Nashville theory.",
+    "title": "Syncopated Riffs, Color Voicings & Maestro Notation",
+    "goal": "Earn full Maestro certification across syncopated percussion, jazz voicings, and full musical notation.",
     "lessonIds": [
       "drill-st-sync-riff",
       "drill-ch-jazz-worship",
       "drill-tr-modulation",
       "drill-sc-arp6-master",
-      "drill-ek-nashville",
+      "drill-sr-rhythm-keys",
       "mile-8"
     ],
-    "testOutId": "mile-8"
+    "testOutId": "mile-8",
+    "passPct": 93,
+    "timingWindowMs": 85
   }
 ];
 
@@ -10139,17 +10337,104 @@
       } catch (e) {}
     }
 
+    // Progressive 8-Unit Mastery Ladder (lenient for beginners -> concert-strict for Maestros)
+    const QCOACH_UNIT_MASTERY_RULES = {
+      1: { passPct: 65, timingWindowMs: 185, chordThresh: 0.64, label: 'Lenient' },
+      2: { passPct: 70, timingWindowMs: 165, chordThresh: 0.66, label: 'Steady' },
+      3: { passPct: 74, timingWindowMs: 150, chordThresh: 0.68, label: 'Focused' },
+      4: { passPct: 78, timingWindowMs: 135, chordThresh: 0.70, label: 'Tight' },
+      5: { passPct: 82, timingWindowMs: 120, chordThresh: 0.72, label: 'Band-Tight' },
+      6: { passPct: 86, timingWindowMs: 110, chordThresh: 0.74, label: 'Live-Ready' },
+      7: { passPct: 90, timingWindowMs: 95,  chordThresh: 0.76, label: 'Concert' },
+      8: { passPct: 93, timingWindowMs: 85,  chordThresh: 0.78, label: 'Maestro' }
+    };
+
+    function getLessonUnitNumber(drillId) {
+      if (!drillId) return 0;
+      for (const u of QCOACH_GUIDED_UNITS) {
+        if (Array.isArray(u.lessonIds) && u.lessonIds.includes(drillId)) return u.unit;
+      }
+      return 0;
+    }
+
+    function getUnitMasteryRules(unitNum) {
+      return QCOACH_UNIT_MASTERY_RULES[unitNum] || { passPct: 65, timingWindowMs: 185, chordThresh: 0.64, label: 'Warm-Up' };
+    }
+
+    function getPassThresholdForItem(item) {
+      if (!item || !item.id) return 65;
+      const uNum = getLessonUnitNumber(item.id);
+      return uNum > 0 ? getUnitMasteryRules(uNum).passPct : 65;
+    }
+
+    function isLessonPassed(item) {
+      if (!item) return false;
+      return getBestScoreForItem(item) >= getPassThresholdForItem(item);
+    }
+
+    function getPrerequisiteLesson(drillId) {
+      const seq = getFlatGuidedSequence();
+      const idx = seq.findIndex(s => s.item.id === drillId);
+      if (idx <= 0) return null;
+      return seq[idx - 1];
+    }
+
+    function isLessonUnlocked(drillId) {
+      if (!drillId) return true;
+      const seq = getFlatGuidedSequence();
+      const idx = seq.findIndex(s => s.item.id === drillId);
+      // Optional Warm-Ups (like 1-2-3-4 Finger Stretch) are always unlocked
+      if (idx < 0) return true;
+      if (idx === 0) return true;
+      if (isLessonPassed(seq[idx].item)) return true;
+      const myUnit = QCOACH_GUIDED_UNITS.find(u => u.unit === seq[idx].unit);
+      if (myUnit && myUnit.testOutId && isLessonPassed(findDrillById(myUnit.testOutId))) return true;
+      return isLessonPassed(seq[idx - 1].item);
+    }
+
     function getNextRecommendedGuidedStep() {
       const seq = getFlatGuidedSequence();
-      const firstUnpassed = seq.find(s => getBestScoreForItem(s.item) < 75);
+      const firstUnpassed = seq.find(s => !isLessonPassed(s.item));
       return firstUnpassed || seq[seq.length - 1];
     }
 
     function getFollowingGuidedLesson(currentDrillId) {
       const seq = getFlatGuidedSequence();
       const idx = seq.findIndex(s => s.item.id === currentDrillId);
-      if (idx >= 0 && idx + 1 < seq.length) return seq[idx + 1].item;
-      return getNextRecommendedGuidedStep().item;
+      if (idx >= 0 && idx + 1 < seq.length) {
+        const nextEntry = seq[idx + 1];
+        if (isLessonUnlocked(nextEntry.item.id)) return nextEntry.item;
+      }
+      // If finished an optional Warm-Up (not on guided path), route to the user's actual next unlocked guided lesson!
+      const rec = getNextRecommendedGuidedStep();
+      return rec ? rec.item : null;
+    }
+
+    function updateStageLessonGoalBanner() {
+      const banner = document.getElementById('stageLessonGoalBanner');
+      if (!banner) return;
+      const drill = state.activeDrillMeta;
+      const curSong = (typeof getCurrentSong === 'function') ? getCurrentSong() : null;
+      const isActiveDrillSong = !!(drill && curSong && (curSong.isDrillSession || (drill.songKey && normalizeSongTitleKey(curSong.title) === drill.songKey)));
+      if (!isActiveDrillSong) {
+        banner.classList.add('hidden');
+        return;
+      }
+      const seq = getFlatGuidedSequence();
+      const entry = seq.find(s => s.item.id === drill.id);
+      const uNum = entry ? entry.unit : 0;
+      const rules = getUnitMasteryRules(uNum);
+      const badgeEl = document.getElementById('stageLessonGoalBadge');
+      const titleEl = document.getElementById('stageLessonGoalTitle');
+      const targetEl = document.getElementById('stageLessonGoalTarget');
+      const descEl = document.getElementById('stageLessonGoalDesc');
+      if (badgeEl) badgeEl.textContent = entry ? entry.stepLabel : 'Warm-Up · Free Practice';
+      if (titleEl) titleEl.textContent = drill.title;
+      if (targetEl) targetEl.textContent = uNum > 0
+        ? `Pass ≥ ${rules.passPct}% · Timing ±${rules.timingWindowMs}ms (${rules.label})`
+        : 'Warm-Up · No Pass Gate';
+      if (descEl) descEl.textContent = `${drill.desc || ''}${drill.tip ? ' 💡 ' + drill.tip : ''} Press ▶ PLAY when ready.`;
+      banner.classList.remove('hidden');
     }
     state.activeDrillMeta = null;
     state.listenChordStats = {};
@@ -10217,32 +10502,216 @@
       { min: 2800, max: 3000, label: 'Maestro',          nextLabel: 'Max 3000',         nextAt: 3000 }
     ];
 
-    function computeUkuleleRating3000(drillScores) {
-      const ds = drillScores || getDrillScoresMap();
-      const scorePane = (paneNames, maxPts) => {
-        let sum = 0, count = 0;
-        paneNames.forEach(p => {
-          (QCOACH_DRILL_LIBRARY[p] || []).forEach(it => {
-            count++;
-            const sc = Number(ds[it.id] || 0);
-            if (sc > 0) sum += Math.min(100, sc);
-          });
-        });
-        return count > 0 ? Math.min(maxPts, Math.round((sum / (count * 100)) * maxPts)) : 0;
+    // 🎓 QCOACH STUDIO v6.0 — TWO-AXIS CONSERVATORY HYBRID ENGINE
+    // Axis 1 (Credibility): Grade 1..8 with Pass / Merit / Distinction + 4 Rolling Proficiencies (Precision, Timing, Fluency, Reading).
+    // Axis 2 (Hard Work / Gamification): Quality-multiplied Effort Points + Daily Practice Ring (3/day) + Exam Readiness %.
+    const QCOACH_GRADE_SPECS = {
+      1: { label: 'Grade 1 · Beginner',          minCleanRuns: 6,  req: { precision: 65, timing: 60, fluency: 60, reading: 0  } },
+      2: { label: 'Grade 2 · Strummer',          minCleanRuns: 8,  req: { precision: 68, timing: 65, fluency: 65, reading: 0  } },
+      3: { label: 'Grade 3 · Rhythm Player',     minCleanRuns: 10, req: { precision: 72, timing: 70, fluency: 68, reading: 0  } },
+      4: { label: 'Grade 4 · Groove Specialist', minCleanRuns: 12, req: { precision: 74, timing: 72, fluency: 70, reading: 0  } },
+      5: { label: 'Grade 5 · Band Player',       minCleanRuns: 14, req: { precision: 76, timing: 75, fluency: 72, reading: 0  } },
+      6: { label: 'Grade 6 · Worship Leader',    minCleanRuns: 16, req: { precision: 78, timing: 76, fluency: 75, reading: 75 } },
+      7: { label: 'Grade 7 · Concert Virtuoso',  minCleanRuns: 18, req: { precision: 80, timing: 78, fluency: 78, reading: 85 } },
+      8: { label: 'Grade 8 · Maestro',           minCleanRuns: 20, req: { precision: 82, timing: 80, fluency: 80, reading: 90 } }
+    };
+
+    function getProficiencyProfile() {
+      const def = {
+        verifiedGrade: 1,
+        indicativeGrade: 0,
+        gradeAttainments: {},
+        effortPoints: 0,
+        dailyRunsDate: '',
+        dailyRunsCount: 0,
+        precision: 0,
+        timing: 0,
+        fluency: 0,
+        reading: 0,
+        samples: 0,
+        gradeCleanRuns: {}
       };
-      const pChords = scorePane(['chords', 'transitions', 'warmup'], 700);
-      const pRhythm = scorePane(['strumming'], 650);
-      const pLead   = scorePane(['scales', 'earkeys'], 650);
-      let songPts = 0;
-      (state.songs || []).forEach(sg => {
-        const sc = Number(sg && sg.masteryStats && sg.masteryStats.bestListenScore) || 0;
-        if (sc >= 65) songPts += Math.round((sc / 100) * 30);
-      });
+      try {
+        const raw = JSON.parse(localStorage.getItem('qcoach_proficiency_v6') || localStorage.getItem('qcoach_proficiency_v2') || 'null');
+        if (raw && typeof raw === 'object') {
+          return {
+            ...def,
+            ...raw,
+            gradeCleanRuns: raw.gradeCleanRuns || {},
+            gradeAttainments: raw.gradeAttainments || {}
+          };
+        }
+      } catch (e) {}
+      return def;
+    }
+
+    function saveProficiencyProfile(p) {
+      try { localStorage.setItem('qcoach_proficiency_v6', JSON.stringify(p)); } catch (e) {}
+    }
+
+    function computeAttainmentBand(passedAllSubjects, finalPct) {
+      if (!passedAllSubjects) return { band: 'Practice', mult: 1.0, badge: 'Practice' };
+      if (finalPct >= 90) return { band: 'Distinction', mult: 3.0, badge: '🏆 Distinction' };
+      if (finalPct >= 80) return { band: 'Merit', mult: 2.0, badge: '🌟 Merit' };
+      return { band: 'Pass', mult: 1.5, badge: '✅ Pass' };
+    }
+
+    function evaluateGradeSubjects(gradeNum, metrics) {
+      const spec = QCOACH_GRADE_SPECS[gradeNum] || QCOACH_GRADE_SPECS[1];
+      const failed = [];
+      if (metrics.chordPct < spec.req.precision) failed.push(`Precision ${metrics.chordPct}% (need ≥${spec.req.precision}%)`);
+      if (metrics.rhythmPct < spec.req.timing)   failed.push(`Timing ${metrics.rhythmPct}% (need ≥${spec.req.timing}%)`);
+      if (metrics.fluencyPct < spec.req.fluency) failed.push(`Fluency ${metrics.fluencyPct}% (need ≥${spec.req.fluency}%)`);
+      if (spec.req.reading > 0 && metrics.isCapstoneExam) {
+        const curRead = getProficiencyProfile().reading || 0;
+        if (curRead < spec.req.reading) failed.push(`Sight-Reading ${curRead}% (need ≥${spec.req.reading}%)`);
+      }
+      return { passedAllSubjects: failed.length === 0, failedSubjects: failed, spec };
+    }
+
+    function creditPriorGradesClearedByExam(targetGrade) {
+      for (let g = 1; g < targetGrade; g++) {
+        const uObj = QCOACH_GUIDED_UNITS.find(u => u.unit === g);
+        if (uObj) {
+          uObj.lessonIds.forEach(lid => {
+            const it = findDrillById(lid);
+            const passReq = getPassThresholdForItem(it);
+            if (it && getBestScoreForItem(it) < passReq) saveDrillScore(lid, passReq);
+          });
+        }
+      }
+    }
+
+    function recordProficiencySession({ chordPct, rhythmPct, fluencyPct, finalPct, drillMeta }) {
+      const prof = getProficiencyProfile();
+      const drillId = drillMeta && drillMeta.id ? drillMeta.id : '';
+      const unitNum = drillId ? getLessonUnitNumber(drillId) : prof.verifiedGrade;
+      const evalGrade = unitNum > 0 ? unitNum : prof.verifiedGrade;
+      const isCapstoneExam = /^mile-[1-8]$/.test(drillId);
+      const { passedAllSubjects, failedSubjects, spec } = evaluateGradeSubjects(evalGrade, { chordPct, rhythmPct, fluencyPct, isCapstoneExam });
+      const att = computeAttainmentBand(passedAllSubjects, finalPct);
+
+      // Update rolling EWMA proficiencies (sloppy sessions genuinely pull rolling % down!)
+      const alpha = prof.samples === 0 ? 1.0 : 0.35;
+      prof.precision = Math.round(prof.precision * (1 - alpha) + chordPct * alpha);
+      prof.timing    = Math.round(prof.timing    * (1 - alpha) + rhythmPct * alpha);
+      prof.fluency   = Math.round(prof.fluency   * (1 - alpha) + fluencyPct * alpha);
+      prof.samples   = (prof.samples || 0) + 1;
+
+      // Axis 2: Award Effort Points (quality-multiplied) & advance Daily Ring (3 runs/day)
+      const effortEarned = Math.round(25 * att.mult);
+      prof.effortPoints = (Number(prof.effortPoints) || 0) + effortEarned;
+      const todayIso = new Date().toISOString().slice(0, 10);
+      if (prof.dailyRunsDate !== todayIso) {
+        prof.dailyRunsDate = todayIso;
+        prof.dailyRunsCount = 1;
+      } else {
+        prof.dailyRunsCount = (Number(prof.dailyRunsCount) || 0) + 1;
+      }
+
+      // Track coursework grind (clean runs in current Grade)
+      if (passedAllSubjects && unitNum > 0) {
+        const k = String(unitNum);
+        prof.gradeCleanRuns[k] = (Number(prof.gradeCleanRuns[k]) || 0) + 1;
+      }
+
+      // Axis 1: Gate-Pass Capstone Exam Verification & Promotion!
+      let promotedToGrade = null;
+      let demotedFromIndicative = null;
+      if (isCapstoneExam && passedAllSubjects) {
+        const rankOrder = { 'Pass': 1, 'Merit': 2, 'Distinction': 3 };
+        const prevBand = prof.gradeAttainments[String(evalGrade)] || '';
+        if ((rankOrder[att.band] || 0) > (rankOrder[prevBand] || 0)) {
+          prof.gradeAttainments[String(evalGrade)] = att.band;
+        }
+        // If verifying an indicative placement grade OR advancing from current verifiedGrade:
+        const nextVerified = Math.min(8, evalGrade + 1);
+        if (prof.indicativeGrade && evalGrade >= prof.indicativeGrade) {
+          prof.verifiedGrade = Math.max(prof.verifiedGrade, evalGrade);
+          prof.indicativeGrade = 0;
+          creditPriorGradesClearedByExam(prof.verifiedGrade);
+          promotedToGrade = prof.verifiedGrade;
+        } else if (evalGrade >= prof.verifiedGrade && evalGrade < 8) {
+          prof.verifiedGrade = nextVerified;
+          promotedToGrade = nextVerified;
+        }
+      } else if (isCapstoneExam && !passedAllSubjects && prof.indicativeGrade && evalGrade === prof.indicativeGrade) {
+        // Failed Verification Exam for Indicative Grade -> drop smoothly 1 grade below!
+        const fallbackGrade = Math.max(1, evalGrade - 1);
+        prof.verifiedGrade = Math.max(prof.verifiedGrade, fallbackGrade);
+        prof.indicativeGrade = 0;
+        creditPriorGradesClearedByExam(prof.verifiedGrade);
+        demotedFromIndicative = fallbackGrade;
+      }
+
+      saveProficiencyProfile(prof);
+      return {
+        effortEarned,
+        attainment: att,
+        passedAllSubjects,
+        failedSubjects,
+        promotedToGrade,
+        demotedFromIndicative,
+        isCapstoneExam,
+        evalGrade
+      };
+    }
+
+    function recordSightReadingProficiency(pct, isPreview = false) {
+      if (isPreview) return;
+      const prof = getProficiencyProfile();
+      prof.reading = prof.reading > 0 ? Math.round(prof.reading * 0.4 + pct * 0.6) : pct;
+      prof.effortPoints = (Number(prof.effortPoints) || 0) + (pct >= 85 ? 45 : 25);
+      saveProficiencyProfile(prof);
+    }
+
+    function computeUkuleleRating3000(drillScores) {
+      const prof = getProficiencyProfile();
+      const g = Math.max(1, Math.min(8, Number(prof.verifiedGrade) || 1));
+      const spec = QCOACH_GRADE_SPECS[g];
+      const nextSpec = QCOACH_GRADE_SPECS[Math.min(8, g + 1)];
       const crBest = Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0);
-      const pSongs = Math.min(600, songPts + Math.min(150, crBest * 6));
-      const rating = Math.min(3000, 400 + pChords + pRhythm + pLead + pSongs);
-      const tier = QCOACH_RATING_TIERS.find(t => rating >= t.min && rating <= t.max) || QCOACH_RATING_TIERS[0];
-      return { rating, tier, pillars: { chords: pChords, rhythm: pRhythm, lead: pLead, songs: pSongs }, chordRushBest: crBest };
+      const cleanRuns = Number((prof.gradeCleanRuns && prof.gradeCleanRuns[String(g)]) || 0);
+      const todayIso = new Date().toISOString().slice(0, 10);
+      const dailyRuns = prof.dailyRunsDate === todayIso ? (Number(prof.dailyRunsCount) || 0) : 0;
+
+      // Compute Exam Readiness % (50% subject proficiency readiness + 50% coursework grind reps)
+      const subjScores = [
+        Math.min(1, (prof.precision || 0) / Math.max(1, spec.req.precision)),
+        Math.min(1, (prof.timing || 0) / Math.max(1, spec.req.timing)),
+        Math.min(1, (prof.fluency || 0) / Math.max(1, spec.req.fluency))
+      ];
+      if (spec.req.reading > 0) subjScores.push(Math.min(1, (prof.reading || 0) / spec.req.reading));
+      const subjAvg = subjScores.reduce((a, b) => a + b, 0) / subjScores.length;
+      const grindFrac = Math.min(1, cleanRuns / Math.max(1, spec.minCleanRuns));
+      const readinessPct = Math.round((subjAvg * 0.6 + grindFrac * 0.4) * 100);
+
+      const missing = [];
+      if (prof.precision < spec.req.precision) missing.push(`Precision (${prof.precision}%/${spec.req.precision}%)`);
+      if (prof.timing < spec.req.timing)       missing.push(`Timing (${prof.timing}%/${spec.req.timing}%)`);
+      if (prof.fluency < spec.req.fluency)     missing.push(`Fluency (${prof.fluency}%/${spec.req.fluency}%)`);
+      if (spec.req.reading > 0 && prof.reading < spec.req.reading) missing.push(`Sight-Reading (${prof.reading}%/${spec.req.reading}%)`);
+
+      const promotionBlocker = (g < 8 && (missing.length > 0 || cleanRuns < spec.minCleanRuns)) ? {
+        targetLabel: nextSpec.label,
+        missing: missing.length ? missing : [`Pass Grade ${g} Gate-Pass Exam (${cleanRuns}/${spec.minCleanRuns} clean runs)`]
+      } : null;
+
+      const curAttainment = prof.gradeAttainments[String(g)] || prof.gradeAttainments[String(g - 1)] || '';
+      return {
+        readinessPct,
+        verifiedGrade: g,
+        indicativeGrade: Number(prof.indicativeGrade) || 0,
+        attainmentBand: curAttainment,
+        effortPoints: Number(prof.effortPoints) || 0,
+        dailyRuns,
+        gradeSpec: spec,
+        cleanRuns,
+        tier: { label: spec.label, nextLabel: g < 8 ? nextSpec.label : 'Distinction Mastery' },
+        pillars: { precision: prof.precision, timing: prof.timing, fluency: prof.fluency, reading: prof.reading, samples: prof.samples },
+        promotionBlocker,
+        chordRushBest: crBest
+      };
     }
 
     // ⚡ 60-SECOND CHORD RUSH ENGINE (Chess.com Puzzle Rush for Ukulele)
@@ -10275,6 +10744,11 @@
     function endChordRushGame() {
       chordRushState.active = false;
       if (chordRushState.timerId) { clearInterval(chordRushState.timerId); chordRushState.timerId = null; }
+      if (chordRushState.score > 0 && typeof getProficiencyProfile === 'function') {
+        const pCr = getProficiencyProfile();
+        pCr.effortPoints = (Number(pCr.effortPoints) || 0) + (chordRushState.score * 5);
+        saveProficiencyProfile(pCr);
+      }
       const prevBest = Number(localStorage.getItem('qcoach_chord_rush_best_v1') || 0);
       const isNewBest = chordRushState.score > prevBest;
       if (isNewBest) {
@@ -10331,7 +10805,137 @@
       return pool[dayNum % pool.length];
     }
 
+    // 🎼 INTERACTIVE CONSERVATORY SIGHT-READING & MUSICAL NOTATION ENGINE
+    const SR_STAFF_NOTES = [
+      { name: 'C4 (Middle C)', note: 'C', y: 102, ledger: true,  hint: 'Open C string (String 3)' },
+      { name: 'D4',            note: 'D', y: 94,  ledger: false, hint: 'C string · Fret 2' },
+      { name: 'E4',            note: 'E', y: 86,  ledger: false, hint: 'Open E string (String 2) — Bottom Line' },
+      { name: 'F4',            note: 'F', y: 78,  ledger: false, hint: 'E string · Fret 1 — Space 1' },
+      { name: 'G4',            note: 'G', y: 70,  ledger: false, hint: 'Open G string (String 4) — Line 2' },
+      { name: 'A4',            note: 'A', y: 62,  ledger: false, hint: 'Open A string (String 1) — Space 2' },
+      { name: 'B4',            note: 'B', y: 54,  ledger: false, hint: 'A string · Fret 2 — Middle Line' },
+      { name: 'C5',            note: 'C', y: 46,  ledger: false, hint: 'A string · Fret 3 — Space 3' },
+      { name: 'D5',            note: 'D', y: 38,  ledger: false, hint: 'A string · Fret 5 — Line 4' },
+      { name: 'E5',            note: 'E', y: 30,  ledger: false, hint: 'A string · Fret 7 — Top Space' }
+    ];
+    const SR_SYMBOL_QUESTIONS = [
+      { sym: '𝅝', prompt: 'How many beats does a Whole Note get in 4/4 time?', ans: '4 beats', opts: ['1 beat', '2 beats', '3 beats', '4 beats'] },
+      { sym: '𝅗𝅥', prompt: 'How many beats does a Half Note get in 4/4 time?', ans: '2 beats', opts: ['1 beat', '2 beats', '3 beats', '4 beats'] },
+      { sym: '♩.', prompt: 'How many beats does a Dotted Quarter Note get in 4/4?', ans: '1.5 beats', opts: ['1 beat', '1.5 beats', '2 beats', '3 beats'] },
+      { sym: '3/4', prompt: 'What does a 3/4 Time Signature mean?', ans: '3 quarter-note beats per bar (Waltz)', opts: ['3 quarter-note beats per bar (Waltz)', '4 third-notes per bar', '6 eighth-notes per bar', '3 bars per phrase'] },
+      { sym: '6/8', prompt: 'How is a 6/8 Time Signature typically felt?', ans: 'Two compound pulses of 3 eighth-notes (1-2-3, 4-5-6)', opts: ['Six slow whole notes', 'Two compound pulses of 3 eighth-notes (1-2-3, 4-5-6)', 'Three half notes', 'Four quarter notes'] },
+      { sym: '1♯ (F♯)', prompt: 'Which Major Key has 1 Sharp (F♯) in its Key Signature?', ans: 'Key of G Major', opts: ['Key of C Major', 'Key of G Major', 'Key of F Major', 'Key of D Major'] },
+      { sym: '2♯ (F♯, C♯)', prompt: 'Which Major Key has 2 Sharps (F♯, C♯)?', ans: 'Key of D Major', opts: ['Key of G Major', 'Key of D Major', 'Key of A Major', 'Key of Bb Major'] },
+      { sym: '1♭ (B♭)', prompt: 'Which Major Key has 1 Flat (B♭) in its Key Signature?', ans: 'Key of F Major', opts: ['Key of C Major', 'Key of G Major', 'Key of F Major', 'Key of D Major'] },
+      { sym: 'mf', prompt: 'What does the dynamic marking "mf" (mezzo-forte) tell you?', ans: 'Moderately loud', opts: ['Very soft', 'Moderately loud', 'Gradually slow down', 'Repeat from the start'] },
+      { sym: '𝄐', prompt: 'What does a Fermata (𝄐) over a note or chord mean?', ans: 'Hold the note longer than its written value', opts: ['Mute immediately (chuck)', 'Play twice as fast', 'Hold the note longer than its written value', 'Skip to the coda'] },
+      { sym: ':||', prompt: 'What does a Repeat Sign (:||) instruct the player to do?', ans: 'Repeat the previous musical section', opts: ['Stop the song', 'Modulate up one key', 'Repeat the previous musical section', 'Play an octave higher'] }
+    ];
+    let srState = { drill: null, mode: 'staff', qIdx: 0, total: 10, correct: 0, currentAns: '', queue: [] };
+
+    function buildTrebleStaffSvg(noteObj) {
+      const linesY = [22, 38, 54, 70, 86];
+      const staffLines = linesY.map(y => `<line x1="20" y1="${y}" x2="260" y2="${y}" stroke="#9ca3af" stroke-width="1.5"/>`).join('');
+      const ledger = noteObj.ledger ? `<line x1="128" y1="${noteObj.y}" x2="172" y2="${noteObj.y}" stroke="#fbbf24" stroke-width="2"/>` : '';
+      const stemDir = noteObj.y >= 54 ? `<line x1="158" y1="${noteObj.y}" x2="158" y2="${noteObj.y - 34}" stroke="#fbbf24" stroke-width="2.5"/>` : `<line x1="142" y1="${noteObj.y}" x2="142" y2="${noteObj.y + 34}" stroke="#fbbf24" stroke-width="2.5"/>`;
+      return `<svg viewBox="0 0 280 120" class="w-full max-w-[280px] h-28" aria-label="Treble Clef Staff">
+        ${staffLines}
+        <text x="30" y="84" font-size="76" fill="#38bdf8" font-family="serif">𝄞</text>
+        ${ledger}
+        <ellipse cx="150" cy="${noteObj.y}" rx="9.5" ry="7" transform="rotate(-18 150 ${noteObj.y})" fill="#fbbf24"/>
+        ${stemDir}
+      </svg>`;
+    }
+
+    function openSightReadingTrainer(drill, isPreview = false) {
+      const modal = document.getElementById('sightReadingModal');
+      if (!modal) return;
+      const mode = drill.sightReadingMode || 'staff';
+      srState.isPreview = !!isPreview;
+      const pool = mode === 'staff' ? SR_STAFF_NOTES.slice() : SR_SYMBOL_QUESTIONS.slice();
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      srState = { drill, mode, isPreview: !!isPreview, qIdx: 0, total: 10, correct: 0, currentAns: '', queue: pool.slice(0, 10) };
+      const passReq = getPassThresholdForItem(drill);
+      document.getElementById('srModeBadge').textContent = mode === 'staff' ? '🎼 Unit 7 · Treble Staff Reading' : '🎼 Unit 8 · Maestro Notation';
+      document.getElementById('srTitle').textContent = drill.title;
+      document.getElementById('srTargetLabel').textContent = `Pass: ≥ ${passReq}%`;
+      document.getElementById('srFeedbackBar').textContent = '';
+      modal.classList.remove('hidden');
+      renderSightReadingQuestion();
+    }
+
+    function renderSightReadingQuestion() {
+      const visual = document.getElementById('srVisualStage');
+      const prompt = document.getElementById('srPromptText');
+      const grid = document.getElementById('srChoicesGrid');
+      const fb = document.getElementById('srFeedbackBar');
+      if (!visual || !grid) return;
+
+      if (srState.qIdx >= srState.total) {
+        const pct = Math.round((srState.correct / srState.total) * 100);
+        const passReq = getPassThresholdForItem(srState.drill);
+        const passed = pct >= passReq;
+        if (!srState.isPreview) {
+          saveDrillScore(srState.drill.id, pct);
+          if (typeof recordSightReadingProficiency === 'function') recordSightReadingProficiency(pct, false);
+        }
+        recordDailyPracticeStreak();
+        incrementTodayLessonsCompleted();
+        if (typeof renderLearnPathView === 'function') renderLearnPathView();
+        visual.innerHTML = `<div class="text-4xl font-black ${passed ? 'text-emerald-400' : 'text-amber-400'}">${pct}%</div>
+          <div class="text-xs text-qmuted">${srState.correct} / ${srState.total} Correct · Target ≥ ${passReq}%</div>`;
+        prompt.textContent = passed
+          ? '🎉 Sight-Reading Mastery Passed! Your Lead & Reading pillar has been updated.'
+          : `Keep drilling! You need ≥ ${passReq}% to pass this conservatory notation test.`;
+        grid.innerHTML = `
+          <button id="btnSrRetry" type="button" class="py-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs">🔁 Try Again</button>
+          <button id="btnSrDone" type="button" class="py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs">✓ Back to Learn</button>`;
+        document.getElementById('btnSrRetry')?.addEventListener('click', () => openSightReadingTrainer(srState.drill));
+        document.getElementById('btnSrDone')?.addEventListener('click', () => document.getElementById('sightReadingModal')?.classList.add('hidden'));
+        if (fb) fb.textContent = '';
+        return;
+      }
+
+      document.getElementById('srProgressLabel').textContent = `Question ${srState.qIdx + 1} / ${srState.total}`;
+      document.getElementById('srScoreLabel').textContent = `Score: ${srState.correct} / ${srState.qIdx}`;
+      const q = srState.queue[srState.qIdx];
+      let opts = [];
+      if (srState.mode === 'staff') {
+        visual.innerHTML = buildTrebleStaffSvg(q);
+        prompt.textContent = 'Which note is shown on the treble clef staff?';
+        srState.currentAns = q.name;
+        const distractors = SR_STAFF_NOTES.filter(x => x.name !== q.name).sort(() => Math.random() - 0.5).slice(0, 3).map(x => x.name);
+        opts = [q.name, ...distractors].sort(() => Math.random() - 0.5);
+      } else {
+        visual.innerHTML = `<div class="text-5xl font-serif font-black text-amber-400 py-2">${q.sym}</div>`;
+        prompt.textContent = q.prompt;
+        srState.currentAns = q.ans;
+        opts = q.opts.slice().sort(() => Math.random() - 0.5);
+      }
+      grid.innerHTML = opts.map(o => `<button type="button" data-sr-opt="${o.replace(/"/g, '&quot;')}" class="sr-opt-btn px-3 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-bold text-qtext transition text-left">${o}</button>`).join('');
+      grid.querySelectorAll('.sr-opt-btn').forEach(b => b.addEventListener('click', () => {
+        const picked = b.getAttribute('data-sr-opt');
+        const ok = picked === srState.currentAns;
+        if (ok) srState.correct++;
+        if (fb) {
+          fb.className = `text-xs font-mono text-center min-h-[18px] ${ok ? 'text-emerald-400' : 'text-rose-400'}`;
+          fb.textContent = ok
+            ? `✓ Correct!${q.hint ? ' (' + q.hint + ')' : ''}`
+            : `✕ Answer: ${srState.currentAns}${q.hint ? ' — ' + q.hint : ''}`;
+        }
+        srState.qIdx++;
+        setTimeout(renderSightReadingQuestion, ok ? 650 : 1200);
+      }));
+    }
+
     function launchInteractiveDrill(drill, isAutoRamp = false) {
+      if (drill && drill.sightReadingMode) {
+        openSightReadingTrainer(drill);
+        return;
+      }
       recordDailyPracticeStreak();
       state.activeDrillMeta = drill;
       state.smartDrillActive = isAutoRamp;
@@ -10415,22 +11019,44 @@
       } else {
         resetListenSessionScores();
       }
-      showToast(`🎓 ${drill.title} (${startBpm} BPM) — 🎙️ Listen ON. Press ▶ PLAY!`, 'success');
+      updateStageLessonGoalBanner();
     }
 
-    function openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, drillMeta) {
+    function openCoachDiagnosisCard(finalPct, chordPct, rhythmPct, stars, drillMeta, fluencyPct = null, evalOutcome = null) {
       if (typeof recordChordHistoryFromSession === 'function') recordChordHistoryFromSession();
       const modal = document.getElementById('coachDiagnosisModal');
       if (!modal) return;
-      document.getElementById('coachDiagTitle').textContent = finalPct >= 85
-        ? '🎉 Lesson Passed — Outstanding!'
-        : (finalPct >= 75 ? '✅ Lesson Passed!' : 'Keep Practicing (Need 75% to Pass)');
+      const flPct = (fluencyPct !== null && fluencyPct !== undefined) ? fluencyPct : chordPct;
+      const diagUnitNum = (drillMeta && drillMeta.id && typeof getLessonUnitNumber === 'function') ? getLessonUnitNumber(drillMeta.id) : 0;
+      const diagRules = diagUnitNum > 0 && typeof getUnitMasteryRules === 'function' ? getUnitMasteryRules(diagUnitNum) : { passPct: 65, timingWindowMs: 185, label: 'Warm-Up' };
+      const passTarget = diagRules.passPct;
+      const passedLesson = diagUnitNum === 0 || (evalOutcome ? evalOutcome.passedAllSubjects : (finalPct >= passTarget));
+      const effPts = evalOutcome ? Number(evalOutcome.effortEarned || 25) : 25;
+      const attBadge = (evalOutcome && evalOutcome.attainment && evalOutcome.attainment.badge) ? evalOutcome.attainment.badge : (passedLesson ? '✅ Pass' : 'Practice');
+      document.getElementById('coachDiagTitle').textContent = (evalOutcome && evalOutcome.promotedToGrade)
+        ? `🏆 Verified Grade ${evalOutcome.promotedToGrade} (${attBadge})!`
+        : ((evalOutcome && evalOutcome.demotedFromIndicative)
+          ? `Placed at Grade ${evalOutcome.demotedFromIndicative} — Tighten Weak Subjects First`
+          : (diagUnitNum === 0
+            ? '✅ Warm-Up Complete — Ready for Your Next Lesson!'
+            : (passedLesson
+              ? `${attBadge} · ${finalPct}% Overall`
+              : `❌ Below Pass — Fix Weak Subjects Below`)));
       document.getElementById('coachDiagStars').textContent = stars;
-      document.getElementById('coachDiagOverall').textContent = finalPct + '%';
+      const ovEl = document.getElementById('coachDiagOverall');
+      if (ovEl) {
+        ovEl.textContent = `+${effPts} ⚡`;
+        ovEl.className = 'text-base sm:text-lg font-black text-amber-400';
+      }
       document.getElementById('coachDiagChords').textContent = chordPct + '%';
       document.getElementById('coachDiagTiming').textContent = rhythmPct + '%';
+      const flEl = document.getElementById('coachDiagFluency');
+      if (flEl) flEl.textContent = flPct + '%';
 
       const adviceLines = [];
+      if (evalOutcome && evalOutcome.failedSubjects && evalOutcome.failedSubjects.length > 0) {
+        adviceLines.push(`<div class="text-rose-300">❌ <strong>Subjects below Grade ${evalOutcome.evalGrade} standard:</strong> ${evalOutcome.failedSubjects.join(' · ')}</div>`);
+      }
       // Per-chord weakness detection
       const weakChords = [];
       const strongChords = [];
@@ -10483,7 +11109,8 @@
           ? '🎉 Amazing Performance!'
           : (finalPct >= 65 ? '👏 Nice Run — Getting Tighter!' : '🎸 Good Practice — Try Again!');
       }
-      document.getElementById('btnCoachDiagNextLesson')?.classList.toggle('hidden', !isLesson);
+      const canAdvanceNext = isLesson && passedLesson && !!getFollowingGuidedLesson(drillMeta && drillMeta.id);
+      document.getElementById('btnCoachDiagNextLesson')?.classList.toggle('hidden', !canAdvanceNext);
       document.getElementById('btnCoachDiagBackLearn')?.classList.toggle('hidden', !isLesson);
       document.getElementById('btnCoachDiagClose')?.classList.toggle('hidden', isLesson);
       modal.classList.remove('hidden');
@@ -10580,6 +11207,7 @@
       };
       state.waitModeEnabled = !!useWaitMode;
       updateWaitModeButtonUi();
+      if (typeof updateStageLessonGoalBanner === 'function') updateStageLessonGoalBanner();
       launchInteractiveDrill(customDrill, false);
     }
 
@@ -10667,41 +11295,34 @@
     }
 
     function applyPlacementResult(completedStageCount) {
-      // One-Level-Below Placement Strategy (motivates players to prove themselves & climb):
-      // 0-1 stages -> Unit 1 (Beginner), 2 stages -> Unit 2 (Strummer),
-      // 3 stages -> Unit 3 (Rhythm Player), 4 stages -> Unit 4 (Band Player)
-      const unitsToCredit = completedStageCount >= 4 ? [1, 2, 3]
-        : (completedStageCount === 3 ? [1, 2]
-        : (completedStageCount === 2 ? [1] : []));
-      unitsToCredit.forEach(uNum => {
-        const unitObj = QCOACH_GUIDED_UNITS.find(u => u.unit === uNum);
-        if (unitObj) {
-          unitObj.lessonIds.forEach(lid => {
-            const item = findDrillById(lid);
-            if (item && getBestScoreForItem(item) < 78) saveDrillScore(lid, 78);
-          });
-        }
-      });
-      const newSkill = completedStageCount >= 4 ? 'intermediate' : 'beginner';
-      try { localStorage.setItem('qcoach_skill_level', newSkill); } catch (e) {}
+      // v6.0 Two-Stage Placement: 2-Min Diagnostic gives an INDICATIVE Grade (capped at Grade 5)
+      // NEVER auto-awards fake scores or Grades 6-8; player verifies via Gate-Pass Exam!
+      const estGrade = completedStageCount >= 4 ? 5
+        : (completedStageCount === 3 ? 4
+        : (completedStageCount === 2 ? 3
+        : (completedStageCount === 1 ? 2 : 1)));
+      const prof = getProficiencyProfile();
+      prof.indicativeGrade = estGrade > prof.verifiedGrade ? estGrade : 0;
+      saveProficiencyProfile(prof);
+      const estSpec = QCOACH_GRADE_SPECS[estGrade] || QCOACH_GRADE_SPECS[1];
       closePlacementCheckModal();
-      const stats = getLearnStats();
-      const targetUnit = Math.min(8, unitsToCredit.length + 1);
-      const nextTierLabel = (stats.tier && stats.tier.nextLabel) || 'Strummer';
-      const tierLabel = (stats.tier && stats.tier.label) || 'Beginner';
 
       if (typeof isCloudUserSignedIn === 'function' && !isCloudUserSignedIn()) {
         const resBox = document.getElementById('guestPlacementResultBox');
         const scoreLine = document.getElementById('guestPlacementScoreLine');
         const chalLine = document.getElementById('guestPlacementChallengeLine');
         if (resBox) resBox.classList.remove('hidden');
-        if (scoreLine) scoreLine.textContent = `Rating ${stats.rating} · ${tierLabel}`;
-        if (chalLine) chalLine.textContent = `We placed you at Unit ${targetUnit} — right below ${nextTierLabel}. Sign in free to save your rating and prove you can climb higher!`;
-        showToast(`🎯 Rated ${stats.rating} (${tierLabel})! Sign in to save & climb to ${nextTierLabel}.`, 'success');
+        if (scoreLine) scoreLine.textContent = `🧭 Indicative: ${estSpec.label} (Unverified)`;
+        if (chalLine) chalLine.textContent = estGrade > 1
+          ? `Sign in free to take the Grade ${estGrade} Gate-Pass Exam and officially verify your Grade—or start smoothly at Grade ${estGrade - 1}.`
+          : 'Sign in free to begin your Step 0 & Grade 1 Conservatory Journey!';
+        showToast(`🧭 Indicative Level: ${estSpec.label} (Unverified). Sign in to verify!`, 'info');
       } else {
         renderLearnPathView();
         if (typeof syncCloudProgressQuietly === 'function') syncCloudProgressQuietly();
-        showToast(`🎯 Rated ${stats.rating} (${tierLabel}) — starting at Unit ${targetUnit}. Ready to beat ${nextTierLabel}?`, 'success');
+        showToast(estGrade > 1
+          ? `🧭 Indicative Level: ${estSpec.label}. Tap "Verify Grade Now" to pass the Gate-Pass Exam!`
+          : `📘 Starting cleanly at Grade 1 (Beginner) — Step 0 basics are right at the top!`, 'info');
       }
     }
 
@@ -11136,27 +11757,80 @@
       if (sEl) sEl.textContent = stats.streak;
       if (stEl) stEl.textContent = stats.totalStars;
 
-      // Update 3000-Point Ukulele Rating, Tier Badge & 4 Musical Pillars
+      // Update v6.0 Two-Axis Header: Grade 1-8 (Pass/Merit/Distinction) + Effort Points + Daily Ring + Exam Readiness %
       const rankBadge = document.getElementById('learnRankBadge');
       const rankLbl = document.getElementById('learnRankProgressLabel');
       const rankBar = document.getElementById('learnRankProgressBar');
       const ratingNumEl = document.getElementById('learnRatingNumber');
       if (rankBadge && rankLbl && rankBar && stats.tier) {
-        rankBadge.textContent = `${stats.tier.label} · ${stats.rating}`;
-        if (ratingNumEl) ratingNumEl.textContent = `${stats.rating} / 3000`;
-        const span = Math.max(1, stats.tier.nextAt - stats.tier.min);
-        const pct = stats.rating >= 3000 ? 100 : Math.min(100, Math.round(((stats.rating - stats.tier.min) / span) * 100));
-        rankLbl.textContent = stats.rating >= 2800
-          ? `🎼 Maestro Tier · ${stats.rating} / 3000`
-          : `Next Tier: ${stats.tier.nextLabel} (${stats.tier.nextAt})`;
-        rankBar.style.width = `${Math.max(4, pct)}%`;
+        rankBadge.textContent = stats.attainmentBand ? `${stats.tier.label} · ${stats.attainmentBand}` : stats.tier.label;
+        const rPct = Math.max(0, Math.min(100, Number(stats.readinessPct) || 0));
+        if (ratingNumEl) ratingNumEl.textContent = `${rPct}% Ready`;
+        rankLbl.textContent = stats.verifiedGrade >= 8
+          ? `🎼 Grade 8 Maestro · Chasing Distinction`
+          : `Grade ${stats.verifiedGrade} Exam Readiness · Next: ${stats.tier.nextLabel}`;
+        rankBar.style.width = `${Math.max(4, rPct)}%`;
+      }
+      const effEl = document.getElementById('learnEffortPoints');
+      if (effEl) effEl.textContent = String(stats.effortPoints || 0);
+      const ringCntEl = document.getElementById('learnDailyRingCount');
+      const ringPill = document.getElementById('learnDailyRingPill');
+      if (ringCntEl) ringCntEl.textContent = String(Math.min(3, stats.dailyRuns || 0));
+      if (ringPill) {
+        const closed = (stats.dailyRuns || 0) >= 3;
+        ringPill.className = closed
+          ? 'px-3 py-1.5 rounded-xl bg-emerald-500/25 border border-emerald-400 text-xs font-mono font-black text-emerald-300'
+          : 'px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-xs font-mono font-bold text-cyan-300';
+      }
+      // Show/Hide Indicative Placement Verification Card
+      const indCard = document.getElementById('indicativePlacementCard');
+      if (indCard) {
+        if (stats.indicativeGrade && stats.indicativeGrade > stats.verifiedGrade) {
+          const ig = stats.indicativeGrade;
+          const igSpec = QCOACH_GRADE_SPECS[ig] || QCOACH_GRADE_SPECS[2];
+          const bEl = document.getElementById('indicativeGradeBadge');
+          const dEl = document.getElementById('indicativeGradeDesc');
+          const vBtn = document.getElementById('btnVerifyIndicativeNow');
+          const sBtn = document.getElementById('btnStartBelowIndicative');
+          if (bEl) bEl.textContent = igSpec.label;
+          if (dEl) dEl.textContent = `Pass the Grade ${ig} Gate-Pass Exam across Precision, Timing & Fluency to officially verify Grade ${ig}—or warm up smoothly at Grade ${ig - 1}.`;
+          if (vBtn) vBtn.textContent = `🎓 Verify Grade ${ig} Now`;
+          if (sBtn) sBtn.textContent = `Start at Grade ${ig - 1}`;
+          indCard.classList.remove('hidden');
+        } else {
+          indCard.classList.add('hidden');
+        }
       }
       if (stats.pillars) {
         const setTxt = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-        setTxt('pillarChordsVal', `${stats.pillars.chords}/700`);
-        setTxt('pillarRhythmVal', `${stats.pillars.rhythm}/650`);
-        setTxt('pillarLeadVal',   `${stats.pillars.lead}/650`);
-        setTxt('pillarSongsVal',  `${stats.pillars.songs}/600`);
+        const hasS = stats.pillars.samples > 0;
+        setTxt('pillarChordsVal', hasS ? `${stats.pillars.precision}%` : '—');
+        setTxt('pillarRhythmVal', hasS ? `${stats.pillars.timing}%` : '—');
+        setTxt('pillarLeadVal',   hasS ? `${stats.pillars.fluency}%` : '—');
+        setTxt('pillarSongsVal',  stats.pillars.reading > 0 ? `${stats.pillars.reading}%` : '—');
+      }
+      if (stats.gradeSpec) {
+        const grLbl = document.getElementById('learnGradeGrindLabel');
+        const exLbl = document.getElementById('learnGradeExamTarget');
+        if (grLbl) grLbl.textContent = `Grade ${stats.verifiedGrade} Grind: ${stats.cleanRuns} / ${stats.gradeSpec.minCleanRuns} clean runs`;
+        if (exLbl) {
+          const r = stats.gradeSpec.req;
+          exLbl.textContent = `Gate-Pass Exam: Precision ≥${r.precision}% · Timing ≥${r.timing}% · Fluency ≥${r.fluency}%${r.reading > 0 ? ` · Reading ≥${r.reading}%` : ''}`;
+        }
+      }
+      const gateBanner = document.getElementById('learnPromotionGateBanner');
+      if (gateBanner) {
+        if (stats.promotionBlocker) {
+          gateBanner.innerHTML = `<strong>🔒 Gate-Pass to ${stats.promotionBlocker.targetLabel}:</strong> Build proficiency in <strong>${stats.promotionBlocker.missing.join(', ')}</strong> — or pass the Grade ${stats.verifiedGrade} Gate-Pass Capstone Exam to advance.`;
+          gateBanner.classList.remove('hidden');
+        } else {
+          gateBanner.classList.add('hidden');
+        }
+      }
+      const u0Card = document.getElementById('unit0AbsoluteBeginnerCard');
+      if (u0Card && !u0Card.dataset.userToggled) {
+        if (stats.verifiedGrade === 1 && (stats.effortPoints || 0) === 0) u0Card.setAttribute('open', '');
+        else u0Card.removeAttribute('open');
       }
       const crPill = document.getElementById('chordRushBestPill');
       if (crPill) crPill.textContent = stats.chordRushBest > 0 ? `(Best: ${stats.chordRushBest})` : '';
@@ -11204,34 +11878,44 @@
       if (unitsWrap) {
         unitsWrap.innerHTML = '';
         const flatSeq = getFlatGuidedSequence();
-        const masteredItems = flatSeq.filter(s => getBestScoreForItem(s.item) >= 75);
+        const masteredItems = flatSeq.filter(s => isLessonPassed(s.item));
         const activeUnitNum = nextStep ? nextStep.unit : 1;
         const activeUnit = QCOACH_GUIDED_UNITS.find(u => u.unit === activeUnitNum) || QCOACH_GUIDED_UNITS[0];
 
-        // 1. Current Unit Stepper (Focused 6-step milestone track — no wall of 36 cards!)
+        // 1. Current Unit Stepper (Strict Prerequisite Gating + Progressive Pass Bar)
         if (activeUnit) {
-          const passedInUnit = activeUnit.lessonIds.filter(id => getBestScoreForItem(findDrillById(id)) >= 75).length;
+          const unitRules = getUnitMasteryRules(activeUnit.unit);
+          const passedInUnit = activeUnit.lessonIds.filter(id => isLessonPassed(findDrillById(id))).length;
           const unitTrack = document.createElement('div');
           unitTrack.className = 'q-card rounded-2xl p-4 space-y-3';
           const stepsHtml = activeUnit.lessonIds.map((lid, idx) => {
             const item = findDrillById(lid);
             if (!item) return '';
             const best = getBestScoreForItem(item);
-            const passed = best >= 75;
+            const passed = isLessonPassed(item);
+            const unlocked = isLessonUnlocked(item.id);
             const isNext = nextStep && nextStep.item.id === item.id;
+            const prereq = getPrerequisiteLesson(item.id);
             const pillCls = passed
               ? 'border-emerald-500/50 bg-emerald-500/10 text-emerald-300'
               : (isNext
                 ? 'border-2 border-amber-400 bg-amber-500/15 text-qtext shadow'
-                : 'border-[#2C2C2E] bg-[#121212] text-qmuted opacity-70');
+                : (unlocked
+                  ? 'border-[#2C2C2E] bg-[#121212] text-qtext opacity-90'
+                  : 'border-[#2C2C2E] bg-[#121212] text-qmuted opacity-55 cursor-not-allowed'));
+            const subStatus = passed
+              ? `Mastered · ${best}%`
+              : (isNext
+                ? `▶ Up Next · Pass ≥ ${unitRules.passPct}%`
+                : (unlocked ? `Unlocked · Pass ≥ ${unitRules.passPct}%` : `🔒 Pass "${prereq ? prereq.item.title : 'previous'}" first`));
             return `
-              <button type="button" data-guided-id="${item.id}" class="guided-node-btn text-left p-2.5 rounded-xl border ${pillCls} flex items-center gap-2.5 hover:opacity-100 transition">
+              <button type="button" data-guided-id="${item.id}" data-locked="${unlocked ? '0' : '1'}" class="guided-node-btn text-left p-2.5 rounded-xl border ${pillCls} flex items-center gap-2.5 ${unlocked ? 'hover:opacity-100' : ''} transition">
                 <span class="w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-mono font-black shrink-0 ${passed ? 'bg-emerald-500 text-black' : (isNext ? 'bg-amber-500 text-black' : 'bg-zinc-800 text-qmuted')}">
-                  ${passed ? '✓' : (idx + 1)}
+                  ${passed ? '✓' : (unlocked ? (idx + 1) : '🔒')}
                 </span>
                 <div class="min-w-0 flex-1">
                   <div class="text-xs font-bold truncate">${item.title}</div>
-                  <div class="text-[10px] font-mono opacity-80">${passed ? `Mastered · ${best}%` : (isNext ? '▶ Up Next' : 'Upcoming')}</div>
+                  <div class="text-[10px] font-mono opacity-85 truncate">${subStatus}</div>
                 </div>
               </button>`;
           }).join('');
@@ -11239,11 +11923,11 @@
           unitTrack.innerHTML = `
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div>
-                <div class="text-[11px] font-mono font-bold text-amber-400 uppercase">${activeUnit.badge} · ${passedInUnit}/${activeUnit.lessonIds.length} Done</div>
+                <div class="text-[11px] font-mono font-bold text-amber-400 uppercase">${activeUnit.badge} · ${passedInUnit}/${activeUnit.lessonIds.length} Done · Pass ≥ ${unitRules.passPct}% (±${unitRules.timingWindowMs}ms)</div>
                 <h3 class="text-sm sm:text-base font-black text-qtext">${activeUnit.title}</h3>
               </div>
               <button type="button" data-testout-id="${activeUnit.testOutId}" class="unit-testout-btn px-2.5 py-1 rounded-lg bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-400/50 text-indigo-300 text-[11px] font-mono font-bold transition">
-                ⚡ Skip Unit
+                🎓 Gate-Pass Exam
               </button>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">${stepsHtml}</div>
@@ -11274,7 +11958,7 @@
         const roadmapDetails = document.createElement('details');
         roadmapDetails.className = 'q-card rounded-2xl p-3.5 text-xs';
         const summaryRows = QCOACH_GUIDED_UNITS.map(u => {
-          const pCnt = u.lessonIds.filter(id => getBestScoreForItem(findDrillById(id)) >= 75).length;
+          const pCnt = u.lessonIds.filter(id => isLessonPassed(findDrillById(id))).length;
           const allDone = pCnt >= u.lessonIds.length;
           return `
             <div class="flex items-center justify-between gap-2 py-2 border-b border-[#2C2C2E] last:border-b-0">
@@ -11296,8 +11980,16 @@
 
         unitsWrap.querySelectorAll('.guided-node-btn').forEach(btn => {
           btn.addEventListener('click', () => {
-            const it = findDrillById(btn.getAttribute('data-guided-id'));
-            if (it) launchInteractiveDrill(it, false);
+            const lid = btn.getAttribute('data-guided-id');
+            const it = findDrillById(lid);
+            if (!it) return;
+            if (!isLessonUnlocked(lid)) {
+              const pre = getPrerequisiteLesson(lid);
+              const reqPct = pre ? getPassThresholdForItem(pre.item) : 65;
+              showToast(`🔒 Complete "${pre ? pre.item.title : 'the previous lesson'}" with ≥ ${reqPct}% first to unlock this lesson.`, 'warn');
+              return;
+            }
+            launchInteractiveDrill(it, false);
           });
         });
         unitsWrap.querySelectorAll('.unit-testout-btn').forEach(btn => {
@@ -11334,19 +12026,23 @@
         const best = item.songKey
           ? Number((state.songs.find(sg => normalizeSongTitleKey(sg.title) === item.songKey)?.masteryStats?.bestListenScore) || 0)
           : Number(drillScores[item.id] || 0);
-        const stars = best >= 85 ? '⭐⭐⭐' : (best >= 65 ? '⭐⭐' : (best > 0 ? '⭐' : '☆☆☆'));
+        const unlocked = isLessonUnlocked(item.id);
+        const prereq = getPrerequisiteLesson(item.id);
+        const passReq = getPassThresholdForItem(item);
+        const stars = best >= Math.min(95, passReq + 12) ? '⭐⭐⭐' : (best >= passReq ? '⭐⭐' : (best > 0 ? '⭐' : '☆☆☆'));
         const card = document.createElement('div');
-        card.className = 'q-card rounded-2xl p-4 flex flex-col justify-between gap-3';
+        card.className = `q-card rounded-2xl p-4 flex flex-col justify-between gap-3 ${unlocked ? '' : 'opacity-60'}`;
         card.innerHTML = `
           <div class="space-y-1.5">
             <div class="flex items-center justify-between gap-2">
-              <span class="px-2 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/40 text-[11px] font-mono font-bold text-amber-400">${item.badge}</span>
+              <span class="px-2 py-0.5 rounded-md bg-amber-500/15 border border-amber-500/40 text-[11px] font-mono font-bold text-amber-400">${unlocked ? item.badge : '🔒 Locked'}</span>
               <span class="text-xs font-mono text-amber-400">${stars} ${best > 0 ? best + '%' : ''}</span>
             </div>
             <h3 class="text-base font-black text-qtext">${item.title}</h3>
             <p class="text-xs text-qmuted leading-relaxed">${item.desc}</p>
-            <div class="text-[11px] font-mono text-cyan-400 font-semibold">${item.meter || '4/4'} · ${item.bpm} BPM</div>
+            <div class="text-[11px] font-mono text-cyan-400 font-semibold">${item.meter || '4/4'} · ${item.bpm} BPM · Pass ≥ ${passReq}%</div>
           </div>
+          ${unlocked ? `
           <div class="flex items-center gap-2 pt-1">
             <button type="button" data-drill-id="${item.id}" data-ramp="true" class="learn-launch-btn flex-1 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/35 border border-amber-400/60 text-amber-300 font-bold text-xs transition" title="Starts at 75% tempo and auto-ramps +5% BPM on each clean pass">
               🔁 Auto-Ramp
@@ -11354,7 +12050,10 @@
             <button type="button" data-drill-id="${item.id}" data-ramp="false" class="learn-launch-btn flex-1 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-black text-xs transition">
               ▶ Practice
             </button>
-          </div>
+          </div>` : `
+          <div class="pt-1 text-[11px] font-mono text-amber-300/80">
+            🔒 Pass <strong>${prereq ? prereq.item.title : 'previous lesson'}</strong> first
+          </div>`}
         `;
         grid.appendChild(card);
       });
@@ -13906,6 +14605,62 @@
       if (btnDaily) {
         btnDaily.addEventListener('click', () => launchInteractiveDrill(getTodaysDailyChallenge(), false));
       }
+      document.getElementById('btnCloseSightReading')?.addEventListener('click', () => {
+        document.getElementById('sightReadingModal')?.classList.add('hidden');
+      });
+      document.getElementById('btnPreviewSightReading')?.addEventListener('click', () => {
+        const srDrill = findDrillById('drill-sr-treble') || {
+          id: 'drill-sr-treble',
+          title: '🎼 Sight-Reading Preview: Treble Staff (C4–E5)',
+          sightReadingMode: 'staff'
+        };
+        openSightReadingTrainer(srDrill, true);
+      });
+      document.getElementById('unit0AbsoluteBeginnerCard')?.addEventListener('toggle', (e) => {
+        e.currentTarget.dataset.userToggled = '1';
+      });
+      document.getElementById('btnPlacementBrandNew')?.addEventListener('click', () => {
+        closePlacementCheckModal();
+        const u0 = document.getElementById('unit0AbsoluteBeginnerCard');
+        if (u0) { u0.setAttribute('open', ''); u0.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        showToast('📘 Welcome! Start with Unit 0 Basics right at the top of Learn.', 'info');
+      });
+      document.getElementById('btnVerifyIndicativeNow')?.addEventListener('click', () => {
+        const prof = getProficiencyProfile();
+        const ig = Number(prof.indicativeGrade) || 2;
+        const examItem = findDrillById(`mile-${ig}`) || findDrillById('mile-1');
+        if (examItem) launchInteractiveDrill(examItem, false);
+      });
+      document.getElementById('btnStartBelowIndicative')?.addEventListener('click', () => {
+        const prof = getProficiencyProfile();
+        const targetG = Math.max(1, (Number(prof.indicativeGrade) || 2) - 1);
+        prof.verifiedGrade = Math.max(prof.verifiedGrade, targetG);
+        prof.indicativeGrade = 0;
+        creditPriorGradesClearedByExam(prof.verifiedGrade);
+        saveProficiencyProfile(prof);
+        renderLearnPathView();
+        showToast(`🎸 Starting smoothly at Grade ${prof.verifiedGrade}!`, 'success');
+      });
+      document.getElementById('btnUnit0OpenStrum')?.addEventListener('click', () => {
+        launchInteractiveDrill({
+          id: 'unit0-open-pulse',
+          title: 'Unit 0 · First Open-String Down-Strum Pulse',
+          tier: 'beginner',
+          badge: 'Unit 0',
+          desc: 'Brush gently down across all 4 strings with your index fingernail on each beat (1-2-3-4) at a relaxed 60 BPM.',
+          chords: ['C', 'C', 'C', 'C'],
+          meter: '4/4',
+          strumCode: 'dn4',
+          bpm: 60,
+          tip: 'Keep your strumming wrist loose and hold the ukulele comfortably at chest height.'
+        }, false);
+      });
+      document.getElementById('btnExitLessonMode')?.addEventListener('click', () => {
+        if (state.isPlaying) stopPlayback();
+        state.activeDrillMeta = null;
+        updateStageLessonGoalBanner();
+        switchTab('learn');
+      });
       const btnDiagBack = document.getElementById('btnCoachDiagBackLearn');
       if (btnDiagBack) {
         btnDiagBack.addEventListener('click', () => {

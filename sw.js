@@ -1,4 +1,4 @@
-const CACHE_NAME = 'qcoach-studio-v5-11';
+const CACHE_NAME = 'qcoach-studio-v6-0';
 const CORE_ASSETS = [
   './',
   './index.html',
