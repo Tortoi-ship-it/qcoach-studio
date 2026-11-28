@@ -78,8 +78,8 @@ drop policy if exists "Admins manage all song submissions" on public.community_s
 create policy "Admins manage all song submissions" on public.community_song_submissions
   for all using (public.is_admin()) with check (public.is_admin());
 
-grant usage on schema public to anon, authenticated;
-grant select, insert, update, delete on public.profiles, public.song_progress, public.community_song_submissions to authenticated;
+grant usage on schema public to anon, authenticated, service_role;
+grant select, insert, update, delete on public.profiles, public.song_progress, public.community_song_submissions to authenticated, service_role;
 grant execute on function public.is_admin() to authenticated;
 
 update public.profiles set role = 'admin' where lower(display_name) = 'joy.tuscano@gmail.com';
